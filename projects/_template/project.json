@@ -1,0 +1,37 @@
+{
+  "name": "게임 제목",
+  "platform": "sfc",
+  "rom": "rom/original.sfc",
+  "rom_sha1": "",
+  "tables": {
+    "ja": ["tables/ja.tbl"],
+    "ko": ["tables/ko_ctrl.tbl", "tables/ko_font.tbl"]
+  },
+  "spec": "spec.json",
+  "scripts_dir": "scripts",
+  "expand_to": "0x200000",
+  "expand_fill": "0xFF",
+  "font": {
+    "charset": "font/charset.txt",
+    "ttf": "font/Galmuri11.ttf",
+    "size": 12,
+    "cell": "16x16",
+    "format": "sfc2bpp",
+    "code_start": "0x0100",
+    "code_bytes": 2,
+    "skip_low": [],
+    "fg": 1, "bg": 0, "shadow": null,
+    "order": "row",
+    "offset_x": 2, "offset_y": 1,
+    "bin_out": "build/font.bin",
+    "tbl_out": "tables/ko_font.tbl",
+    "preview_out": "build/font_preview.png",
+    "insert_at": "0x100000"
+  },
+  "inserts": [],
+  "commands": [
+    ["asar", "asm/main.asm", "{rom}"]
+  ],
+  "output": "build/game_kr.sfc",
+  "patch": {"format": "bps", "out": "release/game_kr.bps"}
+}

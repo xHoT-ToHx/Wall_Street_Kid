@@ -1,0 +1,21 @@
+{
+  "blocks": [
+    {
+      "name": "dialog",
+      "type": "pointer",
+      "pointer_table": {"offset": "0x0", "count": 0, "size": 3, "endian": "little", "stride": 3},
+      "address_map": {"type": "lorom", "header": 0},
+      "text_region": {"start": "0x0", "end": "0x0"},
+      "fill": "0xFF",
+      "max_len": 2048
+    },
+    {
+      "name": "items",
+      "type": "fixed",
+      "offset": "0x0",
+      "count": 0,
+      "length": 8,
+      "pad": "0xFF"
+    }
+  ]
+}

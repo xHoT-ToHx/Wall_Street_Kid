@@ -1,0 +1,22 @@
+# 롬/디스크 이미지 - 절대 커밋 금지
+*.nes
+*.fds
+*.sfc
+*.smc
+# (.md 확장자 MD 롬은 문서와 충돌하므로 rom/ 폴더 규칙으로만 막는다)
+*.gen
+*.smd
+*.bin
+*.sms
+*.gg
+*.gb
+*.gbc
+*.iso
+*.img
+*.cue
+*.chd
+projects/*/rom/
+projects/*/work/
+projects/*/build/
+.emucap/
+__pycache__/
