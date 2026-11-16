@@ -1,0 +1,10 @@
+[
+  {
+    "id": "status_cash_0000",
+    "offset": "0x1d091",
+    "max_bytes": 5,
+    "ja": "CASH:",
+    "ko": "",
+    "note": "[우상단 상태창 라벨] 5칸 고정"
+  }
+]

@@ -177,8 +177,8 @@ for name, tb, (ra, rb), (ia, ib), note in BLOCKS:
 
 # ---- 고정 길이 문자열 (포인터 없음, 길이는 코드/레코드가 결정)
 FIXED = [
- {"name": "title_featuring", "type": "fixed", "offset": "0x1447d", "count": 1, "length": 12, "pad": "0x49",
-  "note": "타이틀 데모 'FEATURING...' PPU 레코드 [ea 22 0c]+12바이트 (bank5 $846A). 길이 바꾸려면 레코드 len 바이트(0x1447C)도 수정"},
+ {"name": "title_featuring", "type": "fixed", "offset": "0x1447c", "count": 1, "length": 12, "pad": "0x49",
+  "note": "타이틀 데모 'FEATURING...' PPU 레코드 [ea 22 0c]+12바이트 (bank5 $846A). 길이 바꾸려면 레코드 len 바이트(0x1447B)도 수정"},
  {"name": "weekdays", "type": "fixed", "offset": "0x1c417", "count": 7, "length": 3, "pad": "0x49",
   "note": "요일 SUN..SAT 3글자 고정 (bank7 $C407). 인덱스*3 으로 접근(추정)"},
  {"name": "status_cash", "type": "fixed", "offset": "0x1d091", "count": 1, "length": 5, "pad": "0x49",

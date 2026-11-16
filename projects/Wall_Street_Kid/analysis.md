@@ -52,7 +52,7 @@ LDX #lo / LDY #hi 같은 분리 포인터는 {"lo","hi"} 로 쓴다(romkr script
 | news_b6 | 6 | 130(분리 약 35) | 128 | 10,748 | 0x19291-0x1C009 (11,641) | 신문/종목 뉴스·소문/스탠리/코니/은행 |
 | menu_b7 | 7 | 43 | 37 | 260 | 0x1E027-0x1E131 (267, 확장 불가) | 메뉴 표 $C801-, 이름표 $DCA4 |
 | password_b7 | 7 | 4 | 4 | 89 | 0x1FEA0-0x1FFE9 로 이전 | 원위치는 패스워드 문자표와 섞여 있음 |
-| title_featuring | 5 | 고정 12B | 1 | 12 | 0x1447D | PPU 레코드 [EA 22 0C]+12B, 길이 바이트 0x1447C |
+| title_featuring | 5 | 고정 12B | 1 | 12 | 0x1447C | PPU 레코드 [EA 22 0C]+12B (G2 에서 1바이트 오프셋 정정), 길이 바이트 0x1447B |
 | weekdays | 7 | 고정 3B x7 | 7 | 21 | 0x1C417 | SUN..SAT |
 | status_cash / status_stocks | 7 | 고정 5B / 7B | 1 / 1 | 12 | 0x1D091 / 0x1D096 | 상태창 |
 
@@ -141,3 +141,6 @@ LDX #lo / LDY #hi 같은 분리 포인터는 {"lo","hi"} 로 쓴다(romkr script
 - 상태/포트폴리오 화면 라벨 전수.
 - $8010 업로드 표 나머지 항목, bank2 폰트 사본 용도.
 - 세이브스테이트: work/ralph_call.mss
+
+## 변경 이력
+- G2: spec title_featuring offset 0x1447d -> 0x1447c (덤프가 "EATURING...0" 으로 나와 정정, 길이 바이트는 0x1447B). tools/gen_spec.py 수정 후 재생성.

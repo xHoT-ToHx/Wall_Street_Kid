@@ -1,0 +1,377 @@
+[
+  {
+    "id": "menu_b7_0000",
+    "ptr_addr": "0x1c811",
+    "offset": "0x1e027",
+    "orig_bytes": 12,
+    "ja": "SELL STOCKS<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0001",
+    "ptr_addr": "0x1c813",
+    "offset": "0x1e033",
+    "orig_bytes": 11,
+    "ja": "BUY STOCKS<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0002",
+    "ptr_addr": "0x1c815",
+    "offset": "0x1e03e",
+    "orig_bytes": 12,
+    "ja": "INFORMATION<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0003",
+    "ptr_addr": "0x1c817",
+    "offset": "0x1e04a",
+    "orig_bytes": 10,
+    "ja": "PORTFOLIO<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0004",
+    "ptr_addr": "0x1c819",
+    "offset": "0x1e054",
+    "orig_bytes": 7,
+    "ja": "CANCEL<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0005",
+    "ptr_addr": "0x1c81d",
+    "offset": "0x1e05b",
+    "orig_bytes": 4,
+    "ja": "YES<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0006",
+    "ptr_addr": "0x1c81f",
+    "offset": "0x1e05f",
+    "orig_bytes": 3,
+    "ja": "NO<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0007",
+    "ptr_addr": "0x1c823",
+    "offset": "0x1e062",
+    "orig_bytes": 10,
+    "ja": "NEED LOAN<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0008",
+    "ptr_addr": "0x1c825",
+    "offset": "0x1e06c",
+    "orig_bytes": 13,
+    "ja": "LOAN PAYMENT<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0009",
+    "ptr_addr": "0x1c827",
+    "offset": "0x1e079",
+    "orig_bytes": 12,
+    "ja": "PAY AUCTION<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0010",
+    "ptr_addr": "0x1c82b",
+    "offset": "0x1e0a1",
+    "orig_bytes": 7,
+    "ja": "PICNIC<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0011",
+    "ptr_addr": "0x1c82d",
+    "offset": "0x1e0a8",
+    "orig_bytes": 9,
+    "ja": "SHOPPING<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0012",
+    "ptr_addr": "0x1c82f",
+    "offset": "0x1e0b1",
+    "orig_bytes": 9,
+    "ja": "CARNIVAL<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0013",
+    "ptr_addr": "0x1c831",
+    "offset": "0x1e0ba",
+    "orig_bytes": 7,
+    "ja": "CANCEL<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0014",
+    "ptr_addr": "0x1c835",
+    "offset": "0x1e0c1",
+    "orig_bytes": 4,
+    "ja": "(A)<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0015",
+    "ptr_addr": "0x1c837",
+    "offset": "0x1e0c5",
+    "orig_bytes": 4,
+    "ja": "(B)<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0016",
+    "ptr_addr": "0x1c839",
+    "offset": "0x1e0c9",
+    "orig_bytes": 4,
+    "ja": "(C)<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0017",
+    "ptr_addr": "0x1c83b",
+    "offset": "0x1e0cd",
+    "orig_bytes": 4,
+    "ja": "(D)<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0018",
+    "ptr_addr": "0x1c83f",
+    "offset": "0x1e0c1",
+    "alias_of": "menu_b7_0014",
+    "note": "(alias) [메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0019",
+    "ptr_addr": "0x1c841",
+    "offset": "0x1e0c5",
+    "alias_of": "menu_b7_0015",
+    "note": "(alias) [메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0020",
+    "ptr_addr": "0x1c843",
+    "offset": "0x1e0d1",
+    "orig_bytes": 9,
+    "ja": "NEITHER!<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0021",
+    "ptr_addr": "0x1c847",
+    "offset": "0x1e085",
+    "orig_bytes": 9,
+    "ja": "SWIMMING<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0022",
+    "ptr_addr": "0x1c849",
+    "offset": "0x1e08e",
+    "orig_bytes": 12,
+    "ja": "GYM WORKOUT<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0023",
+    "ptr_addr": "0x1c84b",
+    "offset": "0x1e09a",
+    "orig_bytes": 7,
+    "ja": "HIKING<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0024",
+    "ptr_addr": "0x1c84d",
+    "offset": "0x1e0ba",
+    "alias_of": "menu_b7_0013",
+    "note": "(alias) [메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0025",
+    "ptr_addr": "0x1dcb4",
+    "offset": "0x1e0da",
+    "orig_bytes": 6,
+    "ja": "(YOU)<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0026",
+    "ptr_addr": "0x1dcb6",
+    "offset": "0x1e0e0",
+    "orig_bytes": 5,
+    "ja": "RUTH<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0027",
+    "ptr_addr": "0x1dcb8",
+    "offset": "0x1e0e5",
+    "orig_bytes": 6,
+    "ja": "LARRY<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0028",
+    "ptr_addr": "0x1dcba",
+    "offset": "0x1e0eb",
+    "orig_bytes": 6,
+    "ja": "RALPH<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0029",
+    "ptr_addr": "0x1dcbc",
+    "offset": "0x1e0f1",
+    "orig_bytes": 4,
+    "ja": "DOC<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0030",
+    "ptr_addr": "0x1dcbe",
+    "offset": "0x1e0f5",
+    "orig_bytes": 8,
+    "ja": "STANLEY<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0031",
+    "ptr_addr": "0x1dcc0",
+    "offset": "0x1e0fd",
+    "orig_bytes": 7,
+    "ja": "CONNIE<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0032",
+    "ptr_addr": "0x1dcc2",
+    "offset": "0x1e104",
+    "orig_bytes": 4,
+    "ja": "CAL<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0033",
+    "ptr_addr": "0x1dcc4",
+    "offset": "0x1e108",
+    "orig_bytes": 8,
+    "ja": "PRISILA<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0034",
+    "ptr_addr": "0x1dcc6",
+    "offset": "0x1e110",
+    "orig_bytes": 5,
+    "ja": "DION<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0035",
+    "ptr_addr": "0x1dcc8",
+    "offset": "0x1e115",
+    "orig_bytes": 4,
+    "ja": "ART<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0036",
+    "ptr_addr": "0x1dcca",
+    "offset": "0x1e119",
+    "orig_bytes": 6,
+    "ja": "JULIE<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0037",
+    "ptr_addr": "0x1dccc",
+    "offset": "0x1e11f",
+    "orig_bytes": 7,
+    "ja": "AUSTIN<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0038",
+    "ptr_addr": "0x1dcce",
+    "offset": "0x1e126",
+    "orig_bytes": 7,
+    "ja": "PAMELA<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0039",
+    "ptr_addr": "0x1dcd0",
+    "offset": "0x1e12d",
+    "orig_bytes": 4,
+    "ja": "TED<END>",
+    "ko": "",
+    "note": "[메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0040",
+    "ptr_addr": "0x1ddeb",
+    "offset": "0x1e0fd",
+    "alias_of": "menu_b7_0031",
+    "note": "(alias) [메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0041",
+    "ptr_addr": "0x1dded",
+    "offset": "0x1e108",
+    "alias_of": "menu_b7_0033",
+    "note": "(alias) [메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  },
+  {
+    "id": "menu_b7_0042",
+    "ptr_addr": "0x1ddef",
+    "offset": "0x1e108",
+    "alias_of": "menu_b7_0033",
+    "note": "(alias) [메뉴] 짧은 고정 폭 목록(뒤가 코드라 확장 불가). 메뉴 25~39 = 인물 이름표(통화 상대 선택)"
+  }
+]

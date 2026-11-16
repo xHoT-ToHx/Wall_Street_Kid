@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "dialog_b4_0000",
+    "ptr_addr": "0x14633",
+    "offset": "0x10191",
+    "orig_bytes": 14,
+    "ja": "WALL STREET KID<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0001",
+    "ptr_addr": "0x14635",
+    "offset": "0x1019f",
+    "orig_bytes": 27,
+    "ja": "PRISILA\nTHE PRICY PRIMA DONNA<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0002",
+    "ptr_addr": "0x14637",
+    "offset": "0x101ba",
+    "orig_bytes": 21,
+    "ja": "LARRY\nTHE LOFTY LAWYER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0003",
+    "ptr_addr": "0x14639",
+    "offset": "0x101cf",
+    "orig_bytes": 23,
+    "ja": "RUTH\nTHE RUTHLESS BANKER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0004",
+    "ptr_addr": "0x1463b",
+    "offset": "0x101e6",
+    "orig_bytes": 28,
+    "ja": "STANLEY\nTHE CRAFTY CONSULTANT<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0005",
+    "ptr_addr": "0x1463d",
+    "offset": "0x10202",
+    "orig_bytes": 26,
+    "ja": "CONNIE\nTHE ARROGANT ADVISOR<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0006",
+    "ptr_addr": "0x1463f",
+    "offset": "0x1021c",
+    "orig_bytes": 22,
+    "ja": "RALPH\nTHE REGAL REALTOR<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0007",
+    "ptr_addr": "0x14641",
+    "offset": "0x10232",
+    "orig_bytes": 25,
+    "ja": "DOC\nTHE BOGUS BOATSALESMAN<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0008",
+    "ptr_addr": "0x14643",
+    "offset": "0x1024b",
+    "orig_bytes": 27,
+    "ja": "PAMELA\nTHE PATIENT PET DEALER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0009",
+    "ptr_addr": "0x14645",
+    "offset": "0x10266",
+    "orig_bytes": 23,
+    "ja": "CAL\nTHE CRANKY CAR DEALER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0010",
+    "ptr_addr": "0x14647",
+    "offset": "0x1027d",
+    "orig_bytes": 21,
+    "ja": "TED\nTHE TUFF STEREOMAN<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0011",
+    "ptr_addr": "0x14649",
+    "offset": "0x10292",
+    "orig_bytes": 19,
+    "ja": "ART\nTHE ARTSY ARTIST<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0012",
+    "ptr_addr": "0x1464b",
+    "offset": "0x102a5",
+    "orig_bytes": 24,
+    "ja": "DION\nTHE DASHING DESIGNER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0013",
+    "ptr_addr": "0x1464d",
+    "offset": "0x102bd",
+    "orig_bytes": 22,
+    "ja": "JULIE\nTHE JOLLY JEWELER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0014",
+    "ptr_addr": "0x1464f",
+    "offset": "0x102d3",
+    "orig_bytes": 27,
+    "ja": "AUSTIN\nTHE ASTUTE AUCTIONEER<END>",
+    "ko": "",
+    "note": "[화자:캐릭터 소개 카드] 이름 줄바꿈 별명(두운 말장난: LOFTY LAWYER 등). 이름 고정, 별명은 의역"
+  },
+  {
+    "id": "dialog_b4_0015",
+    "ptr_addr": "0x14651",
+    "offset": "0x102ee",
+    "orig_bytes": 44,
+    "ja": "PRISILA\nHONEY, YOU'RE SO GOOD.I MARRIED THE BEST.<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0016",
+    "ptr_addr": "0x14653",
+    "offset": "0x1031a",
+    "orig_bytes": 44,
+    "ja": "LARRY\nGOOD JOB!  YOUR UNCLE\nWOULD'VE BEEN PROUD!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0017",
+    "ptr_addr": "0x14655",
+    "offset": "0x10346",
+    "orig_bytes": 37,
+    "ja": "RUTH\nWELL, I BET YOU\nCOULDN'T DO IT AGAIN!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0018",
+    "ptr_addr": "0x14657",
+    "offset": "0x1036b",
+    "orig_bytes": 28,
+    "ja": "STANLEY\nYOU'VE MADE IT!  YEAH!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0019",
+    "ptr_addr": "0x14659",
+    "offset": "0x10387",
+    "orig_bytes": 43,
+    "ja": "CONNIE\nYOU REALLY WALLED YOURWAY THRU THIS GAME!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0020",
+    "ptr_addr": "0x1465b",
+    "offset": "0x103b2",
+    "orig_bytes": 37,
+    "ja": "RALPH\nARE YOU READY TO BUY\nMORE MANSIONS?<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0021",
+    "ptr_addr": "0x1465d",
+    "offset": "0x103d7",
+    "orig_bytes": 41,
+    "ja": "DOC\nCELEBRATION ON THE\nMOST LUXURIOUS YACHT?<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0022",
+    "ptr_addr": "0x1465f",
+    "offset": "0x10400",
+    "orig_bytes": 32,
+    "ja": "PAMELA\nHOW ABOUT SOME LARGER\nPETS?<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0023",
+    "ptr_addr": "0x14661",
+    "offset": "0x10420",
+    "orig_bytes": 42,
+    "ja": "CAL\nI CAN QUIT MY WORK ANDBECOME YOUR CHAUFFEUR!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0024",
+    "ptr_addr": "0x14663",
+    "offset": "0x1044a",
+    "orig_bytes": 37,
+    "ja": "TED\nWHY DON'T YOU STOP BY\nMY NEW SHOWROOM?<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0025",
+    "ptr_addr": "0x14665",
+    "offset": "0x1046f",
+    "orig_bytes": 36,
+    "ja": "ART\nYOU'RE A SUCCESSFUL\nARTIST INDEED!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0026",
+    "ptr_addr": "0x14667",
+    "offset": "0x10493",
+    "orig_bytes": 44,
+    "ja": "DION\nIMPRESSIVE!  NEED ANY\nDESIGNER UNDERWEAR?<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0027",
+    "ptr_addr": "0x14669",
+    "offset": "0x104bf",
+    "orig_bytes": 39,
+    "ja": "JULIE\nCONGRATULATIONS!\nYOU'RE A REAL GEM!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0028",
+    "ptr_addr": "0x1466b",
+    "offset": "0x104e6",
+    "orig_bytes": 46,
+    "ja": "AUSTIN\nATTEND MORE AUCTIONS.\nI'LL BID YOU WELCOME!<END>",
+    "ko": "",
+    "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
+  },
+  {
+    "id": "dialog_b4_0029",
+    "ptr_addr": "0x14731",
+    "offset": "0x10514",
+    "orig_bytes": 911,
+    "ja": "HELLO.  I'M LARRY, A LAWYER\nEMPLOYED BY YOUR DISTANT\nUNCLE, MR. BENEDICT.  I'M\nSORRY TO SAY HE'S PASSED\nAWAY.\n<WAIT>\nAS HIS ONLY SURVIVING\nRELATIVE, YOU MAY BE\nELIGIBLE TO INHERIT OVER\n$600 BILLION IN ASSETS.\n<WAIT>\nFIRST, YOU MUST PROVE\nYOURSELF.  YOU'LL BE\nPROVIDED WITH $500,000 WITH\nWHICH YOU MUST TURN A PROFITTHROUGH THE STOCK MARKET.\n<WAIT>\nUSE THE PROFITS TO UPHOLD\nTHE BENEDICT STANDARD OF\nLIVING.  PAMPER YOUR\nSWEETHEART AND MOVE IN TO A\nDECENT $1 MILLION HOUSE.\n<WAIT>\nYOU'LL HAVE ONE MONTH TO\nPURCHASE THE HOUSE.  I'LL\nHAVE A REAL ESTATE AGENT\nCALL YOU.\n<WAIT>\nALSO, MR. BENEDICT'S\nGRANDFATHER OWNED A CASTLE\nIN EUROPE YEARS AGO.  WHEN\nHE EMIGRATED TO THE US, THE\nCASTLE HAD TO BE SOLD.\n<WAIT>\nJUST BEFORE MR. BENEDICT'S\nDEATH, HE HEARD GOSSIP THAT\nTHE CASTLE WOULD GO UP FOR\nSALE.  YOU MUST BUY IT BACK\nTO MAINTAIN THE FAMILY\nHERITAGE.<WAIT>\n\nTHE CASTLE WILL COST SEVERALMILLION DOLLARS, SO PREPARE\nYOURSELF!  I'LL KEEP YOU\nPOSTED ON THIS SALE.\n<WAIT>\nOH, BY THE WAY, HAVE A GREATAPRIL FOOL'S DAY.  BUT\nREMEMBER, EVERYTHING I JUST\nTOLD YOU IS NO APRIL FOOL'S\nJOKE.  GOOD LUCK!\n<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공 오프닝] 삼촌 베네딕트 유산 설명. 4/1 만우절 농담. 가장 긴 대사. <WAIT> 페이지 구분"
+  },
+  {
+    "id": "dialog_b4_0030",
+    "ptr_addr": "0x14733",
+    "offset": "0x108a3",
+    "orig_bytes": 352,
+    "ja": "CONGRATULATIONS!  YOU HAVE\nACCOMPLISHED THE FIRST STEP.YOUR NEW HOUSE IS A DECENT\nBEGINNING FOR A BENEDICT.<WAIT>\n\nTHANK YOU FOR THE WEDDING\nINVITATION.  I'LL BE THERE.\nTHE BENEDICT TRADITION IS TOHONEYMOON ON A YACHT.  A\nDECENT YACHT MAY COST AROUND$700,000.<WAIT>\n\nYOU CAN ALWAYS TAKE A LOAN\nFROM THE BANK. I'LL HAVE THEBOATSALESMAN CALL YOU.\n<WAIT>\nJUST A REMINDER, PLEASE KEEPSAVING YOUR MONEY FOR THE\nCASTLE, TOO.<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공] 집 구입 성공 후 축하, 요트(허니문) 안내"
+  },
+  {
+    "id": "dialog_b4_0031",
+    "ptr_addr": "0x14735",
+    "offset": "0x11263",
+    "orig_bytes": 182,
+    "ja": "RALPH HAS JUST INFORMED ME\nTHAT YOU HAVE FAILED TO BUY\nTHE HOUSE.  TOO BAD.\n<WAIT>\nIF YOU CAN'T EVEN MAKE \nENOUGH PROFIT FROM A FREE\n$500,000 GIFT TO BUY A\nHOUSE, YOU'LL NEVER MAKE IT\nAS A BENEDICT.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 집 구입 실패(31=래리, 32=해설). 끝에 빈 줄 6개(화면 정리) 유지"
+  },
+  {
+    "id": "dialog_b4_0032",
+    "ptr_addr": "0x14737",
+    "offset": "0x10a03",
+    "orig_bytes": 206,
+    "ja": "TOO BAD!  YOU CAN'T EVEN\nMAKE ENOUGH PROFIT TO\nPURCHASE A DECENT HOUSE\nWITHIN A MONTH.\n<WAIT>\nYOU ARE OBVIOUSLY NOT\nCAPABLE OF COMMITTING\nYOURSELF TO HANDLE THE\nRESPONSIBILITY OF MR.\nBENEDICT'S PROPERTY.\nTOUGH LUCK.<WAIT>\nGAME'S OVER!\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 집 구입 실패(31=래리, 32=해설). 끝에 빈 줄 6개(화면 정리) 유지"
+  },
+  {
+    "id": "dialog_b4_0033",
+    "ptr_addr": "0x14739",
+    "offset": "0x10ad1",
+    "orig_bytes": 168,
+    "ja": "I SEE YOU'VE BOUGHT A\nBEAUTIFUL YACHT.  WHAT AN\nACCOMPLISHMENT!  I'VE JUST\nFOUND OUT THAT THE CASTLE\nWILL BE FOR SALE AT AN\nAUCTION.<WAIT>\n\nI'LL KEEP YOU INFORMED OF\nANYTHING ELSE I LEARN\nABOUT IT.<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공] 요트 구입 성공, 성 경매 예고"
+  },
+  {
+    "id": "dialog_b4_0034",
+    "ptr_addr": "0x1473b",
+    "offset": "0x11319",
+    "orig_bytes": 188,
+    "ja": "I'VE JUST HAD A CALL FROM\nDOC.  HE TOLD ME THAT YOU\nFAILED TO BUY THE YACHT.\nYOU'VE REALLY PUT HIM IN A\nPREDICAMENT.\n<WAIT>\nWHAT A DISAPPOINTMENT!\nA BENEDICT WOULD NEVER ACT\nSO IRRESPONSIBLY.  YOU LOSE.<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 요트 구입 실패(34=래리, 35=해설)"
+  },
+  {
+    "id": "dialog_b4_0035",
+    "ptr_addr": "0x1473d",
+    "offset": "0x10b79",
+    "orig_bytes": 154,
+    "ja": "TOO BAD!  IF YOU CAN'T MAKE\nENOUGH PROFIT TO BUY A YACHTWITHIN A REASONABLE AMOUNT\nOF TIME, YOU'LL NEVER BE\nCOMPETENT ENOUGH TO MANAGE\nTHE BENEDICT DYNASTY.<WAIT>\nGAME'S OVER!\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 요트 구입 실패(34=래리, 35=해설)"
+  },
+  {
+    "id": "dialog_b4_0036",
+    "ptr_addr": "0x1473f",
+    "offset": "0x10c13",
+    "orig_bytes": 450,
+    "ja": "CONGRATULATIONS ON YOUR\nMARRIAGE!  YOUR BEAUTIFUL\nNEW WIFE WILL FIT INTO THE\nBENEDICT FAMILY VERY NICELY.<WAIT>\nI'VE JUST BEEN INFORMED THATTHE CASTLE WILL BE SOLD AT\nAN AUCTION ON JULY 1ST, AND\n10% OF THE CLOSING BID WILL\nBE DUE IN CASH.  THE BALANCEMUST BE PAID BY JULY 28TH.<WAIT>\n\nPLEASE KEEP IN MIND THAT\nMAINTAINING THE BENEDICT\nSTANDARD OF LIVING DOESN'T\nONLY INCLUDE SHOWING MONEY,\nPROFIT AND MANAGEABILITY.\n<WAIT>\nYOUR HEALTH AND MARRIAGE\nCONDITIONS ARE ALSO SUBJECT\nTO JUDGE.  HAVE A WONDERFUL\nHONEYMOON ON YOUR NEW YACHT!<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공] 결혼 축하, 성 경매 7/1 안내, 건강·결혼 조건"
+  },
+  {
+    "id": "dialog_b4_0037",
+    "ptr_addr": "0x14741",
+    "offset": "0x10ff5",
+    "orig_bytes": 175,
+    "ja": "CONGRATULATIONS!  YOU'VE WONTHE CASTLE BACK.  NOW ALL\nYOU HAVE TO DO IS PAY OFF\nTHE BALANCE WITHIN 4 WEEKS.\n<WAIT>\nYOU'RE SO CLOSE TO CARRYING\nOUT THE BENEDICT LEGACY AND\nINHERITING THE FORTUNE.\nGOOD LUCK!<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공] 성 낙찰 후 잔금 4주 안내"
+  },
+  {
+    "id": "dialog_b4_0038",
+    "ptr_addr": "0x14743",
+    "offset": "0x10f7b",
+    "orig_bytes": 122,
+    "ja": "TOO BAD!  YOU DON'T HAVE\nENOUGH MONEY FOR THE DEPOSITON THE CASTLE.  YOU'VE\nDESTROYED YOUR UNCLE'S\nLEGACY.  YOU LOSE!<WAIT>\nGAME'S OVER.\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 성 보증금 부족"
+  },
+  {
+    "id": "dialog_b4_0039",
+    "ptr_addr": "0x14745",
+    "offset": "0x110a4",
+    "orig_bytes": 267,
+    "ja": "CONGRATULATIONS! YOU HAVE\nSUCCEEDED IN CARRYING OUT\nTHE BENEDICT LEGACY.  NOW\nEVERYTHING IS YOURS, ALL\nYOURS!\n<WAIT>\nYOU'VE PROVEN YOUR ABILITY\nTO SUCCESSFULLY RUN A\nMARRIAGE, MONEY AND A SOCIALENVIRONMENT.\n<WAIT>\nTO TOP IT OFF, YOU'VE\nCARRIED OUT THE LAST WISHES\nOF A DYING MAN.  YOU ARE\nA REAL BENEDICT!\n<WAIT>\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[엔딩] 39=상속 성공(최종 엔딩) 40=자선단체 기부(실패 엔딩)"
+  },
+  {
+    "id": "dialog_b4_0040",
+    "ptr_addr": "0x14747",
+    "offset": "0x111af",
+    "orig_bytes": 180,
+    "ja": "OH, NO!\nWHAT A DISAPPOINTMENT!  YOU\nWEREN'T ABLE TO CARRY OUT\nTHE FINAL WISHES OF A DYING\nMAN.\n<WAIT>\nTHE ONLY GOOD THING TO COME\nOUT OF THIS IS THAT THE\nFORTUNE WILL BE DONATED TO\nCHARITY.  HAVE A NICE LIFE!\n<WAIT>\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[엔딩] 39=상속 성공(최종 엔딩) 40=자선단체 기부(실패 엔딩)"
+  },
+  {
+    "id": "dialog_b4_0041",
+    "ptr_addr": "0x14749",
+    "offset": "0x113d5",
+    "orig_bytes": 127,
+    "ja": "TOO BAD!  IF YOU CAN'T GET\nOUT OF DEBT BY THE DUE DATE,YOU'RE OBVIOUSLY NOT THE\nTYPE OF PERSON TO DESERVE\nTHE BENEDICT DYNASTY.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 41=잔금 미납 42=결혼생활 파탄 43=건강 악화"
+  },
+  {
+    "id": "dialog_b4_0042",
+    "ptr_addr": "0x1474b",
+    "offset": "0x114cd",
+    "orig_bytes": 112,
+    "ja": "IF YOU CANNOT EVEN MANAGE\nYOUR MARRIED LIFE, YOU'LL\nNEVER BE CAPABLE OF HANDLINGMR. BENEDICT'S PROPERTY.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 41=잔금 미납 42=결혼생활 파탄 43=건강 악화"
+  },
+  {
+    "id": "dialog_b4_0043",
+    "ptr_addr": "0x1474d",
+    "offset": "0x11454",
+    "orig_bytes": 121,
+    "ja": "YOU'VE GOTTEN TOO GREEDY ANDBECOME UNABLE TO TAKE CARE\nOF YOUR HEALTH.  NO BENEDICTWOULD ALLOW HIMSELF TO BE SOSTUPID.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
+    "ko": "",
+    "note": "[게임오버] 41=잔금 미납 42=결혼생활 파탄 43=건강 악화"
+  },
+  {
+    "id": "dialog_b4_0044",
+    "ptr_addr": "0x14820",
+    "offset": "0x1153d",
+    "orig_bytes": 233,
+    "ja": "HELLO.  MY NAME IS RALPH.\nI'M A REAL ESTATE AGENT.\nLARRY TOLD ME THAT YOU ARE\nINTERESTED IN PURCHASING A\nHOUSE FOR AROUND $1 MILLION.<WAIT>\nI'M LOOKING AT SOME VERY\nNICE HOMES FOR SALE AT THE\nMOMENT.  I'LL GET THE\nDETAILS AND CALL YOU AT THE\nBEGINNING OF NEXT WEEK.\nBYE FOR NOW.<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 첫 인사, 집 매물 안내(약 100만 달러)"
+  },
+  {
+    "id": "dialog_b4_0045",
+    "ptr_addr": "0x14824",
+    "offset": "0x11c45",
+    "orig_bytes": 162,
+    "ja": "HELLO.  THIS IS DOC.  LARRY\nASKED ME TO CALL YOU.  HE\nTOLD ME YOU WERE INTERESTED\nIN BUYING A YACHT.\n<WAIT>\nI'LL BE GETTING A HOLD OF\nONE NEXT WEEK.  I'LL CALL\nYOU BACK THEN WITH ALL THE\nDETAILS.<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 첫 인사, 요트 안내"
+  },
+  {
+    "id": "dialog_b4_0046",
+    "ptr_addr": "0x14828",
+    "offset": "0x122c6",
+    "orig_bytes": 94,
+    "ja": "HI!  IT'S PRISILA.\nTOMORROW'S \"THE BIG DAY\"!\nI'M SO HAPPY.  OUR HONEYMOONON THE YACHT WILL BE SO\nEXCITING!<WAIT><END>",
+    "ko": "",
+    "note": "[프리실라->주인공 전화] 결혼식 전날, 허니문 기대"
+  },
+  {
+    "id": "dialog_b4_0047",
+    "ptr_addr": "0x1482c",
+    "offset": "0x10dd5",
+    "orig_bytes": 292,
+    "ja": "THE AUCTION FOR THE CASTLE\nIS ONLY 3 WEEKS AWAY.  YOU\nMUST GET THAT CASTLE BACK TOKEEP THE FAMILY HERITAGE\nFROM BEING DESTROYED!\n<WAIT>\nI HAVE CONFIRMED THAT THE\nSTARTING BID WILL BE\n$2 MILLION.  JUST TO BE ON\nTHE SAFE SIDE, I SUGGEST YOUBRING AT LEAST $1 MILLION\nCASH TO THE AUCTION.<WAIT>\n\nDO YOUR BEST TO SAVE, BUT BECAREFUL NOT TO NEGLECT YOUR\nWIFE!<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공 전화] 47=경매 3주 전 48=경매 전날(보증금 100만 달러 현금)"
+  },
+  {
+    "id": "dialog_b4_0048",
+    "ptr_addr": "0x14830",
+    "offset": "0x10ef9",
+    "orig_bytes": 130,
+    "ja": "GOOD MORNING.  THE BIG\nAUCTION WILL BE HELD\nTOMORROW.  REMEMBER,\nDEPENDING ON THE BID, YOU\nNEED AT LEAST $1 MILLION IN\nCASH AS A DEPOSIT.\nGOOD LUCK!<WAIT><END>",
+    "ko": "",
+    "note": "[래리->주인공 전화] 47=경매 3주 전 48=경매 전날(보증금 100만 달러 현금)"
+  },
+  {
+    "id": "dialog_b4_0049",
+    "ptr_addr": "0x14834",
+    "offset": "0x12324",
+    "orig_bytes": 126,
+    "ja": "HELLO.  THIS IS RUTH AT THE\nBANK.  I'M JUST CALLING TO\nREMIND YOU THAT YOU MUST PAYOFF THE BALANCE ON THE\nCASTLE BY NO LATER THAN\nFRIDAY, JULY 28TH.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)->주인공 전화] 성 잔금 안내(49=기한 안내, 50=49의 alias, 51=당일 5PM)"
+  },
+  {
+    "id": "dialog_b4_0050",
+    "ptr_addr": "0x14838",
+    "offset": "0x12324",
+    "alias_of": "dialog_b4_0049",
+    "note": "(alias) [루스(은행)->주인공 전화] 성 잔금 안내(49=기한 안내, 50=49의 alias, 51=당일 5PM)"
+  },
+  {
+    "id": "dialog_b4_0051",
+    "ptr_addr": "0x1483c",
+    "offset": "0x123a2",
+    "orig_bytes": 150,
+    "ja": "GOOD MORNING.  THIS IS RUTH\nAT THE BANK.  THE BALANCE ONYOUR CASTLE IS DUE TODAY.\n<WAIT>\nIF WE DON'T RECEIVE THE\nPAYMENT BY 5 PM TODAY, WE'LLHAVE TO FORECLOSE ALL OF\nYOUR PROPERTY.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)->주인공 전화] 성 잔금 안내(49=기한 안내, 50=49의 alias, 51=당일 5PM)"
+  },
+  {
+    "id": "dialog_b4_0052",
+    "ptr_addr": "0x1492b",
+    "ptr_hi": "0x1492d",
+    "offset": "0x1197c",
+    "orig_bytes": 84,
+    "ja": "GOOD CHOICE!  I'M SURE\nYOU'LL LOVE THE HOUSE.  I'LLSEE YOU ON SATURDAY.  DON'T\nFORGET THE CASH!<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공] 집 구입 \"예\" 선택 직후(Y/N 응답). 토요일 현금 지참"
+  },
+  {
+    "id": "dialog_b4_0053",
+    "ptr_addr": "0x1493c",
+    "offset": "0x11626",
+    "orig_bytes": 408,
+    "ja": "HELLO.  THIS IS RALPH.  I'VEFOUND A GORGEOUS HOUSE FOR\nYOU!  IN FACT, THE OWNER IS\nA FRIEND OF YOURS, JOHN\nFELD.\n<WAIT>\nI KNOW YOU LOVE THE HOUSE.\nJOHN SAID YOU WERE RAVING\nABOUT IT AT HIS LAST PARTY.\n<WAIT>\nTHE COST IS EXACTLY\n$1 MILLION.  YOUR PRESENT\nCREDIT STATUS DOESN'T SHOW\nANY ACQUIRED ASSETS TO BE\nAPPLIED AGAINST A LOAN, SO\nYOU'LL HAVE TO HAVE THE CASHUP FRONT.<WAIT>\n\nIF YOU AGREE TO BUY NOW AND\nEND UP NOT HAVING ENOUGH\nMONEY ON SATURDAY, YOU'LL \nLOSE THE DEAL.\nWOULD YOU GO FOR IT?\n\n<END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
+  },
+  {
+    "id": "dialog_b4_0054",
+    "ptr_addr": "0x1493e",
+    "offset": "0x117be",
+    "orig_bytes": 249,
+    "ja": "HELLO.  THIS IS RALPH.\nLARRY JUST TOLD ME THAT YOU\nMUST PURCHASE THE HOUSE BY\nMAY 1ST.\n<WAIT>\nTHE HOUSE IS STILL FOR SALE,AND I CAN TAKE YOU BY THE\nHOUSE ON SATURDAY TO CLOSE\nTHE DEAL.\n<WAIT>\nREMEMBER, IF YOU DON'T HAVE\nTHE CASH ON SATURDAY, YOU\nWON'T HAVE ANOTHER CHANCE ATTHE HOUSE.\n\nDO WE HAVE A DEAL?<END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
+  },
+  {
+    "id": "dialog_b4_0055",
+    "ptr_addr": "0x14940",
+    "offset": "0x118b7",
+    "orig_bytes": 197,
+    "ja": "HELLO.  IT'S RALPH.  THE\nHOUSE IS STILL FOR SALE.  I\nTHINK YOU SHOULD STRONGLY\nCONSIDER BUYING THIS TIME ORYOUR TIME WILL BE UP.\n<WAIT>\nI CAN TAKE YOU BY THE HOUSE\nON SATURDAY, AND WE CAN \nCONCLUDE THE DEAL IF YOU\nARE INTERESTED, ARE YOU?<END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
+  },
+  {
+    "id": "dialog_b4_0056",
+    "ptr_addr": "0x14942",
+    "offset": "0x119d0",
+    "orig_bytes": 76,
+    "ja": "OK.  IF THE HOUSE IS STILL\nFOR SALE IN A WEEK, I'LL\nCALL YOU TO SEE IF YOU'RE\nREADY TO BUY.<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공] 거절 응답 56,57=일주일 뒤 재전화 58=마지막 기회였다고 말함"
+  },
+  {
+    "id": "dialog_b4_0057",
+    "ptr_addr": "0x14944",
+    "offset": "0x11a1c",
+    "orig_bytes": 85,
+    "ja": "ALRIGHT.  IF THE HOUSE IS\nSTILL UP FOR SALE IN A WEEK,I'LL CALL YOU THEN TO SEE IFYOU'RE READY TO BUY.<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공] 거절 응답 56,57=일주일 뒤 재전화 58=마지막 기회였다고 말함"
+  },
+  {
+    "id": "dialog_b4_0058",
+    "ptr_addr": "0x14946",
+    "offset": "0x11a71",
+    "orig_bytes": 56,
+    "ja": "I TOLD YOU THAT THIS WOULD\nBE YOUR LAST CHANCE.\nWELL, GOOD LUCK!<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공] 거절 응답 56,57=일주일 뒤 재전화 58=마지막 기회였다고 말함"
+  },
+  {
+    "id": "dialog_b4_0059",
+    "ptr_addr": "0x14949",
+    "ptr_hi": "0x1494b",
+    "offset": "0x11aa9",
+    "orig_bytes": 88,
+    "ja": "HELLO.  THIS IS RALPH.  JUSTCALLING TO REMIND YOU NOT TOFORGET THE $1 MILLION CASH.\nSEE YOU TOMORROW.<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
+  },
+  {
+    "id": "dialog_b4_0060",
+    "ptr_addr": "0x14964",
+    "ptr_hi": "0x14966",
+    "offset": "0x11ba6",
+    "orig_bytes": 159,
+    "ja": "GOOD MORNING.  I'VE BEEN\nWORKING VERY HARD ON THIS\nDEAL HOLDING THE HOUSE FROM\nOTHER BUYERS.\n<WAIT>\nNOW I HEAR YOU DON'T HAVE\nENOUGH CASH.\nHOW IRRESPONSIBLE.  I'M\nAFRAID THE DEAL IS OFF!<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
+  },
+  {
+    "id": "dialog_b4_0061",
+    "ptr_addr": "0x14976",
+    "ptr_hi": "0x14978",
+    "offset": "0x11b01",
+    "orig_bytes": 86,
+    "ja": "GOOD MORNING.  THIS IS\nRALPH.  JUST CALLING TO MAKESURE YOU'RE AWAKE.  I'LL\nMEET YOU AT THE HOUSE.<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
+  },
+  {
+    "id": "dialog_b4_0062",
+    "ptr_addr": "0x149a1",
+    "ptr_hi": "0x149a3",
+    "offset": "0x11b57",
+    "orig_bytes": 79,
+    "ja": "I'M GLAD YOU DECIDED TO BUY\nTHIS GORGEOUS HOUSE.  WELL\nIT'S ALL YOURS!  THANK YOU.\nENJOY!<WAIT><END>",
+    "ko": "",
+    "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
+  },
+  {
+    "id": "dialog_b4_0063",
+    "ptr_addr": "0x149df",
+    "ptr_hi": "0x149e1",
+    "offset": "0x12028",
+    "orig_bytes": 88,
+    "ja": "GREAT!  YOU'RE GONNA LOVE\nTHIS YACHT.  I'LL SEE YOU ATTHE HARBOR ON SATURDAY.\nDON'T FORGET THE CASH!<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공] 요트 구입 \"예\" 선택 직후. 토요일 항구"
+  },
+  {
+    "id": "dialog_b4_0064",
+    "ptr_addr": "0x149f0",
+    "offset": "0x11ce7",
+    "orig_bytes": 416,
+    "ja": "HELLO.  THIS IS DOC.  I'VE\nGOTTEN ONE SIMILAR TO THE\nYACHT I SOLD MR. BENEDICT\nSOME TIME AGO.  LARRY SAID\nIT'D BE JUST PERFECT FOR\nYOU.<WAIT>\n\nTHIS PARTICULAR YACHT IS A\nCLASSIC AND SELLING FOR\n$700,000. THE OWNER IS ON\nTHE URGE OF BANKRUPTCY AND\nCAN ONLY ACCEPT CASH FOR\nIT.<WAIT>\n\nIF YOU AGREE TO BUY NOW AND\nEND UP NOT HAVING ENOUGH\nMONEY ON SATURDAY, YOU'LL\nLOSE THE DEAL.\n<WAIT>\nI CAN'T AFFORD TO HOLD A\nCLASSIC FOR EMPTY PROMISES.\nESPECIALLY, IF ANOTHER BUYERCOMES ALONG.\n\nARE YOU INTERESTED?<END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
+  },
+  {
+    "id": "dialog_b4_0065",
+    "ptr_addr": "0x149f2",
+    "offset": "0x11e87",
+    "orig_bytes": 215,
+    "ja": "HELLO.  THIS IS DOC.  THE\nYACHT DOESN'T HAVE A BUYER\nYET.  LARRY TOLD ME THAT YOUMUST BUY A YACHT BEFORE YOURHONEYMOON.\n<WAIT>\nIF YOU'RE READY, I CAN MEET\nYOU ON SATURDAY. DON'T\nFORGET, IF YOU DON'T HAVE\nTHE CASH ON SATURDAY, THE\nDEAL IS OFF.\nARE YOU READY?<END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
+  },
+  {
+    "id": "dialog_b4_0066",
+    "ptr_addr": "0x149f4",
+    "offset": "0x11f5e",
+    "orig_bytes": 202,
+    "ja": "HI.  THIS IS DOC.  I DON'T\nHAVE A BUYER FOR THE YACHT\nYET.  I THINK YOU SHOULD\nSTRONGLY CONSIDER BUYING\nTHIS TIME OR YOUR TIME WILL\nBE UP.<WAIT>\n\nIF YOU'RE READY, I CAN MEET\nYOU AT THE HARBOR ON\nSATURDAY AND WE CAN FINISH\nTHE DEAL.  WANNA DO IT?<END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
+  },
+  {
+    "id": "dialog_b4_0067",
+    "ptr_addr": "0x149f6",
+    "offset": "0x12080",
+    "orig_bytes": 75,
+    "ja": "WELL, IF THE YACHT ISN'T\nALREADY SOLD, I'LL CALL YOU\nNEXT WEEK TO SEE IF YOU'RE\nREADY.<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공] 거절/실패 응답(67,68=다음 주 재전화 69=허니문 어쩔거냐)"
+  },
+  {
+    "id": "dialog_b4_0068",
+    "ptr_addr": "0x149f8",
+    "offset": "0x120cb",
+    "orig_bytes": 55,
+    "ja": "TOO BAD.  WELL, IF I DON'T\nSELL BY NEXT WEEK, I'LL CALLYOU THEN.<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공] 거절/실패 응답(67,68=다음 주 재전화 69=허니문 어쩔거냐)"
+  },
+  {
+    "id": "dialog_b4_0069",
+    "ptr_addr": "0x149fa",
+    "offset": "0x12102",
+    "orig_bytes": 54,
+    "ja": "WELL, I WONDER HOW YOU'RE\nGONNA GO ON A HONEYMOON.\nGOOD LUCK.<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공] 거절/실패 응답(67,68=다음 주 재전화 69=허니문 어쩔거냐)"
+  },
+  {
+    "id": "dialog_b4_0070",
+    "ptr_addr": "0x149fd",
+    "ptr_hi": "0x149ff",
+    "offset": "0x12138",
+    "orig_bytes": 90,
+    "ja": "HELLO.  THIS IS DOC.  I JUSTWANTED TO REMIND YOU NOT TO\nFORGET THE $700,000 CASH.\nI'LL SEE YOU TOMORROW.<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 70=전날 확인(70만 달러) 71=현금 부족 취소 72=당일 아침 모닝콜 73=요트 인도"
+  },
+  {
+    "id": "dialog_b4_0071",
+    "ptr_addr": "0x14a18",
+    "ptr_hi": "0x14a1a",
+    "offset": "0x1222a",
+    "orig_bytes": 156,
+    "ja": "GOOD MORNING.\nI HELD THE YACHT FROM OTHER\nBUYERS BECAUSE YOU SAID\nYOU'D HAVE THE CASH TODAY.\nNOW I HEAR YOU DON'T HAVE\nENOUGH.<WAIT>\n\nI'M VERY DISAPPOINTED IN\nYOUR IRRESPONSIBILITY!<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 70=전날 확인(70만 달러) 71=현금 부족 취소 72=당일 아침 모닝콜 73=요트 인도"
+  },
+  {
+    "id": "dialog_b4_0072",
+    "ptr_addr": "0x14a2a",
+    "ptr_hi": "0x14a2c",
+    "offset": "0x12192",
+    "orig_bytes": 84,
+    "ja": "GOOD MORNING.  THIS IS DOC.\nJUST CALLING TO MAKE SURE\nYOU'RE AWAKE.  I'LL MEET YOUAT THE HARBOR.<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 70=전날 확인(70만 달러) 71=현금 부족 취소 72=당일 아침 모닝콜 73=요트 인도"
+  },
+  {
+    "id": "dialog_b4_0073",
+    "ptr_addr": "0x14a55",
+    "ptr_hi": "0x14a57",
+    "offset": "0x121e6",
+    "orig_bytes": 68,
+    "ja": "I KNOW YOU'RE GONNA LOVE\nTHIS YACHT.  THANK YOU.\nHAVE A WONDERFUL HONEYMOON!<WAIT><END>",
+    "ko": "",
+    "note": "[닥->주인공 전화] 70=전날 확인(70만 달러) 71=현금 부족 취소 72=당일 아침 모닝콜 73=요트 인도"
+  },
+  {
+    "id": "dialog_b4_0074",
+    "ptr_addr": "0x14ae9",
+    "offset": "0x12cf4",
+    "orig_bytes": 47,
+    "ja": "HI, HONEY!\nI REALLY LOVE DOGS.\nCAN I PLEASE HAVE ONE?<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공 전화] 강아지 사고 싶다(74=프리실라 75=주인공 76=프리실라). 화자 번갈아 한 문장씩(<PAGE>)"
+  },
+  {
+    "id": "dialog_b4_0075",
+    "ptr_addr": "0x14aec",
+    "offset": "0x12d23",
+    "orig_bytes": 64,
+    "ja": "WELL, IF YOU PROMISE TO\nTAKE GOOD CARE OF IT, WE\nCAN GO FOR A LOOK TOMORROW.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공 전화] 강아지 사고 싶다(74=프리실라 75=주인공 76=프리실라). 화자 번갈아 한 문장씩(<PAGE>)"
+  },
+  {
+    "id": "dialog_b4_0076",
+    "ptr_addr": "0x14aef",
+    "offset": "0x12d63",
+    "orig_bytes": 35,
+    "ja": "THANKS, HONEY.\nI'LL SEE YOU TOMORROW.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공 전화] 강아지 사고 싶다(74=프리실라 75=주인공 76=프리실라). 화자 번갈아 한 문장씩(<PAGE>)"
+  },
+  {
+    "id": "dialog_b4_0077",
+    "ptr_addr": "0x14af3",
+    "offset": "0x12ebd",
+    "orig_bytes": 51,
+    "ja": "HI, HONEY!\nMY CAR IS OLD AND BROKEN\nDOWN.  I NEED A NEW ONE.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 자동차 사고 싶다(77=프리실라 78=주인공 79=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0078",
+    "ptr_addr": "0x14af6",
+    "offset": "0x12ef0",
+    "orig_bytes": 35,
+    "ja": "OK.  I'LL GO AND LOOK AT\nSOME TOMORROW.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 자동차 사고 싶다(77=프리실라 78=주인공 79=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0079",
+    "ptr_addr": "0x14af9",
+    "offset": "0x12f13",
+    "orig_bytes": 20,
+    "ja": "THANKS, HONEY.\nBYE.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 자동차 사고 싶다(77=프리실라 78=주인공 79=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0080",
+    "ptr_addr": "0x14afd",
+    "offset": "0x13080",
+    "orig_bytes": 62,
+    "ja": "HI, HONEY!\nWE SHOULD LOOK AT SOME TV\nAND STEREO SETS FOR OUR NEW\nHOUSE.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] TV/오디오(80=프리실라 81=주인공 82=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0081",
+    "ptr_addr": "0x14b00",
+    "offset": "0x130be",
+    "orig_bytes": 53,
+    "ja": "THAT SOUNDS LIKE A GOOD\nIDEA.  WE'LL GO FOR A LOOK\nTOMORROW.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] TV/오디오(80=프리실라 81=주인공 82=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0082",
+    "ptr_addr": "0x14b03",
+    "offset": "0x130f3",
+    "orig_bytes": 26,
+    "ja": "ALRIGHT.  SEE YOU TOMORROW.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] TV/오디오(80=프리실라 81=주인공 82=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0083",
+    "ptr_addr": "0x14b07",
+    "offset": "0x13272",
+    "orig_bytes": 70,
+    "ja": "HI, HONEY!\nMAYBE WE SHOULD BUY A\nPAINTING FOR THE MAIN\nENTRANCE IN OUR NEW HOME.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
+  },
+  {
+    "id": "dialog_b4_0084",
+    "ptr_addr": "0x14b0a",
+    "offset": "0x132b8",
+    "orig_bytes": 21,
+    "ja": "WHAT TYPE OF PAINTING?<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
+  },
+  {
+    "id": "dialog_b4_0085",
+    "ptr_addr": "0x14b0d",
+    "offset": "0x132cd",
+    "orig_bytes": 85,
+    "ja": "I'VE FOUND A WONDERFUL ART\nGALLERY.  WHY DON'T YOU\nCOME WITH ME TOMORROW AND\nHELP ME PICK ONE OUT.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
+  },
+  {
+    "id": "dialog_b4_0086",
+    "ptr_addr": "0x14b10",
+    "offset": "0x13322",
+    "orig_bytes": 5,
+    "ja": "OK.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
+  },
+  {
+    "id": "dialog_b4_0087",
+    "ptr_addr": "0x14b13",
+    "offset": "0x13327",
+    "orig_bytes": 20,
+    "ja": "GREAT!  I CAN'T WAIT!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
+  },
+  {
+    "id": "dialog_b4_0088",
+    "ptr_addr": "0x14b17",
+    "offset": "0x1359a",
+    "orig_bytes": 126,
+    "ja": "HI, HONEY!\nI'VE FOUND A WONDERFUL\nDRESS DESIGNER TO DESIGN A\nDRESS THAT I CAN WEAR TO\nOUR PARTY.  PLEASE COME AND\nHELP ME PICK A DESIGN\nTOMORROW.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 드레스 디자이너(88=프리실라 89=주인공)"
+  },
+  {
+    "id": "dialog_b4_0089",
+    "ptr_addr": "0x14b1a",
+    "offset": "0x13618",
+    "orig_bytes": 14,
+    "ja": "OK.  LET'S GO.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 드레스 디자이너(88=프리실라 89=주인공)"
+  },
+  {
+    "id": "dialog_b4_0090",
+    "ptr_addr": "0x14b1e",
+    "offset": "0x137ad",
+    "orig_bytes": 93,
+    "ja": "HI, HONEY!\nPLEASE COME WITH ME TO THE\nJEWELERS TOMORROW TO HELP\nPICK OUT SOME JEWELRY TO\nWEAR AT OUR PARTY.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 보석(90=프리실라 91=주인공 92=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0091",
+    "ptr_addr": "0x14b21",
+    "offset": "0x1380a",
+    "orig_bytes": 5,
+    "ja": "OK.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 보석(90=프리실라 91=주인공 92=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0092",
+    "ptr_addr": "0x14b24",
+    "offset": "0x1380f",
+    "orig_bytes": 15,
+    "ja": "THANKS, HONEY.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라<->주인공] 보석(90=프리실라 91=주인공 92=프리실라)"
+  },
+  {
+    "id": "dialog_b4_0093",
+    "ptr_addr": "0x14b28",
+    "offset": "0x13987",
+    "orig_bytes": 94,
+    "ja": "HI, HONEY!\nI'M SO EXCITED ABOUT THE\nPARTY TOMORROW.  DON'T\nFORGET TO BRING THE CASH FORTHE PAYMENT, HONEY.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 파티 전날 현금 지참 당부"
+  },
+  {
+    "id": "dialog_b4_0094",
+    "ptr_addr": "0x14b33",
+    "ptr_hi": "0x14b35",
+    "offset": "0x12438",
+    "orig_bytes": 81,
+    "ja": "HELLO, THIS IS RUTH.\nPLEASE DO NOT FORGET THAT\nYOUR DUE DATE FOR THE LOAN\nIS A WEEK FROM TODAY.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)->주인공 전화] 대출 상환일 94=1주 전 95=당일"
+  },
+  {
+    "id": "dialog_b4_0095",
+    "ptr_addr": "0x14b39",
+    "ptr_hi": "0x14b3b",
+    "offset": "0x12489",
+    "orig_bytes": 92,
+    "ja": "HELLO, THIS IS RUTH.\nSIR, TODAY IS YOUR DUE DATE\nFOR THE LOAN. PLEASE DO NOT\nFORGET TO PAY OFF THE\nBALANCE.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)->주인공 전화] 대출 상환일 94=1주 전 95=당일"
+  },
+  {
+    "id": "dialog_b4_0096",
+    "ptr_addr": "0x14bc0",
+    "ptr_hi": "0x14bc2",
+    "offset": "0x13a8a",
+    "orig_bytes": 12,
+    "ja": "MEMORIAL DAY<END>",
+    "ko": "",
+    "note": "[달력 이벤트 제목 추정] 날짜 휴일/이벤트 라벨(MEMORIAL DAY 등). 짧은 고정 표시 추정"
+  },
+  {
+    "id": "dialog_b4_0097",
+    "ptr_addr": "0x14bd4",
+    "ptr_hi": "0x14bd6",
+    "offset": "0x13aa9",
+    "orig_bytes": 16,
+    "ja": "GETTING MARRIED.<END>",
+    "ko": "",
+    "note": "[달력 이벤트 제목 추정] 날짜 휴일/이벤트 라벨(MEMORIAL DAY 등). 짧은 고정 표시 추정"
+  },
+  {
+    "id": "dialog_b4_0098",
+    "ptr_addr": "0x14c07",
+    "ptr_hi": "0x14c09",
+    "offset": "0x13a96",
+    "orig_bytes": 19,
+    "ja": "HAPPY HONEYMOONERS!<END>",
+    "ko": "",
+    "note": "[달력 이벤트 제목 추정] 날짜 휴일/이벤트 라벨(MEMORIAL DAY 등). 짧은 고정 표시 추정"
+  },
+  {
+    "id": "dialog_b4_0099",
+    "ptr_addr": "0x14d03",
+    "ptr_hi": "0x14d05",
+    "offset": "0x124e5",
+    "orig_bytes": 229,
+    "ja": "THE AUCTION IS NOW\nBEGINNING.  HOUSE RULES\nSTATE 10% DOWN ON ALL\nCLOSING BIDS.  BALANCES MUSTBE PAID IN FULL BY\nJULY 28TH.<WAIT>\n\nWE WILL BEGIN WITH THE\nCASTLE.  OPENING BID IS\n$2 MILLION.  DO I HEAR\n$2 MILLION?  ONCE, TWICE.\nLADIES AND GENTLEMEN, PLEASEPLACE YOUR BID.<END>",
+    "ko": "",
+    "note": "[경매인] 경매 개시 선언(성 시작가 200만 달러). 마지막 <END> 직전에 입찰 메뉴 연결 추정"
+  },
+  {
+    "id": "dialog_b4_0100",
+    "ptr_addr": "0x14ddb",
+    "ptr_hi": "0x14ddd",
+    "offset": "0x125ca",
+    "orig_bytes": 77,
+    "ja": "I'M SORRY.  THAT BID IS\nLOWER THAN THE LAST BID.\nYOU MUST BID MORE THAN THE\nPREVIOUS BID.<WAIT><END>",
+    "ko": "",
+    "note": "[경매인] 앞 입찰보다 낮은 입찰"
+  },
+  {
+    "id": "dialog_b4_0101",
+    "ptr_addr": "0x14e55",
+    "ptr_hi": "0x14e57",
+    "offset": "0x1264c",
+    "orig_bytes": 27,
+    "ja": "THE CASTLE HAS BEEN SOLD FOR<VAR>.<PAGE><END>",
+    "ko": "",
+    "note": "[경매인] 낙찰 <VAR>=낙찰가(문자열 금액). VAR 위치 어순 주의"
+  },
+  {
+    "id": "dialog_b4_0102",
+    "ptr_addr": "0x14e74",
+    "ptr_hi": "0x14e76",
+    "offset": "0x12691",
+    "orig_bytes": 42,
+    "ja": "YOU DON'T HAVE <VAR>\nFOR THE DEPOSIT ON THE\nCASTLE!<WAIT><END>",
+    "ko": "",
+    "note": "[경매인] 102=보증금 부족(<VAR>=금액) 103=낙찰가 10% 보증금(<VAR>=금액)"
+  },
+  {
+    "id": "dialog_b4_0103",
+    "ptr_addr": "0x14e8e",
+    "ptr_hi": "0x14e90",
+    "offset": "0x12667",
+    "orig_bytes": 42,
+    "ja": "10% DEPOSIT ON THE CLOSING\nBID IS <VAR>.\nTHANK YOU.<WAIT><END>",
+    "ko": "",
+    "note": "[경매인] 102=보증금 부족(<VAR>=금액) 103=낙찰가 10% 보증금(<VAR>=금액)"
+  },
+  {
+    "id": "dialog_b4_0104",
+    "ptr_addr": "0x14ee2",
+    "ptr_hi": "0x14ee4",
+    "offset": "0x12617",
+    "orig_bytes": 28,
+    "ja": "THE CURRENT BID IS\n<VAR>.  DO I HEAR\n<END>",
+    "ko": "",
+    "note": "[경매인] 입찰 호가 2조각: 104 끝 \"DO I HEAR\"(<END>)와 105 \"<VAR>?...\" 가 이어서 출력됨. 두 문장이 한 문장을 이룸 -> 어순 분할 주의"
+  },
+  {
+    "id": "dialog_b4_0105",
+    "ptr_addr": "0x14f4a",
+    "ptr_hi": "0x14f4c",
+    "offset": "0x12633",
+    "orig_bytes": 25,
+    "ja": "<VAR>?\nGOING ONCE, GOING TWICE.<END>",
+    "ko": "",
+    "note": "[경매인] 입찰 호가 2조각: 104 끝 \"DO I HEAR\"(<END>)와 105 \"<VAR>?...\" 가 이어서 출력됨. 두 문장이 한 문장을 이룸 -> 어순 분할 주의"
+  },
+  {
+    "id": "dialog_b4_0106",
+    "ptr_addr": "0x14fd9",
+    "ptr_hi": "0x14fdb",
+    "offset": "0x13a7a",
+    "orig_bytes": 16,
+    "ja": "INDEPENDENCE DAY<END>",
+    "ko": "",
+    "note": "[달력 이벤트 제목 추정] INDEPENDENCE DAY"
+  },
+  {
+    "id": "dialog_b4_0107",
+    "ptr_addr": "0x15019",
+    "ptr_hi": "0x1501b",
+    "offset": "0x12c91",
+    "orig_bytes": 99,
+    "ja": "HONEY, I'VE HAD ENOUGH!\nTHERE'S NO POINT IN\nSAVING THIS MARRIAGE.  HAVE\nA NICE LIFE WITH YOUR STOCKSOR WHATEVER!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
+  },
+  {
+    "id": "dialog_b4_0108",
+    "ptr_addr": "0x15031",
+    "ptr_hi": "0x15033",
+    "offset": "0x12c6c",
+    "orig_bytes": 37,
+    "ja": "OOOOOOOO.  I'M NOT FEELING\nWELL.  HELP…<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
+  },
+  {
+    "id": "dialog_b4_0109",
+    "ptr_addr": "0x15053",
+    "ptr_hi": "0x15055",
+    "offset": "0x12c29",
+    "orig_bytes": 67,
+    "ja": "YOU'VE BEEN NEGLECTING ME\nLATELY.  I GUESS I DON'T\nMEAN MUCH TO YOU ANYMORE…<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
+  },
+  {
+    "id": "dialog_b4_0110",
+    "ptr_addr": "0x15065",
+    "ptr_hi": "0x15067",
+    "offset": "0x12bef",
+    "orig_bytes": 58,
+    "ja": "HONEY, YOU LOOK AWFUL\nLATELY.  ARE YOU GETTING\nENOUGH EXERCISE?<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
+  },
+  {
+    "id": "dialog_b4_0111",
+    "ptr_addr": "0x15159",
+    "offset": "0x126bb",
+    "orig_bytes": 74,
+    "ja": "GOOD DECISION.  SWIMMING IS\nVERY GOOD FOR YOUR HEALTH!\n\nTRANSACTION TAKES 2 HOURS.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
+  },
+  {
+    "id": "dialog_b4_0112",
+    "ptr_addr": "0x1515c",
+    "offset": "0x127a6",
+    "orig_bytes": 77,
+    "ja": "GOOD DECISION.  WORKING OUT\nIS VERY GOOD FOR YOUR\nHEALTH!\n\nTRANSACTION TAKES 4 HOURS.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
+  },
+  {
+    "id": "dialog_b4_0113",
+    "ptr_addr": "0x1515f",
+    "offset": "0x1286f",
+    "orig_bytes": 87,
+    "ja": "GOOD DECISION.  HIKING IS\nVERY GOOD FOR YOUR HEALTH\nAND STATE OF MIND!\n\nTRANSACTION TAKES 8 HOURS.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
+  },
+  {
+    "id": "dialog_b4_0114",
+    "ptr_addr": "0x15162",
+    "offset": "0x12949",
+    "orig_bytes": 56,
+    "ja": "THAT SOUNDS LIKE A WONDERFULIDEA!\n\nWE'LL HAVE A LOVELY 2 HOURS!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 활동 수락(114=2시간 115=쇼핑 4시간 116=놀이공원 추정)"
+  },
+  {
+    "id": "dialog_b4_0115",
+    "ptr_addr": "0x15165",
+    "offset": "0x12a23",
+    "orig_bytes": 63,
+    "ja": "BRILLIANT IDEA!  YOU KNOW\nHOW I LOVE TO SHOP.\n\nI'LL ENJOY THOSE 4 HOURS!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 활동 수락(114=2시간 115=쇼핑 4시간 116=놀이공원 추정)"
+  },
+  {
+    "id": "dialog_b4_0116",
+    "ptr_addr": "0x15168",
+    "offset": "0x12b28",
+    "orig_bytes": 35,
+    "ja": "THAT SOUNDS GOOD!\nLET'S HAVE A FUN DAY!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 활동 수락(114=2시간 115=쇼핑 4시간 116=놀이공원 추정)"
+  },
+  {
+    "id": "dialog_b4_0117",
+    "ptr_addr": "0x1516b",
+    "offset": "0x12719",
+    "orig_bytes": 60,
+    "ja": "TOO BAD.  YOU SHOULD'VE PAIDCLOSER ATTENTION TO THE\nMORNING PAPER!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 신문 기사로 활동 불가(같은 문장 3벌; alias 아님)"
+  },
+  {
+    "id": "dialog_b4_0118",
+    "ptr_addr": "0x1516e",
+    "offset": "0x12807",
+    "orig_bytes": 60,
+    "ja": "TOO BAD.  YOU SHOULD'VE PAIDCLOSER ATTENTION TO THE\nMORNING PAPER!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 신문 기사로 활동 불가(같은 문장 3벌; alias 아님)"
+  },
+  {
+    "id": "dialog_b4_0119",
+    "ptr_addr": "0x15171",
+    "offset": "0x128e0",
+    "orig_bytes": 60,
+    "ja": "TOO BAD.  YOU SHOULD'VE PAIDCLOSER ATTENTION TO THE\nMORNING PAPER!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 신문 기사로 활동 불가(같은 문장 3벌; alias 아님)"
+  },
+  {
+    "id": "dialog_b4_0120",
+    "ptr_addr": "0x15174",
+    "offset": "0x129a7",
+    "orig_bytes": 84,
+    "ja": "HONEY!  HOW COULD YOU EVEN\nTHINK I'D WANT TO GO THERE\nTODAY?  DIDN'T YOU READ THE\nMORNING PAPER?<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 신문을 안 읽었냐며 화냄 120=수영장? 121=쇼핑몰 122=기타"
+  },
+  {
+    "id": "dialog_b4_0121",
+    "ptr_addr": "0x15177",
+    "offset": "0x12aae",
+    "orig_bytes": 73,
+    "ja": "HONEY!  DIDN'T YOU READ THE\nMORNING PAPER?  I'M NOT\nGOING NEAR THE SHOPPING\nMALL!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 신문을 안 읽었냐며 화냄 120=수영장? 121=쇼핑몰 122=기타"
+  },
+  {
+    "id": "dialog_b4_0122",
+    "ptr_addr": "0x1517a",
+    "offset": "0x12b79",
+    "orig_bytes": 74,
+    "ja": "FORGET IT!  EITHER YOU\nDIDN'T READ THE MORNING\nPAPER OR YOU HAVE A DEATH\nWISH FOR ME.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라->주인공] 신문을 안 읽었냐며 화냄 120=수영장? 121=쇼핑몰 122=기타"
+  },
+  {
+    "id": "dialog_b4_0123",
+    "ptr_addr": "0x1517d",
+    "offset": "0x12705",
+    "orig_bytes": 20,
+    "ja": "SORRY, WE'RE CLOSED.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
+  },
+  {
+    "id": "dialog_b4_0124",
+    "ptr_addr": "0x15180",
+    "offset": "0x127f3",
+    "orig_bytes": 20,
+    "ja": "SORRY, WE'RE CLOSED.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
+  },
+  {
+    "id": "dialog_b4_0125",
+    "ptr_addr": "0x15183",
+    "offset": "0x128c6",
+    "orig_bytes": 26,
+    "ja": "SORRY, HIKING TRAIL CLOSED.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
+  },
+  {
+    "id": "dialog_b4_0126",
+    "ptr_addr": "0x15186",
+    "offset": "0x12981",
+    "orig_bytes": 38,
+    "ja": "SORRY HONEY, I HAVE ANOTHER\nAPPOINTMENT.<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
+  },
+  {
+    "id": "dialog_b4_0127",
+    "ptr_addr": "0x15189",
+    "offset": "0x12a62",
+    "orig_bytes": 76,
+    "ja": "SORRY HONEY, I WISH I COULD.\nI WOULD HAVE REALLY\nENJOYED SPENDING THAT\nTIME WITH YOU.\n<WAIT><END>",
+    "ko": "",
+    "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
+  },
+  {
+    "id": "dialog_b4_0128",
+    "ptr_addr": "0x1518c",
+    "offset": "0x12b4b",
+    "orig_bytes": 46,
+    "ja": "SORRY HONEY, I'D GET SICK IFI WENT ON ANY RIDES TODAY!<PAGE><END>",
+    "ko": "",
+    "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
+  },
+  {
+    "id": "dialog_b4_0129",
+    "ptr_addr": "0x1540a",
+    "offset": "0x12d86",
+    "orig_bytes": 17,
+    "ja": "HOW MAY I HELP YOU?<PAGE><END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0130",
+    "ptr_addr": "0x1540d",
+    "offset": "0x12d97",
+    "orig_bytes": 33,
+    "ja": "WE'D LIKE TO HAVE A LOOK AT\nSOME DOGS.<PAGE><END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0131",
+    "ptr_addr": "0x15411",
+    "offset": "0x12db8",
+    "orig_bytes": 80,
+    "ja": "WE HAVE-\n(A) A SHAR-PEI FOR $2,000.\n(B) A POODLE FOR $1,000.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0132",
+    "ptr_addr": "0x15415",
+    "offset": "0x12e08",
+    "orig_bytes": 79,
+    "ja": "WE HAVE-\n(A) A POODLE FOR $1,000.\n(B) A CHIHUAHUA FOR $500.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0133",
+    "ptr_addr": "0x15419",
+    "offset": "0x12e57",
+    "orig_bytes": 29,
+    "ja": "THANKS, HONEY.\nHE'S ADORABLE!<PAGE><END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0134",
+    "ptr_addr": "0x1541d",
+    "offset": "0x12e74",
+    "orig_bytes": 13,
+    "ja": "HE'S SO CUTE!<PAGE><END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0135",
+    "ptr_addr": "0x15421",
+    "offset": "0x12e81",
+    "orig_bytes": 17,
+    "ja": "OH, WHAT A BUMMER!<PAGE><END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0136",
+    "ptr_addr": "0x15425",
+    "offset": "0x12e92",
+    "orig_bytes": 43,
+    "ja": "SIR, YOU DON'T HAVE ENOUGH\nCASH FOR THE PAYMENT.<PAGE><END>",
+    "ko": "",
+    "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
+  },
+  {
+    "id": "dialog_b4_0137",
+    "ptr_addr": "0x15429",
+    "offset": "0x12f27",
+    "orig_bytes": 17,
+    "ja": "HOW MAY I HELP YOU?<PAGE><END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0138",
+    "ptr_addr": "0x1542c",
+    "offset": "0x12f38",
+    "orig_bytes": 43,
+    "ja": "I'D LIKE TO PURCHASE A CAR\nAS A GIFT TO MY FIANCEE.<PAGE><END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0139",
+    "ptr_addr": "0x15430",
+    "offset": "0x12f63",
+    "orig_bytes": 87,
+    "ja": "I HAVE-\n(A) A PORCH 928 FOR\n    $100,000.\n(B) A FAIRRARI 328 FOR\n    $50,000.\nWHICH ONE WOULD YOU LIKE?<END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0140",
+    "ptr_addr": "0x15434",
+    "offset": "0x12fba",
+    "orig_bytes": 83,
+    "ja": "I HAVE-\n(A) A FAIRRARI 328 FOR\n    $50,000.\n(B) A BMV 750IL FOR $25,000.\nWHICH ONE WOULD YOU LIKE?<END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0141",
+    "ptr_addr": "0x15438",
+    "offset": "0x1300d",
+    "orig_bytes": 34,
+    "ja": "GOOD CHOICE!\nI'M SURE SHE'LL LIKE IT.<PAGE><END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0142",
+    "ptr_addr": "0x1543c",
+    "offset": "0x1302f",
+    "orig_bytes": 34,
+    "ja": "GOOD CHOICE.\nI'M SURE SHE'LL LIKE IT.<PAGE><END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0143",
+    "ptr_addr": "0x15440",
+    "offset": "0x13051",
+    "orig_bytes": 47,
+    "ja": "COME BACK AGAIN. I'LL BE\nMORE THAN HAPPY TO HELP\nYOU!<PAGE><END>",
+    "ko": "",
+    "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0144",
+    "ptr_addr": "0x15444",
+    "offset": "0x12e92",
+    "alias_of": "dialog_b4_0136",
+    "note": "(alias) [자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
+  },
+  {
+    "id": "dialog_b4_0145",
+    "ptr_addr": "0x15448",
+    "offset": "0x1310d",
+    "orig_bytes": 24,
+    "ja": "HEY DUDE, WANT SOMETHIN'?<PAGE><END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0146",
+    "ptr_addr": "0x1544b",
+    "offset": "0x13125",
+    "orig_bytes": 48,
+    "ja": "WE'RE LOOKING FOR A TV AND\nSTEREO SET FOR OUR NEW\nHOME.<PAGE><END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0147",
+    "ptr_addr": "0x1544f",
+    "offset": "0x13155",
+    "orig_bytes": 90,
+    "ja": "WE GOT-\n(A) A SOMY SYSTEM FOR\n    $6,000.\n(B) A PANAZODIAC SYSTEM FOR\n    $3,000.\nWHICH ONE YA WANT, DUDE?<END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0148",
+    "ptr_addr": "0x15453",
+    "offset": "0x131af",
+    "orig_bytes": 92,
+    "ja": "WE GOT-\n(A) A PANAZODIAC SYSTEM FOR\n    $3,000.\n(B) A SHAORP SYSTEM FOR\n    $1,500.\nWHICH ONE YA WANT, DUDE?<END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0149",
+    "ptr_addr": "0x15457",
+    "offset": "0x1320b",
+    "orig_bytes": 30,
+    "ja": "I LIKE THIS SET!\nTHANK YOU, DEAR!<PAGE><END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0150",
+    "ptr_addr": "0x1545b",
+    "offset": "0x13229",
+    "orig_bytes": 51,
+    "ja": "FOR THAT PRICE, I HOPE IT\nLASTS AWHILE.\nTHANK YOU, HONEY!<PAGE><END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0151",
+    "ptr_addr": "0x1545f",
+    "offset": "0x1325c",
+    "orig_bytes": 22,
+    "ja": "THIS IS DISAPPOINTING.<PAGE><END>",
+    "ko": "",
+    "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0152",
+    "ptr_addr": "0x15463",
+    "offset": "0x12e92",
+    "alias_of": "dialog_b4_0136",
+    "note": "(alias) [오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
+  },
+  {
+    "id": "dialog_b4_0153",
+    "ptr_addr": "0x15467",
+    "offset": "0x1333b",
+    "orig_bytes": 14,
+    "ja": "MAY I HELP YOU?<PAGE><END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0154",
+    "ptr_addr": "0x1546a",
+    "offset": "0x13349",
+    "orig_bytes": 40,
+    "ja": "WE'RE INTERESTED IN\nPURCHASING A PAINTING.<PAGE><END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0155",
+    "ptr_addr": "0x1546e",
+    "offset": "0x13371",
+    "orig_bytes": 79,
+    "ja": "WE HAVE-\n(A) A FABIANI FOR $70,000.\n(B) AN ALI FOR $50,000.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0156",
+    "ptr_addr": "0x15472",
+    "offset": "0x133c0",
+    "orig_bytes": 80,
+    "ja": "WELL, WE HAVE-\n(A) AN ALI FOR $50,000.\n(B) A NUA FOR $30,000.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0157",
+    "ptr_addr": "0x15476",
+    "offset": "0x13410",
+    "orig_bytes": 37,
+    "ja": "WOW!  THAT'LL LOOK GREAT IN\nOUR NEW HOME.<PAGE><END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0158",
+    "ptr_addr": "0x1547a",
+    "offset": "0x13435",
+    "orig_bytes": 17,
+    "ja": "IT'S NICE ENOUGH.<PAGE><END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0159",
+    "ptr_addr": "0x1547e",
+    "offset": "0x13446",
+    "orig_bytes": 9,
+    "ja": "TOO BAD.<PAGE><END>",
+    "ko": "",
+    "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0160",
+    "ptr_addr": "0x15482",
+    "offset": "0x12e92",
+    "alias_of": "dialog_b4_0136",
+    "note": "(alias) [미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
+  },
+  {
+    "id": "dialog_b4_0161",
+    "ptr_addr": "0x15486",
+    "offset": "0x1344f",
+    "orig_bytes": 31,
+    "ja": "LET'S HAVE A HOUSE WARMING\nPARTY.<PAGE><END>",
+    "ko": "",
+    "note": "[파티 계획: 프리실라<->주인공] 161=프리실라 162=주인공 163,164=파티 종류 목록 165,166=프리실라 감사"
+  },
+  {
+    "id": "dialog_b4_0162",
+    "ptr_addr": "0x15489",
+    "offset": "0x1346e",
+    "orig_bytes": 33,
+    "ja": "LET'S SEE HOW MUCH IT'LL\nCOST FIRST.<PAGE><END>",
+    "ko": "",
+    "note": "[파티 계획: 프리실라<->주인공] 161=프리실라 162=주인공 163,164=파티 종류 목록 165,166=프리실라 감사"
+  },
+  {
+    "id": "dialog_b4_0163",
+    "ptr_addr": "0x1548d",
+    "offset": "0x1348f",
+    "orig_bytes": 97,
+    "ja": "WELL, WE CAN HAVE-\n(A) A FANTASTIC PARTY FOR\n    $30,000.\n(B) A NICE PARTY FOR\n    $20,000.\nWHAT WOULD YOU PREFER?<END>",
+    "ko": "",
+    "note": "[파티 계획: 프리실라<->주인공] 161=프리실라 162=주인공 163,164=파티 종류 목록 165,166=프리실라 감사"
+  },
+  {
+    "id": "dialog_b4_0164",
+    "ptr_addr": "0x15491",
+    "offset": "0x134f0",
+    "orig_bytes": 98,
+    "ja": "WELL, WE CAN HAVE-\n(A) A NICE PARTY FOR\n    $20,000.\n(B) A VERY SIMPLE PARTY FOR\n    $10,000.\nWHAT WOULD YOU PREFER?<END>",
+    "ko": "",
+    "note": "[파티 계획: 프리실라<->주인공] 161=프리실라 162=주인공 163,164=파티 종류 목록 165,166=프리실라 감사"
+  },
+  {
+    "id": "dialog_b4_0165",
+    "ptr_addr": "0x15495",
+    "offset": "0x13552",
+    "orig_bytes": 43,
+    "ja": "OH, THANK YOU HONEY!  WE'LL\nALL HAVE A LOT OF FUN!<PAGE><END>",
+    "ko": "",
+    "note": "[파티 계획: 프리실라<->주인공] 161=프리실라 162=주인공 163,164=파티 종류 목록 165,166=프리실라 감사"
+  },
+  {
+    "id": "dialog_b4_0166",
+    "ptr_addr": "0x15499",
+    "offset": "0x1357d",
+    "orig_bytes": 29,
+    "ja": "THANK YOU, DEAR.  IT'LL BE\nFUN!<PAGE><END>",
+    "ko": "",
+    "note": "[파티 계획: 프리실라<->주인공] 161=프리실라 162=주인공 163,164=파티 종류 목록 165,166=프리실라 감사"
+  },
+  {
+    "id": "dialog_b4_0167",
+    "ptr_addr": "0x1549f",
+    "offset": "0x13637",
+    "orig_bytes": 14,
+    "ja": "MAY I HELP YOU?<PAGE><END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0168",
+    "ptr_addr": "0x154a2",
+    "offset": "0x13645",
+    "orig_bytes": 42,
+    "ja": "I'D LIKE TO HAVE YOU DESIGN\nA PARTY DRESS FOR ME.<PAGE><END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0169",
+    "ptr_addr": "0x154a6",
+    "offset": "0x1366f",
+    "orig_bytes": 124,
+    "ja": "WELL, I CAN DESIGN-\n(A) A DRESS WITH A LOT OF\n    JEWELRY FOR $30,000.\n(B) A DRESS WITH A BIT OF\n    JEWELRY FOR $20,000.\nWHICH DESIGN WOULD YOU LIKE?<END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0170",
+    "ptr_addr": "0x154aa",
+    "offset": "0x136eb",
+    "orig_bytes": 113,
+    "ja": "WELL, I CAN DESIGN-\n(A) A DRESS WITH A BIT OF\n    JEWELRY FOR $20,000.\n(B) A SIMPLE DRESS FOR\n    $10,000.\nWHICH DESIGN WOULD YOU LIKE?<END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0171",
+    "ptr_addr": "0x154ae",
+    "offset": "0x1375c",
+    "orig_bytes": 41,
+    "ja": "OH, I'M SO HAPPY.  YOU'RE\nSUCH A GOOD HUSBAND!<PAGE><END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0172",
+    "ptr_addr": "0x154b2",
+    "offset": "0x13785",
+    "orig_bytes": 15,
+    "ja": "IT'S SO LOVELY.<PAGE><END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0173",
+    "ptr_addr": "0x154b6",
+    "offset": "0x13794",
+    "orig_bytes": 25,
+    "ja": "OH, WHAT A DISAPPOINTMENT.<PAGE><END>",
+    "ko": "",
+    "note": "[드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0174",
+    "ptr_addr": "0x154ba",
+    "offset": "0x12e92",
+    "alias_of": "dialog_b4_0136",
+    "note": "(alias) [드레스 가게: 디온] 167 인사 168 요청 169,170 목록 171,172 구입 후 173 실망 174=alias"
+  },
+  {
+    "id": "dialog_b4_0175",
+    "ptr_addr": "0x154be",
+    "offset": "0x1381e",
+    "orig_bytes": 14,
+    "ja": "MAY I HELP YOU?<PAGE><END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0176",
+    "ptr_addr": "0x154c1",
+    "offset": "0x1382c",
+    "orig_bytes": 52,
+    "ja": "WE'RE INTERESTED IN\nPURCHASING SOME ELABORATE\nJEWELRY.<PAGE><END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0177",
+    "ptr_addr": "0x154c5",
+    "offset": "0x13860",
+    "orig_bytes": 102,
+    "ja": "WELL, I HAVE-\n(A) A DIAMOND NECKLACE\n    FOR $70,000.\n(B) A DIAMOND BRACELET\n    FOR $50,000.\nWHICH ONE WOULD YOU LIKE?<END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0178",
+    "ptr_addr": "0x154c9",
+    "offset": "0x138c6",
+    "orig_bytes": 93,
+    "ja": "I HAVE-\n(A) A DIAMOND BRACELET\n    FOR $50,000.\n(B) A DIAMOND RING\n    FOR $30,000.\nWHICH ONE WOULD YOU LIKE?<END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0179",
+    "ptr_addr": "0x154cd",
+    "offset": "0x13923",
+    "orig_bytes": 32,
+    "ja": "THANK YOU, DEAR.\nTHIS IS VERY NICE!<PAGE><END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0180",
+    "ptr_addr": "0x154d1",
+    "offset": "0x13943",
+    "orig_bytes": 17,
+    "ja": "THANK YOU, HONEY.<PAGE><END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0181",
+    "ptr_addr": "0x154d5",
+    "offset": "0x13954",
+    "orig_bytes": 51,
+    "ja": "I GUESS I'LL JUST HAVE TO\nWEAR MY OLD JEWELRY TO THE\nPARTY.<PAGE><END>",
+    "ko": "",
+    "note": "[보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0182",
+    "ptr_addr": "0x154d9",
+    "offset": "0x12e92",
+    "alias_of": "dialog_b4_0136",
+    "note": "(alias) [보석 가게: 줄리] 175 인사 176 요청 177,178 목록 179,180 구입 후 181 구입 안 함 182=alias"
+  },
+  {
+    "id": "dialog_b4_0183",
+    "ptr_addr": "0x154dd",
+    "offset": "0x139e5",
+    "orig_bytes": 23,
+    "ja": "WHAT A SUCCESSFUL PARTY!<PAGE><END>",
+    "ko": "",
+    "note": "[파티 후 대화] 183~186=프리실라<->주인공 187=파티를 못 연 경우"
+  },
+  {
+    "id": "dialog_b4_0184",
+    "ptr_addr": "0x154e0",
+    "offset": "0x139fc",
+    "orig_bytes": 21,
+    "ja": "I AGREE.  WANNA DANCE?<PAGE><END>",
+    "ko": "",
+    "note": "[파티 후 대화] 183~186=프리실라<->주인공 187=파티를 못 연 경우"
+  },
+  {
+    "id": "dialog_b4_0185",
+    "ptr_addr": "0x154e3",
+    "offset": "0x13a11",
+    "orig_bytes": 7,
+    "ja": "SURE!<PAGE><END>",
+    "ko": "",
+    "note": "[파티 후 대화] 183~186=프리실라<->주인공 187=파티를 못 연 경우"
+  },
+  {
+    "id": "dialog_b4_0186",
+    "ptr_addr": "0x154e6",
+    "offset": "0x13a18",
+    "orig_bytes": 16,
+    "ja": "AFTER YOU, DEAR.<PAGE><END>",
+    "ko": "",
+    "note": "[파티 후 대화] 183~186=프리실라<->주인공 187=파티를 못 연 경우"
+  },
+  {
+    "id": "dialog_b4_0187",
+    "ptr_addr": "0x154ea",
+    "offset": "0x13a28",
+    "orig_bytes": 82,
+    "ja": "IT'S A SHAME THAT WE CAN'T\nAFFORD TO HAVE A PARTY.  I\nWAS REALLY LOOKING FORWARD\nTO HAVING ONE!<PAGE><END>",
+    "ko": "",
+    "note": "[파티 후 대화] 183~186=프리실라<->주인공 187=파티를 못 연 경우"
+  },
+  {
+    "id": "dialog_b4_0188",
+    "ptr_addr": "0x18500",
+    "offset": "0x12755",
+    "orig_bytes": 81,
+    "ja": "THERE HAVE BEEN REPORTS OF\nDANGEROUSLY DEFECTIVE\nCHEMICALS BEING SOLD TO ALL\nPOOL OWNERS.<WAIT><END>",
+    "ko": "",
+    "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
+  },
+  {
+    "id": "dialog_b4_0189",
+    "ptr_addr": "0x18502",
+    "offset": "0x12843",
+    "orig_bytes": 44,
+    "ja": "GYMNASIUM UNDER\nINVESTIGATION BY HEALTH\nDEPT.<WAIT><END>",
+    "ko": "",
+    "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
+  },
+  {
+    "id": "dialog_b4_0190",
+    "ptr_addr": "0x18504",
+    "offset": "0x1291c",
+    "orig_bytes": 45,
+    "ja": "TICK ABUNDANCE ATTACKS\nFAMILY ON HIKING GROUNDS.<WAIT><END>",
+    "ko": "",
+    "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
+  },
+  {
+    "id": "dialog_b4_0191",
+    "ptr_addr": "0x18506",
+    "offset": "0x129fb",
+    "orig_bytes": 40,
+    "ja": "POISONOUS INSECTS RAIDING\nPICNIC GROUNDS.<WAIT><END>",
+    "ko": "",
+    "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
+  },
+  {
+    "id": "dialog_b4_0192",
+    "ptr_addr": "0x18508",
+    "offset": "0x12af7",
+    "orig_bytes": 49,
+    "ja": "MUGGERS BECOMING REGULAR\nCUSTOMERS AT SHOPPING MALL.<WAIT><END>",
+    "ko": "",
+    "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
+  },
+  {
+    "id": "dialog_b4_0193",
+    "ptr_addr": "0x1850a",
+    "offset": "0x12bc3",
+    "orig_bytes": 44,
+    "ja": "EQUIPMENT FAILURES CAUSE\nINJURIES AT CARNIVAL.<WAIT><END>",
+    "ko": "",
+    "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
+  }
+]

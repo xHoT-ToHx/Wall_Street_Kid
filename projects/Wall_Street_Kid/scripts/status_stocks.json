@@ -1,0 +1,10 @@
+[
+  {
+    "id": "status_stocks_0000",
+    "offset": "0x1d096",
+    "max_bytes": 7,
+    "ja": "STOCKS:",
+    "ko": "",
+    "note": "[우상단 상태창 라벨] 7칸 고정"
+  }
+]

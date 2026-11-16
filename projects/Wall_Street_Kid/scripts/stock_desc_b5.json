@@ -1,0 +1,182 @@
+[
+  {
+    "id": "stock_desc_b5_0000",
+    "ptr_addr": "0x17562",
+    "offset": "0x1758a",
+    "orig_bytes": 80,
+    "ja": "A VERY STRONG\nCOMMUNICATIONS COMPANY,\nTHAT NOW HAS TO COMPETE\nFOR THEIR MARKET.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0001",
+    "ptr_addr": "0x17564",
+    "offset": "0x175da",
+    "orig_bytes": 93,
+    "ja": "SUCCESSFUL FINANCIAL\nSERVICES COMPANY, HIGH\nMARKET VALUE WITH HIGH\nSALES, AND STRONG GROWTH.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0002",
+    "ptr_addr": "0x17566",
+    "offset": "0x17637",
+    "orig_bytes": 92,
+    "ja": "UNDER NEW MANAGEMENT,\nSHOWING PROFITABILITY,\nINDUSTRY UNCERTAINTY,\nRECESSION HURTS PROFITS.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0003",
+    "ptr_addr": "0x17568",
+    "offset": "0x17693",
+    "orig_bytes": 82,
+    "ja": "VERY STRONG DOMESTIC AND\nEXPORT MANUFACTURER OF\nAIRPLANES, EXCELLENT PAST\nRECORD.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0004",
+    "ptr_addr": "0x1756a",
+    "offset": "0x176e5",
+    "orig_bytes": 92,
+    "ja": "TRANSPORTATION AND\nENTERTAINMENT COMPANY,\nREADY FOR GROWTH, EXPANDEDINTO HOTELS AND TRAVEL.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0005",
+    "ptr_addr": "0x1756c",
+    "offset": "0x17741",
+    "orig_bytes": 89,
+    "ja": "LARGE CONSTRUCTION\nMACHINERY BUILDER,\nBENEFITED FROM BUILDING\nSURGE, RECESSION MAY HURT.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0006",
+    "ptr_addr": "0x1756e",
+    "offset": "0x1779a",
+    "orig_bytes": 87,
+    "ja": "RECEIVED LOW INTEREST\nGOVERNMENT LOANS WHICH\nHELPED THE COMPANY BACK\nTO PROFITABILITY.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0007",
+    "ptr_addr": "0x17570",
+    "offset": "0x177f1",
+    "orig_bytes": 97,
+    "ja": "FLORIDA'S NO.1 HOME\nBUILDER, ALSO A SUCCESSFULFOREIGN BUILDER, INSURANCEDIVISION NOT PROFITABLE.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0008",
+    "ptr_addr": "0x17572",
+    "offset": "0x17852",
+    "orig_bytes": 64,
+    "ja": "NOW A RAILROAD LEADER,\nLOOKING TO EXPAND INTO\nOTHER INDUSTRIES.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0009",
+    "ptr_addr": "0x17574",
+    "offset": "0x17892",
+    "orig_bytes": 87,
+    "ja": "SUCCESSFUL INSURANCE FIRM,HEADING FOR A PEAK IN\nSALES, MAY DIVERSIFY INTO\nOTHER AREAS.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0010",
+    "ptr_addr": "0x17576",
+    "offset": "0x178e9",
+    "orig_bytes": 92,
+    "ja": "SUCCESSFUL FAMILY RUN\nHOTEL CHAIN, LARGE ASSETS,EXPERIMENTING WITH THE\nRESTAURANT BUSINESS.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0011",
+    "ptr_addr": "0x17578",
+    "offset": "0x17945",
+    "orig_bytes": 76,
+    "ja": "ONE TIME GIANT HAS HIGH\nDEBT, LOW ASSETS.  SALES\nARE HIGH BUT SO ARE LOSSES<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0012",
+    "ptr_addr": "0x1757a",
+    "offset": "0x17991",
+    "orig_bytes": 84,
+    "ja": "SALES ARE HIGH BUT\nSEASONAL.  PRODUCT DEMAND\nDEPENDS ON CONSUMERS\nSPENDABLE INCOME.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0013",
+    "ptr_addr": "0x1757c",
+    "offset": "0x179e5",
+    "orig_bytes": 76,
+    "ja": "VERY SUCCESSFUL FOOTWEAR\nMANUFACTURER, ON THE WAY\nTO BEING NO.1, HIGH DEBT.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0014",
+    "ptr_addr": "0x1757e",
+    "offset": "0x17a31",
+    "orig_bytes": 104,
+    "ja": "LARGE DISCOUNT SECURITIES\nBROKERAGE FIRM BOUGHT BACKBY ITS FOUNDER, RECENTLY\nEXPERIENCING MUCH SUCCESS.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0015",
+    "ptr_addr": "0x17580",
+    "offset": "0x17a99",
+    "orig_bytes": 93,
+    "ja": "ONCE A MAJOR BUS LINE,\nSOLD THE DIVISION IN ORDERTO MANUFACTURE PRIMARILY\nCONSUMER PRODUCTS.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0016",
+    "ptr_addr": "0x17582",
+    "offset": "0x17af6",
+    "orig_bytes": 88,
+    "ja": "ACQUISITIONS HAVE BEEN\nMADE TO STRENGTHEN THE\nCOMPANY, HOWEVER, THEY\nSTILL SHOW LOSSES.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0017",
+    "ptr_addr": "0x17584",
+    "offset": "0x17b4e",
+    "orig_bytes": 96,
+    "ja": "STRONG, INNOVATIVE COPIER\nCOMPANY, DOMINATED MARKET\nFOR MANY YEARS, ALSO IN\nFINANCIAL SERVICES.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0018",
+    "ptr_addr": "0x17586",
+    "offset": "0x17bae",
+    "orig_bytes": 85,
+    "ja": "DOMINATED THE COMPUTER\nMARKETS FOR MANY YEARS,\nRECENTLY FACING STRONGER\nCOMPETITION.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  },
+  {
+    "id": "stock_desc_b5_0019",
+    "ptr_addr": "0x17588",
+    "offset": "0x17c03",
+    "orig_bytes": 83,
+    "ja": "HAS EXCELLENT NEW PRODUCT\nLINE, VERY COMPETITIVE\nWITH YBM, CAPABLE OF MAJORGROWTH.<END>",
+    "ko": "",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+  }
+]

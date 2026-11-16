@@ -1,0 +1,74 @@
+[
+  {
+    "id": "stock_ui_b5_0000",
+    "ptr_addr": "0x17c56",
+    "offset": "0x17c66",
+    "orig_bytes": 47,
+    "ja": " CASH:\n STOCKS:\n HOW MANY LOTS?     (     MAX)<END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0001",
+    "ptr_addr": "0x17c58",
+    "offset": "0x17c95",
+    "orig_bytes": 80,
+    "ja": " IF YOU'D LIKE TO SELL STOCK,\n\n SELECT ONE NOW.\n\n  STOCK       CUR. ORIG. LOTS <END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0002",
+    "ptr_addr": "0x17c5a",
+    "offset": "0x17ce5",
+    "orig_bytes": 53,
+    "ja": " NO STOCK HOLDINGS\n\n\n\n  STOCK       CUR. ORIG. LOTS <END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0003",
+    "ptr_addr": "0x17c5c",
+    "offset": "0x17d1a",
+    "orig_bytes": 79,
+    "ja": " IF YOU'D LIKE TO BUY STOCK,\n\n SELECT ONE NOW.\n\n  STOCK        PRICE  %CHANGE <END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0004",
+    "ptr_addr": "0x17c5e",
+    "offset": "0x17d69",
+    "orig_bytes": 50,
+    "ja": " PORTFOLIO FULL\n\n\n\n  STOCK        PRICE  %CHANGE <END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0005",
+    "ptr_addr": "0x17c60",
+    "offset": "0x17d9b",
+    "orig_bytes": 79,
+    "ja": " IF YOU'D LIKE TO GET INFO.,\n\n SELECT ONE NOW.\n\n  STOCK        PRICE  %CHANGE <END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0006",
+    "ptr_addr": "0x17c62",
+    "offset": "0x17dea",
+    "orig_bytes": 49,
+    "ja": " CASH:\n STOCKS:\n\n\n  STOCK       CUR. ORIG. LOTS <END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  },
+  {
+    "id": "stock_ui_b5_0007",
+    "ptr_addr": "0x17c64",
+    "offset": "0x17e1b",
+    "orig_bytes": 18,
+    "ja": " NOT ENOUGH MONEY<END>",
+    "ko": "",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+  }
+]

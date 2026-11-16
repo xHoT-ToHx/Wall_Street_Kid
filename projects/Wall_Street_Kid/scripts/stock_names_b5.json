@@ -1,0 +1,192 @@
+[
+  {
+    "id": "stock_names_b5_0000",
+    "ptr_addr": "0x16e41",
+    "ptr_hi": "0x16e45",
+    "offset": "0x17f61",
+    "orig_bytes": 75,
+    "ja": "\n«STOCK PRICE»\n\n STARTING CURRENT %CHANGE\n\n\n«STOCK CATEGORY»\n\n\n\n«COMMENTS»<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0001",
+    "ptr_addr": "0x17e3f",
+    "offset": "0x17e67",
+    "orig_bytes": 5,
+    "ja": "ATNT<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0002",
+    "ptr_addr": "0x17e41",
+    "offset": "0x17e6c",
+    "orig_bytes": 17,
+    "ja": "AMERICAN DEPRESS<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0003",
+    "ptr_addr": "0x17e43",
+    "offset": "0x17e7d",
+    "orig_bytes": 16,
+    "ja": "BETHLEHAM STEEL<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0004",
+    "ptr_addr": "0x17e45",
+    "offset": "0x17e8d",
+    "orig_bytes": 6,
+    "ja": "BOING<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0005",
+    "ptr_addr": "0x17e47",
+    "offset": "0x17e93",
+    "orig_bytes": 23,
+    "ja": "CARNIVORE CRUISE LINES<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0006",
+    "ptr_addr": "0x17e49",
+    "offset": "0x17eaa",
+    "orig_bytes": 10,
+    "ja": "CENTIPEDE<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0007",
+    "ptr_addr": "0x17e4b",
+    "offset": "0x17eb4",
+    "orig_bytes": 7,
+    "ja": "CHRYER<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0008",
+    "ptr_addr": "0x17e4d",
+    "offset": "0x17ebb",
+    "orig_bytes": 17,
+    "ja": "COUGHMAN & BROAD<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0009",
+    "ptr_addr": "0x17e4f",
+    "offset": "0x17ecc",
+    "orig_bytes": 10,
+    "ja": "EXCONRAIL<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0010",
+    "ptr_addr": "0x17e51",
+    "offset": "0x17ed6",
+    "orig_bytes": 16,
+    "ja": "FIREDMAN'S FUND<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0011",
+    "ptr_addr": "0x17e53",
+    "offset": "0x17ee6",
+    "orig_bytes": 16,
+    "ja": "MARRINOT HOTELS<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0012",
+    "ptr_addr": "0x17e55",
+    "offset": "0x17ef6",
+    "orig_bytes": 17,
+    "ja": "PAN MAM AIRLINES<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0013",
+    "ptr_addr": "0x17e57",
+    "offset": "0x17f07",
+    "orig_bytes": 12,
+    "ja": "RATTEL TOYS<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0014",
+    "ptr_addr": "0x17e59",
+    "offset": "0x17f13",
+    "orig_bytes": 15,
+    "ja": "REEBUCKS INT'L<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0015",
+    "ptr_addr": "0x17e5b",
+    "offset": "0x17f22",
+    "orig_bytes": 15,
+    "ja": "CHARLES SCHLOB<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0016",
+    "ptr_addr": "0x17e5d",
+    "offset": "0x17f31",
+    "orig_bytes": 11,
+    "ja": "STRAYHOUND<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0017",
+    "ptr_addr": "0x17e5f",
+    "offset": "0x17f3c",
+    "orig_bytes": 10,
+    "ja": "TERADYING<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0018",
+    "ptr_addr": "0x17e61",
+    "offset": "0x17f46",
+    "orig_bytes": 7,
+    "ja": "XEAROX<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0019",
+    "ptr_addr": "0x17e63",
+    "offset": "0x17f4d",
+    "orig_bytes": 4,
+    "ja": "YBM<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  },
+  {
+    "id": "stock_names_b5_0020",
+    "ptr_addr": "0x17e65",
+    "offset": "0x17f51",
+    "orig_bytes": 16,
+    "ja": "YAPPLE COMPUTER<END>",
+    "ko": "",
+    "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정"
+  }
+]

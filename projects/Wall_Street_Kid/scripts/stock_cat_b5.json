@@ -1,0 +1,38 @@
+[
+  {
+    "id": "stock_cat_b5_0000",
+    "ptr_addr": "0x17fac",
+    "offset": "0x17fb4",
+    "orig_bytes": 12,
+    "ja": "SPECULATIVE<END>",
+    "ko": "",
+    "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
+  },
+  {
+    "id": "stock_cat_b5_0001",
+    "ptr_addr": "0x17fae",
+    "offset": "0x17fc0",
+    "orig_bytes": 7,
+    "ja": "GROWTH<END>",
+    "ko": "",
+    "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
+  },
+  {
+    "id": "stock_cat_b5_0002",
+    "ptr_addr": "0x17fb0",
+    "offset": "0x17fc7",
+    "orig_bytes": 9,
+    "ja": "CYCLICAL<END>",
+    "ko": "",
+    "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
+  },
+  {
+    "id": "stock_cat_b5_0003",
+    "ptr_addr": "0x17fb2",
+    "offset": "0x17fd0",
+    "orig_bytes": 10,
+    "ja": "BLUE CHIP<END>",
+    "ko": "",
+    "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "weekdays_0000",
+    "offset": "0x1c417",
+    "max_bytes": 3,
+    "ja": "SUN",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  },
+  {
+    "id": "weekdays_0001",
+    "offset": "0x1c41a",
+    "max_bytes": 3,
+    "ja": "MON",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  },
+  {
+    "id": "weekdays_0002",
+    "offset": "0x1c41d",
+    "max_bytes": 3,
+    "ja": "TUE",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  },
+  {
+    "id": "weekdays_0003",
+    "offset": "0x1c420",
+    "max_bytes": 3,
+    "ja": "WED",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  },
+  {
+    "id": "weekdays_0004",
+    "offset": "0x1c423",
+    "max_bytes": 3,
+    "ja": "THU",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  },
+  {
+    "id": "weekdays_0005",
+    "offset": "0x1c426",
+    "max_bytes": 3,
+    "ja": "FRI",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  },
+  {
+    "id": "weekdays_0006",
+    "offset": "0x1c429",
+    "max_bytes": 3,
+    "ja": "SAT",
+    "ko": "",
+    "note": "[요일] 3칸 고정 SUN..SAT"
+  }
+]

@@ -1,0 +1,1203 @@
+[
+  {
+    "id": "news_b6_0000",
+    "ptr_addr": "0x1804f",
+    "ptr_hi": "0x18051",
+    "offset": "0x198a7",
+    "orig_bytes": 25,
+    "ja": "HELLO, MY NAME IS STANLEY.\n\n<END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0001",
+    "ptr_addr": "0x18056",
+    "ptr_hi": "0x18058",
+    "offset": "0x198c0",
+    "orig_bytes": 43,
+    "ja": "HI, IT'S STANLEY HERE. HOW\nARE YOU DOING TODAY?\n<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0002",
+    "ptr_addr": "0x1805f",
+    "ptr_hi": "0x18061",
+    "offset": "0x198eb",
+    "orig_bytes": 52,
+    "ja": "WOULD YOU LIKE ME TO EXPLAINTHE STOCK MARKET TO YOU FOR\n$500?<END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0003",
+    "ptr_addr": "0x180ab",
+    "ptr_hi": "0x180ad",
+    "offset": "0x1991f",
+    "orig_bytes": 102,
+    "ja": "WHAT WOULD YOU LIKE TO KNOW?\n(A) ABOUT STOCKS\n(B) ABOUT STOCK PRICES\n(C) HOW TO ACQUIRE NEWS\n(D) HOW TO BUY & SELL STOCKS<END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0004",
+    "ptr_addr": "0x180d3",
+    "ptr_hi": "0x180d5",
+    "offset": "0x19985",
+    "orig_bytes": 94,
+    "ja": "THANK YOU SO VERY MUCH FOR\nYOUR BUSINESS. I'LL BE HERE\nANY TIME YOU WANT TO LEARN\nMORE ABOUT THE STOCK MARKET.<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0005",
+    "ptr_addr": "0x180da",
+    "ptr_hi": "0x180dc",
+    "offset": "0x199e3",
+    "orig_bytes": 40,
+    "ja": "WELL, CHECK BACK WHEN YOU\nHAVE ENOUGH MONEY.<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0006",
+    "ptr_addr": "0x180e1",
+    "ptr_hi": "0x180e3",
+    "offset": "0x19a0b",
+    "orig_bytes": 50,
+    "ja": "THANK YOU FOR STOPPING BY\nANYWAY, IT WAS NICE TO SEE\nYOU.<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리(컨설턴트) 주식 강의 가게] 0,1=인사 2=500달러 강의 제안(예/아니오) 3=메뉴 (A)~(D) 4=고마움 5=돈 부족 6=그냥 나감"
+  },
+  {
+    "id": "news_b6_0007",
+    "ptr_addr": "0x180f3",
+    "offset": "0x19a3d",
+    "orig_bytes": 520,
+    "ja": "STOCKS ARE MONEY WHICH A\nCOMPANY DIVIDES INTO SHARES\nOF EQUAL AMOUNTS THAT ARE\nBOUGHT AND SOLD IN THE STOCKMARKET. BUYING STOCK IN A\nCOMPANY MAKES YOU PART\nOWNER.<WAIT>\n\nA COMPANY ISSUES YOU STOCK\nCERTIFICATES TO REPRESENT\nTHE NUMBER OF SHARES YOU\nHAVE PURCHASED, OR IN OTHER\nWORDS, HOW MUCH OF THE\nCOMPANY YOU OWN.<WAIT>\n\nBY BECOMING A STOCKHOLDER,\nYOU RECEIVE A PERCENTAGE OF\nTHE PROFITS THAT THE COMPANYMAKES.  IT ALSO MEANS THAT\nYOU CAN ATTEND STOCKHOLDER\nMEETINGS.<WAIT>\n\nAT THE MEETINGS YOU'RE GIVENINFORMATION ON COMPANY\nBUSINESS AND ARE ALLOWED TO\nEXPRESS YOUR OPINION THROUGHYOUR PERCENTAGE OF VOTES.\n<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리 강의 4편] 7=주식이란 8=주가 9=뉴스 확보 10=매매법. 매우 긴 페이지 묶음(여러 <WAIT>). 1 LOT=1,000주"
+  },
+  {
+    "id": "news_b6_0008",
+    "ptr_addr": "0x180f5",
+    "offset": "0x19c45",
+    "orig_bytes": 808,
+    "ja": "TIMING IS VERY IMPORTANT IN\nTHE STOCK MARKET. TO MAKE\nMONEY YOU MUST BUY STOCKS\nWHILE THEY ARE SELLING LOW\nAND SELL STOCKS WHILE THEY\nARE SELLING HIGH.<WAIT>\n\nSTOCK PRICES DEPEND MAINLY\nON SUPPLY AND DEMAND. THE\nMORE BUYERS, THE HIGHER THE\nPRICES. THE MORE SELLERS,\nTHE LOWER THE PRICES.\n<WAIT>\nSEVERAL THINGS CAN AFFECT\nSTOCK PRICES: COMPANY SALES,COMPANY PLANS AND INTEREST\nRATE FLUCTUATIONS.\n<WAIT>\nTHE MORE SENSITIVE A COMPANYIS TO CHANGES IN INTEREST\nRATES, THE MORE RISKY THE\nINVESTMENT.\n<WAIT>\nINTEREST RATE CHANGES AFFECTHOW MUCH YOU SPEND AND BUY.\nWHEN INTEREST RATES\nINCREASE, YOU WILL TEND TO\nSAVE MORE AND SPEND LESS.\n<WAIT>\nDURING A RECESSION, PRICES\nARE HIGH, THEREFORE YOU WILLTEND TO SPEND LESS.\n<WAIT>\nTHE MORE DEBT A COMPANY HAS,THAT IS THE MORE MONEY THEY\nOWE, THE MORE SENSITIVE THEYARE TO INTEREST RATES.\n<WAIT>\nTHE HIGHER THE ASSET BASE,\nTHAT IS ALL PROPERTY AND\nGOODS THAT HAVE HIGH VALUE,\nTHE LESS SENSITIVE THE\nCOMPANY IS TO INTEREST\nRATES.<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리 강의 4편] 7=주식이란 8=주가 9=뉴스 확보 10=매매법. 매우 긴 페이지 묶음(여러 <WAIT>). 1 LOT=1,000주"
+  },
+  {
+    "id": "news_b6_0009",
+    "ptr_addr": "0x180f7",
+    "offset": "0x19f6d",
+    "orig_bytes": 514,
+    "ja": "BY READING ALL FINANCIAL\nNEWS AND REPORTS AND WITH\nLOTS OF LUCK, YOU SHOULD BE\nABLE TO MAKE INTELLIGENT ANDPROFITABLE STOCK INVESTMENT.<WAIT>\nDURING THE BUSINESS WEEK,\nNEWSPAPERS CAN USUALLY GIVE\nYOU VALUABLE INFORMATION ON\nFLUCTUATIONS IN THE STOCK\nMARKET, INTEREST RATES AND\nTHE ECONOMY.<WAIT>\n\nTHIS CAN BE HELPFUL WHEN\nATTEMPTING TO PREDICT THE\nSTOCK PRICE PER EACH STOCK\nCATEGORY.\n<WAIT>\nPROFESSIONAL ANALYSTS AND\nCONSULTANTS CAN PROVIDE YOU\nWITH INFORMATION ON THE\nPAST, PRESENT AND FUTURE\nSTATUS OF COMPANIES.\n<WAIT>\nTHIS CAN REALLY HELP YOU TO\nKNOW THE POPULARITY OR\nUNPOPULARITY OF A COMPANY.\n<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리 강의 4편] 7=주식이란 8=주가 9=뉴스 확보 10=매매법. 매우 긴 페이지 묶음(여러 <WAIT>). 1 LOT=1,000주"
+  },
+  {
+    "id": "news_b6_0010",
+    "ptr_addr": "0x180f9",
+    "offset": "0x1a16f",
+    "orig_bytes": 474,
+    "ja": "YOU CAN PURCHASE STOCKS\nUSING YOUR OWN PERSONAL\nCOMPUTER WHICH IS CONNECTED\nTO THE LARGE COMPUTER AT A\nSECURITIES CORPORATION.\n<WAIT>\nFOR YOUR CONVENIENCE, STOCK\nPRICES ARE DISPLAYED ON YOURSCREEN. TRANSACTIONS HAVE TOBE MADE BY LOTS. 1 LOT IS\nEQUAL TO 1,000 SHARES OF\nSTOCK IN THIS GAME.<WAIT>\n\nPERCENTAGE CHANGES ARE ALSO\nSHOWN ON YOUR SCREEN TO\nINDICATE WHETHER THE STOCK\nPRICE HAS INCREASED OR\nDECREASED FROM THE PREVIOUS\nDAY.<WAIT>\n\nHOW MUCH MONEY YOU HAVE AT\nANY PARTICULAR TIME DURING\nTHE GAME WILL DEPEND ON HOW\nWISE YOU MAKE YOUR STOCK\nINVESTMENTS.\n<WAIT><END>",
+    "ko": "",
+    "note": "[스탠리 강의 4편] 7=주식이란 8=주가 9=뉴스 확보 10=매매법. 매우 긴 페이지 묶음(여러 <WAIT>). 1 LOT=1,000주"
+  },
+  {
+    "id": "news_b6_0011",
+    "ptr_addr": "0x18112",
+    "ptr_hi": "0x18114",
+    "offset": "0x1a349",
+    "orig_bytes": 29,
+    "ja": "HELLO SIR.  MY NAME IS\nCONNIE.\n\n<END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0012",
+    "ptr_addr": "0x18119",
+    "ptr_hi": "0x1811b",
+    "offset": "0x1a366",
+    "orig_bytes": 14,
+    "ja": "HELLO AGAIN.\n\n<END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0013",
+    "ptr_addr": "0x18127",
+    "ptr_hi": "0x18129",
+    "offset": "0x1a374",
+    "orig_bytes": 56,
+    "ja": "I HAVE AN EXCELLENT\nINVESTMENT TIP FOR $1,000.\nDO WE HAVE A DEAL?<END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0014",
+    "ptr_addr": "0x1817d",
+    "ptr_hi": "0x1817f",
+    "offset": "0x1a3ac",
+    "orig_bytes": 48,
+    "ja": "COME BACK SOON.  I'LL ALWAYSHAVE MORE INFO.\nGOOD BYE.<WAIT><END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0015",
+    "ptr_addr": "0x18184",
+    "ptr_hi": "0x18186",
+    "offset": "0x1a3dc",
+    "orig_bytes": 90,
+    "ja": "THAT'S A SHAME AND I HAD\nSUCH GOOD INFORMATION FOR\nYOU.  OH WELL, CHECK BACK\nWHEN YOU HAVE ENOUGH MONEY.<WAIT><END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0016",
+    "ptr_addr": "0x1818b",
+    "ptr_hi": "0x1818d",
+    "offset": "0x1a436",
+    "orig_bytes": 33,
+    "ja": "WELL SIR, MAYBE NEXT TIME.\nGOOD BYE.<WAIT><END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0017",
+    "ptr_addr": "0x18195",
+    "ptr_hi": "0x18197",
+    "offset": "0x1a457",
+    "orig_bytes": 53,
+    "ja": "SORRY, SIR.  MAYBE NEXT TIMEI'LL HAVE SOME INFO.\n\nGOOD BYE.<WAIT><END>",
+    "ko": "",
+    "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
+  },
+  {
+    "id": "news_b6_0018",
+    "ptr_addr": "0x181be",
+    "ptr_hi": "0x181c0",
+    "offset": "0x1b869",
+    "orig_bytes": 23,
+    "ja": "HELLO.  HOW CAN I HELP YOU?<END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0019",
+    "ptr_addr": "0x181c5",
+    "ptr_hi": "0x181c7",
+    "offset": "0x1b880",
+    "orig_bytes": 69,
+    "ja": "HELLO, IT'S NICE TO SEE YOU\nAGAIN.\n\nWHICH SERVICE CAN I PROVIDE\nYOU WITH TODAY?<END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0020",
+    "ptr_addr": "0x18203",
+    "ptr_hi": "0x18205",
+    "offset": "0x1b8c5",
+    "orig_bytes": 48,
+    "ja": "IF YOU NEED MY ASSISTANCE,\nSTOP BY ANY TIME.  GOOD BYE.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0021",
+    "ptr_addr": "0x1824d",
+    "ptr_hi": "0x1824f",
+    "offset": "0x1b8f5",
+    "orig_bytes": 114,
+    "ja": "YOUR COLLATERAL CAN BE\nAPPLIED AGAINST A LOAN FOR\nUP TO $800,000 PLUS 5%\nINTEREST WHICH COMES TO\n$840,000.  THE BALANCE IS\nDUE ON <VAR>.<END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0022",
+    "ptr_addr": "0x18297",
+    "ptr_hi": "0x18299",
+    "offset": "0x1ba32",
+    "orig_bytes": 69,
+    "ja": "THANK YOU FOR USING OUR\nBANK.  DON'T FORGET THAT\nYOUR LOAN BALANCE IS DUE ON\n<VAR>.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0023",
+    "ptr_addr": "0x1829c",
+    "ptr_hi": "0x1829e",
+    "offset": "0x1b967",
+    "orig_bytes": 78,
+    "ja": "I'M SORRY SIR.  I CANNOT\nPROCESS YOUR LOAN IF YOU\nHAVE NO COLLATERAL TO APPLY\nAGAINST IT.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0024",
+    "ptr_addr": "0x182a1",
+    "ptr_hi": "0x182a3",
+    "offset": "0x1b9b5",
+    "orig_bytes": 125,
+    "ja": "I'M SORRY SIR.  ACCORDING TOOUR RECORDS, YOU PRESENTLY\nHOLD A LOAN THROUGH US.  I\nCANNOT PROCESS A SECOND LOANUNTIL THE FIRST HAS BEEN\nCLEARED.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0025",
+    "ptr_addr": "0x182a6",
+    "ptr_hi": "0x182a8",
+    "offset": "0x1ba77",
+    "orig_bytes": 56,
+    "ja": "THANK YOU.  PLEASE FEEL FREETO CALL ON OUR SERVICES AT\nANY TIME.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0026",
+    "ptr_addr": "0x182b7",
+    "ptr_hi": "0x182b9",
+    "offset": "0x1baaf",
+    "orig_bytes": 31,
+    "ja": "WOULD YOU LIKE TO PAY OFF\nYOUR LOAN?<END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0027",
+    "ptr_addr": "0x18310",
+    "ptr_hi": "0x18312",
+    "offset": "0x1bb4e",
+    "orig_bytes": 90,
+    "ja": "THANK YOU FOR YOUR PAYMENT.\nPLEASE FEEL FREE TO CONTACT\nUS FOR ANY FUTURE SERVICES\nWE CAN HELP YOU WITH.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0028",
+    "ptr_addr": "0x18315",
+    "ptr_hi": "0x18317",
+    "offset": "0x1bace",
+    "orig_bytes": 30,
+    "ja": "I'M SORRY, YOU DON'T HAVE A\nLOAN.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0029",
+    "ptr_addr": "0x1831a",
+    "ptr_hi": "0x1831c",
+    "offset": "0x1baec",
+    "orig_bytes": 50,
+    "ja": "PLEASE DON'T FORGET THAT\nYOUR DUE DATE FOR THE LOAN\nIS <VAR>.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0030",
+    "ptr_addr": "0x1831f",
+    "ptr_hi": "0x18321",
+    "offset": "0x1bb1e",
+    "orig_bytes": 48,
+    "ja": "SIR, YOU DON'T HAVE ENOUGH\nCASH TO PAY OFF THE BALANCE!<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0031",
+    "ptr_addr": "0x18326",
+    "ptr_hi": "0x18328",
+    "offset": "0x1bba8",
+    "orig_bytes": 44,
+    "ja": "WOULD YOU LIKE TO PAY OFF\nTHE BALANCE ON THE CASTLE?<END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0032",
+    "ptr_addr": "0x18383",
+    "ptr_hi": "0x18385",
+    "offset": "0x1bc47",
+    "orig_bytes": 70,
+    "ja": "WE'VE RECEIVED YOUR FINAL\nPAYMENT ON THE CASTLE.\nTHANK YOU FOR USING OUR\nBANK.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0033",
+    "ptr_addr": "0x18388",
+    "ptr_hi": "0x1838a",
+    "offset": "0x1bbd4",
+    "orig_bytes": 62,
+    "ja": "PLEASE DON'T FORGET THE DUE\nDATE ON YOUR BALANCE IS\nFRIDAY, JULY 28TH.<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0034",
+    "ptr_addr": "0x1838d",
+    "ptr_hi": "0x1838f",
+    "offset": "0x1bc12",
+    "orig_bytes": 53,
+    "ja": "OH, NO!  YOU DON'T HAVE\nENOUGH MONEY TO PAY OFF YOURBALANCE!<WAIT><END>",
+    "ko": "",
+    "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
+  },
+  {
+    "id": "news_b6_0035",
+    "ptr_addr": "0x183a8",
+    "ptr_hi": "0x183aa",
+    "offset": "0x19291",
+    "orig_bytes": 34,
+    "ja": "  -THE WALL STREET TIMES-\n\n«ECONOMY»\n<END>",
+    "ko": "",
+    "note": "[신문 구역 제목] 35=WALL STREET TIMES 제호+ECONOMY 36=MARKET DATA 37=HOT STOCKS 38=NEWS HEADLINERS. « » 는 장식 기호 타일"
+  },
+  {
+    "id": "news_b6_0036",
+    "ptr_addr": "0x18411",
+    "ptr_hi": "0x18413",
+    "offset": "0x1934e",
+    "orig_bytes": 14,
+    "ja": "«MARKET DATA»\n<END>",
+    "ko": "",
+    "note": "[신문 구역 제목] 35=WALL STREET TIMES 제호+ECONOMY 36=MARKET DATA 37=HOT STOCKS 38=NEWS HEADLINERS. « » 는 장식 기호 타일"
+  },
+  {
+    "id": "news_b6_0037",
+    "ptr_addr": "0x1842c",
+    "ptr_hi": "0x1842e",
+    "offset": "0x19424",
+    "orig_bytes": 25,
+    "ja": "$$$ HOT STOCKS BULLETIN $$$\n<END>",
+    "ko": "",
+    "note": "[신문 구역 제목] 35=WALL STREET TIMES 제호+ECONOMY 36=MARKET DATA 37=HOT STOCKS 38=NEWS HEADLINERS. « » 는 장식 기호 타일"
+  },
+  {
+    "id": "news_b6_0038",
+    "ptr_addr": "0x18461",
+    "ptr_hi": "0x18463",
+    "offset": "0x1943d",
+    "orig_bytes": 18,
+    "ja": "«NEWS HEADLINERS»\n<END>",
+    "ko": "",
+    "note": "[신문 구역 제목] 35=WALL STREET TIMES 제호+ECONOMY 36=MARKET DATA 37=HOT STOCKS 38=NEWS HEADLINERS. « » 는 장식 기호 타일"
+  },
+  {
+    "id": "news_b6_0039",
+    "ptr_addr": "0x184a4",
+    "offset": "0x192f1",
+    "orig_bytes": 41,
+    "ja": "HIGHER PRICES KEEP\nINTEREST RATES CLIMBING.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 금리 기사] 39,40=금리 동향 41,42=39,40의 alias 43,44=금리 변동 <VAR>=퍼센트"
+  },
+  {
+    "id": "news_b6_0040",
+    "ptr_addr": "0x184a6",
+    "offset": "0x1931a",
+    "orig_bytes": 52,
+    "ja": "INTEREST RATES ARE\nDROPPING WHILE PRICES\nREMAIN STABLE.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 금리 기사] 39,40=금리 동향 41,42=39,40의 alias 43,44=금리 변동 <VAR>=퍼센트"
+  },
+  {
+    "id": "news_b6_0041",
+    "ptr_addr": "0x184a8",
+    "offset": "0x192f1",
+    "alias_of": "news_b6_0039",
+    "note": "(alias) [신문: 금리 기사] 39,40=금리 동향 41,42=39,40의 alias 43,44=금리 변동 <VAR>=퍼센트"
+  },
+  {
+    "id": "news_b6_0042",
+    "ptr_addr": "0x184aa",
+    "offset": "0x1931a",
+    "alias_of": "news_b6_0040",
+    "note": "(alias) [신문: 금리 기사] 39,40=금리 동향 41,42=39,40의 alias 43,44=금리 변동 <VAR>=퍼센트"
+  },
+  {
+    "id": "news_b6_0043",
+    "ptr_addr": "0x184b8",
+    "offset": "0x192b3",
+    "orig_bytes": 30,
+    "ja": "INTEREST RATES HAVE RISEN\nBY <VAR>%.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 금리 기사] 39,40=금리 동향 41,42=39,40의 alias 43,44=금리 변동 <VAR>=퍼센트"
+  },
+  {
+    "id": "news_b6_0044",
+    "ptr_addr": "0x184ba",
+    "offset": "0x192d1",
+    "orig_bytes": 32,
+    "ja": "INTEREST RATES HAVE\nDROPPED BY <VAR>%.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 금리 기사] 39,40=금리 동향 41,42=39,40의 alias 43,44=금리 변동 <VAR>=퍼센트"
+  },
+  {
+    "id": "news_b6_0045",
+    "ptr_addr": "0x184bc",
+    "offset": "0x1935c",
+    "orig_bytes": 52,
+    "ja": "SPECULATIVE AND GROWTH\nSTOCKS CLIMB WHILE OTHERS\nCRASH.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 시장 동향] 종목 분류(SPECULATIVE/GROWTH/BLUE CHIP/CYCLICAL) 강세 기사"
+  },
+  {
+    "id": "news_b6_0046",
+    "ptr_addr": "0x184be",
+    "offset": "0x19390",
+    "orig_bytes": 42,
+    "ja": "BLUE CHIP AND CYCLICAL\nSTOCKS SURPASS OTHERS.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 시장 동향] 종목 분류(SPECULATIVE/GROWTH/BLUE CHIP/CYCLICAL) 강세 기사"
+  },
+  {
+    "id": "news_b6_0047",
+    "ptr_addr": "0x184c0",
+    "offset": "0x193ba",
+    "orig_bytes": 53,
+    "ja": "BLUE CHIP AND SPECULATIVE\nSTOCKS SWIM ABOVE THE\nDROWNERS.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 시장 동향] 종목 분류(SPECULATIVE/GROWTH/BLUE CHIP/CYCLICAL) 강세 기사"
+  },
+  {
+    "id": "news_b6_0048",
+    "ptr_addr": "0x184c2",
+    "offset": "0x193ef",
+    "orig_bytes": 53,
+    "ja": "RISING STOCKS ARE OUTPACED\nBY BLUE CHIP AND GROWTH\nSTOCKS.<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 시장 동향] 종목 분류(SPECULATIVE/GROWTH/BLUE CHIP/CYCLICAL) 강세 기사"
+  },
+  {
+    "id": "news_b6_0049",
+    "ptr_addr": "0x184c4",
+    "offset": "0x1944f",
+    "orig_bytes": 72,
+    "ja": "HOLLYWOOD'S TALKSHOW HOSTS\nMAKE WAVES AS THEY BATTLE\nFOR OVERSEAS RATING POINTS<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0050",
+    "ptr_addr": "0x184c6",
+    "offset": "0x19497",
+    "orig_bytes": 87,
+    "ja": "MORE GIANT COCKROACHES\nINVADE SMALL SOUTH SEAS\nISLAND -\nGIANT CANS OF RAIDO USED\nWITHOUT SUCCESS<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0051",
+    "ptr_addr": "0x184c8",
+    "offset": "0x194ee",
+    "orig_bytes": 78,
+    "ja": "ANOTHER GANGSTER \"SHOOT UP\"\nAT A DOWNTOWN TAVERN AFTER\nBIG BRAWL - NO INJURIES\nREPORTED<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0052",
+    "ptr_addr": "0x184ca",
+    "offset": "0x1953c",
+    "orig_bytes": 74,
+    "ja": "LOCAL ROCK BAND HITS STONE\nCITY AGAIN BY STORM - 3 DAYSADDED TO THEIR SOLD OUT\nCONCERT<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0053",
+    "ptr_addr": "0x184cc",
+    "offset": "0x19586",
+    "orig_bytes": 68,
+    "ja": "LOCAL HERO TO BE GIVEN\nTICKER-TAPE WELCOME AFTER\nSAVING DROWNING GUINEA PIG<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0054",
+    "ptr_addr": "0x184ce",
+    "offset": "0x195ca",
+    "orig_bytes": 76,
+    "ja": "UP AND COMING VIDEO SOFTWARECOMPANY HITS IT BIG WITH A\nHIGH STAKES GAME - SOON TO\nBE NO.1<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0055",
+    "ptr_addr": "0x184d0",
+    "offset": "0x19616",
+    "orig_bytes": 73,
+    "ja": "THE ART WORLD GOES INTO\nSHOCK AS A WARHALSKY PRINT\nGOES UP FOR SALE FOR\n$400 MILLION<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0056",
+    "ptr_addr": "0x184d2",
+    "offset": "0x1965f",
+    "orig_bytes": 84,
+    "ja": "83 YEAR OLD WOMAN COMES IN\nFIRST IN THE ANNUAL USA\nMARATHON - NOW WANTED FOR\nCHANNEL 3 SPORTS SHOW<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0057",
+    "ptr_addr": "0x184d4",
+    "offset": "0x196b3",
+    "orig_bytes": 76,
+    "ja": "PRINCE LOPOLOCO GOING TO\nMARRY AMERICAN HEIRESS -\nCOMBINED WORTH IS OVER\n$75 BILLION<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0058",
+    "ptr_addr": "0x184d6",
+    "offset": "0x196ff",
+    "orig_bytes": 77,
+    "ja": "SPACE EXPEDITION SET FOR\nEARLY NEXT YEAR - LIFE\nSUPPORT STATION TO BE BUILT\nON PLUTOSOS<WAIT><END>",
+    "ko": "",
+    "note": "[신문: 잡보 기사 10개] 풍자 기사. 패러디 이름 다수(WARHALSKY, LOPOLOCO 등)"
+  },
+  {
+    "id": "news_b6_0059",
+    "ptr_addr": "0x184d8",
+    "offset": "0x1974c",
+    "orig_bytes": 12,
+    "ja": "           ATNT\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0060",
+    "ptr_addr": "0x184da",
+    "offset": "0x19758",
+    "orig_bytes": 20,
+    "ja": "      AMERICAN DEPRESS\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0061",
+    "ptr_addr": "0x184dc",
+    "offset": "0x1976c",
+    "orig_bytes": 19,
+    "ja": "      BETHLEHAM STEEL\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0062",
+    "ptr_addr": "0x184de",
+    "offset": "0x1977f",
+    "orig_bytes": 13,
+    "ja": "           BOING\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0063",
+    "ptr_addr": "0x184e0",
+    "offset": "0x1978c",
+    "orig_bytes": 24,
+    "ja": "   CARNIVORE CRUISE LINES\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0064",
+    "ptr_addr": "0x184e2",
+    "offset": "0x197a4",
+    "orig_bytes": 16,
+    "ja": "         CENTIPEDE\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0065",
+    "ptr_addr": "0x184e4",
+    "offset": "0x197b4",
+    "orig_bytes": 14,
+    "ja": "           CHRYER\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0066",
+    "ptr_addr": "0x184e6",
+    "offset": "0x197c2",
+    "orig_bytes": 19,
+    "ja": "      COUGHMAN & BROAD\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0067",
+    "ptr_addr": "0x184e8",
+    "offset": "0x197d5",
+    "orig_bytes": 16,
+    "ja": "         EXCONRAIL\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0068",
+    "ptr_addr": "0x184ea",
+    "offset": "0x197e5",
+    "orig_bytes": 19,
+    "ja": "      FIREDMAN'S FUND\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0069",
+    "ptr_addr": "0x184ec",
+    "offset": "0x197f8",
+    "orig_bytes": 19,
+    "ja": "      MARRINOT HOTELS\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0070",
+    "ptr_addr": "0x184ee",
+    "offset": "0x1980b",
+    "orig_bytes": 19,
+    "ja": "      PAN MAM AIRLINES\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0071",
+    "ptr_addr": "0x184f0",
+    "offset": "0x1981e",
+    "orig_bytes": 16,
+    "ja": "        RATTEL TOYS\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0072",
+    "ptr_addr": "0x184f2",
+    "offset": "0x1982e",
+    "orig_bytes": 25,
+    "ja": "   REEBUCKS INTERNATIONAL\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0073",
+    "ptr_addr": "0x184f4",
+    "offset": "0x19847",
+    "orig_bytes": 19,
+    "ja": "       CHARLES SCHLOB\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0074",
+    "ptr_addr": "0x184f6",
+    "offset": "0x1985a",
+    "orig_bytes": 17,
+    "ja": "         STRAYHOUND\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0075",
+    "ptr_addr": "0x184f8",
+    "offset": "0x1986b",
+    "orig_bytes": 16,
+    "ja": "         TERADYING\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0076",
+    "ptr_addr": "0x184fa",
+    "offset": "0x1987b",
+    "orig_bytes": 14,
+    "ja": "           XEAROX\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0077",
+    "ptr_addr": "0x184fc",
+    "offset": "0x19889",
+    "orig_bytes": 11,
+    "ja": "            YBM\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0078",
+    "ptr_addr": "0x184fe",
+    "offset": "0x19894",
+    "orig_bytes": 19,
+    "ja": "      YAPPLE COMPUTER\n<END>",
+    "ko": "",
+    "note": "[신문: 종목명 20개, 가운데 정렬용 앞 공백 포함] 순서가 stock_names_b5 의 종목 1~20 과 동일. 줄 전체 28칸 안에서 가운데 정렬"
+  },
+  {
+    "id": "news_b6_0079",
+    "ptr_addr": "0x1919d",
+    "offset": "0x1a48c",
+    "orig_bytes": 109,
+    "ja": "ATNT'S JUST DEVELOPED A\nNEW COMMUNICATION NETWORK\nSYSTEM FOR COMPUTERS.  THAT\nSHOULD GET THE STOCKS\nRINGING.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0080",
+    "ptr_addr": "0x191a1",
+    "offset": "0x1a4f9",
+    "orig_bytes": 84,
+    "ja": "ATNT HAS HAD A 20% RISE IN\nPROFITS THIS QUARTER.  NOW\nTHE STOCKS ARE REALLY\nRINGING.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0081",
+    "ptr_addr": "0x191a5",
+    "offset": "0x1a54d",
+    "orig_bytes": 103,
+    "ja": "AMERICAN DEPRESS HAD A 30%\nINCREASE LAST QUARTER.  THATSHOULD KEEP THEM FROM BEING\nDEPRESSED FOR A WHILE.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0082",
+    "ptr_addr": "0x191a9",
+    "offset": "0x1a5b4",
+    "orig_bytes": 125,
+    "ja": "AMERICAN DEPRESS JUST\nOFFERED A GIFT PROMOTION\nWHICH BOOSTED RATINGS 10%\nTHIS QUARTER.  THAT SHOULD\nDEPRESS THEIR COMPETITORS.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0083",
+    "ptr_addr": "0x191ad",
+    "offset": "0x1a631",
+    "orig_bytes": 119,
+    "ja": "BETHLEHAM STEEL HAD A PROFITINCREASE AFTER MANAGEMENT\nWAS REORGANIZED.  NOW THEY\nCAN GIVE OUT SOME EXTRA HAMSAT CHRISTMAS.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0084",
+    "ptr_addr": "0x191b1",
+    "offset": "0x1a6a8",
+    "orig_bytes": 88,
+    "ja": "BOING WON A BIG CONTRACT\nWITH A MAJOR AIRLINE.  THAT\nSHOULD KEEP THEM FLYING FOR\nA WHILE.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0085",
+    "ptr_addr": "0x191b5",
+    "offset": "0x1a700",
+    "orig_bytes": 75,
+    "ja": "BOING HAS HAD A 30% RISE IN\nPROFITS THIS QUARTER. NOW\nTHEY'RE FLYING HIGH.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0086",
+    "ptr_addr": "0x191b9",
+    "offset": "0x1a74b",
+    "orig_bytes": 105,
+    "ja": "CARNIVORE ANNOUNCED PLANS\nFOR INDUSTRIAL EXPANSION.  ITHINK THEY SHOULD CONSIDER\nPRODUCING VEGETABLES.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0087",
+    "ptr_addr": "0x191bd",
+    "offset": "0x1a7b4",
+    "orig_bytes": 104,
+    "ja": "CARNIVORE HAS SHOWN A RATINGINCREASE AS A RESULT OF\nTHEIR EXPANSION.  THEY\nMUST'VE PRODUCED LOTS OF\nMEAT.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0088",
+    "ptr_addr": "0x191c1",
+    "offset": "0x1a81c",
+    "orig_bytes": 88,
+    "ja": "CENTIPEDE HAS PLANS TO SURGEBUILDING.  THAT SHOULD GIVE\nTHEM A FEW MORE LEGS TO\nSTAND ON.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0089",
+    "ptr_addr": "0x191c5",
+    "offset": "0x1a874",
+    "orig_bytes": 93,
+    "ja": "CENTIPEDE HAS SHOWN PROGRESSIN THEIR BUILDING SURGE.\nTHEIR COMPETITORS MAY GET\nA REAL SHOCK!  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0090",
+    "ptr_addr": "0x191c9",
+    "offset": "0x1a8d1",
+    "orig_bytes": 110,
+    "ja": "CHRYER IS RELEASING A NEW\nCOMPETITIVELY PRICED CAR.  IDON'T FEEL THAT THEY'LL BE\nSHEDDING ANY TEARS ON THIS\nDEAL.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0091",
+    "ptr_addr": "0x191cd",
+    "offset": "0x1a93f",
+    "orig_bytes": 90,
+    "ja": "CHRYER HAS SHOWN A 25%\nPROFIT THIS QUARTER.  I\nDON'T THINK THEY HAVE\nANYTHING TO CRY ABOUT.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0092",
+    "ptr_addr": "0x191d1",
+    "offset": "0x1a999",
+    "orig_bytes": 113,
+    "ja": "COUGHMAN & BROAD IS PLANNINGA HIGH-TECH TOWNHOUSE\nPROJECT.  THAT SHOULD GIVE\nTHE COMPETITORS SOMETHING TOCOUGH AT.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0093",
+    "ptr_addr": "0x191d5",
+    "offset": "0x1aa0a",
+    "orig_bytes": 91,
+    "ja": "EXCONRAIL IS EXPANDING INTO\nTHE CABLE NETWORK INDUSTRY.\nI HOPE THEY DON'T HIRE ANY\nEXCONS.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0094",
+    "ptr_addr": "0x191d9",
+    "offset": "0x1aa65",
+    "orig_bytes": 104,
+    "ja": "FIREDMAN'S FUND HAS SHOWN A\nPROFIT INCREASE IN SALES.  IHOPE THEY'RE DONATING TO\nUNEMPLOYMENT INSURANCE.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0095",
+    "ptr_addr": "0x191dd",
+    "offset": "0x1aacd",
+    "orig_bytes": 79,
+    "ja": "MARRINOT HOTELS PLAN TO\nBUILD 10 HOTELS THIS YEAR.\nMAYBE NOW THEY'LL BE MERRY.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0096",
+    "ptr_addr": "0x191e1",
+    "offset": "0x1ab1c",
+    "orig_bytes": 94,
+    "ja": "PAN MAM DENIED RUMORS OF\nDOMESTIC LINE CUT-OFFS.  I\nDON'T THINK THERE ARE ANY\nHOLES IN THIS PAN.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0097",
+    "ptr_addr": "0x191e5",
+    "offset": "0x1ab7a",
+    "orig_bytes": 111,
+    "ja": "THE RATTEL TOY INDUSTRY IS\nBOOMING BECAUSE OF HIGH\nDEMAND.  IT'LL PROBABLY STAYTHAT WAY UNLESS THEY MAKE\nTOY RATS.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0098",
+    "ptr_addr": "0x191e9",
+    "offset": "0x1abe9",
+    "orig_bytes": 107,
+    "ja": "REEBUCKS SHOWED A 20%\nPROFIT INCREASE LAST\nQUARTER.  I GUESS THAT MEANSTHEY'LL BE RUNNING ALL THE\nWAY TO THE BANK.  HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0099",
+    "ptr_addr": "0x191ed",
+    "offset": "0x1ac54",
+    "orig_bytes": 99,
+    "ja": "CHARLES SCHLOB IS DOING WELLBECAUSE OF THE BULL STOCK\nMARKET.  I GUESS CHARLES\nISN'T BULLING AROUND.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0100",
+    "ptr_addr": "0x191f1",
+    "offset": "0x1acb7",
+    "orig_bytes": 106,
+    "ja": "STRAYHOUND IS EXPANDING INTOTHE CONSUMER PRODUCT\nINDUSTRY.  I HOPE THE DOG\nPOUND DOESN'T GET TO THEM\nFIRST.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0101",
+    "ptr_addr": "0x191f5",
+    "offset": "0x1ad21",
+    "orig_bytes": 84,
+    "ja": "TERADYING IS MAKING\nACQUISITIONS TO STRENGTHEN\nTHE COMPANY TO KEEP IT FROM\nDYING.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0102",
+    "ptr_addr": "0x191f9",
+    "offset": "0x1ad75",
+    "orig_bytes": 88,
+    "ja": "TERADYING HAD A 30% PROFIT\nRISE LAST QUARTER.  THAT\nSHOULD DELAY THEIR DYING FORA WHILE.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0103",
+    "ptr_addr": "0x191fd",
+    "offset": "0x1adcd",
+    "orig_bytes": 93,
+    "ja": "XEAROX IS RELEASING A NEW\nADVANCED COLOR COPIER.\nTHAT'LL GET THE COMPETITORS\nTRYING TO COPY.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0104",
+    "ptr_addr": "0x19201",
+    "offset": "0x1ae2a",
+    "orig_bytes": 63,
+    "ja": "XEAROX HAS HAD A 50% PROFIT\nRAISE THIS QUARTER.  COPY\nTHAT!  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0105",
+    "ptr_addr": "0x19205",
+    "offset": "0x1ae69",
+    "orig_bytes": 115,
+    "ja": "YBM'S RELEASING A NEW\nCOMPUTER WITH THE MOST\nADVANCED WORD PROCESSOR.\nSOUNDS LIKE THEY'RE TYPING\nTHEIR WAY TO THE TOP. \nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0106",
+    "ptr_addr": "0x19209",
+    "offset": "0x1aedc",
+    "orig_bytes": 70,
+    "ja": "YBM HAD A 30% PROFIT RAISE\nTHIS QUARTER. YBM, THEY CAN\nBEAT ALL OF 'EM. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0107",
+    "ptr_addr": "0x1920d",
+    "offset": "0x1af22",
+    "orig_bytes": 116,
+    "ja": "YAPPLE'S RELEASING A NEW\nPORTABLE COMPUTER WITH\nADVANCED AUDIO AND VISUAL\nCAPABILITIES.  THAT'LL MAKE\nTHE BUYERS YAPPY.  HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0108",
+    "ptr_addr": "0x19211",
+    "offset": "0x1af96",
+    "orig_bytes": 69,
+    "ja": "YAPPLE JUST HAD A 10% PROFITGAIN.  I GUESS IT PAYS TO BEA GOOD YAPPER.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 호재] 종목별 소문+말장난 농담(\"HA! HA! HA!\" 로 끝남). 종목당 대개 2건(호재 계획/실적). 말장난 번역 필요(종목명 의미 연결)"
+  },
+  {
+    "id": "news_b6_0109",
+    "ptr_addr": "0x19215",
+    "offset": "0x1afdb",
+    "orig_bytes": 95,
+    "ja": "A DEFECT WAS FOUND IN ONE OFBOING'S PLANES.  I THINK YOUCAN CONSIDER THIS INVESTMENTA REAL DOWNER.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 실적] BOING 결함, CHRYER 판매 감소, FIREDMAN'S, RATTEL. 말장난 포함"
+  },
+  {
+    "id": "news_b6_0110",
+    "ptr_addr": "0x19219",
+    "offset": "0x1b03a",
+    "orig_bytes": 116,
+    "ja": "SALES ON CHRYER'S NEW CAR\nHAS DROPPED BECAUSE OF\nIMPORTED CAR POPULARITY.\nTHAT SHOULD GIVE THEM\nSOMETHING TO CRY ABOUT.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 실적] BOING 결함, CHRYER 판매 감소, FIREDMAN'S, RATTEL. 말장난 포함"
+  },
+  {
+    "id": "news_b6_0111",
+    "ptr_addr": "0x1921d",
+    "offset": "0x1b0ae",
+    "orig_bytes": 85,
+    "ja": "FIREDMAN'S FUND SALES ARE\n2.5% MARKET VALUE.  I HOPE\nTHEY DON'T HAVE TO FIRE\nANYONE.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 실적] BOING 결함, CHRYER 판매 감소, FIREDMAN'S, RATTEL. 말장난 포함"
+  },
+  {
+    "id": "news_b6_0112",
+    "ptr_addr": "0x19221",
+    "offset": "0x1b103",
+    "orig_bytes": 111,
+    "ja": "RATTEL TOYS HAS SHOWN A LOSSBECAUSE OF EXCESSIVE FACTORYINVESTMENTS.  THE INVESTOR\nMUST NOT HAVE BEEN A SMART\nRAT.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 실적] BOING 결함, CHRYER 판매 감소, FIREDMAN'S, RATTEL. 말장난 포함"
+  },
+  {
+    "id": "news_b6_0113",
+    "ptr_addr": "0x1926f",
+    "offset": "0x1b172",
+    "orig_bytes": 110,
+    "ja": "ATNT MAY ANNOUNCE A RATE\nINCREASE IN PHONE CHARGES.\nI THINK IT MAY GIVE THEIR\nDISCOUNT COMPETITORS A REAL\nCHARGE.  HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0114",
+    "ptr_addr": "0x19271",
+    "offset": "0x1b1e0",
+    "orig_bytes": 123,
+    "ja": "CONSUMER BUYING SLOWDOWN\nPREDICTED, COULD EFFECT\nAMERICAN DEPRESS PROFITS.\nTHEY WON'T BE GETTING MUCH\nOF A CHARGE OUT OF THAT.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0115",
+    "ptr_addr": "0x19273",
+    "offset": "0x1b25b",
+    "orig_bytes": 120,
+    "ja": "POSSIBLE LAYOFF OF EMPLOYEESAT BETHLEHAM STEEL DUE TO\nMANAGEMENT REORGANIZATION.\nTHEIR PRESENT EMPLOYEES GOT\nA REAL STEAL. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0116",
+    "ptr_addr": "0x19275",
+    "offset": "0x1b2d3",
+    "orig_bytes": 115,
+    "ja": "BUDGETARY BATTLES MAY CAUSE\nCARNIVORE'S EXPANSION PLANS\nTO SLOW DOWN. SOUNDS LIKE\nTHERE'S A BIT OF PIGGING OUTGOING ON. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0117",
+    "ptr_addr": "0x19277",
+    "offset": "0x1b346",
+    "orig_bytes": 89,
+    "ja": "BUILDING SURGE MAY BE TOO\nMUCH FOR CENTIPEDE TO\nHANDLE.  THEY MIGHT JUST\nBREAK A FEW LEGS.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0118",
+    "ptr_addr": "0x19279",
+    "offset": "0x1b39f",
+    "orig_bytes": 93,
+    "ja": "OVERSEAS PROBLEMS MAY BE\nDAMAGING TO COUGHMAN & BROADSALES. MAYBE A COUGH DROP\nCOULD HELP THEM. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0119",
+    "ptr_addr": "0x1927b",
+    "offset": "0x1b3fc",
+    "orig_bytes": 101,
+    "ja": "EXCESSIVE SPENDING COULD\nPOSSIBLY CAUSE EXCONRAIL TO\nLOSE BIG.  I HOPE THAT'S ALLTHEY HAVE TO EXPLAIN.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0120",
+    "ptr_addr": "0x1927d",
+    "offset": "0x1b461",
+    "orig_bytes": 122,
+    "ja": "HOTEL EXPANSION PLANS MAY BEREDUCED AND COULD CAUSE\nMARRINOT FINANCIAL\nDIFFICULTIES.  I GUESS THAT\nPROVES THEY'RE NOT MERRY.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0121",
+    "ptr_addr": "0x1927f",
+    "offset": "0x1b4db",
+    "orig_bytes": 106,
+    "ja": "RECENT PROBLEMS CONCERNING\nENGINE PARTS COULD CAUSE A\nDROP IN PAN MAM PROFITS.\nTHERE MIGHT BE A HOLE IN THEPAN. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0122",
+    "ptr_addr": "0x19281",
+    "offset": "0x1b545",
+    "orig_bytes": 106,
+    "ja": "YBM MAKES TENTATIVE PLANS TODEVELOP A COMPUTER WITH\nADVANCED GRAPHICS. YBM WILL\nBE BEAMING WITH EXCITEMENT.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0123",
+    "ptr_addr": "0x19283",
+    "offset": "0x1b5af",
+    "orig_bytes": 104,
+    "ja": "REEBUCKS EMPLOYEES CAUSE\nUPROAR AS THEY DEMAND MORE\nBENEFITS. I'D SAY SOMEONE\nIS REALLY PASSING THE BUCK.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0124",
+    "ptr_addr": "0x19285",
+    "offset": "0x1b617",
+    "orig_bytes": 86,
+    "ja": "RUMORS SAY REEBUCKS MAY BE\nLOSING PROFITS.  I'D SAY\nTHEY'LL MAY BE GROVELING FORBUCKS. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0125",
+    "ptr_addr": "0x19287",
+    "offset": "0x1b66d",
+    "orig_bytes": 110,
+    "ja": "POSSIBILITY OF BAD\nINVESTMENTS MAY MOVE CHARLESSCHLOB INTO A DEFICIT.\nCHARLES IS MORE OF A SCHLOB\nTHAN WE THOUGHT. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0126",
+    "ptr_addr": "0x19289",
+    "offset": "0x1b6db",
+    "orig_bytes": 85,
+    "ja": "STRAYHOUND MAY CONSIDER\nINCREASING ITS PRODUCT LINE.IT'S A REAL DOG FIGHT OUT\nTHERE. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0127",
+    "ptr_addr": "0x1928b",
+    "offset": "0x1b730",
+    "orig_bytes": 83,
+    "ja": "TERADYING TEST EQUIPMENT\nPRODUCTION MAY BE HEADING\nFOR A SLUMP. THEY MAY JUST\nDIE. HA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0128",
+    "ptr_addr": "0x1928d",
+    "offset": "0x1b783",
+    "orig_bytes": 123,
+    "ja": "XEAROX RIVALS ARE EXPECTED\nTO RELEASE COMPETITIVE COLORCOPIERS.  I GUESS THE COPY\nBUSINESS MAY NOT BE PICTURE\nPERFECT FOR THEM.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  },
+  {
+    "id": "news_b6_0129",
+    "ptr_addr": "0x1928f",
+    "offset": "0x1b7fe",
+    "orig_bytes": 107,
+    "ja": "POSSIBLE TECHNICAL\nDIFFICULTIES MAY DELAY\nYAPPLE'S NEW COMPUTER.\nTHE PROGRAMMERS MAY BE\nYAPPING TOO MUCH.\nHA! HA! HA!<WAIT><END>",
+    "ko": "",
+    "note": "[HOT STOCKS 뉴스: 악재 전망] 종목별 하락 예상 소문+말장난 농담"
+  }
+]

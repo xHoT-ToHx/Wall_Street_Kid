@@ -804,11 +804,11 @@
   {
    "name": "title_featuring",
    "type": "fixed",
-   "offset": "0x1447d",
+   "offset": "0x1447c",
    "count": 1,
    "length": 12,
    "pad": "0x49",
-   "note": "타이틀 데모 'FEATURING...' PPU 레코드 [ea 22 0c]+12바이트 (bank5 $846A). 길이 바꾸려면 레코드 len 바이트(0x1447C)도 수정"
+   "note": "타이틀 데모 'FEATURING...' PPU 레코드 [ea 22 0c]+12바이트 (bank5 $846A). 길이 바꾸려면 레코드 len 바이트(0x1447B)도 수정"
   },
   {
    "name": "weekdays",
