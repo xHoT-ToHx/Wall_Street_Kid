@@ -1,0 +1,19 @@
+{
+  "name": "Wall Street Kid",
+  "version": "0.0.0",
+  "platform": "fc",
+  "source_lang": "en",
+  "rom": "rom/Wall Street Kid (USA).nes",
+  "rom_sha1": "caba8f34159eba1ecff38dd7097218c63c240ad7",
+  "rom_crc32": "e256aed4",
+  "tables": {
+    "ja": ["tables/ja.tbl"],
+    "ko": ["tables/ko_ctrl.tbl", "tables/ko_font.tbl"]
+  },
+  "spec": "spec.json",
+  "scripts_dir": "scripts",
+  "inserts": [],
+  "commands": [],
+  "output": "build/Wall_Street_Kid_kr.nes",
+  "patch": {"format": "bps", "out": "release/Wall_Street_Kid_kr_v{version}.bps"}
+}
