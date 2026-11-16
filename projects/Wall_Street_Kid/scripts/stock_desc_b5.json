@@ -5,7 +5,7 @@
     "offset": "0x1758a",
     "orig_bytes": 80,
     "ja": "A VERY STRONG\nCOMMUNICATIONS COMPANY,\nTHAT NOW HAS TO COMPETE\nFOR THEIR MARKET.<END>",
-    "ko": "",
+    "ko": "매우 탄탄한 통신 회사.\n이제는 자기 시장을 놓고\n경쟁해야 하는 처지.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -14,7 +14,7 @@
     "offset": "0x175da",
     "orig_bytes": 93,
     "ja": "SUCCESSFUL FINANCIAL\nSERVICES COMPANY, HIGH\nMARKET VALUE WITH HIGH\nSALES, AND STRONG GROWTH.<END>",
-    "ko": "",
+    "ko": "성공한 금융 서비스 회사.\n시가총액과 매출이 높고\n성장세가 강함.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -23,7 +23,7 @@
     "offset": "0x17637",
     "orig_bytes": 92,
     "ja": "UNDER NEW MANAGEMENT,\nSHOWING PROFITABILITY,\nINDUSTRY UNCERTAINTY,\nRECESSION HURTS PROFITS.<END>",
-    "ko": "",
+    "ko": "경영진 교체 후 수익 회복.\n업계 전망은 불투명.\n불황이 오면 수익 감소.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -32,7 +32,7 @@
     "offset": "0x17693",
     "orig_bytes": 82,
     "ja": "VERY STRONG DOMESTIC AND\nEXPORT MANUFACTURER OF\nAIRPLANES, EXCELLENT PAST\nRECORD.<END>",
-    "ko": "",
+    "ko": "국내외 판매 모두 강한\n항공기 제조사.\n과거 실적이 뛰어남.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -41,7 +41,7 @@
     "offset": "0x176e5",
     "orig_bytes": 92,
     "ja": "TRANSPORTATION AND\nENTERTAINMENT COMPANY,\nREADY FOR GROWTH, EXPANDEDINTO HOTELS AND TRAVEL.<END>",
-    "ko": "",
+    "ko": "운송과 엔터테인먼트 회사.\n성장 준비가 되어 있으며\n호텔과 여행업으로 확장.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -50,7 +50,7 @@
     "offset": "0x17741",
     "orig_bytes": 89,
     "ja": "LARGE CONSTRUCTION\nMACHINERY BUILDER,\nBENEFITED FROM BUILDING\nSURGE, RECESSION MAY HURT.<END>",
-    "ko": "",
+    "ko": "대형 건설 기계 제조사.\n건설 붐의 덕을 봤지만\n불황이 오면 타격 우려.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -59,7 +59,7 @@
     "offset": "0x1779a",
     "orig_bytes": 87,
     "ja": "RECEIVED LOW INTEREST\nGOVERNMENT LOANS WHICH\nHELPED THE COMPANY BACK\nTO PROFITABILITY.<END>",
-    "ko": "",
+    "ko": "정부의 저금리 대출 덕에\n다시 흑자로 돌아선 회사.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -68,7 +68,7 @@
     "offset": "0x177f1",
     "orig_bytes": 97,
     "ja": "FLORIDA'S NO.1 HOME\nBUILDER, ALSO A SUCCESSFULFOREIGN BUILDER, INSURANCEDIVISION NOT PROFITABLE.<END>",
-    "ko": "",
+    "ko": "플로리다 1위 주택 건설사.\n해외 건설도 성공적이나\n보험 부문은 적자.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -77,7 +77,7 @@
     "offset": "0x17852",
     "orig_bytes": 64,
     "ja": "NOW A RAILROAD LEADER,\nLOOKING TO EXPAND INTO\nOTHER INDUSTRIES.<END>",
-    "ko": "",
+    "ko": "지금은 철도 업계 선두.\n다른 업종으로 진출을\n노리고 있음.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -86,7 +86,7 @@
     "offset": "0x17892",
     "orig_bytes": 87,
     "ja": "SUCCESSFUL INSURANCE FIRM,HEADING FOR A PEAK IN\nSALES, MAY DIVERSIFY INTO\nOTHER AREAS.<END>",
-    "ko": "",
+    "ko": "성공적인 보험 회사.\n매출이 정점을 향하고\n다른 분야로 다각화 가능.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -95,7 +95,7 @@
     "offset": "0x178e9",
     "orig_bytes": 92,
     "ja": "SUCCESSFUL FAMILY RUN\nHOTEL CHAIN, LARGE ASSETS,EXPERIMENTING WITH THE\nRESTAURANT BUSINESS.<END>",
-    "ko": "",
+    "ko": "성공한 가족 경영 호텔 체인.\n자산이 많고 외식 사업에\n도전 중.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -104,7 +104,7 @@
     "offset": "0x17945",
     "orig_bytes": 76,
     "ja": "ONE TIME GIANT HAS HIGH\nDEBT, LOW ASSETS.  SALES\nARE HIGH BUT SO ARE LOSSES<END>",
-    "ko": "",
+    "ko": "한때의 거인, 부채는 많고\n자산은 적음. 매출은 높지만\n손실도 큼.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -113,7 +113,7 @@
     "offset": "0x17991",
     "orig_bytes": 84,
     "ja": "SALES ARE HIGH BUT\nSEASONAL.  PRODUCT DEMAND\nDEPENDS ON CONSUMERS\nSPENDABLE INCOME.<END>",
-    "ko": "",
+    "ko": "매출은 높지만 계절을 탐.\n제품 수요가 소비자의\n가처분 소득에 좌우됨.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -122,7 +122,7 @@
     "offset": "0x179e5",
     "orig_bytes": 76,
     "ja": "VERY SUCCESSFUL FOOTWEAR\nMANUFACTURER, ON THE WAY\nTO BEING NO.1, HIGH DEBT.<END>",
-    "ko": "",
+    "ko": "크게 성공한 신발 제조사.\n1위를 향해 가는 중이나\n부채가 많음.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -131,7 +131,7 @@
     "offset": "0x17a31",
     "orig_bytes": 104,
     "ja": "LARGE DISCOUNT SECURITIES\nBROKERAGE FIRM BOUGHT BACKBY ITS FOUNDER, RECENTLY\nEXPERIENCING MUCH SUCCESS.<END>",
-    "ko": "",
+    "ko": "대형 할인 증권 중개사.\n창업자가 다시 인수한 뒤\n최근 큰 성공을 거두는 중.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -140,7 +140,7 @@
     "offset": "0x17a99",
     "orig_bytes": 93,
     "ja": "ONCE A MAJOR BUS LINE,\nSOLD THE DIVISION IN ORDERTO MANUFACTURE PRIMARILY\nCONSUMER PRODUCTS.<END>",
-    "ko": "",
+    "ko": "한때 대형 버스 회사.\n버스 부문을 매각하고\n소비재 제조에 주력.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -149,7 +149,7 @@
     "offset": "0x17af6",
     "orig_bytes": 88,
     "ja": "ACQUISITIONS HAVE BEEN\nMADE TO STRENGTHEN THE\nCOMPANY, HOWEVER, THEY\nSTILL SHOW LOSSES.<END>",
-    "ko": "",
+    "ko": "회사 강화를 위해 여러\n기업을 인수했지만 아직\n적자를 벗어나지 못함.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -158,7 +158,7 @@
     "offset": "0x17b4e",
     "orig_bytes": 96,
     "ja": "STRONG, INNOVATIVE COPIER\nCOMPANY, DOMINATED MARKET\nFOR MANY YEARS, ALSO IN\nFINANCIAL SERVICES.<END>",
-    "ko": "",
+    "ko": "강력하고 혁신적인 복사기\n회사. 오랫동안 시장을 지배.\n금융 서비스 사업도 함.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -167,7 +167,7 @@
     "offset": "0x17bae",
     "orig_bytes": 85,
     "ja": "DOMINATED THE COMPUTER\nMARKETS FOR MANY YEARS,\nRECENTLY FACING STRONGER\nCOMPETITION.<END>",
-    "ko": "",
+    "ko": "오랫동안 컴퓨터 시장을\n지배했지만 최근 경쟁이\n치열해지는 중.<END>",
     "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
   },
   {
@@ -176,7 +176,7 @@
     "offset": "0x17c03",
     "orig_bytes": 83,
     "ja": "HAS EXCELLENT NEW PRODUCT\nLINE, VERY COMPETITIVE\nWITH YBM, CAPABLE OF MAJORGROWTH.<END>",
-    "ko": "",
-    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸)"
+    "ko": "뛰어난 신제품 라인으로\nIBM과 맞설 경쟁력이 있고\n큰 성장이 가능함.<END>",
+    "note": "[종목 설명] 정보 화면 COMMENTS 란. 종목 순서=stock_names_b5 의 1~20. 줄당 28칸 이내 추정(원문 최대 26칸) / 원문 YBM(패러디) → IBM(glossary)"
   }
 ]

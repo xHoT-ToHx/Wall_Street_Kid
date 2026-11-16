@@ -4,55 +4,55 @@
     "offset": "0x1c417",
     "max_bytes": 3,
     "ja": "SUN",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "일  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   },
   {
     "id": "weekdays_0001",
     "offset": "0x1c41a",
     "max_bytes": 3,
     "ja": "MON",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "월  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   },
   {
     "id": "weekdays_0002",
     "offset": "0x1c41d",
     "max_bytes": 3,
     "ja": "TUE",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "화  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   },
   {
     "id": "weekdays_0003",
     "offset": "0x1c420",
     "max_bytes": 3,
     "ja": "WED",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "수  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   },
   {
     "id": "weekdays_0004",
     "offset": "0x1c423",
     "max_bytes": 3,
     "ja": "THU",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "목  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   },
   {
     "id": "weekdays_0005",
     "offset": "0x1c426",
     "max_bytes": 3,
     "ja": "FRI",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "금  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   },
   {
     "id": "weekdays_0006",
     "offset": "0x1c429",
     "max_bytes": 3,
     "ja": "SAT",
-    "ko": "",
-    "note": "[요일] 3칸 고정 SUN..SAT"
+    "ko": "토  ",
+    "note": "[요일] 3칸 고정 SUN..SAT / 3칸 고정: 한글 1자 + 공백 2. 한글 1자=1칸 확정 시 '일요일' 등 3자 표기 가능"
   }
 ]

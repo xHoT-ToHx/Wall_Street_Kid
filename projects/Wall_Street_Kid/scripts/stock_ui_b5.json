@@ -5,8 +5,8 @@
     "offset": "0x17c66",
     "orig_bytes": 47,
     "ja": " CASH:\n STOCKS:\n HOW MANY LOTS?     (     MAX)<END>",
-    "ko": "",
-    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+    "ko": " 현금:  \n 주식:    \n 몇 랏입니까?            (     까지) <END>",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고) / 수량 입력란: '(' 열(20)과 숫자 칸(21~25)은 원문 위치 유지. MAX → '까지'(예: (  12까지)). 숫자 정렬 방향은 QA 확인. 라벨 뒤는 공백으로 원문 칸 수 맞춤"
   },
   {
     "id": "stock_ui_b5_0001",
@@ -14,8 +14,8 @@
     "offset": "0x17c95",
     "orig_bytes": 80,
     "ja": " IF YOU'D LIKE TO SELL STOCK,\n\n SELECT ONE NOW.\n\n  STOCK       CUR. ORIG. LOTS <END>",
-    "ko": "",
-    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+    "ko": " 주식을 팔려면\n\n 종목을 고르십시오.\n\n  종목          현재가  매입가   수량   <END>",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고) / 열 머리: 종목@2 현재가@14 매입가@19 수량@25, 30칸 유지"
   },
   {
     "id": "stock_ui_b5_0002",
@@ -23,7 +23,7 @@
     "offset": "0x17ce5",
     "orig_bytes": 53,
     "ja": " NO STOCK HOLDINGS\n\n\n\n  STOCK       CUR. ORIG. LOTS <END>",
-    "ko": "",
+    "ko": " 보유 주식 없음\n\n\n\n  종목          현재가  매입가   수량   <END>",
     "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
   },
   {
@@ -32,8 +32,8 @@
     "offset": "0x17d1a",
     "orig_bytes": 79,
     "ja": " IF YOU'D LIKE TO BUY STOCK,\n\n SELECT ONE NOW.\n\n  STOCK        PRICE  %CHANGE <END>",
-    "ko": "",
-    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
+    "ko": " 주식을 사려면\n\n 종목을 고르십시오.\n\n  종목           가격     등락률     <END>",
+    "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고) / 열 머리: 종목@2 가격@15 등락률@22, 30칸 유지"
   },
   {
     "id": "stock_ui_b5_0004",
@@ -41,7 +41,7 @@
     "offset": "0x17d69",
     "orig_bytes": 50,
     "ja": " PORTFOLIO FULL\n\n\n\n  STOCK        PRICE  %CHANGE <END>",
-    "ko": "",
+    "ko": " 포트폴리오가 가득 찼습니다\n\n\n\n  종목           가격     등락률     <END>",
     "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
   },
   {
@@ -50,7 +50,7 @@
     "offset": "0x17d9b",
     "orig_bytes": 79,
     "ja": " IF YOU'D LIKE TO GET INFO.,\n\n SELECT ONE NOW.\n\n  STOCK        PRICE  %CHANGE <END>",
-    "ko": "",
+    "ko": " 정보를 보려면\n\n 종목을 고르십시오.\n\n  종목           가격     등락률     <END>",
     "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
   },
   {
@@ -59,7 +59,7 @@
     "offset": "0x17dea",
     "orig_bytes": 49,
     "ja": " CASH:\n STOCKS:\n\n\n  STOCK       CUR. ORIG. LOTS <END>",
-    "ko": "",
+    "ko": " 현금:  \n 주식:    \n\n\n  종목          현재가  매입가   수량   <END>",
     "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
   },
   {
@@ -68,7 +68,7 @@
     "offset": "0x17e1b",
     "orig_bytes": 18,
     "ja": " NOT ENOUGH MONEY<END>",
-    "ko": "",
+    "ko": " 현금이 부족합니다<END>",
     "note": "[매매 화면 틀] 열 정렬 필수. 숫자·열 머리 위치가 코드와 맞물림. 번역 시 칸 수 엄수(README 참고)"
   }
 ]

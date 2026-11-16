@@ -5,7 +5,7 @@
     "offset": "0x17fb4",
     "orig_bytes": 12,
     "ja": "SPECULATIVE<END>",
-    "ko": "",
+    "ko": "투기주<END>",
     "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
   },
   {
@@ -14,7 +14,7 @@
     "offset": "0x17fc0",
     "orig_bytes": 7,
     "ja": "GROWTH<END>",
-    "ko": "",
+    "ko": "성장주<END>",
     "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
   },
   {
@@ -23,7 +23,7 @@
     "offset": "0x17fc7",
     "orig_bytes": 9,
     "ja": "CYCLICAL<END>",
-    "ko": "",
+    "ko": "경기순환주<END>",
     "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
   },
   {
@@ -32,7 +32,7 @@
     "offset": "0x17fd0",
     "orig_bytes": 10,
     "ja": "BLUE CHIP<END>",
-    "ko": "",
+    "ko": "우량주<END>",
     "note": "[종목 분류 4개] 정보 화면 STOCK CATEGORY. 열 폭 제약"
   }
 ]
