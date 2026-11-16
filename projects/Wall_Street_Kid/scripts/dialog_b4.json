@@ -266,7 +266,7 @@
     "offset": "0x10514",
     "orig_bytes": 911,
     "ja": "HELLO.  I'M LARRY, A LAWYER\nEMPLOYED BY YOUR DISTANT\nUNCLE, MR. BENEDICT.  I'M\nSORRY TO SAY HE'S PASSED\nAWAY.\n<WAIT>\nAS HIS ONLY SURVIVING\nRELATIVE, YOU MAY BE\nELIGIBLE TO INHERIT OVER\n$600 BILLION IN ASSETS.\n<WAIT>\nFIRST, YOU MUST PROVE\nYOURSELF.  YOU'LL BE\nPROVIDED WITH $500,000 WITH\nWHICH YOU MUST TURN A PROFITTHROUGH THE STOCK MARKET.\n<WAIT>\nUSE THE PROFITS TO UPHOLD\nTHE BENEDICT STANDARD OF\nLIVING.  PAMPER YOUR\nSWEETHEART AND MOVE IN TO A\nDECENT $1 MILLION HOUSE.\n<WAIT>\nYOU'LL HAVE ONE MONTH TO\nPURCHASE THE HOUSE.  I'LL\nHAVE A REAL ESTATE AGENT\nCALL YOU.\n<WAIT>\nALSO, MR. BENEDICT'S\nGRANDFATHER OWNED A CASTLE\nIN EUROPE YEARS AGO.  WHEN\nHE EMIGRATED TO THE US, THE\nCASTLE HAD TO BE SOLD.\n<WAIT>\nJUST BEFORE MR. BENEDICT'S\nDEATH, HE HEARD GOSSIP THAT\nTHE CASTLE WOULD GO UP FOR\nSALE.  YOU MUST BUY IT BACK\nTO MAINTAIN THE FAMILY\nHERITAGE.<WAIT>\n\nTHE CASTLE WILL COST SEVERALMILLION DOLLARS, SO PREPARE\nYOURSELF!  I'LL KEEP YOU\nPOSTED ON THIS SALE.\n<WAIT>\nOH, BY THE WAY, HAVE A GREATAPRIL FOOL'S DAY.  BUT\nREMEMBER, EVERYTHING I JUST\nTOLD YOU IS NO APRIL FOOL'S\nJOKE.  GOOD LUCK!\n<WAIT><END>",
-    "ko": "안녕하십니까. 변호사 래리입니다.\n먼 친척이신 베네딕트 씨의\n일을 맡고 있습니다. 안타깝게도\n그분께서 세상을 떠나셨습니다.\n<WAIT>\n유일한 친척인 당신께서는\n$6000억이 넘는 재산을\n상속받을 자격이 있을지도\n모릅니다.\n<WAIT>\n먼저 실력을 증명하셔야\n합니다. $500,000의 자금을\n드릴 테니, 그 돈으로 주식\n시장에서 수익을 내십시오.\n<WAIT>\n그 수익으로 베네딕트 가문의\n생활 수준을 지키십시오.\n연인을 아껴 주시고,\n$1,000,000짜리 번듯한 집으로\n이사하셔야 합니다.\n<WAIT>\n집을 구입할 기한은\n한 달입니다. 부동산 중개인이\n연락드리도록 하겠습니다.\n<WAIT>\n그리고 베네딕트 씨의 조부께서는\n오래전 유럽에 성을 한 채\n갖고 계셨습니다. 미국으로\n이주하실 때 그 성을 팔아야\n했지요.\n<WAIT>\n베네딕트 씨는 돌아가시기 직전,\n그 성이 매물로 나온다는\n소문을 들으셨습니다. 가문의\n유산을 지키려면 그 성을\n되찾아야 합니다.<WAIT>\n\n성은 적어도 수백만은 할 테니\n각오하십시오! 매각 소식은\n계속 알려 드리겠습니다.\n<WAIT>\n아, 그리고 즐거운 만우절\n보내십시오. 하지만 방금 드린\n말씀은 만우절 농담이\n아닙니다. 행운을 빕니다!\n<WAIT><END>",
+    "ko": "안녕하십니까. 변호사 래리입니다.\n먼 삼촌이신 베네딕트 씨의\n일을 맡고 있습니다. 안타깝게도\n그분께서 세상을 떠나셨습니다.\n<WAIT>\n유일한 친척인 당신께서는\n$6000억이 넘는 재산을\n상속받을 자격이 있을지도\n모릅니다.\n<WAIT>\n먼저 실력을 증명하셔야\n합니다. $500,000의 자금을\n드릴 테니, 그 돈으로 주식\n시장에서 수익을 내십시오.\n<WAIT>\n그 수익으로 베네딕트 가문의\n생활 수준을 지키십시오.\n연인을 아껴 주시고,\n$1,000,000짜리 번듯한 집으로\n이사하셔야 합니다.\n<WAIT>\n집을 구입할 기한은\n한 달입니다. 부동산 중개인이\n연락드리도록 하겠습니다.\n<WAIT>\n그리고 베네딕트 씨의 조부께서는\n오래전 유럽에 성을 한 채\n갖고 계셨습니다. 미국으로\n이주하실 때 그 성을 팔아야\n했습니다.\n<WAIT>\n베네딕트 씨는 돌아가시기 직전,\n그 성이 매물로 나온다는\n소문을 들으셨습니다. 가문의\n유산을 지키려면 그 성을\n되찾아야 합니다.<WAIT>\n\n성은 수백만 달러는 할 테니\n각오하십시오! 매각 소식은\n계속 알려 드리겠습니다.\n<WAIT>\n아, 그리고 즐거운 만우절\n보내십시오. 하지만 방금 드린\n말씀은 만우절 농담이\n아닙니다. 행운을 빕니다!\n<WAIT><END>",
     "note": "[래리->주인공 오프닝] 삼촌 베네딕트 유산 설명. 4/1 만우절 농담. 가장 긴 대사. <WAIT> 페이지 구분 / [번역] $600 BILLION -> $6000억 표기(전체 자릿수는 너무 길어 억 단위 사용). SEVERAL MILLION DOLLARS -> '수백만'(달러 미표기)"
   },
   {
@@ -499,7 +499,7 @@
     "offset": "0x118b7",
     "orig_bytes": 197,
     "ja": "HELLO.  IT'S RALPH.  THE\nHOUSE IS STILL FOR SALE.  I\nTHINK YOU SHOULD STRONGLY\nCONSIDER BUYING THIS TIME ORYOUR TIME WILL BE UP.\n<WAIT>\nI CAN TAKE YOU BY THE HOUSE\nON SATURDAY, AND WE CAN \nCONCLUDE THE DEAL IF YOU\nARE INTERESTED, ARE YOU?<END>",
-    "ko": "안녕, 랄프야. 그 집 아직\n안 팔렸어. 이번엔 진지하게\n사는 걸 생각해 봐. 안 그러면\n시간 다 끝나.\n<WAIT>\n토요일에 집으로 데려가서\n네가 원하면 바로 거래를\n끝낼 수 있어. 어때, 할 거지?<END>",
+    "ko": "안녕, 랄프야. 그 집 아직\n안 팔렸어. 이번엔 진지하게\n사는 걸 생각해 봐. 안 그러면\n기회를 놓쳐.\n<WAIT>\n토요일에 집으로 데려가서\n네가 원하면 바로 거래를\n끝낼 수 있어. 어때, 할 거지?<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -603,7 +603,7 @@
     "offset": "0x11f5e",
     "orig_bytes": 202,
     "ja": "HI.  THIS IS DOC.  I DON'T\nHAVE A BUYER FOR THE YACHT\nYET.  I THINK YOU SHOULD\nSTRONGLY CONSIDER BUYING\nTHIS TIME OR YOUR TIME WILL\nBE UP.<WAIT>\n\nIF YOU'RE READY, I CAN MEET\nYOU AT THE HARBOR ON\nSATURDAY AND WE CAN FINISH\nTHE DEAL.  WANNA DO IT?<END>",
-    "ko": "안녕, 닥이야. 요트는 아직\n살 사람이 없어. 이번엔\n진지하게 사는 걸 생각해 봐.\n안 그러면 시간 다 끝나.<WAIT>\n\n준비됐으면 토요일에 항구에서\n만나서 거래를 끝내자고.\n어때, 할 거야?<END>",
+    "ko": "안녕, 닥이야. 요트는 아직\n살 사람이 없어. 이번엔\n진지하게 사는 걸 생각해 봐.\n안 그러면 기회를 놓쳐.<WAIT>\n\n준비됐으면 토요일에 항구에서\n만나서 거래를 끝내자고.\n어때, 할 거야?<END>",
     "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -910,7 +910,7 @@
     "offset": "0x124e5",
     "orig_bytes": 229,
     "ja": "THE AUCTION IS NOW\nBEGINNING.  HOUSE RULES\nSTATE 10% DOWN ON ALL\nCLOSING BIDS.  BALANCES MUSTBE PAID IN FULL BY\nJULY 28TH.<WAIT>\n\nWE WILL BEGIN WITH THE\nCASTLE.  OPENING BID IS\n$2 MILLION.  DO I HEAR\n$2 MILLION?  ONCE, TWICE.\nLADIES AND GENTLEMEN, PLEASEPLACE YOUR BID.<END>",
-    "ko": "지금부터 경매를 시작합니다.\n규칙에 따라 모든 낙찰가의\n10%를 보증금으로 받으며,\n잔금은 7월 28일까지 전액\n납부하셔야 합니다.<WAIT>\n\n첫 물건은 성입니다.\n시작가는 $2,000,000입니다.\n$2,000,000, 없습니까? 하나, 둘.\n신사 숙녀 여러분, 입찰해\n주십시오.<END>",
+    "ko": "지금부터 경매를 시작합니다.\n규칙에 따라 모든 낙찰가의\n10%를 보증금으로 받으며,\n잔금은 7월 28일까지 전액\n납부하셔야 합니다.<WAIT>\n\n첫 물건은 성입니다.\n시작가는 $2,000,000입니다.\n$2,000,000 부르실 분? 하나, 둘.\n신사 숙녀 여러분, 입찰해\n주십시오.<END>",
     "note": "[경매인] 경매 개시 선언(성 시작가 200만 달러). 마지막 <END> 직전에 입찰 메뉴 연결 추정 / [번역] DO I HEAR $2 MILLION? ONCE, TWICE -> '없습니까? 하나, 둘.' 마지막 페이지 6줄->5줄"
   },
   {
@@ -930,7 +930,7 @@
     "offset": "0x1264c",
     "orig_bytes": 27,
     "ja": "THE CASTLE HAS BEEN SOLD FOR<VAR>.<PAGE><END>",
-    "ko": "성이<VAR>에 낙찰되었습니다.<PAGE><END>",
+    "ko": "성이 <VAR>에 낙찰되었습니다.<PAGE><END>",
     "note": "[경매인] 낙찰 <VAR>=낙찰가(문자열 금액). VAR 위치 어순 주의 / [번역] 원문 FOR<VAR> 공백 없음 -> <VAR>에 앞 공백이 포함된다고 보고 '성이<VAR>에' 로 붙임. QA에서 공백 확인 필요"
   },
   {
@@ -940,7 +940,7 @@
     "offset": "0x12691",
     "orig_bytes": 42,
     "ja": "YOU DON'T HAVE <VAR>\nFOR THE DEPOSIT ON THE\nCASTLE!<WAIT><END>",
-    "ko": "성의 보증금으로 낼 현금\n<VAR>만큼이\n없으시군요!<WAIT><END>",
+    "ko": "성의 보증금 <VAR>만큼의\n현금이 없습니다!<WAIT><END>",
     "note": "[경매인] 102=보증금 부족(<VAR>=금액) 103=낙찰가 10% 보증금(<VAR>=금액) / [번역] <VAR> 뒤 조사 받침 문제 회피로 '만큼이' 사용"
   },
   {
@@ -960,7 +960,7 @@
     "offset": "0x12617",
     "orig_bytes": 28,
     "ja": "THE CURRENT BID IS\n<VAR>.  DO I HEAR\n<END>",
-    "ko": "현재 입찰가는\n<VAR>입니다. 다음은\n<END>",
+    "ko": "현재 입찰가는\n<VAR>입니다.\n<END>",
     "note": "[경매인] 입찰 호가 2조각: 104 끝 \"DO I HEAR\"(<END>)와 105 \"<VAR>?...\" 가 이어서 출력됨. 두 문장이 한 문장을 이룸 -> 어순 분할 주의 / [번역] 104+105 이어서 '현재 입찰가는 <VAR>입니다. 다음은 / <VAR>! 없습니까? 하나, 둘.'"
   },
   {
@@ -970,7 +970,7 @@
     "offset": "0x12633",
     "orig_bytes": 25,
     "ja": "<VAR>?\nGOING ONCE, GOING TWICE.<END>",
-    "ko": "<VAR>! 없습니까?\n하나, 둘.<END>",
+    "ko": "<VAR> 부르실 분 없습니까?\n하나, 둘.<END>",
     "note": "[경매인] 입찰 호가 2조각: 104 끝 \"DO I HEAR\"(<END>)와 105 \"<VAR>?...\" 가 이어서 출력됨. 두 문장이 한 문장을 이룸 -> 어순 분할 주의 / [번역] 104에서 이어짐"
   },
   {
@@ -1038,7 +1038,7 @@
     "offset": "0x127a6",
     "orig_bytes": 77,
     "ja": "GOOD DECISION.  WORKING OUT\nIS VERY GOOD FOR YOUR\nHEALTH!\n\nTRANSACTION TAKES 4 HOURS.<PAGE><END>",
-    "ko": "잘 생각했어. 운동은\n건강에 정말\n좋아!\n\n소요 시간: 4시간<PAGE><END>",
+    "ko": "잘 생각했어. 운동은\n건강에 정말 좋아!\n\n소요 시간: 4시간<PAGE><END>",
     "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
   },
   {
@@ -1047,7 +1047,7 @@
     "offset": "0x1286f",
     "orig_bytes": 87,
     "ja": "GOOD DECISION.  HIKING IS\nVERY GOOD FOR YOUR HEALTH\nAND STATE OF MIND!\n\nTRANSACTION TAKES 8 HOURS.<PAGE><END>",
-    "ko": "잘 생각했어. 하이킹은\n몸과 마음 건강에\n정말 좋아!\n\n소요 시간: 8시간<PAGE><END>",
+    "ko": "잘 생각했어. 등산은\n몸과 마음 건강에\n정말 좋아!\n\n소요 시간: 8시간<PAGE><END>",
     "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
   },
   {
@@ -1155,7 +1155,7 @@
     "offset": "0x128c6",
     "orig_bytes": 26,
     "ja": "SORRY, HIKING TRAIL CLOSED.<PAGE><END>",
-    "ko": "죄송합니다, 하이킹 코스 폐쇄 중입니다.<PAGE><END>",
+    "ko": "죄송합니다, 등산로 폐쇄 중입니다.<PAGE><END>",
     "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
   },
   {
@@ -1281,7 +1281,7 @@
     "offset": "0x12f63",
     "orig_bytes": 87,
     "ja": "I HAVE-\n(A) A PORCH 928 FOR\n    $100,000.\n(B) A FAIRRARI 328 FOR\n    $50,000.\nWHICH ONE WOULD YOU LIKE?<END>",
-    "ko": "있는 건-\n(A) 포르치 928:\n    $100,000\n(B) 페어라리 328:\n    $50,000\n어느 걸로 할래?<END>",
+    "ko": "이런 차가 있어-\n(A) 포르치 928:\n    $100,000\n(B) 페어라리 328:\n    $50,000\n어느 걸로 할래?<END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1290,7 +1290,7 @@
     "offset": "0x12fba",
     "orig_bytes": 83,
     "ja": "I HAVE-\n(A) A FAIRRARI 328 FOR\n    $50,000.\n(B) A BMV 750IL FOR $25,000.\nWHICH ONE WOULD YOU LIKE?<END>",
-    "ko": "있는 건-\n(A) 페어라리 328:\n    $50,000\n(B) BMV 750IL: $25,000\n어느 걸로 할래?<END>",
+    "ko": "이런 차가 있어-\n(A) 페어라리 328:\n    $50,000\n(B) BMV 750IL: $25,000\n어느 걸로 할래?<END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1299,7 +1299,7 @@
     "offset": "0x1300d",
     "orig_bytes": 34,
     "ja": "GOOD CHOICE!\nI'M SURE SHE'LL LIKE IT.<PAGE><END>",
-    "ko": "좋은 선택이군!\n애인도 분명 좋아할 거야.<PAGE><END>",
+    "ko": "좋은 선택이군!\n약혼녀도 분명 좋아할 거야.<PAGE><END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1308,7 +1308,7 @@
     "offset": "0x1302f",
     "orig_bytes": 34,
     "ja": "GOOD CHOICE.\nI'M SURE SHE'LL LIKE IT.<PAGE><END>",
-    "ko": "좋은 선택이군.\n애인도 분명 좋아할 거야.<PAGE><END>",
+    "ko": "좋은 선택이군.\n약혼녀도 분명 좋아할 거야.<PAGE><END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1721,7 +1721,7 @@
     "offset": "0x12843",
     "orig_bytes": 44,
     "ja": "GYMNASIUM UNDER\nINVESTIGATION BY HEALTH\nDEPT.<WAIT><END>",
-    "ko": "보건 당국, 체육관\n조사 착수<WAIT><END>",
+    "ko": "보건 당국, 헬스장\n조사 착수<WAIT><END>",
     "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체 / [번역] 헤드라인 명사 종결"
   },
   {
@@ -1730,7 +1730,7 @@
     "offset": "0x1291c",
     "orig_bytes": 45,
     "ja": "TICK ABUNDANCE ATTACKS\nFAMILY ON HIKING GROUNDS.<WAIT><END>",
-    "ko": "하이킹 코스에 진드기 떼\n출몰, 가족 습격<WAIT><END>",
+    "ko": "등산로에 진드기 떼\n출몰, 가족 습격<WAIT><END>",
     "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
   },
   {
@@ -1739,7 +1739,7 @@
     "offset": "0x129fb",
     "orig_bytes": 40,
     "ja": "POISONOUS INSECTS RAIDING\nPICNIC GROUNDS.<WAIT><END>",
-    "ko": "피크닉장에 독충 떼\n기승<WAIT><END>",
+    "ko": "소풍지에 독충 떼\n기승<WAIT><END>",
     "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
   },
   {
@@ -1757,7 +1757,7 @@
     "offset": "0x12bc3",
     "orig_bytes": 44,
     "ja": "EQUIPMENT FAILURES CAUSE\nINJURIES AT CARNIVAL.<WAIT><END>",
-    "ko": "놀이공원 기구 고장으로\n부상자 발생<WAIT><END>",
+    "ko": "축제장 기구 고장으로\n부상자 발생<WAIT><END>",
     "note": "[신문 헤드라인 6개] 활동 불가 사유(수영장,체육관,하이킹,피크닉,쇼핑몰,놀이공원). 뉴스 기사체"
   }
 ]
