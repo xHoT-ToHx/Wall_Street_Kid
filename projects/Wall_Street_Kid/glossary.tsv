@@ -121,3 +121,8 @@ STOCKHOLDER	주주	용어	STOCKHOLDER MEETING = 주주총회
 PERCENTAGE CHANGE	변동률	용어	본문. 열 머리 %CHANGE 는 등락률
 BULL MARKET	강세장	용어	
 종목명 단축형	CARNIVAL / MARRIOTT / PAN AM / APPLE / REEBOK	종목	문장 안에서는 원문처럼 짧은 이름 허용(목록·제목은 정식 표기)
+TRANSACTION TAKES N HOURS	소요 시간: N시간	문구	전 파일 통일
+GETTING MARRIED.	결혼식 날.	날짜	달력 라벨
+HAPPY HONEYMOONERS!	행복한 신혼여행!	문구	
+HOUSE WARMING PARTY	집들이 파티	용어	
+MILLION / BILLION	$1,000,000 / $N억	표기	MILLION 은 숫자로 풀어 쓰고 BILLION 단위만 "$N억" 허용
