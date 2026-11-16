@@ -132,7 +132,7 @@
     "offset": "0x1a374",
     "orig_bytes": 56,
     "ja": "I HAVE AN EXCELLENT\nINVESTMENT TIP FOR $1,000.\nDO WE HAVE A DEAL?<END>",
-    "ko": "끝내주는 투자 정보를\n$1,000에 드리죠.\n거래하시겠어요?<END>",
+    "ko": "훌륭한 투자 정보를\n$1,000에 드리죠.\n거래하시겠어요?<END>",
     "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
   },
   {
@@ -172,7 +172,7 @@
     "offset": "0x1a457",
     "orig_bytes": 53,
     "ja": "SORRY, SIR.  MAYBE NEXT TIMEI'LL HAVE SOME INFO.\n\nGOOD BYE.<WAIT><END>",
-    "ko": "죄송해요, 손님. 다음엔\n정보가 있을지도 모르겠네요.\n\n안녕히 가세요.<WAIT><END>",
+    "ko": "유감이군요, 손님. 다음엔\n정보가 있을지도 모르겠네요.\n\n안녕히 가세요.<WAIT><END>",
     "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
   },
   {
@@ -182,7 +182,7 @@
     "offset": "0x1b869",
     "orig_bytes": 23,
     "ja": "HELLO.  HOW CAN I HELP YOU?<END>",
-    "ko": "안녕하십니까. 무엇을 도와드릴까요?<END>",
+    "ko": "안녕하십니까. 무엇을 도와드리겠습니까?<END>",
     "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
   },
   {
@@ -192,7 +192,7 @@
     "offset": "0x1b880",
     "orig_bytes": 69,
     "ja": "HELLO, IT'S NICE TO SEE YOU\nAGAIN.\n\nWHICH SERVICE CAN I PROVIDE\nYOU WITH TODAY?<END>",
-    "ko": "다시 뵙게 되어 반갑습니다.\n\n오늘은 어떤 업무를\n도와드릴까요?<END>",
+    "ko": "다시 뵙게 되어 반갑습니다.\n\n오늘은 어떤 업무를\n도와드리겠습니까?<END>",
     "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
   },
   {
@@ -342,7 +342,7 @@
     "offset": "0x1bc12",
     "orig_bytes": 53,
     "ja": "OH, NO!  YOU DON'T HAVE\nENOUGH MONEY TO PAY OFF YOURBALANCE!<WAIT><END>",
-    "ko": "이런! 잔금을 갚기에는 돈이\n부족하십니다!<WAIT><END>",
+    "ko": "이런! 잔금을 갚기에는 돈이\n부족합니다!<WAIT><END>",
     "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
   },
   {
