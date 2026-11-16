@@ -1,6 +1,6 @@
 # 소형 블록 10개 검수 (stock_desc_b5, stock_ui_b5, stock_names_b5, stock_cat_b5, menu_b7, password_b7, title_featuring, weekdays, status_cash, status_stocks)
 
-검수 항목: 112개 번역 항목(alias 6 제외; 20+8+21+4+37+4+1+7+1+1 = 104 고유 + 정렬 라인 점검). 직접 수정 1건, 반려 0건.
+검수 항목: 번역 항목 104개(alias 6 제외; 20+8+21+4+37+4+1+7+1+1 + 열 정렬 줄 점검). 직접 수정 1건, 반려 0건.
 
 ## 기계 검사
 - `romkr check` (ja.tbl + ko_font.tbl, stock_ui 는 --line-width 30, 나머지 28) 전 파일 문제 0건.
