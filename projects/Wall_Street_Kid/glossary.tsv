@@ -111,3 +111,13 @@ GYM WORKOUT	헬스	메뉴
 HIKING	등산	메뉴	
 CANCEL	취소	메뉴	
 (YOU)	(나)	메뉴	
+ECONOMY	경제	신문	구역 제목
+MARKET DATA	시장 데이터	신문	구역 제목
+NEWS HEADLINERS	주요 뉴스	신문	구역 제목
+HOT STOCKS BULLETIN	화제의 종목 속보	신문	
+STONE CITY	스톤 시티	지명	
+SHARES	주	용어	
+STOCKHOLDER	주주	용어	STOCKHOLDER MEETING = 주주총회
+PERCENTAGE CHANGE	변동률	용어	본문. 열 머리 %CHANGE 는 등락률
+BULL MARKET	강세장	용어	
+종목명 단축형	CARNIVAL / MARRIOTT / PAN AM / APPLE / REEBOK	종목	문장 안에서는 원문처럼 짧은 이름 허용(목록·제목은 정식 표기)
