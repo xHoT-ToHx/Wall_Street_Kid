@@ -22,6 +22,8 @@ spec.json 구조 (projects/_template/spec.json 참고)
 }
 pointer_table 대신 흩어진 포인터: {"addrs": ["0x2B0E", ...], "size": 2, "endian": "little"}
   (각 원소 = 포인터 워드의 파일 오프셋. 스크립트 바이트코드에 박힌 포인터 등)
+  분리 포인터(6502 LDX #lo / LDY #hi 처럼 lo·hi 바이트가 떨어져 있는 경우, size 2 전용):
+  addrs 원소를 {"lo": "0x14E2C", "hi": "0x14E2E"} 로 쓴다. 덤프 결과에 ptr_hi 가 추가된다.
 address_map
   linear : ptr - cpu_base + file_base  (FC/GB/SMS 뱅크, MD(0/0), PS-EXE)
   lorom  : SFC LoROM, "header": 0|512, 2바이트 포인터면 "bank": "0xC8"
@@ -113,17 +115,24 @@ def dump_block(rom: bytes, tbl: Table, b: dict) -> list[dict]:
     size, endian = pt.get("size", 2), pt.get("endian", "little")
     stride = pt.get("stride", size)
     if "addrs" in pt:   # 흩어진 포인터 목록(스크립트 바이트코드 안에 박힌 포인터 등): 파일 오프셋 리스트
-        addrs = [parse_int(a) for a in pt["addrs"]]
+        addrs = [(parse_int(a["lo"]), parse_int(a["hi"])) if isinstance(a, dict) else parse_int(a)
+                 for a in pt["addrs"]]
     else:
         off, n = parse_int(pt["offset"]), pt["count"]
         addrs = [off + i * stride for i in range(n)]
     am = AddrMap(b["address_map"], size)
     seen = {}
     for i, pa in enumerate(addrs):
-        raw = int.from_bytes(rom[pa:pa + size], endian)
+        if isinstance(pa, tuple):   # 분리 포인터 (lo, hi)
+            raw = rom[pa[0]] | (rom[pa[1]] << 8)
+        else:
+            raw = int.from_bytes(rom[pa:pa + size], endian)
         fo = am.to_file(raw)
         eid = f"{name}_{i:04d}"
-        e = {"id": eid, "ptr_addr": hex(pa), "offset": hex(fo)}
+        if isinstance(pa, tuple):
+            e = {"id": eid, "ptr_addr": hex(pa[0]), "ptr_hi": hex(pa[1]), "offset": hex(fo)}
+        else:
+            e = {"id": eid, "ptr_addr": hex(pa), "offset": hex(fo)}
         if fo in seen:
             e["alias_of"] = seen[fo]
         elif not (0 <= fo < len(rom)):
@@ -225,6 +234,11 @@ def insert_block(rom: bytearray, tbl: Table, b: dict, entries: list[dict], allow
             continue
         target = new_off[e.get("alias_of", e["id"])]
         pa = parse_int(e.get("ptr_addr", off + i * stride))
-        rom[pa:pa + size] = am.to_raw(target).to_bytes(size, endian)
+        raw = am.to_raw(target)
+        if "ptr_hi" in e:   # 분리 포인터
+            rom[pa] = raw & 0xFF
+            rom[parse_int(e["ptr_hi"])] = (raw >> 8) & 0xFF
+        else:
+            rom[pa:pa + size] = raw.to_bytes(size, endian)
     log.append(f"{b['name']}: {cur - start}/{end + 1 - start} 바이트 사용 ({(cur - start) * 100 // (end + 1 - start)}%)")
     return log
