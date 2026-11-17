@@ -207,6 +207,7 @@ def cmd_text(a):
         reg = b["text_region"]
         fbase = pint(b["address_map"]["file_base"])
         r0, r1 = pint(reg["start"]) - fbase, pint(reg["end"]) - fbase     # 뱅크 내 오프셋
+        r1 = min(r1, 0x3FF8)          # $BFF9 = 뱅크 번호 표식(kor_engine.asm BANKID)
         cur, xcur = r0, 0
         place = {}
         enc = {}

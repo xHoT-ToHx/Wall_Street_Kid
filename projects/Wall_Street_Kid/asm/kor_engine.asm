@@ -9,18 +9,19 @@
 ; ---------------------------------------------------------------- RAM ($0600 페이지, 원본 미사용 [정적+카나리])
 KLO     = $0600          ; [107] 슬롯별 글리프 번호 lo
 KHI     = $0670          ; [107] 슬롯별 글리프 번호 hi ($FF = 비어 있음)
-KACT    = $06E0          ; 0 꺼짐 / 1,2 사본 업로드 중 / 3 활성(분할)
+KACT    = $06E0          ; 0 꺼짐 / 3 활성(분할) / 4 해제 요청(NMI 가 감지 스프라이트 숨김)
 KFAIL   = $06E1          ; 연속 분할 실패 수
 KNEXT   = $06E2          ; 다음 할당 슬롯(원형)
-KPEND   = $06E3          ; 1 = KBUF 업로드 대기
-KPT     = $06E4          ; 대기 글리프의 윗타일 번호
 KTWO    = $06E5          ; 1 = 이번 플러시는 2행(8x16)
 KGLO    = $06E6
 KGHI    = $06E7
 KC      = $06E8          ; 1바이트 코드 임시
 KT      = $06E9          ; 현재 글자 윗타일
 KSPL    = $06EA          ; 분할 스캔라인용 OAM Y (창 윗행*8-1)
-KBUF    = $06F0          ; [16] 글리프 1bpp (위 8 + 아래 8)
+KCH     = $06EB          ; 사본 업로드 조각(0-4, 32B 단위)
+KSPON   = $06EC          ; ≠0 = 이번 프레임 BG=$1000 로 분할함
+KREC    = $05F0          ; [8] 사본 업로드용 큐 레코드 (원본 미참조 영역)
+KBUF    = $05C0          ; [32] 글리프 2bpp (위 타일 16 + 아래 타일 16, plane1=0)
 
 ; ---------------------------------------------------------------- 상수
 NSLOT    = 107
@@ -32,6 +33,7 @@ OVSLOT   = $02DC          ; 오버플로 감지용 스프라이트 9개 = OAM �
 OVTILE   = $40            ; $1000 타일 0x40 (빈 타일로 업로드)
 
 BUS      = $FE90          ; 버스충돌 표 0..15 (원래 $F07E 0..6)
+BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번호 (원본은 0 패딩)
 
 ; ================================================================= 고정뱅크 훅
 .bank 31
@@ -236,18 +238,19 @@ kmask:
 kinit:
   LDA #0
   STA KACT
-  STA KPEND
-  STA KTWO
+  STA KSPON
   JMP ($FFDE)
 
 ; ---- NMI 훅 (엔진 뱅크 호출, $07 은 건드리지 않음)
 nmi_pre:
+  LDA BANKID              ; 지금 $8000 에 걸린 뱅크(메인 스레드가 $07 없이 바꿨을 수 있음)
+  PHA
   LDA #ENGBANK
   TAX
   STA BUS,X
   JSR eng_nmipre
-  LDX $07
-  TXA
+  PLA
+  TAX
   STA BUS,X
   LDA $0C
   BNE @p
@@ -258,12 +261,14 @@ nmi_pre:
   RTS
 
 nmi_post:
+  LDA BANKID              ; 지금 $8000 에 걸린 뱅크(메인 스레드가 $07 없이 바꿨을 수 있음)
+  PHA
   LDA #ENGBANK
   TAX
   STA BUS,X
   JSR eng_split
-  LDX $07
-  TXA
+  PLA
+  TAX
   STA BUS,X
   LDA #0
   STA $05
@@ -333,19 +338,45 @@ glyph_emit:
   SEC
   SBC #1
   STA KSPL
-@req:
-  LDA #1
-  STA KACT
-@w:
+  ; 사본(타일 0x40-0x49, 160B)을 게임 큐 작업으로 32B x5 업로드 (메인 스레드 PPU 쓰기와 충돌 없음)
+  LDA #0
+  STA KCH
+@cpy:
+  LDA #$02                ; 쓰기, +1
+  STA KREC
+  LDA #0
+  STA KREC+1              ; 256B 페이지 수
+  LDA #32
+  STA KREC+2              ; 나머지 바이트
+  LDA #ENGBANK
+  STA KREC+3
+  LDA KCH
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  PHA
+  CLC
+  ADC #<COPYIMG
+  STA KREC+4
+  LDA #>COPYIMG
+  ADC #0
+  STA KREC+5
+  PLA
+  STA KREC+6
+  LDA #$14
+  STA KREC+7
+  LDX #<KREC
+  LDY #>KREC
+  JSR $F302
   JSR $F03E
-  LDA KACT
-  CMP #3
-  BEQ @act
-  CMP #1
-  BEQ @w
-  CMP #2
-  BEQ @w
-  JMP @req                ; 대기 중 렌더링 꺼짐(0/4) → 다시 요청
+  INC KCH
+  LDA KCH
+  CMP #5
+  BCC @cpy
+  LDA #3
+  STA KACT
 @act:
   LDX #NSLOT-1
 @find:
@@ -360,29 +391,57 @@ glyph_emit:
   BPL @find
   ; ---- 미스: 원형 할당
 @pw:
-  LDA KPEND
-  BEQ @np
-  JSR $F03E
-  JMP @pw
-@np:
-  JSR kcopy
+  LDA #0                  ; KBUF 의 plane1(+8..15, +24..31) = 0
+  LDX #7
+@z:
+  STA KBUF+8,X
+  STA KBUF+24,X
+  DEX
+  BPL @z
+  JSR kcopy               ; plane0 채움 (폰트 뱅크)
   LDX KNEXT
   LDA KGLO
   STA KLO,X
   LDA KGHI
   STA KHI,X
   LDA SLOTTOP,X
-  STA KPT
+  STA KT
   INX
   CPX #NSLOT
   BCC @nn
   LDX #0
 @nn:
   STX KNEXT
-  LDA KPT
-  STA KT
-  LDA #1
-  STA KPEND
+  ; 글리프 32B 를 게임 큐 작업으로 업로드: [02][00][20][FF][KBUF][$1000+T*16]
+  LDA #$02
+  STA KREC
+  LDA #0
+  STA KREC+1
+  LDA #32
+  STA KREC+2
+  LDA #$FF
+  STA KREC+3
+  LDA #<KBUF
+  STA KREC+4
+  LDA #>KBUF
+  STA KREC+5
+  LDA KT
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  STA KREC+6
+  LDA KT
+  LSR A
+  LSR A
+  LSR A
+  LSR A
+  ORA #$10
+  STA KREC+7
+  LDX #<KREC
+  LDY #>KREC
+  JSR $F302
+  JSR $F03E
   JMP @emit
 @hit:                     ; 곧 덮일 슬롯(다음 할당 위치에서 REFRESH 안)이면 새 슬롯으로 옮김
   TXA
@@ -453,15 +512,16 @@ glyph_emit:
 
 ; ---- NMI 앞부분: BG=$0000 복귀, 사본/글리프 업로드, 오버플로 스프라이트 OAM
 eng_nmipre:
+  LDA KSPON               ; 지난 프레임에 분할했으면 BG=$0000 로 복귀
+  BEQ @n0
   LDA $01
   STA $2000
+  LDA #0
+  STA KSPON
+@n0:
   LDA KACT
   CMP #3
   BEQ @act
-  CMP #1
-  BEQ @c0
-  CMP #2
-  BEQ @c1
   CMP #4
   BNE @idle
   LDA #$F4                ; 비활성화: 감지 스프라이트 숨김
@@ -477,40 +537,6 @@ eng_nmipre:
   STA KACT
 @idle:
   RTS
-@c0:
-  LDA $2002
-  LDA #$14
-  STA $2006
-  LDA #$00
-  STA $2006
-  LDY #0
-  LDX #80
-@u0:
-  LDA COPYIMG,Y
-  STA $2007
-  INY
-  DEX
-  BNE @u0
-  LDA #2
-  STA KACT
-  JMP @scr
-@c1:
-  LDA $2002
-  LDA #$14
-  STA $2006
-  LDA #$50
-  STA $2006
-  LDY #80
-  LDX #80
-@u1:
-  LDA COPYIMG,Y
-  STA $2007
-  INY
-  DEX
-  BNE @u1
-  LDA #3
-  STA KACT
-  JMP @scr
 @act:
   LDX #32                 ; 감지 스프라이트 9개: Y=KSPL, 타일 0x40(빈), 뒤
 @ov:
@@ -527,58 +553,41 @@ eng_nmipre:
   DEX
   DEX
   BPL @ov
-  LDA KPEND
-  BEQ @done
-  LDA $2002
-  LDA KPT
-  LSR A
-  LSR A
-  LSR A
-  LSR A
-  ORA #$10
-  STA $2006
-  LDA KPT
-  ASL A
-  ASL A
-  ASL A
-  ASL A
-  STA $2006
-  LDX #0
-@g0:
-  LDA KBUF,X
-  STA $2007
-  INX
-  CPX #8
-  BNE @g0
-  LDA #0
-  LDX #8
-@z0:
-  STA $2007
-  DEX
-  BNE @z0
-  LDX #8
-@g1:
-  LDA KBUF,X
-  STA $2007
-  INX
-  CPX #16
-  BNE @g1
-  LDA #0
-  LDX #8
-@z1:
-  STA $2007
-  DEX
-  BNE @z1
-  STA KPEND
-@scr:
-  LDA $2002
-  LDA $03
-  STA $2005
-  LDA $04
-  STA $2005
-  LDA $01
-  STA $2000
 @done:
+  RTS
+
+; ---- NMI 가 끊은 메인 스레드 위치 검사. C=1 = 직접 PPU 쓰기 루틴 안($CB79-$CBFF CHR 로더, $F086-$F0BE 스크롤)
+; 스택: S+1,2 nmi_post 복귀 / S+3,4 $F9C0 / S+5 Y S+6 X S+7 A S+8 P / S+9 P S+10 PCL S+11 PCH (NMI)
+;       NMI 가 $F03E 대기 루프($F03E-$F048)를 끊었으면 S+12 A, S+13/14 = 호출자 복귀 주소
+ppubusy:
+  TSX                     ; (이 루틴 JSR 로 2 더 깊음 → +2)
+  LDA $010D,X
+  LDY $010C,X
+  CMP #$F0
+  BNE @c
+  CPY #$3E
+  BCC @c
+  CPY #$49
+  BCS @c
+  LDA $0110,X
+  LDY $010F,X
+@c:
+  CMP #$CB
+  BNE @c2
+  CPY #$79
+  BCS @busy
+@c2:
+  CMP #$F0
+  BNE @free
+  CPY #$86
+  BCC @free
+  CPY #$BF
+  BCC @busy
+@free:
+  CLC
+  RTS
+@busy:
+  SEC
   RTS
 
 ; ---- NMI 끝: 스프라이트 오버플로 플래그를 기다렸다가 BG=$1000
@@ -586,23 +595,33 @@ eng_split:
   LDA KACT
   CMP #3
   BNE @out
-  LDA KFAIL
-  CMP #3
-  BCS @out
   LDA $02
   AND #$18
   CMP #$18
   BNE @out
+  JSR ppubusy             ; 메인 스레드가 VBlank 직후 PPU 를 직접 쓰는 중이면 이번 프레임 분할 안 함
+  BCS @out
+  LDA $2002                ; 이전 프레임의 오버플로가 아직 켜져 있어야 사전렌더(261) 시점을 잡을 수 있다
+  AND #$20
+  BEQ @out                 ; 이미 꺼짐(NMI 가 길었음) → 이번 프레임은 분할 안 함
   LDX #0
-@w1:                      ; 이전 프레임 플래그가 지워질 때(사전렌더)까지
+@w1:                      ; 사전렌더 줄에서 플래그가 지워질 때까지 (최대 ~29줄)
   LDA $2002
   AND #$20
   BEQ @w2s
   DEX
   BNE @w1
   JMP @fail
-@w2s:
-  LDY #6
+@w2s:                     ; 이제 스캔라인 0 근처. 최대 (KSPL/32+2)*~29줄 → 241 전에 반드시 끝남(중첩 NMI 방지)
+  LDA KSPL
+  LSR A
+  LSR A
+  LSR A
+  LSR A
+  LSR A
+  CLC
+  ADC #2
+  TAY
   LDX #0
 @w2:
   LDA $2002
@@ -619,6 +638,7 @@ eng_split:
   LDA $01
   ORA #$10
   STA $2000
+  STA KSPON
   LDA #0
   STA KFAIL
 @out:
@@ -629,14 +649,10 @@ eng_split:
 ; ================================================================= 공유 코드 (뱅크 7,8,9,10 의 $BFB0-$BFF9)
 .bank 15,17,19,21
 .org $BFB0
-.limit $BFF9
+.limit $BFF8
 ; ---- 글리프 n(KGLO/KGHI) 1bpp 16B → KBUF (메인 스레드, $10/$11 임시)
 ; 엔진 뱅크 7 과 폰트 뱅크 8-10 의 같은 주소($BFB0)에 복제: 뱅크를 바꿔도 다음 명령이 이어진다
 kcopy:
-  LDA $10
-  PHA
-  LDA $11
-  PHA
   LDA $07
   PHA
   LDA KGLO
@@ -660,17 +676,72 @@ kcopy:
   ADC #FONTBANK            ; 글리프 번호 g: 뱅크 8+(g>>10), 뱅크당 1019자(끝 5칸은 이 코드)
   JSR fastsw
   LDY #15
-@c:
+@c1:                      ; 아래 타일 plane0 → KBUF+16..23
+  LDA ($10),Y
+  STA KBUF+8,Y
+  DEY
+  CPY #7
+  BNE @c1
+@c0:                      ; 위 타일 plane0 → KBUF+0..7
   LDA ($10),Y
   STA KBUF,Y
   DEY
-  BPL @c
+  BPL @c0
   PLA
-  JSR fastsw
-  PLA
-  STA $11
-  PLA
-  STA $10
-  RTS
+  JMP fastsw
 
-
+; ================================================================= 뱅크 번호 표식 ($BFF9)
+.bank 1
+.org $BFF9
+.expect 00
+  .db 0
+.bank 3
+.org $BFF9
+.expect 00
+  .db 1
+.bank 5
+.org $BFF9
+.expect 00
+  .db 2
+.bank 7
+.org $BFF9
+.expect 00
+  .db 3
+.bank 9
+.org $BFF9
+.expect 00
+  .db 4
+.bank 11
+.org $BFF9
+.expect 00
+  .db 5
+.bank 13
+.org $BFF9
+.expect 00
+  .db 6
+.bank 15
+.org $BFF9
+  .db 7
+.bank 17
+.org $BFF9
+  .db 8
+.bank 19
+.org $BFF9
+  .db 9
+.bank 21
+.org $BFF9
+  .db 10
+.bank 23
+.org $BFF9
+  .db 11
+.bank 25
+.org $BFF9
+.expect 00
+  .db 12
+.bank 27
+.org $BFF9
+.expect 00
+  .db 13
+.bank 29
+.org $BFF9
+  .db 14
