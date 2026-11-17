@@ -19,9 +19,10 @@ KC      = $06E8          ; 1바이트 코드 임시
 KT      = $06E9          ; 현재 글자 윗타일
 KSPL    = $06EA          ; 분할 스캔라인용 OAM Y (창 윗행*8-1)
 KCH     = $06EB          ; 사본 업로드 조각(0-4, 32B 단위)
+KTMP    = $06ED
 KSPON   = $06EC          ; ≠0 = 이번 프레임 BG=$1000 로 분할함
 KREC    = $05F0          ; [8] 사본 업로드용 큐 레코드 (원본 미참조 영역)
-KBUF    = $05C0          ; [32] 글리프 2bpp (위 타일 16 + 아래 타일 16, plane1=0)
+KBUF    = $05C0          ; [32] 글리프 2bpp (위 타일 16 + 아래 타일 16, plane0=0 / plane1=글리프 → 색 2)
 
 ; ---------------------------------------------------------------- 상수
 NSLOT    = 107
@@ -43,12 +44,12 @@ BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번�
 .org $F8ED                ; NMI 큐 작업의 뱅크 전환
 .expect 9D 7E F0
   STA BUS,X
-.org $F970                ; NMI: OAM DMA 직후, $0B 작업 전
-.expect A5 0C F0 0D
-  JSR nmi_pre
-  NOP
-.org $F9BE                ; NMI 끝: LDA #0 / STA $05
-.expect A9 00 85 05
+.org $F962                ; NMI 시작: OAM DMA 앞에서 분할 BG 복귀
+.expect A5 06 F0 0A A9 00 8D 03 20 A9 02 8D 14 40
+  JSR kdma
+  JMP $F970
+.org $F981                ; NMI: 큐 작업 직후(아직 VBlank), $09 프레임 훅·사운드 전
+.expect A5 0A F0 09
   JSR nmi_post
   NOP
 .org $F197                ; PPUMASK 갱신 공통 꼬리 (STA $02 / STA $2001 / RTS)
@@ -238,26 +239,25 @@ kmask:
 kinit:
   LDA #0
   STA KACT
-  STA KSPON
   JMP ($FFDE)
 
 ; ---- NMI 훅 (엔진 뱅크 호출, $07 은 건드리지 않음)
-nmi_pre:
-  LDA BANKID              ; 지금 $8000 에 걸린 뱅크(메인 스레드가 $07 없이 바꿨을 수 있음)
-  PHA
-  LDA #ENGBANK
-  TAX
-  STA BUS,X
-  JSR eng_nmipre
-  PLA
-  TAX
-  STA BUS,X
-  LDA $0C
-  BNE @p
-  PLA
-  PLA
-  JMP $F981
-@p:
+; ---- NMI 시작: 지난 프레임에 BG=$1000 로 분할했으면 즉시 $0000 로 (긴 NMI 에서도 화면 위쪽 보호), 원래 OAM DMA
+kdma:
+  LDA KSPON
+  BEQ @d
+  LDA $01
+  STA $2000
+  LDA #0
+  STA KSPON
+@d:
+  LDA $06
+  BEQ @x
+  LDA #0
+  STA $2003
+  LDA #2
+  STA $4014
+@x:
   RTS
 
 nmi_post:
@@ -266,12 +266,17 @@ nmi_post:
   LDA #ENGBANK
   TAX
   STA BUS,X
+  JSR eng_nmipre          ; 게임 큐 작업이 끝난 뒤(VBlank 안): BG 복귀·감지 스프라이트
   JSR eng_split
   PLA
   TAX
   STA BUS,X
-  LDA #0
-  STA $05
+  LDA $0A                 ; 원래: LDA $0A / BEQ $F98E ($09 훅 없으면 건너뜀)
+  BNE @h
+  PLA
+  PLA
+  JMP $F98E
+@h:
   RTS
 
 ; ================================================================= 엔진 뱅크 7 ($8000-$BFFF)
@@ -391,11 +396,11 @@ glyph_emit:
   BPL @find
   ; ---- 미스: 원형 할당
 @pw:
-  LDA #0                  ; KBUF 의 plane1(+8..15, +24..31) = 0
+  LDA #0                  ; KBUF 의 plane0(+0..7, +16..23) = 0 (원본 폰트처럼 plane1 만 사용 = 색 2)
   LDX #7
 @z:
-  STA KBUF+8,X
-  STA KBUF+24,X
+  STA KBUF,X
+  STA KBUF+16,X
   DEX
   BPL @z
   JSR kcopy               ; plane0 채움 (폰트 뱅크)
@@ -510,15 +515,8 @@ glyph_emit:
   STA ($89),Y
   JMP @put1x
 
-; ---- NMI 앞부분: BG=$0000 복귀, 사본/글리프 업로드, 오버플로 스프라이트 OAM
+; ---- NMI 뒷부분(작업·사운드 뒤, VBlank 안): BG=$0000 복귀, 오버플로 감지 스프라이트 OAM(다음 프레임 DMA 용)
 eng_nmipre:
-  LDA KSPON               ; 지난 프레임에 분할했으면 BG=$0000 로 복귀
-  BEQ @n0
-  LDA $01
-  STA $2000
-  LDA #0
-  STA KSPON
-@n0:
   LDA KACT
   CMP #3
   BEQ @act
@@ -601,9 +599,10 @@ eng_split:
   BNE @out
   JSR ppubusy             ; 메인 스레드가 VBlank 직후 PPU 를 직접 쓰는 중이면 이번 프레임 분할 안 함
   BCS @out
-  LDA $2002                ; 이전 프레임의 오버플로가 아직 켜져 있어야 사전렌더(261) 시점을 잡을 수 있다
+  LDY #1                   ; 대기 한도 보정(아래)
+  LDA $2002                ; 이전 프레임의 오버플로가 아직 켜져 있으면 사전렌더(261)에서 꺼지는 순간으로 동기
   AND #$20
-  BEQ @out                 ; 이미 꺼짐(NMI 가 길었음) → 이번 프레임은 분할 안 함
+  BEQ @out                 ; 이미 꺼짐: NMI 가 길어 사전렌더를 지났거나 지난 프레임 미발생 → 시점 불명, 이번 프레임은 분할 안 함
   LDX #0
 @w1:                      ; 사전렌더 줄에서 플래그가 지워질 때까지 (최대 ~29줄)
   LDA $2002
@@ -612,7 +611,10 @@ eng_split:
   DEX
   BNE @w1
   JMP @fail
-@w2s:                     ; 이제 스캔라인 0 근처. 최대 (KSPL/32+2)*~29줄 → 241 전에 반드시 끝남(중첩 NMI 방지)
+@w2s:
+  INY
+@late:                    ; 최대 (KSPL/32 + 1 또는 2) x ~29줄 → 다음 NMI(241) 전에 반드시 끝남(중첩 NMI 방지)
+  STY KTMP
   LDA KSPL
   LSR A
   LSR A
@@ -620,7 +622,7 @@ eng_split:
   LSR A
   LSR A
   CLC
-  ADC #2
+  ADC KTMP
   TAY
   LDX #0
 @w2:
@@ -646,13 +648,17 @@ eng_split:
 
 .include "../build/kor_tables.asm"
 
-; ================================================================= 공유 코드 (뱅크 7,8,9,10 의 $BFB0-$BFF9)
+; ================================================================= 공유 코드 (뱅크 7,8,9,10 의 $BFA0-$BFF8)
 .bank 15,17,19,21
-.org $BFB0
+.org $BFA0
 .limit $BFF8
 ; ---- 글리프 n(KGLO/KGHI) 1bpp 16B → KBUF (메인 스레드, $10/$11 임시)
-; 엔진 뱅크 7 과 폰트 뱅크 8-10 의 같은 주소($BFB0)에 복제: 뱅크를 바꿔도 다음 명령이 이어진다
+; 엔진 뱅크 7 과 폰트 뱅크 8-10 의 같은 주소($BFA0)에 복제: 뱅크를 바꿔도 다음 명령이 이어진다
 kcopy:
+  LDA $10
+  PHA
+  LDA $11
+  PHA
   LDA $07
   PHA
   LDA KGLO
@@ -673,22 +679,27 @@ kcopy:
   LSR A
   LSR A
   CLC
-  ADC #FONTBANK            ; 글리프 번호 g: 뱅크 8+(g>>10), 뱅크당 1019자(끝 5칸은 이 코드)
+  ADC #FONTBANK            ; 글리프 번호 g: 뱅크 8+(g>>10), 뱅크당 1018자(끝 6칸은 이 코드·뱅크표식)
   JSR fastsw
   LDY #15
-@c1:                      ; 아래 타일 plane0 → KBUF+16..23
+@c1:                      ; 아래 타일 → KBUF+24..31 (plane1: 원본 폰트와 같은 색 2)
   LDA ($10),Y
-  STA KBUF+8,Y
+  STA KBUF+16,Y
   DEY
   CPY #7
   BNE @c1
-@c0:                      ; 위 타일 plane0 → KBUF+0..7
+@c0:                      ; 위 타일 → KBUF+8..15 (plane1)
   LDA ($10),Y
-  STA KBUF,Y
+  STA KBUF+8,Y
   DEY
   BPL @c0
   PLA
-  JMP fastsw
+  JSR fastsw
+  PLA
+  STA $11
+  PLA
+  STA $10
+  RTS
 
 ; ================================================================= 뱅크 번호 표식 ($BFF9)
 .bank 1

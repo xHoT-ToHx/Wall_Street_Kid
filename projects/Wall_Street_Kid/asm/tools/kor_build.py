@@ -35,7 +35,7 @@ SLOT_TOPS = list(range(0x4A, 0xFF, 2))[:91] + list(range(0x20, 0x40, 2))   # A: 
 assert len(SLOT_TOPS) == NSLOT
 FONT_BANK0 = 8
 FONT_BANKS = 3
-PER_BANK = 1019   # 뱅크당 글리프 수: 끝 5칸($BFB0-$BFFF)은 공유 코드(kcopy)
+PER_BANK = 1018   # 뱅크당 글리프 수: 끝 6칸($BFA0-$BFFF)은 공유 코드(kcopy)·뱅크 표식
 
 
 def gnum(i):
