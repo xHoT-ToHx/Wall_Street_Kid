@@ -146,10 +146,13 @@ BLOCKS = [
   "bank5 종목 분류 4개(SPECULATIVE/GROWTH/CYCLICAL/BLUE CHIP). 포인터표 0x17FAC. 삽입영역 끝 = 꼬리 빈공간 포함."),
  ("news_b6", 6, (0x19280, 0x1BC90), (0x19291, 0x1C009),
   "bank6 신문(WALL STREET TIMES)·종목 뉴스·스탠리/코니/은행 대사. 출력 $C12D(=$DB51). 삽입영역 끝 = 꼬리 빈공간(0x1BC8D-0x1C009) 포함."),
- ("menu_b7", 7, (0x1E027, 0x1E131), (0x1E027, 0x1E131),
-  "고정뱅크 메뉴 항목/선택지 (A)-(D)/인물 이름. 메뉴표 $C801-$C84F([x][y] 뒤 포인터 목록), 이름표 $DCA4. 영역 고정(뒤는 코드)."),
- ("password_b7", 7, (0x1E840, 0x1E960), (0x1FEA0, 0x1FFE9),
-  "패스워드 화면 문구 3개. 원위치는 패스워드 문자표(0x1E874-, 1글자+FF x65)와 섞여 있으므로 삽입은 bank7 꼬리 빈공간 0x1FEA0-0x1FFE9 로 이전(원래 자리는 그대로 둠)."),
+ ("menu_b7", 7, (0x1E027, 0x1E131), (0x1E027, 0x1E111),
+  "고정뱅크 메뉴 항목/선택지 (A)-(D)/인물 이름. 메뉴표 $C801-$C84F([x][y] 뒤 포인터 목록), 이름표 $DCA4(원시 복사 → asm eng_ntag). 영역 고정(뒤는 코드). "
+  "삽입영역 끝 32B(0x1E112-0x1E131 = 확장 롬 $E102-$E121)는 asm 엔진 고정부(korig) 예약. 삽입은 asm/tools/kor_build.py ui."),
+ ("password_b7", 7, (0x1E840, 0x1E960), (0x1E85C, 0x1E86F),
+  "패스워드 화면 문구 4개. 원위치는 패스워드 문자표(0x1E874-, 1글자+FF x65)와 섞여 있음. 고정뱅크 꼬리 0x1FEA0- 는 G3 엔진이 사용 → "
+  "삽입은 asm/tools/kor_build.py ui 가 문자열마다 제자리 [4F 0B lo hi] 스텁 + 뱅크 11 본문(포인터 불변, PASSWORD_KO). "
+  "text_region 은 romkr insert 오용 방지용으로 첫 문자열 자리(20B)만 둔다(insert_scripts=false)."),
 ]
 NOTES = {}
 spec = {"_comment": "Wall Street Kid (USA) FC. tools/gen_spec.py 로 생성(정적 분석 초안). addrs = 포인터 파일 오프셋, {lo,hi} = 분리 포인터(LDX #lo/LDY #hi 또는 LDA #lo/STA $81/LDA #hi/STA $82). 근거는 analysis.md.",

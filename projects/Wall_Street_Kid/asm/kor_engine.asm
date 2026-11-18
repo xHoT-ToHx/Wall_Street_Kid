@@ -23,6 +23,18 @@ KTMP    = $06ED
 KSPON   = $06EC          ; ≠0 = 이번 프레임 BG=$1000 로 분할함
 KREC    = $05F0          ; [8] 사본 업로드용 큐 레코드 (원본 미참조 영역)
 KBUF    = $05C0          ; [32] 글리프 2bpp (위 타일 16 + 아래 타일 16, plane0=0 / plane1=글리프 → 색 2)
+; ---- 8x8 UI 경로 (DESIGN §10). $0560-$05BF: 원본 정적 참조 없음(오탐만) [정적, 카나리 미확인]
+UGLY    = $0560          ; [80] 풀 슬롯별 8x8 글리프 번호 ($FF = 비어 있음)
+USTATE  = $05B0          ; 0 = 풀 없음(타이틀 등) / 1..19 = 장면 맵 t+1 의 CHR 이 BG $0000 에 있음
+UNEXT   = $05B1          ; 다음 할당 슬롯(원형)
+UCNT    = $05B2          ; 현재 풀 크기
+UPLO    = $05B3          ; 현재 풀 표 주소
+UPHI    = $05B4
+UTMP    = $05B5
+NTI     = $05B6          ; 이름표 변환 입력/출력 위치
+NTO     = $05B7
+KDCLR   = $05B8          ; [진단] 분할 건너뜀: NMI 가 사전렌더를 넘겨 오버플로 플래그가 이미 꺼짐 (DESIGN §12)
+KDBUSY  = $05B9          ; [진단] 분할 건너뜀: 메인 스레드가 직접 PPU 쓰기 루틴 안(ppubusy)
 
 ; ---------------------------------------------------------------- 상수
 NSLOT    = 107
@@ -32,6 +44,8 @@ FONTBANK = 8              ; 글리프 n → 뱅크 8+(n>>10), $8000+(n&$3FF)*16
 SPLITTOP = 16             ; 이 행 이상(y>=16)의 창만 한글 표시
 OVSLOT   = $02DC          ; 오버플로 감지용 스프라이트 9개 = OAM 슬롯 55-63
 OVTILE   = $40            ; $1000 타일 0x40 (빈 타일로 업로드)
+LABTILE  = $4A            ; 상태창 라벨 고정 타일 0x4A-0x4D (kor_build.py LABEL_TILE0)
+NPOOLMAX = 80
 
 BUS      = $FE90          ; 버스충돌 표 0..15 (원래 $F07E 0..6)
 BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번호 (원본은 0 패딩)
@@ -87,11 +101,53 @@ BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번�
 .org $F03B                ; 리셋 초기화 끝 JMP ($FFDE)
 .expect 6C DE FF
   JMP kinit
+.bank 30
+.org $C003                ; 고정뱅크 머리 JMP $C010 뒤 0 패딩(리셋 벡터 $C000 → $C010 으로 건너뜀, 미실행)
+.limit $C00F
+.expect 00 00 00 00 00 00 00 00 00 00 00 00 00
+; ---- 리셋 초기화 ($F03B JMP ($FFDE) 대체)
+kinit:
+  LDA #0
+  STA KACT
+  STA USTATE
+  JMP ($FFDE)
+.bank 30
+.org $CBEB                ; CHR 로더($CB33, 1bpp/2bpp 직접 쓰기) 끝: JMP $CE03 (PLA / 뱅크 복원 / RTS)
+.expect 4C 03 CE
+  JMP ulab
+.org $CCAA                ; CHR 로더($CBF2, 큐 $F20F) 끝
+.expect 4C 03 CE
+  JMP ulab
+.org $DC82                ; 이름표($DC67): 문자열 → $032E 복사 루프 (LDY #0 .. BNE) 
+.expect A0 00 B1 8F C9 FF F0 06 99 2E 03 C8 D0 F4
+  JSR ntag
+  JMP $DC90
+.org $DDB9                ; 이름표 2($DD9E): 같은 루프
+.expect A0 00 B1 8F C9 FF F0 06 99 2E 03 C8 D0 F4
+  JSR ntag
+  JMP $DDC7
 
 ; ================================================================= 고정뱅크 본체 ($FE90-$FFBF)
+; ================================================================= 고정뱅크 본체 2 ($E102-$E121: menu_b7 영역 끝, kor_build.py MENU_CODE_RESERVE)
+.bank 31
+.org $E102
+.limit $E121
+; ---- 1바이트 문자 원래 경로. 4E = NOP(그리지 않고 전진 0: 고정 길이 요일 채움)
+korig:
+  LDA KC
+  CMP #$4E
+  BEQ @nop
+  CMP #$FB                ; 원래 $D90F 와 같은 플래그(N)로 $D918 진입
+  JMP $D918
+@nop:
+  LDA #0
+  STA $7B
+  STA $73
+  RTS
+
 .bank 31
 .org $FE90
-.limit $FFBF
+.limit $FFDD              ; $FFDE = 리셋 연속 벡터(JMP ($FFDE))
   .db 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 
 ; A = 뱅크 → $07 갱신 후 전환 (NMI 안전: $07 먼저)
@@ -108,7 +164,7 @@ khook:
   BCS @ctl
   CMP #$4F
   BCC @one
-  CMP #$60
+  CMP #$61                ; 50-5F = 8x16 글리프, 60 = 8x8 UI 글리프(KGHI=$10 으로 구분)
   BCS @one
   CMP #$50
   BCC @jmp
@@ -145,9 +201,7 @@ khook:
   JSR fastsw
   BCC @ret
 @orig:
-  LDA KC
-  CMP #$FB
-  JMP $D918
+  JMP korig
 @ret:
   RTS
 @jmp:                     ; 4F bb ll hh : 뱅크 bb 의 $hhll 로 이어 읽기
@@ -235,11 +289,29 @@ kmask:
   PLA
   RTS
 
-; ---- 리셋 초기화 ($F03B JMP ($FFDE) 대체)
-kinit:
-  LDA #0
-  STA KACT
-  JMP ($FFDE)
+
+; ---- CHR 로더 끝($CBEB/$CCAA 의 JMP $CE03 대체): 엔진 뱅크에서 8x8 풀 상태 갱신·라벨 타일 업로드
+ulab:
+  LDA $07
+  PHA
+  LDA #ENGBANK
+  JSR fastsw
+  JSR eng_chr
+  PLA
+  JSR fastsw
+  JMP $CE03
+
+; ---- 이름표 복사 루프 대체 ($DC82/$DDB9): 반환 A=$FF, Y=길이 (원래 루프 종료 상태)
+ntag:
+  LDA $07
+  PHA
+  LDA #ENGBANK
+  JSR fastsw
+  JSR eng_ntag
+  PLA
+  JSR fastsw
+  LDA #$FF
+  RTS
 
 ; ---- NMI 훅 (엔진 뱅크 호출, $07 은 건드리지 않음)
 ; ---- NMI 시작: 지난 프레임에 BG=$1000 로 분할했으면 즉시 $0000 로 (긴 NMI 에서도 화면 위쪽 보호), 원래 OAM DMA
@@ -285,9 +357,269 @@ nmi_post:
 .limit $9FFF
   JMP $C010               ; 다른 뱅크와 같은 머리(안전용)
 
-; ---- 2바이트 한글 (KGLO/KGHI = 글리프 번호)
+; ---- 2바이트 한글 (KGLO/KGHI = 글리프 번호, KGHI=$10 이면 8x8 UI 글리프 KGLO)
 eng_kor:
-  JSR glyph_emit
+  LDA KGHI
+  CMP #$10
+  BEQ eng_ui8
+  JMP glyph_emit
+
+; ---- 8x8 UI 글리프 (DESIGN §10)
+; 분할 아래(행>=16)·2행 피치 창이면 같은 글자의 8x16 글리프로(대사창 <VAR> 의 요일 등).
+; 그 밖에는 BG $0000 의 현재 장면 빈 타일 풀에 동적 배치(캐시 적중이면 재사용).
+eng_ui8:
+  LDA $75
+  CMP #SPLITTOP
+  BCC @u8
+  LDA $7A
+  AND #1
+  BEQ @u8
+  LDX KGLO
+  LDA UI8G_HI,X
+  CMP #$FF
+  BEQ @u8
+  STA KGHI
+  LDA UI8G_LO,X
+  STA KGLO
+  JMP glyph_emit
+@u8:
+  JSR u8tile
+@put:
+  LDY #0
+  LDA KT
+  STA ($89),Y
+  LDA #0
+  STA $73
+  CLC
+  LDA $89
+  ADC $7B
+  STA $89
+  LDA $8A
+  ADC #0
+  STA $8A
+  RTS
+
+; KGLO(8x8 글리프) → KT(BG $0000 타일). 풀 없음이면 KT=$49(공백). 미스면 원형 할당 후 업로드(NMI 1회)
+u8tile:
+  LDA #$49
+  STA KT
+  LDA USTATE
+  BEQ @r
+  LDX UCNT
+  BEQ @r
+  DEX
+@find:
+  LDA UGLY,X
+  CMP KGLO
+  BEQ @hit
+  DEX
+  BPL @find
+  LDX UNEXT
+  LDA KGLO
+  STA UGLY,X
+  TXA
+  TAY
+  INX
+  CPX UCNT
+  BCC @nn
+  LDX #0
+@nn:
+  STX UNEXT
+  JSR upool
+  STA KT
+  JMP u8up
+@hit:
+  TXA
+  TAY
+  JSR upool
+  STA KT
+@r:
+  RTS
+
+; ---- 이름표($DC67/$DD9E): 문자열을 PPU 레코드 버퍼 $032E 로 그대로 복사하던 루프 대체.
+;      [60 ii] 는 풀 타일 번호로 바꿔 쓴다. 반환 Y = 출력 길이 (원래 루프와 같음)
+eng_ntag:
+  LDA #0
+  STA NTI
+  STA NTO
+@l:
+  LDY NTI
+  LDA ($8F),Y
+  CMP #$FF
+  BEQ @end
+  INY
+  CMP #$60
+  BNE @raw
+  LDA ($8F),Y
+  INY
+  STY NTI
+  STA KGLO
+  JSR u8tile
+  LDA KT
+  JMP @out
+@raw:
+  STY NTI
+@out:
+  LDY NTO
+  STA $032E,Y
+  INC NTO
+  JMP @l
+@end:
+  LDY NTO
+  RTS
+
+; Y = 슬롯 → A = 타일 번호 (현재 풀 표)
+upool:
+  LDA $10
+  PHA
+  LDA $11
+  PHA
+  LDA UPLO
+  STA $10
+  LDA UPHI
+  STA $11
+  LDA ($10),Y
+  STA UTMP
+  PLA
+  STA $11
+  PLA
+  STA $10
+  LDA UTMP
+  RTS
+
+; KGLO 의 8x8 글리프(1bpp 8B) → KBUF 2bpp(plane0=0, plane1=글리프) → 타일 KT 로 큐 업로드
+u8up:
+  LDA $10
+  PHA
+  LDA $11
+  PHA
+  LDA KGLO
+  STA $10
+  LDA #0
+  ASL $10
+  ROL A
+  ASL $10
+  ROL A
+  ASL $10
+  ROL A
+  STA $11
+  CLC
+  LDA $10
+  ADC #<UI8FONT
+  STA $10
+  LDA $11
+  ADC #>UI8FONT
+  STA $11
+  LDY #7
+@c:
+  LDA ($10),Y
+  STA KBUF+8,Y
+  LDA #0
+  STA KBUF,Y
+  DEY
+  BPL @c
+  PLA
+  STA $11
+  PLA
+  STA $10
+  LDA #$02                ; [02][00][10][FF][KBUF][$0000+KT*16]
+  STA KREC
+  LDA #0
+  STA KREC+1
+  LDA #16
+  STA KREC+2
+  LDA #$FF
+  STA KREC+3
+  LDA #<KBUF
+  STA KREC+4
+  LDA #>KBUF
+  STA KREC+5
+  LDA KT
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  STA KREC+6
+  LDA KT
+  LSR A
+  LSR A
+  LSR A
+  LSR A
+  STA KREC+7
+  LDX #<KREC
+  LDY #>KREC
+  JSR $F302
+  JMP $F03E
+
+; ---- CHR 로더 끝 ($40 = 로드 항목 번호, 표 bank0-3 $8010). 장면 그림(항목 8-$19 = 맵 0-$11, $29 = 큰 맵)이면
+;      풀을 그 맵의 빈 타일로 바꾸고 캐시를 비운 뒤 라벨 4타일을 올린다. 타이틀/전면 그림(1,2,$2A-$2C)이면 풀 없음.
+eng_chr:
+  LDA $40
+  SEC
+  SBC #8
+  CMP #$12
+  BCC @map
+  LDA $40
+  CMP #$29
+  BNE @other
+  LDA #$12
+@map:
+  TAX
+  INX
+  STX USTATE
+  DEX
+  LDA POOLCNT,X
+  STA UCNT
+  LDA POOLLO,X
+  STA UPLO
+  LDA POOLHI,X
+  STA UPHI
+  JSR uinval
+  LDA #$02                ; 라벨 2bpp 64B → $04A0 (타일 0x4A-0x4D)
+  STA KREC
+  LDA #0
+  STA KREC+1
+  LDA #64
+  STA KREC+2
+  LDA #ENGBANK
+  STA KREC+3
+  LDA #<LABIMG
+  STA KREC+4
+  LDA #>LABIMG
+  STA KREC+5
+  LDA #$A0                ; <(LABTILE*16)
+  STA KREC+6
+  LDA #$04                ; >(LABTILE*16)
+  STA KREC+7
+  LDX #<KREC
+  LDY #>KREC
+  JSR $F302
+  JMP $F03E
+@other:
+  CMP #1
+  BEQ @none
+  CMP #2
+  BEQ @none
+  CMP #$2A
+  BCC @rts
+  CMP #$2D
+  BCS @rts
+@none:
+  LDA #0
+  STA USTATE
+  STA UCNT
+  JMP uinval
+@rts:
+  RTS
+uinval:
+  LDA #$FF
+  LDX #NPOOLMAX-1
+@i:
+  STA UGLY,X
+  DEX
+  BPL @i
+  LDA #0
+  STA UNEXT
   RTS
 
 ; ---- 1바이트 원본 문자: 활성·2행 피치·분할 아래면 8x16 ASCII 글리프로. C=0 처리함 / C=1 원래 경로
@@ -588,21 +920,40 @@ ppubusy:
   SEC
   RTS
 
+; ---- $09 프레임 훅이 $D2A3($D27F 의 PPU 레코드 목록 직접 기록: 이름표·타이틀 메뉴 등)이면 지금 실행하고 $0A=0 으로
+;      원래 자리(분할 줄 뒤 = 화면 중간)에서 다시 돌지 않게 한다. $D27F 는 끝에서 이전 훅을 스스로 복원한다.
+;      훅 끝의 $F086(A=$FF) 이 스크롤·$2000 을 $01 로 되돌리므로 분할 전환($2000|$10)보다 먼저여야 한다.
+hookpre:
+  LDA $0A
+  CMP #$D2
+  BNE @r
+  LDA $09
+  CMP #$A3
+  BNE @r
+  JSR @go
+  LDA #0
+  STA $0A
+@r:
+  RTS
+@go:
+  JMP ($0009)
+
 ; ---- NMI 끝: 스프라이트 오버플로 플래그를 기다렸다가 BG=$1000
 eng_split:
   LDA KACT
   CMP #3
   BNE @out
+  JSR hookpre             ; PPU 를 직접 쓰는 $09 훅($D2A3)은 분할 대기 전에(VBlank 안) 먼저 실행 (QA A1/A2)
   LDA $02
   AND #$18
   CMP #$18
   BNE @out
   JSR ppubusy             ; 메인 스레드가 VBlank 직후 PPU 를 직접 쓰는 중이면 이번 프레임 분할 안 함
-  BCS @out
+  BCS @busy
   LDY #1                   ; 대기 한도 보정(아래)
   LDA $2002                ; 이전 프레임의 오버플로가 아직 켜져 있으면 사전렌더(261)에서 꺼지는 순간으로 동기
   AND #$20
-  BEQ @out                 ; 이미 꺼짐: NMI 가 길어 사전렌더를 지났거나 지난 프레임 미발생 → 시점 불명, 이번 프레임은 분할 안 함
+  BEQ @clr                 ; 이미 꺼짐: NMI 가 길어 사전렌더를 지났거나 지난 프레임 미발생 → 시점 불명, 이번 프레임은 분할 안 함
   LDX #0
 @w1:                      ; 사전렌더 줄에서 플래그가 지워질 때까지 (최대 ~29줄)
   LDA $2002
@@ -645,8 +996,15 @@ eng_split:
   STA KFAIL
 @out:
   RTS
+@busy:
+  INC KDBUSY
+  RTS
+@clr:
+  INC KDCLR
+  RTS
 
 .include "../build/kor_tables.asm"
+.include "../build/kor_ui_tables.asm"
 
 ; ================================================================= 공유 코드 (뱅크 7,8,9,10 의 $BFA0-$BFF8)
 .bank 15,17,19,21

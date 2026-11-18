@@ -49,6 +49,20 @@
     ],
     [
       "python",
+      "asm/tools/kor_build.py",
+      "ui",
+      "{rom}",
+      "--report",
+      "build/kor_ui_report.txt"
+    ],
+    [
+      "python",
+      "asm/tools/kor_build.py",
+      "title",
+      "{rom}"
+    ],
+    [
+      "python",
       "asm/tools/asm65.py",
       "asm/kor_engine.asm",
       "{rom}",

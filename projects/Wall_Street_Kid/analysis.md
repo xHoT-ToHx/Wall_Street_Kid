@@ -105,10 +105,16 @@ LDX #lo / LDY #hi 같은 분리 포인터는 {"lo","hi"} 로 쓴다(romkr script
 | 0x13AB9-0x14009 | bank4 $BAA9- | 1,361B | dialog_b4 영역에 예약 |
 | 0x17FDA-0x18009 | bank5 $BFCA- | 48B | stock_cat_b5 영역에 예약 |
 | 0x1BC8D-0x1C009 | bank6 $BC7D- | 893B | news_b6 영역에 예약 |
-| 0x1FEA0-0x1FFE9 | bank7 $FE90- | 330B | **G3 재배정**: $FE90-$FFBF(304B) = asm 엔진 고정부(asm/CHANGES.md). password_b7 은 $FFC0-$FFDD(30B) 또는 다른 뱅크 + 4F 점프 스텁으로 옮길 것. 확장 롬에서는 고정뱅크 15(파일 0x3FEA0-) |
+| 0x1FEA0-0x1FFE9 | bank7 $FE90- | 330B | **G3/2차 사용**: $FE90-$FFDD = asm 엔진 고정부(asm/CHANGES.md). password_b7 은 이 자리를 쓰지 않는다 → 문자열마다 제자리 4F 스텁 + 뱅크 11 (kor_build.py ui, PASSWORD_KO 기본 꺼짐 = 원문 유지). 확장 롬에서는 고정뱅크 15(파일 0x3FEA0-) |
 | 각 뱅크 $BFF9 (0x0400F+0x4000*b-6...) | bank0-6 $BFF9 | 1B x7 | **G3 사용**: 뱅크 번호 표식(asm BANKID) |
 | (확장) 뱅크 7-14 | $8000-$BFFF | 128KB | G3: 7 엔진, 8-10 폰트, 11/14 넘침 텍스트, 12/13 한글 텍스트 (asm/DESIGN.md §2) |
 | RAM $0600-$06ED, $05C0-$05DF, $05F0-$05F7 | | | G3 엔진 변수(정적 참조 없음, 장시간 카나리 QA 필요) |
+| 0x3C013-0x3C01F | 고정 $C003-$C00F | 13B | **2차 사용**(11B): kinit. 리셋 $C000→JMP $C010 사이 0 패딩 |
+| 0x3E112-0x3E131 | 고정 $E102-$E121 | 32B | **2차 예약**: menu_b7 영역 끝(gen_spec 에서 제외), korig 19B |
+| 0x3FF84-0x3FFED | 고정 $FF74-$FFDD | | **2차 사용**: ulab·ntag (엔진 고정부 끝 $FFBF→$FFDD 로 확장, $FFDE 는 리셋 연속 벡터) |
+| 뱅크 11 $A000-$BF9F | 확장 | 8KB | **2차 사용**: UI 문자열 넘침(현재 63B). 대사 넘침은 $8000-$9FFF |
+| 뱅크 7 $83F3-$8F7E | 확장 | | **2차 사용**: 8x8 UI 엔진·표 |
+| RAM $0560-$05B9 | | 90B | **2차 사용**: 8x8 UI 변수(정적 참조 없음, 카나리 미확인) |
 | 0x07EC7-0x08009 | bank1 $BEB7- | 323B | 미사용 추정 |
 | 0x03F6D-0x04009 | bank0 $BF5D- | 157B | 미사용 추정 |
 | bank3 0x0C7B9-0x0D02F, 0x0E320-0x0F10F 등 | bank3 | 약 6KB 의 0 | 그래픽 뱅크 → 빈 타일일 수 있음, 확인 필요 |

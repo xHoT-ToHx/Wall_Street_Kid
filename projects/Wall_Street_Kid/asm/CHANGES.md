@@ -34,3 +34,42 @@
 - 롬: build/Wall_Street_Kid_kr.nes (sha1 은 빌드 로그). 세이브스테이트 work/g3_kr_larry_start.mss (NEW GAME 직후, 이 빌드 전용).
 - 입력: 전원 → START(타이틀 메뉴) → START(NEW GAME) → 약 340프레임 → 래리 대사(qa/g3_kr_larry_dialog.png) → A 길게 6회 → 스크롤 후(qa/g3_kr_larry_scroll.png).
 - 확장만 한 롬 시험: work/bus_only.asm (확장 + 버스표만), work/g3_expand_larry.mss.
+
+## 2026-11-18 2차: 대사창 외 화면 (kor_engine.asm, kor_build.py ui/title) — 에뮬 미사용, 정적 모의만
+### 훅 (고정 뱅크 15)
+| 주소 | 원래 | 변경 | 목적 |
+|---|---|---|---|
+| $CBEB | JMP $CE03 | JMP ulab | CHR 로더($CB33) 끝: 8x8 풀 상태·라벨 타일 |
+| $CCAA | JMP $CE03 | JMP ulab | CHR 로더($CBF2) 끝: 같음 |
+| $DC82-$DC87 | LDY #0 / LDA ($8F),Y .. (복사 루프 앞 6B) | JSR ntag / JMP $DC90 | 이름표 [60 ii] → 풀 타일 |
+| $DDB9-$DDBE | 같은 루프 | JSR ntag / JMP $DDC7 | 이름표 2 |
+| khook 안 | CMP #$60 | CMP #$61 | 리드 60 = 8x8 |
+| eng_split 첫머리(뱅크 7) | - | JSR hookpre | $09 훅이 $D2A3 이면 분할 대기 전에 실행(QA A1/A2, DESIGN §14) |
+| eng_split @out 분기(뱅크 7) | - | KDCLR/KDBUSY 증가 | 분할 건너뜀 원인 진단(DESIGN §12) |
+| khook @orig | LDA KC / CMP #$FB / JMP $D918 | JMP korig | 4E = NOP |
+| $F03B | JMP kinit (1차) | 그대로, kinit 을 $C003 로 이동 + USTATE=0 | |
+| $D081-$D08C | "CASH:" "STOCKS:" | 4A 4B 2E 49 49 / 4C 4D 2E 49 49 49 49 | 상태창 라벨 고정 타일 |
+| $C407-$C41B | SUN..SAT | [60 ii 4E] x7 | 요일 |
+| 메뉴 표 $C801-, 이름표 $DCA4-, $DDDB- | 포인터 | 새 위치 | menu_b7 재배치 |
+
+### 데이터 (ROM, 코드 아님)
+| 위치 | 내용 |
+|---|---|
+| bank2 $8FF3 + 타일*16 (파일 0x8FF3+) | 타이틀 CHR: 25 26 27 28 2A 2B 2C = 새게임이어하기(색2), 24 39 29 31 = 등장인물(색1) |
+| bank4 $8121 (0x10131, 20B) + bank12 사본(0x30131) | 타이틀 메뉴 문자열 |
+| bank5 $846C (0x1447C, 12B) | FEATURING → 49 24 39 29 31 30 30 30 49 x4 |
+| bank5 0x1758A-0x18009 (stock_desc/ui/names/cat 영역) | 한글 재배치 + 포인터표 갱신 |
+
+### 빈 공간 사용
+| 위치 | 크기 | 내용 |
+|---|---|---|
+| 고정뱅크 $C003-$C00D (파일 0x3C013-0x3C01D) | 11/13B | kinit (리셋 벡터 $C000 → JMP $C010 사이 0 패딩, 미실행) |
+| 고정뱅크 $E102-$E114 (파일 0x3E112-0x3E124), 예약 $E102-$E121 | 19/32B | korig. menu_b7 영역 끝 32B 를 gen_spec.py 에서 제외 |
+| 고정뱅크 $FF74-$FFD4 | (기존 $FE90-$FFBF 에서 확장, 끝 $FFDD) | ulab, ntag. 남은 $FFD5-$FFDD 9B |
+| 뱅크 7 $8000-$8F7E | 약 3.9KB (1차 0.9KB 포함) | eng_ui8/u8tile/eng_ntag/eng_chr + UI8FONT(121자 968B)·UI8G·LABIMG·POOL 표 |
+| 뱅크 11 $A000-$A03E | 63B (상한 $BF9F) | UI 문자열 넘침 본문. 대사 넘침은 $8000-$9FFF 로 제한 |
+| RAM $0560-$05B9 | 90B | §8 |
+
+### 검증용 (정적, 에뮬 아님)
+- `python work/asm2/t_screens.py` / `t_var.py` / `t_render.py` / `t_title.py` (projects/Wall_Street_Kid 에서) → qa/asm2_sim_*.png.
+- 에뮬 확인 대기 목록: DESIGN.md §13.

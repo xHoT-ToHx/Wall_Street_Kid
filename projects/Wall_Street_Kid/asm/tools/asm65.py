@@ -128,6 +128,12 @@ class Asm:
                 if bank is None:
                     raise AsmError(".bank 가 먼저 필요")
                 fo = 0x10 + bank * 0x2000 + (pc & 0x1FFF)
+                if rom is not None:      # .bank 과 .org 창 불일치 검사(UxROM: 마지막 2개 = $C000/$E000 고정)
+                    nb8 = (len(rom) - 16) // 0x2000
+                    for b_ in banks:
+                        win = (0xC000 if b_ >= nb8 - 2 else 0x8000) + (b_ % 2) * 0x2000
+                        if pc & 0xE000 != win:
+                            raise AsmError(f".bank {b_} 의 창은 ${win:04X}-${win + 0x1FFF:04X} 인데 pc=${pc:04X}")
                 if ol == ".expect":
                     exp = bytes(int(x, 16) for x in arg.split())
                     if strict and rom is not None and bytes(rom[fo:fo + len(exp)]) != exp:

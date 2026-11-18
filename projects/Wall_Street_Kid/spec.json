@@ -708,7 +708,7 @@
   {
    "name": "menu_b7",
    "type": "pointer",
-   "note": "고정뱅크 메뉴 항목/선택지 (A)-(D)/인물 이름. 메뉴표 $C801-$C84F([x][y] 뒤 포인터 목록), 이름표 $DCA4. 영역 고정(뒤는 코드).",
+   "note": "고정뱅크 메뉴 항목/선택지 (A)-(D)/인물 이름. 메뉴표 $C801-$C84F([x][y] 뒤 포인터 목록), 이름표 $DCA4(원시 복사 → asm eng_ntag). 영역 고정(뒤는 코드). 삽입영역 끝 32B(0x1E112-0x1E131 = 확장 롬 $E102-$E121)는 asm 엔진 고정부(korig) 예약. 삽입은 asm/tools/kor_build.py ui.",
    "pointer_table": {
     "addrs": [
      "0x1c811",
@@ -766,7 +766,7 @@
    },
    "text_region": {
     "start": "0x1e027",
-    "end": "0x1e131"
+    "end": "0x1e111"
    },
    "fill": "0x00",
    "max_len": 1024
@@ -774,7 +774,7 @@
   {
    "name": "password_b7",
    "type": "pointer",
-   "note": "패스워드 화면 문구 3개. 원위치는 패스워드 문자표(0x1E874-, 1글자+FF x65)와 섞여 있으므로 삽입은 bank7 꼬리 빈공간 0x1FEA0-0x1FFE9 로 이전(원래 자리는 그대로 둠).",
+   "note": "패스워드 화면 문구 4개. 원위치는 패스워드 문자표(0x1E874-, 1글자+FF x65)와 섞여 있음. 고정뱅크 꼬리 0x1FEA0- 는 G3 엔진이 사용 → 삽입은 asm/tools/kor_build.py ui 가 문자열마다 제자리 [4F 0B lo hi] 스텁 + 뱅크 11 본문(포인터 불변, PASSWORD_KO). text_region 은 romkr insert 오용 방지용으로 첫 문자열 자리(20B)만 둔다(insert_scripts=false).",
    "pointer_table": {
     "addrs": [
      "0x1e2b2",
@@ -795,8 +795,8 @@
     "window": "0x4000"
    },
    "text_region": {
-    "start": "0x1fea0",
-    "end": "0x1ffe9"
+    "start": "0x1e85c",
+    "end": "0x1e86f"
    },
    "fill": "0x00",
    "max_len": 1024
