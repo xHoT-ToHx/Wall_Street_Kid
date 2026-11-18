@@ -143,9 +143,12 @@ def main():
 
     # 1행 피치 라벨(8x8)
     p8 = os.path.join(ROOT, "font", "ui8_charset.txt")
-    if os.path.exists(p8) and os.path.exists(os.path.join(ROOT, "build", "font_ui8.bin")):
+    b8 = os.path.join(ROOT, "font", "out", "font_ui8.bin")
+    if not os.path.exists(b8):
+        b8 = os.path.join(ROOT, "build", "font_ui8.bin")
+    if os.path.exists(p8) and os.path.exists(b8):
         c8 = read_charset(p8)
-        g8 = load(os.path.join(ROOT, "build", "font_ui8.bin"), c8, 8, 8, 8)
+        g8 = load(b8, c8, 8, 8, 8)
         orig = orig_font()
         scale = 3
         rows = [
@@ -155,6 +158,20 @@ def main():
             (" STOCKS:", " 보유:"),
             ("SUN MON TUE WED THU FRI SAT", "일  월  화  수  목  금  토 "),
             ("SPECULATIVE  BLUE CHIP", "투기주      우량주"),
+            ("", "주식 매도  주식 매수  정보"),
+            ("", "포트폴리오  대출 신청 대출 상환"),
+            ("", "경매 대금 소풍 쇼핑 축제 취소"),
+            ("", "예 아니오 둘 다 싫어요! 수영 헬스 등산"),
+            ("", "래리 랄프 닥 스탠리 코니 캘 프리실라"),
+            ("", "디온 아트 줄리 오스틴 파멜라 테드 루스"),
+            ("", "주식을 팔려면 종목을 고르십시오."),
+            ("", "보유 주식 없음  현금이 부족합니다"),
+            ("", "포트폴리오가 가득 찼습니다"),
+            ("", "몇 랏입니까? (까지) 성장주 경기순환주"),
+            ("", "패스워드를 입력하십시오 패스워드 오류"),
+            ("", "일생일대의 도전을 계속할 준비를 하십시오"),
+            ("", "당신의 패스워드 시작가 현재가 등락률"),
+            ("", "«주가» «종목 분류» «기업 개요» 등장인물"),
         ]
         img = Image.new("RGB", ((28 * 8 + 16) * scale, (len(rows) * 2 * 8 + 16) * scale), BG)
         px = img.load()
@@ -172,6 +189,15 @@ def main():
                     put(px, 8 + c * 8, 8 + r * 16 + 8, orig[ORIG_MAP[ch]], scale)
         img.save(os.path.join(out, "ui8_labels.png"))
         print("ui8_labels.png")
+        # 전체 글리프 격자(16열, 4배, 글자 사이 1칸 간격 없음 = 실제 화면 밀도)
+        cols = 16
+        rws = (len(c8) + cols - 1) // cols
+        im2 = Image.new("RGB", ((cols * 8 + 16) * 4, (rws * 8 + 16) * 4), BG)
+        px2 = im2.load()
+        for i, ch in enumerate(c8):
+            put(px2, 8 + (i % cols) * 8, 8 + (i // cols) * 8, g8[ch], 4)
+        im2.save(os.path.join(out, "ui8_all.png"))
+        print("ui8_all.png")
 
 
 if __name__ == "__main__":

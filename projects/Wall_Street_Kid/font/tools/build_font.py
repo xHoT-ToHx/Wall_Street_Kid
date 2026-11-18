@@ -63,6 +63,8 @@ def main():
     ap.add_argument("--tbl-out", default="tables/ko_font.tbl", help='"" 이면 tbl 생략')
     ap.add_argument("--preview", default="build/font_preview.png")
     ap.add_argument("--meta-out", default="", help="글리프 목록 json (선택)")
+    ap.add_argument("--narrow-left", default=",.'`;:!\"",
+                    help="좁은 구두점: 잉크 왼쪽 끝을 셀 x=0 으로 붙인다(A4: `$500,000` 에서 쉼표 앞이 벌어져 보이던 문제). 빈 문자열이면 생략")
     ap.add_argument("--tag", default="잠정", help="tbl 머리말에 적는 코드 배정 상태")
     a = ap.parse_args()
 
@@ -83,6 +85,13 @@ def main():
                     break
     print("ASCII Bold 채택 %d자, Condensed 유지: %s" % (len(asc_bold), "".join(
         c for c in chars if (ord(c) < 0x80 or c in "…·「」") and c not in asc_bold)))
+    for i, c in enumerate(chars):
+        if c in a.narrow_left and ord(c) < 0x80:
+            bm = bms[i]
+            xs = [x for row in bm for x, v in enumerate(row) if v]
+            if xs and min(xs) > 0:
+                d = min(xs)
+                bms[i] = [row[d:] + [0] * d for row in bm]
     empty = [c for c, b in zip(chars, bms) if not any(map(any, b))]
     if empty:
         print("경고: 폰트에 없는(빈) 글자 %d자: %s" % (len(empty), "".join(empty[:60])))

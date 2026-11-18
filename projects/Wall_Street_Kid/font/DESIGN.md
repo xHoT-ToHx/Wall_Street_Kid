@@ -108,3 +108,28 @@ python font/tools/render_sample.py
 - font/Galmuri11-Condensed.ttf, font/Galmuri11-Bold.ttf, font/Galmuri7.ttf, font/Galmuri-OFL-LICENSE.txt
 - font/preview/dialog_28x6.png, dense_8x16.png, ui8_labels.png
 - build/font.bin, font_preview.png, font_ui8.bin, font_ui8_preview.png (git 제외), tables/ko_font.tbl (잠정 코드)
+
+## 9. 변경 기록 (2차: A4·UI 세트·폰트 확정 준비)
+산출은 font/out/ 에만 쓴다(build/ 는 asm-hacker 소유라 건드리지 않음). 반영은 `cp font/out/font.bin build/font.bin` (글리프 순서·개수 동일, 6자만 비트 변경).
+
+### 9.1 A4 쉼표 간격 (qa/bugs_A.md)
+- 원인: 8x16 ASCII(Bold)는 고정 8px 칸. 숫자는 x0-6(7px)인데 `,` `.` 은 잉크가 x1-2 에 있어 앞 간격 2px(숫자 x7 + 칸 x0), 뒤 간격 5px.
+- 수정: `build_font.py` 에 `--narrow-left`(기본 `,.'`;:!"`) 추가. 해당 ASCII 글리프의 잉크 왼쪽 끝을 칸 x=0 으로 붙인다(실제 변경된 글리프: `! . , : ; '` 6자). 쉼표 앞 간격 2px -> 1px(숫자 사이 간격과 동일).
+- 한계: 쉼표 뒤 5~6px 빈칸은 8px 고정칸 구조상 줄일 수 없다(폰트 단독 해결 불가). 미리보기 `preview/numbers.png`(위 수정 전, 아래 수정 후)에서 `$500,000` 은 "500,  000" 정도로 개선되지만 완전히 붙지는 않는다. 더 줄이려면 엔진이 금액 문자열에서 쉼표 다음 숫자를 2px 당겨 그리는 VWF 식 처리가 필요(asm-hacker 판단 사항).
+- 도구: `font/tools/render_numbers.py`.
+
+### 9.2 8x8 UI 세트 확장
+- `font/ui8_charset.txt` 43자 -> 129자: 요청 82자 + 타이틀 `등장인물`(asm §11)에 필요한 `인 물` + 정보 화면 틀(stock_names_b5_0000)의 `« »`. 생성 `font/out/font_ui8.bin`(1,032B, Galmuri7 8px, 셀 밖 넘침 0, 빈 글리프 0).
+- 대조: menu_b7·stock_ui_b5·stock_cat_b5·weekdays·status_*·password_b7·stock_names_b5(정보 틀)·title_featuring 의 ko 한글 전부 포함(누락 0). build/ui8_charset_auto.txt 와 비교해 auto 의 모든 글자가 포함되고 font 쪽이 `체 잔 액 : 인 물` 만 더 가짐. 8x8 의 ASCII/기호는 원본 8x8 타일을 쓰므로 `« »` 만 별도(Galmuri7 4px 폭, 작지만 식별 가능). stock_desc_b5(기업 개요 186자)는 8x16 경로라 제외.
+- 미리보기: `preview/ui8_labels.png`(실제 문자열 모의), `ui8_all.png`(전체 격자), `ui8_zoom_hard.png`(9배 확대).
+- 7x7 로 판독이 어려운 글자: 률 환 풍 싫 쇼 헬 멜 팔 랏 찼 캘 탠 출 습(획 밀집/ㅅ·ㅛ 뭉침). 문맥으로는 읽힘. 나머지는 양호. render_sample.py 는 font/out/font_ui8.bin 을 우선 사용하도록 갱신.
+
+### 9.3 폰트 확정(5단계) 준비 — 실사용 문자셋
+- `python -m romkr charset "scripts/*.json" --out font/charset_used.txt --extra "0123456789!?.,…~ー"` -> 641자(한글 622 + 숫자·기호 19, `« » ー` 포함). 빈도순 정렬. KS X 1001 밖 글자 0.
+- 영문 스크립트에 남은 알파벳(종목명 등)은 charset_used 에 안 잡히므로 확정 charset 의 앞 86자(현 ASCII 블록)를 그대로 유지한다.
+- 전환 계획(엔진·QA 가 idle 일 때 한 번에):
+  1. 새 `font/charset.txt` = 현 charset 앞 86자(ASCII+`…·「」`, 인덱스 0-85 불변) + charset_used 의 한글 622자(빈도순). 총 708자, bin 11,328B(현 38,976B 대비 -27.6KB).
+  2. `python font/tools/build_font.py`(기본값) 로 build/font.bin·tables/ko_font.tbl 재생성. 코드 5000+i 규칙 유지, 한글 코드만 바뀜.
+  3. asm 는 tbl 로 변환하므로(asm/DESIGN.md) `romkr build` 재빌드로 반영. 한글 코드가 전부 바뀌니 기존 세이브스테이트(.mss)의 글리프 슬롯 캐시는 무효 -> QA 세이브스테이트 재작성 필요.
+  4. 번역이 또 바뀌면 `romkr charset` 재실행, 새 글자가 생길 때만 뒤에 추가(기존 순서 유지)하는 편이 안전.
+  5. 검증: font_preview.png 로 708자 확인, tbl 에 charset_used 한글 전부 존재하는지 대조.
