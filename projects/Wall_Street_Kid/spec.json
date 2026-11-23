@@ -708,7 +708,7 @@
   {
    "name": "menu_b7",
    "type": "pointer",
-   "note": "고정뱅크 메뉴 항목/선택지 (A)-(D)/인물 이름. 메뉴표 $C801-$C84F([x][y] 뒤 포인터 목록), 이름표 $DCA4(원시 복사 → asm eng_ntag). 영역 고정(뒤는 코드). 삽입영역 끝 32B(0x1E112-0x1E131 = 확장 롬 $E102-$E121)는 asm 엔진 고정부(korig) 예약. 삽입은 asm/tools/kor_build.py ui.",
+   "note": "고정뱅크 메뉴 항목/선택지 (A)-(D)/인물 이름. 메뉴표 $C801-$C84F([x][y] 뒤 포인터 목록), 이름표 $DCA4(원시 복사 → asm eng_ntag). 영역 고정(뒤는 코드). 삽입영역 끝 96B(0x1E0D2-0x1E131 = 확장 롬 $E0C2-$E121)는 asm 엔진 고정부(korig·kq·hkpre·kwdbox) 예약. 삽입은 asm/tools/kor_build.py ui.",
    "pointer_table": {
     "addrs": [
      "0x1c811",
@@ -766,7 +766,7 @@
    },
    "text_region": {
     "start": "0x1e027",
-    "end": "0x1e111"
+    "end": "0x1e0d1"
    },
    "fill": "0x00",
    "max_len": 1024

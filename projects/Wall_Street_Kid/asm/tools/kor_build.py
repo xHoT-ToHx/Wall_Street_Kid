@@ -295,7 +295,7 @@ UI_OVF_END = 0xBF9F          # $BFA0- 는 kcopy 사본 없음(뱅크 11)이지�
 LABEL_TILE0 = 0x4A           # 상태창 라벨(CASH:/STOCKS:) 고정 타일 0x4A-0x4D
 POOL_LO, POOL_HI = 0x4E, 0xDE   # 동적 8x8 풀 범위(0xDF-0xFF 는 idx6/7 이 쓰므로 제외)
 POOL_MAX = 80                # RAM UGLY[80]
-MENU_CODE_RESERVE = 32       # menu_b7 영역(고정 뱅크 $E017-$E121) 끝 32B = 엔진 고정부 2 (kor_engine.asm korig, $E102-$E121)
+MENU_CODE_RESERVE = 96       # menu_b7 영역(고정 뱅크 $E017-$E121) 끝 96B = 엔진 고정부 2 (kor_engine.asm korig·kq·hkpre·kwdbox, $E0C2-$E121)
 NOP_CODE = 0x4E              # 아무것도 그리지 않고 커서도 안 움직이는 1바이트(고정 길이 문자열 채움용, 요일)
 UI8_TTF = os.path.join(PROJ, "font", "Galmuri7.ttf")
 UI8_OFFICIAL = os.path.join(PROJ, "font", "ui8_charset.txt")
@@ -487,24 +487,27 @@ def cmd_ui(a):
         nstub = 0
         # 이름표(menu_b7 의 $DCA4/$DDDB 표, 원래 PPU 레코드로 원시 복사 → 엔진 eng_ntag 가 변환)는 4F 스텁 불가 → 먼저 배치
         is_ntag = lambda e: name == "menu_b7" and pint(e["ptr_addr"]) >= 0x1DC00
-        for e in sorted(ents, key=lambda e: 0 if is_ntag(e) else 1):
-            if e["id"] not in enc:
-                continue
+        # 넘침 계획: 영역에 다 안 들어가면 (이름표 제외) 큰 문자열부터 4B 스텁 + 넘침 뱅크로 옮긴다
+        order = [e for e in sorted(ents, key=lambda e: 0 if is_ntag(e) else 1) if e["id"] in enc]
+        size = {e["id"]: len(enc[e["id"]]) for e in order}
+        cap = r1 + 1 - cur
+        stubbed = set()
+        for e in sorted([e for e in order if not is_ntag(e)], key=lambda e: -size[e["id"]]):
+            if sum(4 if i in stubbed else n for i, n in size.items()) <= cap:
+                break
+            if size[e["id"]] > 4:
+                stubbed.add(e["id"])
+        for e in order:
             data = enc[e["id"]]
-            if is_ntag(e) and cur + len(data) - 1 > r1:
-                raise SystemExit(f"{e['id']}: 이름표는 스텁 불가인데 자리 부족")
-            if cur + len(data) - 1 <= r1:
-                rom[cur:cur + len(data)] = data
-                place[e["id"]] = cur
-                cur += len(data)
-            else:
-                if cur + 3 > r1:
-                    raise SystemExit(f"{name}: 스텁 자리 부족 ({e['id']})")
+            if e["id"] in stubbed:
                 ad = put_ovf(data, e["id"])
-                rom[cur:cur + 4] = bytes([0x4F, UI_OVF_BANK, ad & 0xFF, ad >> 8])
-                place[e["id"]] = cur
-                cur += 4
+                data = bytes([0x4F, UI_OVF_BANK, ad & 0xFF, ad >> 8])
                 nstub += 1
+            if cur + len(data) - 1 > r1:
+                raise SystemExit(f"{name}: 자리 부족 ({e['id']})")
+            rom[cur:cur + len(data)] = data
+            place[e["id"]] = cur
+            cur += len(data)
         # 번역 안 된(원문 유지) 항목도 영역을 다시 쓰므로 원문 바이트로 같이 배치
         for e in ents:
             if "alias_of" in e or "error" in e or e["id"] in enc:

@@ -9,7 +9,7 @@
 ; ---------------------------------------------------------------- RAM ($0600 페이지, 원본 미사용 [정적+카나리])
 KLO     = $0600          ; [107] 슬롯별 글리프 번호 lo
 KHI     = $0670          ; [107] 슬롯별 글리프 번호 hi ($FF = 비어 있음)
-KACT    = $06E0          ; 0 꺼짐 / 3 활성(분할) / 4 해제 요청(NMI 가 감지 스프라이트 숨김)
+KACT    = $06E0          ; 0 꺼짐 / 3 활성(분할) / 4 해제 요청(NMI 가 감지 스프라이트 숨김) / 5 해제+창 마지막 행 지우기
 KFAIL   = $06E1          ; 연속 분할 실패 수
 KNEXT   = $06E2          ; 다음 할당 슬롯(원형)
 KTWO    = $06E5          ; 1 = 이번 플러시는 2행(8x16)
@@ -35,6 +35,8 @@ NTI     = $05B6          ; 이름표 변환 입력/출력 위치
 NTO     = $05B7
 KDCLR   = $05B8          ; [진단] 분할 건너뜀: NMI 가 사전렌더를 넘겨 오버플로 플래그가 이미 꺼짐 (DESIGN §12)
 KDBUSY  = $05B9          ; [진단] 분할 건너뜀: 메인 스레드가 직접 PPU 쓰기 루틴 안(ppubusy)
+KINVF   = $05BB          ; ≠0 = 8x8 캐시 무효화 예약($CD70 화면 지우기)
+KTHI    = $05BA          ; 분할 행의 네임테이블 상위 바이트($20+행/8) — hkpre 가 분할 해제 판정
 
 ; ---------------------------------------------------------------- 상수
 NSLOT    = 107
@@ -118,6 +120,18 @@ kinit:
 .org $CCAA                ; CHR 로더($CBF2, 큐 $F20F) 끝
 .expect 4C 03 CE
   JMP ulab
+.bank 31
+.org $F210                ; $F20F: JSR $F489 → 분할 해제 판정 후 같은 곳으로
+.expect 20 89 F4
+  JSR kq
+.bank 30
+.org $CD73                ; $CD70 화면 지우기: STA $40 / TYA → kcls
+.expect 85 40 98
+  JSR kcls
+.org $C463                ; 날짜 상자 요일 복사 루프(LDY #1 .. BNE) → kwdbox
+.expect A0 01 BD 07 C4 99 2B 03 E8 C8 C6 91 D0 F4
+  JSR kwdbox
+  JMP $C471
 .org $DC82                ; 이름표($DC67): 문자열 → $032E 복사 루프 (LDY #0 .. BNE) 
 .expect A0 00 B1 8F C9 FF F0 06 99 2E 03 C8 D0 F4
   JSR ntag
@@ -128,9 +142,9 @@ kinit:
   JMP $DDC7
 
 ; ================================================================= 고정뱅크 본체 ($FE90-$FFBF)
-; ================================================================= 고정뱅크 본체 2 ($E102-$E121: menu_b7 영역 끝, kor_build.py MENU_CODE_RESERVE)
+; ================================================================= 고정뱅크 본체 2 ($E0F2-$E121: menu_b7 영역 끝 96B, kor_build.py MENU_CODE_RESERVE)
 .bank 31
-.org $E102
+.org $E0C2
 .limit $E121
 ; ---- 1바이트 문자 원래 경로. 4E = NOP(그리지 않고 전진 0: 고정 길이 요일 채움)
 korig:
@@ -143,6 +157,55 @@ korig:
   LDA #0
   STA $7B
   STA $73
+  RTS
+
+; ---- NMI(nmi_post 첫머리, 큐 작업 직후 VBlank 안): $09 훅이 $D2A3($D27F 의 PPU 레코드 목록 직접 기록)이면 지금 실행하고
+;      $0A=0($F051) 으로 원래 자리(분할 대기 뒤 = 화면 중간)에서 다시 돌지 않게 한다. 레코드 목록이 전환 뱅크($8000-)에
+;      있을 수 있으므로(타이틀 bank5 $847A 등) 엔진 뱅크로 바꾸기 전에 호출해야 한다. $0A 상위 $D2 인 훅은 $D2A3 뿐.
+;      첫 레코드의 기록 행이 분할 구간(KTHI = $20+분할행/8 이상의 네임테이블 상위 바이트)이면 그 창이 다른 그림으로
+;      덮이는 것이므로(타이틀 데모 카드 → 메뉴·저작권) 분할을 끈다(KACT=4). 상태창·이름표(행 2-12)는 유지.
+; ---- $F20F(원시 바이트 큐 기록) 첫머리: 분할 중 분할 행 이하 네임테이블($2000-$23FF)에 쓰면 창이 다른 그림으로
+;      바뀌는 것(타이틀 데모 카드 → 메뉴·저작권 $C055)이므로 분할을 끈다. A/X/Y 보존.
+kq:
+  PHA
+  LDA KACT
+  CMP #3
+  BNE @p
+  CPY KTHI
+  BCC @p
+  CPY #$24
+  BCS @p
+  LDA #5                  ; 5 = 해제 + 마지막 행 지우기(eng_nmipre)
+  STA KACT
+@p:
+  PLA
+  JMP $F489
+
+; ---- 날짜 상자($C41C): 요일 3B 원시 복사($C463-$C470) 대체. X = 요일*3. 엔진 뱅크에서 8x8 풀 타일로 바꿔 $032C-$032E 에
+kwdbox:
+  STX KTMP
+  LDA $07
+  PHA
+  LDA #ENGBANK
+  JSR fastsw
+  JSR eng_wdbox
+  PLA
+  JMP fastsw
+
+hkpre:
+  LDA $0A
+  CMP #$D2
+  BNE @r
+  LDY #1
+  LDA ($40),Y
+  CMP KTHI
+  BCC @h
+  LDA #4
+  STA KACT
+@h:
+  JSR $D2A3
+  JSR $F051
+@r:
   RTS
 
 .bank 31
@@ -273,6 +336,13 @@ kreset:
   STA KNEXT
   RTS
 
+; ---- $CD70(네임테이블 전체 지우기) 첫머리: 화면이 통째로 바뀌므로 8x8 풀 캐시 무효화 예약(u8tile 이 처리)
+kcls:
+  STA $40
+  DEC KINVF
+  TYA
+  RTS
+
 ; ---- PPUMASK: BG 또는 스프라이트가 꺼지면 분할 해제
 kmask:
   STA $02
@@ -316,16 +386,15 @@ ntag:
 ; ---- NMI 훅 (엔진 뱅크 호출, $07 은 건드리지 않음)
 ; ---- NMI 시작: 지난 프레임에 BG=$1000 로 분할했으면 즉시 $0000 로 (긴 NMI 에서도 화면 위쪽 보호), 원래 OAM DMA
 kdma:
-  LDA KSPON
+  LDA $01                 ; (X 는 NMI 진입부에서 이미 저장됨)
+  LDX KSPON
   BEQ @d
-  LDA $01
   STA $2000
+@d:
   LDA #0
   STA KSPON
-@d:
-  LDA $06
+  LDX $06
   BEQ @x
-  LDA #0
   STA $2003
   LDA #2
   STA $4014
@@ -333,6 +402,7 @@ kdma:
   RTS
 
 nmi_post:
+  JSR hkpre               ; PPU 직접 쓰기 훅($D2A3)은 분할 대기 전에, 메인 스레드 뱅크 그대로 (DESIGN §14)
   LDA BANKID              ; 지금 $8000 에 걸린 뱅크(메인 스레드가 $07 없이 바꿨을 수 있음)
   PHA
   LDA #ENGBANK
@@ -401,6 +471,12 @@ eng_ui8:
 
 ; KGLO(8x8 글리프) → KT(BG $0000 타일). 풀 없음이면 KT=$49(공백). 미스면 원형 할당 후 업로드(NMI 1회)
 u8tile:
+  LDA KINVF               ; 화면 지우기 뒤 첫 글자: 캐시 비움(보이던 글자가 없으므로 처음부터 할당)
+  BEQ @v
+  JSR uinval
+  LDA #0
+  STA KINVF
+@v:
   LDA #$49
   STA KT
   LDA USTATE
@@ -466,6 +542,19 @@ eng_ntag:
   JMP @l
 @end:
   LDY NTO
+  RTS
+
+; ---- 날짜 상자 요일: 표 $C407 의 [60 ii 4E] 에서 ii → 풀 타일, 오른쪽 맞춤(" 　월,4/03")
+eng_wdbox:
+  LDX KTMP
+  LDA $C408,X
+  STA KGLO
+  JSR u8tile
+  LDA #$49
+  STA $032C
+  STA $032D
+  LDA KT
+  STA $032E
   RTS
 
 ; Y = 슬롯 → A = 타일 번호 (현재 풀 표)
@@ -675,6 +764,12 @@ glyph_emit:
   SEC
   SBC #1
   STA KSPL
+  LDA $77
+  LSR A
+  LSR A
+  LSR A
+  ORA #$20
+  STA KTHI
   ; 사본(타일 0x40-0x49, 160B)을 게임 큐 작업으로 32B x5 업로드 (메인 스레드 PPU 쓰기와 충돌 없음)
   LDA #0
   STA KCH
@@ -852,8 +947,14 @@ eng_nmipre:
   LDA KACT
   CMP #3
   BEQ @act
+  CMP #5
+  BNE @n5
+  JSR wclr                ; kq 가 창 교체로 분할을 끈 경우: 마지막 줄 아래 타일 행 지우기
+  JMP @off
+@n5:
   CMP #4
   BNE @idle
+@off:
   LDA #$F4                ; 비활성화: 감지 스프라이트 숨김
   LDX #32
 @hide:
@@ -885,6 +986,41 @@ eng_nmipre:
   BPL @ov
 @done:
   RTS
+
+; ---- (NMI, VBlank) 직전 텍스트 창의 마지막 행(y+h-1, 8x16 마지막 줄의 아래 타일)을 공백으로. 창 지우기($D198)는
+;      창 높이(1행 피치 기준)만 지워 이 행이 남는다(타이틀 데모 카드 → 메뉴 전환 때 28행 잔상). 끝에서 스크롤 복원.
+wclr:
+  LDA $2002
+  LDA $77
+  CLC
+  ADC $79
+  SEC
+  SBC #1
+  STA KTMP                ; 행
+  LSR A
+  LSR A
+  LSR A
+  ORA #$20
+  STA $2006
+  LDA KTMP
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  CLC
+  ADC $76
+  STA $2006
+  LDX $78
+  BEQ @e
+  LDA #$49
+@l:
+  STA $2007
+  DEX
+  BNE @l
+@e:
+  LDA #$FF
+  JMP $F086
 
 ; ---- NMI 가 끊은 메인 스레드 위치 검사. C=1 = 직접 PPU 쓰기 루틴 안($CB79-$CBFF CHR 로더, $F086-$F0BE 스크롤)
 ; 스택: S+1,2 nmi_post 복귀 / S+3,4 $F9C0 / S+5 Y S+6 X S+7 A S+8 P / S+9 P S+10 PCL S+11 PCH (NMI)
@@ -920,30 +1056,11 @@ ppubusy:
   SEC
   RTS
 
-; ---- $09 프레임 훅이 $D2A3($D27F 의 PPU 레코드 목록 직접 기록: 이름표·타이틀 메뉴 등)이면 지금 실행하고 $0A=0 으로
-;      원래 자리(분할 줄 뒤 = 화면 중간)에서 다시 돌지 않게 한다. $D27F 는 끝에서 이전 훅을 스스로 복원한다.
-;      훅 끝의 $F086(A=$FF) 이 스크롤·$2000 을 $01 로 되돌리므로 분할 전환($2000|$10)보다 먼저여야 한다.
-hookpre:
-  LDA $0A
-  CMP #$D2
-  BNE @r
-  LDA $09
-  CMP #$A3
-  BNE @r
-  JSR @go
-  LDA #0
-  STA $0A
-@r:
-  RTS
-@go:
-  JMP ($0009)
-
 ; ---- NMI 끝: 스프라이트 오버플로 플래그를 기다렸다가 BG=$1000
 eng_split:
   LDA KACT
   CMP #3
   BNE @out
-  JSR hookpre             ; PPU 를 직접 쓰는 $09 훅($D2A3)은 분할 대기 전에(VBlank 안) 먼저 실행 (QA A1/A2)
   LDA $02
   AND #$18
   CMP #$18
