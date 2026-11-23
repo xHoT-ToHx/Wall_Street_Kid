@@ -2,7 +2,7 @@
 
 원문은 영어. 툴 호환상 원문 필드 이름이 `ja` 이다. 번역은 `ko`, 메모는 `note` 만 수정한다.
 `id`, `ja`, `offset`, `ptr_addr`, `ptr_hi`, `alias_of`, `orig_bytes`, `max_bytes` 는 수정 금지.
-덤프: 12블록, 미등록 바이트([XX]) 0개. 원문 그대로 재삽입 후 재덤프하면 텍스트 전부 일치(work/roundtrip.nes, 실행 검증은 아직).
+덤프: 13블록(stock_list_names_b5 추가 포함), 미등록 바이트([XX]) 0개. 원문 그대로 재삽입 후 재덤프하면 텍스트 전부 일치(work/roundtrip.nes, 실행 검증은 아직).
 근거 문서: ../analysis.md (표기: 확인/정적/추정).
 
 ## 1. 파일별 내용과 분량
@@ -22,6 +22,7 @@
 | weekdays.json | 7 | 0 | 21 | 21 | 요일 3칸 고정 |
 | status_cash.json | 1 | 0 | 5 | 5 | "CASH:" 5칸 고정 |
 | status_stocks.json | 1 | 0 | 7 | 7 | "STOCKS:" 7칸 고정 |
+| stock_list_names_b5.json | 20 | 0 | 약 150 | 240 | 매수/매도 목록 종목명 20 x 12B 고정(bank5 0x17472, 패딩 0x49). 9칸 이내 영문 약어, 한글 불가. 삽입 = kor_build.py ui |
 | 합계 | 434 | 14 | 약 30,000 | 약 28,500 | |
 
 ## 2. 화면 제약 (칸 수 기준)

@@ -552,6 +552,16 @@ def cmd_ui(a):
             data += bytes([NOP_CODE]) * (b["length"] - len(data))     # 요일은 <VAR> 로 출력 → 남는 칸은 NOP
             o = remap(pint(b["offset"])) + i * b["length"]
             rom[o:o + b["length"]] = data
+    # 매수/매도 목록 종목명(bank5 0x17472, 20 x 12B 영문 고정, 한글 없음 — 뱅크 5 는 확장 롬에서도 같은 위치)
+    b = blocks["stock_list_names_b5"]
+    for i, e in enumerate(ui_entries("stock_list_names_b5")):
+        text = e.get("ko") or e["ja"]
+        data = b"".join(ja.encode(c) for c in text)    # 글자별 인코딩: "N " → 0x80|c 합자 방지(이 표는 엔진을 거치지 않는 원시 타일 복사)
+        if len(data) > b["length"]:
+            raise SystemExit(f"{e['id']}: {len(data)}B > {b['length']}")
+        data += bytes([0x49]) * (b["length"] - len(data))
+        o = pint(b["offset"]) + i * b["length"]
+        rom[o:o + b["length"]] = data
     for name in ("status_cash", "status_stocks"):
         b = blocks[name]
         e = ui_entries(name)[0]

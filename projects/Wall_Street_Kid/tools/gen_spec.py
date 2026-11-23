@@ -188,6 +188,8 @@ FIXED = [
   "note": "우상단 상태창 'CASH:' (bank7 $D081)"},
  {"name": "status_stocks", "type": "fixed", "offset": "0x1d096", "count": 1, "length": 7, "pad": "0x49",
   "note": "우상단 상태창 'STOCKS:' (bank7 $D086)"},
+ {"name": "stock_list_names_b5", "type": "fixed", "offset": "0x17472", "count": 20, "length": 12, "pad": "0x49",
+  "note": "매수/매도 목록 종목명 20개 x 12바이트(표시는 9칸 이내 권장, 뒤는 공백 패딩). bank5 파일 0x17472-0x17561, 바로 뒤가 포인터표 0x17562. 영문 원본 폰트 문자만(한글 불가). 삽입은 asm/tools/kor_build.py ui"},
 ]
 spec["blocks"] += FIXED
 

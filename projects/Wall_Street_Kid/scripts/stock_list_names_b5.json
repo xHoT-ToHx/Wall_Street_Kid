@@ -1,0 +1,162 @@
+[
+  {
+    "id": "stock_list_names_b5_0000",
+    "offset": "0x17472",
+    "max_bytes": 12,
+    "ja": "ATNT",
+    "ko": "AT&T",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0001",
+    "offset": "0x1747e",
+    "max_bytes": 12,
+    "ja": "AMED",
+    "ko": "AMEX",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0002",
+    "offset": "0x1748a",
+    "max_bytes": 12,
+    "ja": "BETHLEHAM",
+    "ko": "BETHLEHEM",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0003",
+    "offset": "0x17496",
+    "max_bytes": 12,
+    "ja": "BOING",
+    "ko": "BOEING",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0004",
+    "offset": "0x174a2",
+    "max_bytes": 12,
+    "ja": "CARNIVORE",
+    "ko": "CARNIVAL",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0005",
+    "offset": "0x174ae",
+    "max_bytes": 12,
+    "ja": "CENTIPEDE",
+    "ko": "CATERPLR",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0006",
+    "offset": "0x174ba",
+    "max_bytes": 12,
+    "ja": "CHRYER",
+    "ko": "CHRYSLER",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0007",
+    "offset": "0x174c6",
+    "max_bytes": 12,
+    "ja": "COUGHMAN",
+    "ko": "KAUFMAN",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0008",
+    "offset": "0x174d2",
+    "max_bytes": 12,
+    "ja": "EXCONRAIL",
+    "ko": "CONRAIL",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0009",
+    "offset": "0x174de",
+    "max_bytes": 12,
+    "ja": "FIREDMAN'S",
+    "ko": "FIREMAN'S",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0010",
+    "offset": "0x174ea",
+    "max_bytes": 12,
+    "ja": "MARRINOT",
+    "ko": "MARRIOTT",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0011",
+    "offset": "0x174f6",
+    "max_bytes": 12,
+    "ja": "PAN MAM",
+    "ko": "PAN AM",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0012",
+    "offset": "0x17502",
+    "max_bytes": 12,
+    "ja": "RATTEL TOYS",
+    "ko": "MATTEL",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0013",
+    "offset": "0x1750e",
+    "max_bytes": 12,
+    "ja": "REEBUCKS",
+    "ko": "REEBOK",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0014",
+    "offset": "0x1751a",
+    "max_bytes": 12,
+    "ja": "C. SCHLOB",
+    "ko": "C. SCHWAB",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0015",
+    "offset": "0x17526",
+    "max_bytes": 12,
+    "ja": "STRAYHOUND",
+    "ko": "GREYHOUND",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0016",
+    "offset": "0x17532",
+    "max_bytes": 12,
+    "ja": "TERADYING",
+    "ko": "TERADYNE",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0017",
+    "offset": "0x1753e",
+    "max_bytes": 12,
+    "ja": "XEAROX",
+    "ko": "XEROX",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0018",
+    "offset": "0x1754a",
+    "max_bytes": 12,
+    "ja": "YBM",
+    "ko": "IBM",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  },
+  {
+    "id": "stock_list_names_b5_0019",
+    "offset": "0x17556",
+    "max_bytes": 12,
+    "ja": "YAPPLE",
+    "ko": "APPLE",
+    "note": "매수/매도 목록(9칸 이내 권장, 영문 원본 폰트). 실제 회사명 약어"
+  }
+]
