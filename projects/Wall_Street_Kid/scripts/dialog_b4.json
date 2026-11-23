@@ -481,7 +481,7 @@
     "offset": "0x11626",
     "orig_bytes": 408,
     "ja": "HELLO.  THIS IS RALPH.  I'VEFOUND A GORGEOUS HOUSE FOR\nYOU!  IN FACT, THE OWNER IS\nA FRIEND OF YOURS, JOHN\nFELD.\n<WAIT>\nI KNOW YOU LOVE THE HOUSE.\nJOHN SAID YOU WERE RAVING\nABOUT IT AT HIS LAST PARTY.\n<WAIT>\nTHE COST IS EXACTLY\n$1 MILLION.  YOUR PRESENT\nCREDIT STATUS DOESN'T SHOW\nANY ACQUIRED ASSETS TO BE\nAPPLIED AGAINST A LOAN, SO\nYOU'LL HAVE TO HAVE THE CASHUP FRONT.<WAIT>\n\nIF YOU AGREE TO BUY NOW AND\nEND UP NOT HAVING ENOUGH\nMONEY ON SATURDAY, YOU'LL \nLOSE THE DEAL.\nWOULD YOU GO FOR IT?\n\n<END>",
-    "ko": "안녕, 랄프야. 너한테 딱 맞는\n끝내주는 집을 찾았어! 게다가\n집주인이 네 친구인\n존 펠드야.\n<WAIT>\n네가 그 집 좋아하는 거 다 알아.\n지난번 파티 때 네가 그 집\n칭찬을 늘어놨다고 존이 그러더라.\n<WAIT>\n가격은 딱 $1,000,000이야.\n지금 네 신용 상태로는 대출\n담보로 잡을 자산이 없어서,\n현금으로 미리 마련해야 해.<WAIT>\n\n지금 사겠다고 해 놓고\n토요일에 돈이 모자라면\n거래는 없던 걸로 돼.\n어때, 살 거야?\n\n<END>",
+    "ko": "안녕, 나 랄프야. 너한테 딱 맞는\n끝내주는 집을 찾았어! 게다가\n집주인이 네 친구인\n존 펠드야.\n<WAIT>\n네가 그 집 좋아하는 거 다 알아.\n지난번 파티 때 네가 그 집\n칭찬을 늘어놨다고 존이 그러더라.\n<WAIT>\n가격은 딱 $1,000,000이야.\n지금 네 신용 상태로는 대출\n담보로 잡을 자산이 없어서,\n현금으로 미리 마련해야 해.<WAIT>\n\n지금 사겠다고 해 놓고\n토요일에 돈이 모자라면\n거래는 없던 걸로 돼.\n어때, 살 거야?\n\n<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -490,7 +490,7 @@
     "offset": "0x117be",
     "orig_bytes": 249,
     "ja": "HELLO.  THIS IS RALPH.\nLARRY JUST TOLD ME THAT YOU\nMUST PURCHASE THE HOUSE BY\nMAY 1ST.\n<WAIT>\nTHE HOUSE IS STILL FOR SALE,AND I CAN TAKE YOU BY THE\nHOUSE ON SATURDAY TO CLOSE\nTHE DEAL.\n<WAIT>\nREMEMBER, IF YOU DON'T HAVE\nTHE CASH ON SATURDAY, YOU\nWON'T HAVE ANOTHER CHANCE ATTHE HOUSE.\n\nDO WE HAVE A DEAL?<END>",
-    "ko": "안녕, 랄프야.\n래리한테 들었는데, 너\n5월 1일까지 집을 사야\n한다며.\n<WAIT>\n그 집 아직 안 팔렸어. 토요일에\n집으로 데려가서 거래를\n마무리할 수 있어.\n<WAIT>\n명심해, 토요일에 현금이\n없으면 그 집을 살 기회는\n다시 없어.\n\n거래할 거야?<END>",
+    "ko": "안녕, 나 랄프야.\n래리한테 들었는데, 너\n5월 1일까지 집을 사야\n한다며.\n<WAIT>\n그 집 아직 안 팔렸어. 토요일에\n집으로 데려가서 거래를\n마무리할 수 있어.\n<WAIT>\n명심해, 토요일에 현금이\n없으면 그 집을 살 기회는\n다시 없어.\n\n거래할 거야?<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -499,7 +499,7 @@
     "offset": "0x118b7",
     "orig_bytes": 197,
     "ja": "HELLO.  IT'S RALPH.  THE\nHOUSE IS STILL FOR SALE.  I\nTHINK YOU SHOULD STRONGLY\nCONSIDER BUYING THIS TIME ORYOUR TIME WILL BE UP.\n<WAIT>\nI CAN TAKE YOU BY THE HOUSE\nON SATURDAY, AND WE CAN \nCONCLUDE THE DEAL IF YOU\nARE INTERESTED, ARE YOU?<END>",
-    "ko": "안녕, 랄프야. 그 집 아직\n안 팔렸어. 이번엔 진지하게\n사는 걸 생각해 봐. 안 그러면\n기회를 놓쳐.\n<WAIT>\n토요일에 집으로 데려가서\n네가 원하면 바로 거래를\n끝낼 수 있어. 어때, 할 거지?<END>",
+    "ko": "안녕, 나 랄프야. 그 집 아직\n안 팔렸어. 이번엔 진지하게\n사는 걸 생각해 봐. 안 그러면\n기회를 놓쳐.\n<WAIT>\n토요일에 집으로 데려가서\n네가 원하면 바로 거래를\n끝낼 수 있어. 어때, 할 거지?<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -536,7 +536,7 @@
     "offset": "0x11aa9",
     "orig_bytes": 88,
     "ja": "HELLO.  THIS IS RALPH.  JUSTCALLING TO REMIND YOU NOT TOFORGET THE $1 MILLION CASH.\nSEE YOU TOMORROW.<WAIT><END>",
-    "ko": "안녕, 랄프야. $1,000,000\n현금 잊지 말라고 전화했어.\n내일 보자고!<WAIT><END>",
+    "ko": "안녕, 나 랄프야. $1,000,000\n현금 잊지 말라고 전화했어.\n내일 보자고!<WAIT><END>",
     "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
   },
   {
