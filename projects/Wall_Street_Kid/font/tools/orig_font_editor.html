@@ -1,0 +1,477 @@
+<title>원본 폰트 편집기</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: 한 컬럼 작업대. 도안 선택 → 8x8 격자 → 미리보기 → 내보내기. 격자 하나가 화면의 주인공. */
+:root {
+  --bg: #eceef3;
+  --panel: #f8f9fc;
+  --ink: #161a26;
+  --muted: #5b6275;
+  --line: #cfd3de;
+  --accent: #2b55c9;
+  --accent-ink: #ffffff;
+  --off: #e1e5ee;
+  --grid: #c3c9d8;
+  --scr-bg: #0a0d24;
+  --scr-fg: #f4f5fb;
+  --warn: #9a5b00;
+  --font: "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10131b; --panel: #181c27; --ink: #e9ecf6; --muted: #9aa2b8; --line: #2b3144;
+    --accent: #7c9cff; --accent-ink: #0d1330; --off: #202636; --grid: #2f364b;
+    --scr-bg: #05071a; --scr-fg: #f4f5fb; --warn: #e3a94f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10131b; --panel: #181c27; --ink: #e9ecf6; --muted: #9aa2b8; --line: #2b3144;
+  --accent: #7c9cff; --accent-ink: #0d1330; --off: #202636; --grid: #2f364b;
+  --scr-bg: #05071a; --scr-fg: #f4f5fb; --warn: #e3a94f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5;
+  padding-block: 20px 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.app { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+h1 { font-size: 22px; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+h2 { font-size: 13px; margin: 0 0 10px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; }
+.sub { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; min-width: 0; }
+button, .btn, select, textarea, input { font: inherit; color: inherit; }
+button, .btn {
+  min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--panel); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  touch-action: manipulation;
+}
+button:hover, .btn:hover { border-color: var(--accent); }
+button:disabled { opacity: .4; cursor: default; }
+button.primary, .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.row > * { min-width: 0; }
+.note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.note.warn { color: var(--warn); }
+input[type=file] { display: none; }
+
+/* 도안 선택 */
+.picker { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 6px; }
+.pick { min-height: 0; padding: 4px 2px 3px; flex-direction: column; gap: 2px; border-radius: 8px; position: relative; }
+.pick canvas { width: 32px; height: 32px; image-rendering: pixelated; border-radius: 3px; background: var(--off); }
+.pick span { font-size: 11px; line-height: 1; color: var(--muted); font-family: var(--mono); }
+.pick[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 2px var(--accent); }
+.pick.dirty::after { content: ""; position: absolute; top: 4px; right: 4px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+/* 편집 */
+.glyph-head { display: grid; grid-template-columns: 44px 1fr 44px; gap: 8px; align-items: center; margin-bottom: 10px; }
+.glyph-head button { padding: 0; }
+.glyph-title { text-align: center; min-width: 0; }
+.glyph-title b { font-size: 26px; font-family: var(--mono); }
+.glyph-title small { display: block; color: var(--muted); font-family: var(--mono); font-size: 12px; }
+.stage { display: flex; justify-content: center; }
+#editor { width: min(100%, 360px); aspect-ratio: 1; touch-action: none; border-radius: 6px; cursor: crosshair; display: block; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 12px; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+.hex { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 10px 0 0; word-break: break-all; }
+.tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 6px; margin-top: 12px; }
+.tools button { padding: 0 6px; font-size: 14px; }
+.dpad { display: flex; gap: 6px; margin-top: 12px; align-items: center; }
+.dpad button { flex: 1; font-size: 20px; padding: 0; }
+.dpad label { font-size: 13px; color: var(--muted); margin-right: 4px; }
+
+/* 미리보기 */
+textarea { width: 100%; min-height: 76px; resize: vertical; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); padding: 10px; font-family: var(--mono); font-size: 14px; }
+.screen { margin-top: 10px; background: var(--scr-bg); border-radius: 6px; padding: 10px; overflow: hidden; }
+#preview { display: block; }
+
+details { margin-top: 10px; }
+summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--muted); font-size: 14px; }
+#json { min-height: 120px; font-size: 12px; }
+.status { font-size: 13px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { button, .btn { transition: border-color .12s, background-color .12s; } }
+</style>
+
+<main class="app">
+  <header>
+    <h1>원본 폰트 편집기</h1>
+    <p class="sub">Wall Street Kid · 8x8 1비트 · 55자 · 롬 파일 0x2375</p>
+  </header>
+
+  <section class="panel" aria-labelledby="h-rom">
+    <h2 id="h-rom">롬 불러오기</h2>
+    <div class="row">
+      <label class="btn primary" for="romfile">롬 열기</label>
+      <input id="romfile" type="file" accept=".nes">
+      <span class="status" id="romstatus" aria-live="polite">롬 없이 빈 도안으로 시작했습니다.</span>
+    </div>
+    <p class="note">롬은 이 기기의 브라우저 안에서만 읽고 어디로도 보내거나 저장하지 않습니다. 임시 저장에는 바꾼 글자의 픽셀 값만 남습니다.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="h-pick">
+    <h2 id="h-pick">글자 선택 <span id="dirtycount" class="status"></span></h2>
+    <div class="picker" id="picker"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-edit">
+    <h2 id="h-edit">편집</h2>
+    <div class="glyph-head">
+      <button id="prev" aria-label="이전 글자">◀</button>
+      <div class="glyph-title"><b id="gchar">A</b><small id="gmeta"></small></div>
+      <button id="next" aria-label="다음 글자">▶</button>
+    </div>
+    <div class="stage"><canvas id="editor" aria-label="8x8 픽셀 편집 격자"></canvas></div>
+    <div class="seg" role="group" aria-label="그리기 방식">
+      <button id="m-toggle" aria-pressed="true">첫 칸 따라가기</button>
+      <button id="m-draw" aria-pressed="false">칠하기</button>
+      <button id="m-erase" aria-pressed="false">지우기</button>
+    </div>
+    <p class="hex" id="hex"></p>
+    <div class="dpad" role="group" aria-label="이동">
+      <label>이동</label>
+      <button id="s-left" aria-label="왼쪽으로 밀기">←</button>
+      <button id="s-up" aria-label="위로 밀기">↑</button>
+      <button id="s-down" aria-label="아래로 밀기">↓</button>
+      <button id="s-right" aria-label="오른쪽으로 밀기">→</button>
+    </div>
+    <div class="tools">
+      <button id="undo">실행 취소</button>
+      <button id="redo">다시 실행</button>
+      <button id="flip-h">좌우 뒤집기</button>
+      <button id="flip-v">상하 뒤집기</button>
+      <button id="invert">반전</button>
+      <button id="clear">비우기</button>
+      <button id="copy-g">글자 복사</button>
+      <button id="paste-g">글자 붙여넣기</button>
+      <button id="revert">원래대로</button>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-prev">
+    <h2 id="h-prev">미리보기</h2>
+    <textarea id="ptext" aria-label="미리보기 문장" spellcheck="false">WALL STREET KID
+$1,234.50  AT&amp;T +5%
+HOW MANY LOTS? (A) OK!</textarea>
+    <div class="screen" id="screen"><canvas id="preview" aria-label="편집한 폰트로 그린 미리보기"></canvas></div>
+    <p class="note">줄 간격은 원본 대사창처럼 2행입니다. 폰트에 없는 글자(소문자 등)는 빈칸으로 나옵니다.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="h-out">
+    <h2 id="h-out">내보내기 · 가져오기</h2>
+    <div class="row">
+      <button class="primary" id="save">JSON 저장</button>
+      <button id="copy-json">JSON 복사</button>
+      <label class="btn" for="jsonfile">JSON 열기</label>
+      <input id="jsonfile" type="file" accept=".json,application/json">
+    </div>
+    <label class="row" style="margin-top:10px; min-height:32px; gap:8px;"><input id="allg" type="checkbox" style="display:inline;width:18px;height:18px"> 바꾸지 않은 글자도 모두 포함</label>
+    <p class="note" id="outnote" aria-live="polite"></p>
+    <details>
+      <summary>JSON 보기 · 붙여넣어 가져오기</summary>
+      <textarea id="json" aria-label="내보낼 JSON" spellcheck="false"></textarea>
+      <div class="row" style="margin-top:8px"><button id="apply-json">붙여넣은 JSON 적용</button></div>
+    </details>
+  </section>
+</main>
+
+<script>
+(() => {
+  const N = 55, BASE_OFF = 0x2375, CPU_BASE = 0xA365;
+  // 코드 0x24~0x36 순서: ( ) ' " ‥ , $ ! ? - : … . / ▶ « » % &
+  const SYMS = ["(", ")", "'", '"', "‥", ",", "$", "!", "?", "-", ":", "…", ".", "/", "▶", "«", "»", "%", "&"];
+  const LABELS = [];
+  for (let i = 0; i < 10; i++) LABELS.push(String(i));
+  for (let i = 0; i < 26; i++) LABELS.push(String.fromCharCode(65 + i));
+  SYMS.forEach(s => LABELS.push(s));
+  const CODE_OF = {}; LABELS.forEach((c, i) => { if (c !== "‥") CODE_OF[c] = i; });
+  const ORIG_SHA1 = "caba8f34159eba1ecff38dd7097218c63c240ad7";
+  const DRAFT_KEY = "wsk-orig-font-draft-v1";
+
+  const $ = id => document.getElementById(id);
+  let G = new Uint8Array(N * 8);       // 현재 도안
+  let B = new Uint8Array(N * 8);       // 기준(롬 또는 빈 도안)
+  let cur = 0, mode = "toggle", romLoaded = false, clip = null;
+  let undoS = [], redoS = [];
+  let downloads = null;
+
+  const snap = i => G.slice(i * 8, i * 8 + 8);
+  const same = (a, b) => a.length === b.length && a.every((v, k) => v === b[k]);
+  const hex8 = a => Array.from(a, v => v.toString(16).padStart(2, "0")).join("");
+  const isDirty = i => { for (let k = 0; k < 8; k++) if (G[i * 8 + k] !== B[i * 8 + k]) return true; return false; };
+  const codeHex = i => i.toString(16).toUpperCase().padStart(2, "0");
+  const px = (i, x, y) => (G[i * 8 + y] >> (7 - x)) & 1;
+  const setpx = (i, x, y, v) => { const m = 1 << (7 - x); G[i * 8 + y] = v ? (G[i * 8 + y] | m) : (G[i * 8 + y] & ~m & 255); };
+
+  /* ---------- 색 ---------- */
+  let COL = {};
+  const readColors = () => {
+    const s = getComputedStyle(document.documentElement);
+    ["--off", "--ink", "--grid", "--scr-bg", "--scr-fg"].forEach(k => COL[k] = s.getPropertyValue(k).trim());
+  };
+
+  /* ---------- 도안 선택 ---------- */
+  const pickBtns = [], pickCvs = [];
+  const buildPicker = () => {
+    const box = $("picker");
+    for (let i = 0; i < N; i++) {
+      const b = document.createElement("button");
+      b.className = "pick"; b.type = "button";
+      b.setAttribute("aria-label", `글자 ${LABELS[i]} (코드 0x${codeHex(i)})`);
+      const c = document.createElement("canvas"); c.width = 8; c.height = 8;
+      const s = document.createElement("span"); s.textContent = LABELS[i];
+      b.append(c, s);
+      b.addEventListener("click", () => select(i));
+      box.append(b); pickBtns.push(b); pickCvs.push(c);
+    }
+  };
+  const drawThumb = i => {
+    const ctx = pickCvs[i].getContext("2d");
+    ctx.fillStyle = COL["--off"]; ctx.fillRect(0, 0, 8, 8);
+    ctx.fillStyle = COL["--ink"];
+    for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++) if (px(i, x, y)) ctx.fillRect(x, y, 1, 1);
+    pickBtns[i].classList.toggle("dirty", isDirty(i));
+  };
+
+  /* ---------- 편집 격자 ---------- */
+  const ed = $("editor"), edctx = ed.getContext("2d");
+  const sizeEditor = () => {
+    const dpr = window.devicePixelRatio || 1, w = Math.round(ed.getBoundingClientRect().width);
+    if (!w) return;
+    ed.width = Math.round(w * dpr); ed.height = Math.round(w * dpr); drawEditor();
+  };
+  const drawEditor = () => {
+    const W = ed.width, c = W / 8;
+    edctx.fillStyle = COL["--off"]; edctx.fillRect(0, 0, W, W);
+    edctx.fillStyle = COL["--ink"];
+    for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++)
+      if (px(cur, x, y)) edctx.fillRect(Math.floor(x * c), Math.floor(y * c), Math.ceil(c), Math.ceil(c));
+    edctx.strokeStyle = COL["--grid"]; edctx.lineWidth = Math.max(1, W / 360);
+    edctx.beginPath();
+    for (let k = 1; k < 8; k++) { const p = Math.round(k * c) + 0.5; edctx.moveTo(p, 0); edctx.lineTo(p, W); edctx.moveTo(0, p); edctx.lineTo(W, p); }
+    edctx.stroke();
+  };
+  const cellAt = e => {
+    const r = ed.getBoundingClientRect();
+    const x = Math.min(7, Math.max(0, Math.floor((e.clientX - r.left) / r.width * 8)));
+    const y = Math.min(7, Math.max(0, Math.floor((e.clientY - r.top) / r.height * 8)));
+    return [x, y];
+  };
+  let stroke = null;
+  const line = (x0, y0, x1, y1, fn) => {
+    const dx = Math.abs(x1 - x0), dy = -Math.abs(y1 - y0), sx = x0 < x1 ? 1 : -1, sy = y0 < y1 ? 1 : -1;
+    let err = dx + dy, x = x0, y = y0;
+    for (;;) { fn(x, y); if (x === x1 && y === y1) break; const e2 = 2 * err; if (e2 >= dy) { err += dy; x += sx; } if (e2 <= dx) { err += dx; y += sy; } }
+  };
+  ed.addEventListener("pointerdown", e => {
+    e.preventDefault(); ed.setPointerCapture(e.pointerId);
+    const [x, y] = cellAt(e);
+    stroke = { before: snap(cur), last: [x, y], v: mode === "draw" ? 1 : mode === "erase" ? 0 : (px(cur, x, y) ? 0 : 1) };
+    setpx(cur, x, y, stroke.v); refresh(true);
+  });
+  ed.addEventListener("pointermove", e => {
+    if (!stroke) return;
+    const [x, y] = cellAt(e);
+    if (x === stroke.last[0] && y === stroke.last[1]) return;
+    line(stroke.last[0], stroke.last[1], x, y, (a, b) => setpx(cur, a, b, stroke.v));
+    stroke.last = [x, y]; refresh(true);
+  });
+  const endStroke = () => {
+    if (!stroke) return;
+    const after = snap(cur);
+    if (!same(stroke.before, after)) { undoS.push([{ i: cur, b: stroke.before }]); redoS = []; if (undoS.length > 200) undoS.shift(); }
+    stroke = null; refresh();
+  };
+  ed.addEventListener("pointerup", endStroke);
+  ed.addEventListener("pointercancel", endStroke);
+
+  /* ---------- 편집 연산 ---------- */
+  const edit = fn => {
+    const before = snap(cur); fn();
+    if (!same(before, snap(cur))) { undoS.push([{ i: cur, b: before }]); redoS = []; }
+    refresh();
+  };
+  const rot = (b, left) => left ? ((b << 1) | (b >> 7)) & 255 : ((b >> 1) | (b << 7)) & 255;
+  const rev8 = b => { let r = 0; for (let k = 0; k < 8; k++) if (b & (1 << k)) r |= 1 << (7 - k); return r; };
+  const rows = () => Array.from(snap(cur));
+  const putRows = a => a.forEach((v, k) => G[cur * 8 + k] = v & 255);
+  $("s-left").onclick = () => edit(() => putRows(rows().map(b => rot(b, true))));
+  $("s-right").onclick = () => edit(() => putRows(rows().map(b => rot(b, false))));
+  $("s-up").onclick = () => edit(() => { const r = rows(); putRows(r.slice(1).concat(r[0])); });
+  $("s-down").onclick = () => edit(() => { const r = rows(); putRows([r[7]].concat(r.slice(0, 7))); });
+  $("flip-h").onclick = () => edit(() => putRows(rows().map(rev8)));
+  $("flip-v").onclick = () => edit(() => putRows(rows().reverse()));
+  $("invert").onclick = () => edit(() => putRows(rows().map(b => ~b)));
+  $("clear").onclick = () => edit(() => putRows(new Array(8).fill(0)));
+  $("revert").onclick = () => edit(() => putRows(Array.from(B.slice(cur * 8, cur * 8 + 8))));
+  $("copy-g").onclick = () => { clip = snap(cur); $("paste-g").disabled = false; msg(`글자 ${LABELS[cur]} 를 복사했습니다.`); };
+  $("paste-g").onclick = () => { if (clip) edit(() => putRows(Array.from(clip))); };
+  $("undo").onclick = () => {
+    const h = undoS.pop(); if (!h) return;
+    const inv = h.map(({ i }) => ({ i, b: snap(i) }));
+    h.forEach(({ i, b }) => G.set(b, i * 8)); redoS.push(inv); if (h.length) cur = h[0].i; refresh();
+  };
+  $("redo").onclick = () => {
+    const h = redoS.pop(); if (!h) return;
+    const inv = h.map(({ i }) => ({ i, b: snap(i) }));
+    h.forEach(({ i, b }) => G.set(b, i * 8)); undoS.push(inv); if (h.length) cur = h[0].i; refresh();
+  };
+  const setMode = m => {
+    mode = m;
+    [["toggle", "m-toggle"], ["draw", "m-draw"], ["erase", "m-erase"]].forEach(([k, id]) => $(id).setAttribute("aria-pressed", String(k === m)));
+  };
+  $("m-toggle").onclick = () => setMode("toggle");
+  $("m-draw").onclick = () => setMode("draw");
+  $("m-erase").onclick = () => setMode("erase");
+  $("prev").onclick = () => select((cur + N - 1) % N);
+  $("next").onclick = () => select((cur + 1) % N);
+
+  const select = i => { cur = i; refresh(); };
+
+  /* ---------- 미리보기 ---------- */
+  const pv = $("preview"), pvctx = pv.getContext("2d");
+  const drawPreview = () => {
+    const wrap = $("screen"), avail = Math.floor(wrap.clientWidth - 20) || 300;
+    const S = 3, dpr = window.devicePixelRatio || 1, cols = Math.max(8, Math.floor(avail / (8 * S)));
+    const text = $("ptext").value.toUpperCase();
+    const lines = [];
+    text.split("\n").forEach(l => { if (!l.length) lines.push(""); for (let k = 0; k < l.length; k += cols) lines.push(l.slice(k, k + cols)); });
+    const nl = Math.min(8, Math.max(3, lines.length));
+    const cw = cols * 8 * S, ch = nl * 16 * S;
+    pv.style.width = cw + "px"; pv.style.height = ch + "px";
+    pv.width = Math.round(cw * dpr); pv.height = Math.round(ch * dpr);
+    pvctx.fillStyle = COL["--scr-bg"]; pvctx.fillRect(0, 0, pv.width, pv.height);
+    pvctx.fillStyle = COL["--scr-fg"];
+    const u = S * dpr;
+    lines.slice(0, nl).forEach((l, r) => {
+      for (let k = 0; k < l.length; k++) {
+        const i = CODE_OF[l[k]]; if (i === undefined) continue;
+        for (let y = 0; y < 8; y++) for (let x = 0; x < 8; x++)
+          if (px(i, x, y)) pvctx.fillRect(Math.round((k * 8 + x) * u), Math.round((r * 16 + y) * u), Math.ceil(u), Math.ceil(u));
+      }
+    });
+  };
+  $("ptext").addEventListener("input", drawPreview);
+
+  /* ---------- 내보내기 ---------- */
+  const msg = t => { $("outnote").textContent = t; };
+  const buildJson = () => {
+    const all = $("allg").checked, glyphs = {};
+    for (let i = 0; i < N; i++) if (all || (romLoaded ? isDirty(i) : G.slice(i * 8, i * 8 + 8).some(v => v))) glyphs[codeHex(i)] = hex8(snap(i));
+    return JSON.stringify({
+      format: "wsk-orig-font", version: 1,
+      rom_offset: "0x" + BASE_OFF.toString(16), tile_bytes: 8, bits: "1bpp, MSB = left pixel, 8 rows",
+      scope: all ? "all" : "changed", glyphs
+    }, null, 2);
+  };
+  const applyJson = text => {
+    let d; try { d = JSON.parse(text); } catch { msg("JSON 형식이 올바르지 않습니다."); return; }
+    if (!d || typeof d.glyphs !== "object") { msg("glyphs 항목이 없는 파일입니다."); return; }
+    const list = []; let n = 0, bad = 0;
+    for (const [k, v] of Object.entries(d.glyphs)) {
+      const i = parseInt(k, 16);
+      if (!/^[0-9a-fA-F]{2}$/.test(k) || i >= N || !/^[0-9a-fA-F]{16}$/.test(v)) { bad++; continue; }
+      const nb = Uint8Array.from(v.match(/../g).map(h => parseInt(h, 16)));
+      if (!same(snap(i), nb)) { list.push({ i, b: snap(i) }); G.set(nb, i * 8); n++; }
+    }
+    if (list.length) { undoS.push(list); redoS = []; }
+    refresh(); msg(`${n}자를 적용했습니다.` + (bad ? ` 올바르지 않은 항목 ${bad}개는 건너뛰었습니다.` : ""));
+  };
+  $("apply-json").onclick = () => applyJson($("json").value);
+  $("jsonfile").onchange = async e => {
+    const f = e.target.files[0]; e.target.value = "";
+    if (!f || f.size > 1e6) return; applyJson(await f.text());
+  };
+  $("allg").onchange = () => refresh();
+  $("copy-json").onclick = async () => {
+    const t = buildJson();
+    try { await navigator.clipboard.writeText(t); msg("JSON 을 복사했습니다."); }
+    catch { $("json").closest("details").open = true; $("json").select(); msg("복사가 막혀 있습니다. 아래 텍스트를 길게 눌러 복사하세요."); }
+  };
+  $("save").onclick = async () => {
+    if (!downloads) { $("json").closest("details").open = true; msg("이 화면에서는 파일 저장을 쓸 수 없습니다. JSON 복사를 이용하세요."); return; }
+    try { await downloads.save({ filename: "orig_font_edits.json", data: buildJson() }); msg("저장했습니다. 프로젝트의 font/orig_font_edits.json 위치에 두세요."); }
+    catch (e) { if (e && e.code !== "declined") msg("저장하지 못했습니다. JSON 복사를 이용하세요."); }
+  };
+
+  /* ---------- 임시 저장 ---------- */
+  const saveDraft = () => {
+    try {
+      const o = {};
+      for (let i = 0; i < N; i++) if (isDirty(i)) o[codeHex(i)] = hex8(snap(i));
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(o));
+    } catch {}
+  };
+  const loadDraft = () => {
+    try {
+      const o = JSON.parse(localStorage.getItem(DRAFT_KEY) || "null"); if (!o) return 0;
+      let n = 0;
+      for (const [k, v] of Object.entries(o)) {
+        const i = parseInt(k, 16);
+        if (i < N && /^[0-9a-f]{16}$/.test(v)) { G.set(Uint8Array.from(v.match(/../g).map(h => parseInt(h, 16))), i * 8); n++; }
+      }
+      return n;
+    } catch { return 0; }
+  };
+
+  /* ---------- 롬 ---------- */
+  const sha1 = async buf => {
+    if (!(window.crypto && crypto.subtle)) return null;
+    try { return Array.from(new Uint8Array(await crypto.subtle.digest("SHA-1", buf)), b => b.toString(16).padStart(2, "0")).join(""); } catch { return null; }
+  };
+  $("romfile").onchange = async e => {
+    const f = e.target.files[0]; e.target.value = "";
+    if (!f) return;
+    const st = $("romstatus"); st.className = "status";
+    if (f.size > 8 * 1024 * 1024) { st.textContent = "파일이 너무 큽니다. 롬(.nes)을 선택하세요."; return; }
+    const buf = await f.arrayBuffer(), u = new Uint8Array(buf);
+    if (!(u[0] === 0x4E && u[1] === 0x45 && u[2] === 0x53 && u[3] === 0x1A) || u.length < BASE_OFF + N * 8) {
+      st.textContent = "iNES 헤더가 있는 .nes 롬이 아닙니다."; return;
+    }
+    const edited = []; for (let i = 0; i < N; i++) if (isDirty(i)) edited.push([i, snap(i)]);
+    B = u.slice(BASE_OFF, BASE_OFF + N * 8); G = B.slice(); romLoaded = true;
+    edited.forEach(([i, b]) => G.set(b, i * 8));
+    undoS = []; redoS = [];
+    const h = await sha1(buf);
+    st.textContent = h === ORIG_SHA1 ? "원본 USA 롬과 일치합니다." : "원본 USA 롬과 다릅니다. 같은 위치(0x2375)를 읽었으니 글자 모양을 확인하세요.";
+    if (h !== ORIG_SHA1) st.className = "status";
+    refresh();
+  };
+
+  /* ---------- 화면 갱신 ---------- */
+  let lastDirty = -1;
+  const refresh = live => {
+    drawEditor();
+    drawThumb(cur);
+    if (!live || stroke === null) { for (let i = 0; i < N; i++) drawThumb(i); }
+    pickBtns.forEach((b, i) => b.setAttribute("aria-pressed", String(i === cur)));
+    $("gchar").textContent = LABELS[cur];
+    const off = BASE_OFF + cur * 8, cpu = CPU_BASE + cur * 8;
+    $("gmeta").textContent = `코드 0x${codeHex(cur)} · 파일 0x${off.toString(16).toUpperCase()} · $${cpu.toString(16).toUpperCase()}`;
+    $("hex").textContent = "8바이트  " + Array.from(snap(cur), v => v.toString(16).padStart(2, "0")).join(" ");
+    let d = 0; for (let i = 0; i < N; i++) if (isDirty(i)) d++;
+    $("dirtycount").textContent = d ? `· 바꾼 글자 ${d}개` : "";
+    $("undo").disabled = !undoS.length; $("redo").disabled = !redoS.length;
+    $("paste-g").disabled = !clip;
+    $("revert").disabled = !isDirty(cur);
+    drawPreview();
+    $("json").value = buildJson();
+    if (!live) saveDraft();
+  };
+
+  /* ---------- 시작 ---------- */
+  readColors(); buildPicker();
+  const n = loadDraft();
+  if (n) $("romstatus").textContent = `임시 저장된 ${n}자를 불러왔습니다. 롬을 열면 원본과 비교됩니다.`;
+  new ResizeObserver(() => { sizeEditor(); drawPreview(); }).observe($("editor").parentElement);
+  const onTheme = () => { readColors(); refresh(); };
+  new MutationObserver(onTheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", onTheme);
+  sizeEditor(); refresh();
+  try { Promise.resolve(window.claude && claude.use("downloads")).then(d => { downloads = d || null; if (!downloads) $("save").hidden = true; }).catch(() => { $("save").hidden = true; }); } catch { $("save").hidden = true; }
+  if (!(window.claude && claude.use)) $("save").hidden = true;
+})();
+</script>

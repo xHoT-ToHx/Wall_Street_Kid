@@ -390,10 +390,21 @@ def cmd_ui(a):
     labimg += bytes(64 - len(labimg))
 
     # ---- 장면별 풀
+    # QA V2: 맵이 참조하지 않아도 로드된 타일은 애니메이션 패치로 쓰일 수 있다(큰 맵 래리 얼굴 0x4C-0x5B, $D402).
+    #   맵 1-$11: 로드 범위(CHR 항목 8+t, 0x60-) 전체 제외. 맵 0(홈, 0x50-0xFF 전부 로드): 로드 범위 안 미참조 타일만 사용
+    #   (장면 로더의 패치는 장면 $13 만 — $D3AE, 정적 확인). 큰 맵($29, 0x4C-0xFF): 풀 없음(라벨도 안 올림 — 엔진 eng_chr).
     maps = scene_maps(src)
     pools = []
-    for m in maps:
-        p = [x for x in range(POOL_LO, POOL_HI + 1) if x not in m][:POOL_MAX]
+    for t, m in enumerate(maps):
+        if t == 0x12:
+            pools.append([])
+            continue
+        idx = 8 + t
+        b = 0 if idx < 0x11 else 1
+        o = 0x10 + b * 0x4000 + 0x10 + (idx - (0, 0x11)[b]) * 5
+        lo = (src[o + 3] | src[o + 4] << 8) // 16
+        loaded = set(range(lo, lo + src[o])) if t else set()
+        p = [x for x in range(POOL_LO, POOL_HI + 1) if x not in m and x not in loaded][:POOL_MAX]
         pools.append(p)
     report.append("장면별 8x8 풀: " + " ".join(f"{i:X}:{len(p)}" for i, p in enumerate(pools)))
 

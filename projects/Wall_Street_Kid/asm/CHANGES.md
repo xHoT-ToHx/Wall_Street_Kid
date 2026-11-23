@@ -102,3 +102,9 @@
 - asm/tools/kor_build.py ui: 삽입 영역 안의 비문자열 원본 데이터 보호 검사(위반 시 빌드 실패).
 - 코드·빈 공간 변경 없음. 검증 롬 work/asm2/wsk_v1fix.nes(sha1 3A509743…), 상태 work/asm2/v1fix_home.mss(이 롬 전용, 랄프 전화 뒤 홈).
 - 재현(새 빌드): v1fix_home.mss → 왼쪽 3·위 2 → A(컴퓨터) → 아래 → A(주식 매수) → A(AT&T) → 오른쪽 3·위 1(수량 0001) → A → A(YES).
+
+## 2026-11-23 QA 2차 V2 (DESIGN §17)
+- kor_engine.asm eng_chr: USTATE=$13(큰 맵) 이면 상태창 라벨 업로드 생략(0x4C-0x5B 는 래리 얼굴 패치 `$D402` 가 씀).
+- kor_build.py ui 풀: 맵 1-$11 은 CHR 로드 범위 전체 제외, 큰 맵 풀 0, 맵 0 은 기존대로.
+- 빈 공간 변경 없음(엔진 뱅크 코드 +7B). 검증 롬 work/asm2/wsk_v2fix.nes(sha1 464AFDCA…), 상태 work/asm2/v2_fri.mss(금 4/14 신문, 이 롬 전용 아님 — v0.2.1 상태에서 이어진 것).
+- M1: 수정 없음(8x8 글리프가 1-7행 사용, 폰트 한계).

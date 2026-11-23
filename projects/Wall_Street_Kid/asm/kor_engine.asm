@@ -664,6 +664,9 @@ eng_chr:
   LDA POOLHI,X
   STA UPHI
   JSR uinval
+  LDA USTATE
+  CMP #$13                ; 큰 맵(장면 $13): 0x4C- 를 얼굴 애니메이션이 씀 → 라벨 안 올림(QA V2)
+  BEQ @rts
   LDA #$02                ; 라벨 2bpp 64B → $04A0 (타일 0x4A-0x4D)
   STA KREC
   LDA #0
