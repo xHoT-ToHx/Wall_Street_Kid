@@ -44,7 +44,6 @@
 | $DC82-$DC87 | LDY #0 / LDA ($8F),Y .. (복사 루프 앞 6B) | JSR ntag / JMP $DC90 | 이름표 [60 ii] → 풀 타일 |
 | $DDB9-$DDBE | 같은 루프 | JSR ntag / JMP $DDC7 | 이름표 2 |
 | khook 안 | CMP #$60 | CMP #$61 | 리드 60 = 8x8 |
-| eng_split 첫머리(뱅크 7) | - | JSR hookpre | $09 훅이 $D2A3 이면 분할 대기 전에 실행(QA A1/A2, DESIGN §14) |
 | eng_split @out 분기(뱅크 7) | - | KDCLR/KDBUSY 증가 | 분할 건너뜀 원인 진단(DESIGN §12) |
 | khook @orig | LDA KC / CMP #$FB / JMP $D918 | JMP korig | 4E = NOP |
 | $F03B | JMP kinit (1차) | 그대로, kinit 을 $C003 로 이동 + USTATE=0 | |
@@ -73,3 +72,27 @@
 ### 검증용 (정적, 에뮬 아님)
 - `python work/asm2/t_screens.py` / `t_var.py` / `t_render.py` / `t_title.py` (projects/Wall_Street_Kid 에서) → qa/asm2_sim_*.png.
 - 에뮬 확인 대기 목록: DESIGN.md §13.
+
+## 2026-11-18~23 QA 1차 수정 (DESIGN §15)
+### 훅 추가·변경
+| 주소 | 원래 | 변경 | 목적 |
+|---|---|---|---|
+| nmi_post 첫머리(고정) | - | JSR hkpre($E101) | $D2A3 훅을 분할 대기 전·메인 뱅크로 실행(A1/A2/A6) |
+| $F210 | JSR $F489 | JSR kq($E0D5) | $F20F 원시 기록이 분할 구간이면 분할 해제+마지막 행 지우기 |
+| $C463-$C468 | 요일 복사 루프 | JSR kwdbox / JMP $C471 | 날짜 상자 요일 8x8 |
+| $CD73 | STA $40 / TYA | JSR kcls($FF5C) | 화면 전체 지우기 → 8x8 캐시 무효화 예약 |
+| eng_split @clr(뱅크 7) | 분할 건너뜀 | 분할 줄 대기로 진행 | A3 |
+| eng_nmipre(뱅크 7) | - | KACT=5 처리(wclr) | 창 마지막 행 지우기 |
+| kdma(고정) | - | X 사용으로 2B 절약 | 고정 공간 |
+
+### 빈 공간
+| 위치 | 크기 | 내용 |
+|---|---|---|
+| 고정 $E0C2-$E121 (menu_b7 영역 끝 96B, gen_spec.py 에서 제외) | 90/96B | korig·kq·kwdbox·hkpre |
+| 고정 $FF5C- (엔진 고정부, 끝 $FFDC) | | kcls 추가 |
+| RAM $05BA KTHI, $05BB KINVF | 2B | |
+| 뱅크 11 $A000-$A134 | 309B | UI 넘침(메뉴 스텁 14·패스워드 4 포함) |
+
+### 검증 롬·상태 (work/asm2, git 제외)
+- wsk_asm2j.nes(sha1 1978A31A…) 기준. 상태: j_news.mss(신문 시작), j_home.mss(랄프 전화 뒤 홈). **이 롬 전용**(다른 빌드에 로드하면 8x8 풀 포인터가 어긋남).
+- 재현: 리셋 → 750프레임 → START(메뉴) → START(새 게임) → 900프레임 → A 탭(4프레임 누름, 300프레임 간격)으로 래리 대사·신문·랄프 전화 → 홈. 은행: 홈에서 왼쪽 6·아래 5 → A.

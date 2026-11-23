@@ -288,7 +288,7 @@ def cmd_text(a):
 UI8_BLOCKS = ["menu_b7", "stock_ui_b5", "stock_names_b5", "stock_cat_b5", "password_b7", "weekdays",
               "status_cash", "status_stocks"]
 UI16_BLOCKS = ["stock_desc_b5"]
-PASSWORD_KO = False          # 패스워드 화면의 CHR 사용 실측 전까지 영문 유지(DESIGN §10.4). True 면 제자리 스텁 + 한글
+PASSWORD_KO = True           # 패스워드 화면 = 홈 장면 CHR(맵0 풀 36) 위라 8x8 경로 사용 가능(에뮬 확인, DESIGN §10.4)
 UI_OVF_BANK = 11             # 넘침 뱅크(대사 넘침과 공유: 대사는 $8000-, UI 는 $A000-)
 UI_OVF_BASE = 0xA000
 UI_OVF_END = 0xBF9F          # $BFA0- 는 kcopy 사본 없음(뱅크 11)이지만 $BFF9 표식 보호
@@ -299,6 +299,7 @@ MENU_CODE_RESERVE = 96       # menu_b7 영역(고정 뱅크 $E017-$E121) 끝 96B
 NOP_CODE = 0x4E              # 아무것도 그리지 않고 커서도 안 움직이는 1바이트(고정 길이 문자열 채움용, 요일)
 UI8_TTF = os.path.join(PROJ, "font", "Galmuri7.ttf")
 UI8_OFFICIAL = os.path.join(PROJ, "font", "ui8_charset.txt")
+UI8_BIN = os.path.join(PROJ, "build", "font_ui8.bin")
 
 
 def is_hangul(c):
@@ -348,26 +349,22 @@ def cmd_ui(a):
     t16, ko = load_ko()
     report = []
 
-    # ---- 8x8 글리프 세트
-    chars = ui8_charset()
+    # ---- 8x8 글리프 세트: 정본 = font/ui8_charset.txt 순서 + build/font_ui8.bin (font/tools/build_font.py 가 commands 에서 생성)
+    #      번역문에서 자동 수집한 글자(build/ui8_charset_auto.txt)는 누락 검사용
+    from romkr.charset import read_charset
+    chars = read_charset(UI8_OFFICIAL)
     if len(chars) > 255:
         raise SystemExit(f"8x8 글자 {len(chars)} > 255")
-    bms = fnt.render(chars, UI8_TTF, 8, 8, 8, 0, 0)
-    font8 = bytearray()
-    for bm in bms:
-        for row in bm:
-            v = 0
-            for x in range(8):
-                v = v << 1 | (1 if row[x] else 0)
-            font8.append(v)
-    empty = [c for c, bm in zip(chars, bms) if not any(map(any, bm))]
-    if empty:
-        raise SystemExit("8x8 폰트에 없는 글자: " + "".join(empty))
+    font8 = open(UI8_BIN, "rb").read()
+    if len(font8) != len(chars) * 8:
+        raise SystemExit(f"{UI8_BIN} 크기 {len(font8)} != {len(chars)}자 x 8B (build_font.py 8x8 1bpp 확인)")
     idx8 = {c: i for i, c in enumerate(chars)}
-    official = [c for c in open(UI8_OFFICIAL, encoding="utf-8").read().split() if is_hangul(c)]
-    miss = [c for c in chars if c not in official]
-    open(os.path.join(PROJ, "build", "ui8_charset_auto.txt"), "w", encoding="utf-8").write("\n".join(chars) + "\n")
-    report.append(f"8x8 글자 {len(chars)}자 (font/ui8_charset.txt 에 없는 {len(miss)}자: {''.join(miss)})")
+    used = ui8_charset()
+    open(os.path.join(PROJ, "build", "ui8_charset_auto.txt"), "w", encoding="utf-8").write(chr(10).join(used) + chr(10))
+    miss = [c for c in used if c not in idx8]
+    if miss:
+        raise SystemExit("font/ui8_charset.txt 에 없는 글자(font-engineer 추가 필요): " + "".join(miss))
+    report.append(f"8x8 글자 {len(chars)}자 (정본 font/ui8_charset.txt, 번역 사용 {len(used)}자 누락 0)")
     # 8x8 → 8x16 글리프 번호(2행 피치 분할 창에서 <VAR> 요일 등이 섞일 때)
     g_lo, g_hi = [], []
     for c in chars:

@@ -1,6 +1,6 @@
 {
   "name": "Wall Street Kid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "platform": "fc",
   "source_lang": "en",
   "rom": "rom/Wall Street Kid (USA).nes",
@@ -27,6 +27,38 @@
       "4:12",
       "--copy",
       "6:13"
+    ],
+    [
+      "python",
+      "font/tools/build_font.py",
+      "--ascii-ttf",
+      "",
+      "--charset",
+      "font/ui8_charset.txt",
+      "--ttf",
+      "font/Galmuri7.ttf",
+      "--size",
+      "8",
+      "--cell",
+      "8x8",
+      "--oy",
+      "0",
+      "--out",
+      "build/font_ui8.bin",
+      "--tbl-out",
+      "",
+      "--preview",
+      ""
+    ],
+    [
+      "python",
+      "font/tools/build_font.py",
+      "--tbl-out",
+      "",
+      "--out",
+      "build/font.bin",
+      "--preview",
+      ""
     ],
     [
       "python",

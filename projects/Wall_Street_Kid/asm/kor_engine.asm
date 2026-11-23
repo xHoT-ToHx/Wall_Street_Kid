@@ -1070,7 +1070,7 @@ eng_split:
   LDY #1                   ; 대기 한도 보정(아래)
   LDA $2002                ; 이전 프레임의 오버플로가 아직 켜져 있으면 사전렌더(261)에서 꺼지는 순간으로 동기
   AND #$20
-  BEQ @clr                 ; 이미 꺼짐: NMI 가 길어 사전렌더를 지났거나 지난 프레임 미발생 → 시점 불명, 이번 프레임은 분할 안 함
+  BEQ @clr                 ; 이미 꺼짐: NMI 가 길어 사전렌더를 지남(또는 지난 프레임 미발생) → @clr 에서 분할 줄 대기
   LDX #0
 @w1:                      ; 사전렌더 줄에서 플래그가 지워질 때까지 (최대 ~29줄)
   LDA $2002
@@ -1116,9 +1116,9 @@ eng_split:
 @busy:
   INC KDBUSY
   RTS
-@clr:
-  INC KDCLR
-  RTS
+@clr:                     ; NMI 가 길어(스크롤·큰 큐 작업) 이미 사전렌더를 지남 = 이번 프레임 렌더링 중(분할 줄 전) [QA A3]
+  INC KDCLR               ; → 건너뛰지 않고 분할 줄의 오버플로 켜짐을 바로 기다린다(대기 한도는 241 전에 끝남)
+  JMP @w2s
 
 .include "../build/kor_tables.asm"
 .include "../build/kor_ui_tables.asm"
