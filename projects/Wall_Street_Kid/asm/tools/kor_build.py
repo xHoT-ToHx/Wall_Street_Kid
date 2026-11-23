@@ -479,6 +479,16 @@ def cmd_ui(a):
         r1 = min(r1, bank_lim)
         if name == "menu_b7" and r1 > 0x3E131 - MENU_CODE_RESERVE:    # spec(gen_spec.py)이 이미 끝 32B 를 뺐는지 확인
             raise SystemExit("menu_b7 text_region 이 엔진 예약($E102-$E121)과 겹침 — tools/gen_spec.py 확인")
+        # 안전 검사(QA V1): 삽입 영역 안에서 문자열이 아닌 원본 데이터(0 이 아닌 바이트)는 덮지 않는다
+        cov = set()
+        for e in ents:
+            if "offset" in e and "orig_bytes" in e:
+                o = pint(e["offset"])
+                cov.update(range(o, o + e["orig_bytes"]))
+        raw = [x for x in range(pint(reg["start"]), min(pint(reg["end"]), r1 - (remap(0x1C010) - 0x1C010 if r0 >= 0x3C010 else 0)) + 1)
+               if x not in cov and src[x] != 0]
+        if raw:
+            raise SystemExit(f"{name}: 삽입 영역 안에 문자열이 아닌 원본 데이터 0x{raw[0]:X}-0x{raw[-1]:X} — tools/gen_spec.py 영역 조정 필요")
         cur = r0
         place = {}
         nstub = 0

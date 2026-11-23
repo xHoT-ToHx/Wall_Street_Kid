@@ -345,7 +345,7 @@
   {
    "name": "stock_ui_b5",
    "type": "pointer",
-   "note": "bank5 주식 매매/포트폴리오 화면 틀 문자열 8개. 포인터표 0x17C56. 줄 끝 공백·열 정렬이 숫자 출력 위치와 맞물림(주의).",
+   "note": "bank5 주식 매매/포트폴리오 화면 틀 문자열 8개. 포인터표 0x17C56. 줄 끝 공백·열 정렬이 숫자 출력 위치와 맞물림(주의). 0x17E2D-0x17E3E 는 문자열이 아니라 매수 확인 'OK? YES / NO' 의 $D27F PPU 레코드 목록(bank5 $B2CE 가 X=$1D Y=$BE 로 참조) → 삽입 영역에서 제외(QA V1).",
    "pointer_table": {
     "addrs": [
      "0x17c56",
@@ -368,7 +368,7 @@
    },
    "text_region": {
     "start": "0x17c66",
-    "end": "0x17e3e"
+    "end": "0x17e2c"
    },
    "fill": "0x00",
    "max_len": 1024

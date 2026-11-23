@@ -201,3 +201,9 @@
 - project.json commands 첫머리에서 `font/tools/build_font.py` 를 두 번 호출해 build/font.bin(8x16, 기본값 = font/out/font.bin 과 바이트 동일)과 build/font_ui8.bin(Galmuri7 8x8, font/ui8_charset.txt 129자 = font/out/font_ui8.bin 과 동일)을 만든다. tables/ko_font.tbl 은 쓰지 않음(`--tbl-out ""`).
 - `kor_build.py ui` 는 font/ui8_charset.txt 순서 + build/font_ui8.bin 을 정본으로 쓰고, 번역문에서 모은 글자(build/ui8_charset_auto.txt, 121자)는 누락 검사만 한다(누락 0, 있으면 빌드 실패).
 - 타이틀 메뉴·FEATURING 글리프(`kor_build.py title`)는 같은 TTF·설정으로 직접 렌더(새/게/임/이/어/하/기 는 UI 세트 밖).
+
+## 16. QA 2차 V1 (주식 매수 확정 시 화면 깨짐·정지) [검증 2026-11-23]
+- 원인: spec 의 stock_ui_b5 삽입 영역(0x17C66-0x17E3E) 끝 0x17E2D-0x17E3E 18B 는 문자열이 아니라 매수·매도 확인 프롬프트 "OK? YES / NO" 의 `$D27F` PPU 레코드 목록([96 20 08]"OK?  YES"[BB 20 02]"NO"[FF], bank5 `$B2CE` 가 X=$1D Y=$BE 로 참조)이었다. 1행 화면 한글 재배치가 이 자리를 0 으로 채워, 확인 때 `$D2A3` 훅이 종료 표식 없는 목록을 계속 기록 → 네임테이블 전체가 연속값으로 덮이고 NMI 가 길어져 메인 스레드는 입력 대기 루프에서 화면 갱신 없이 멈춘 것처럼 보임. (QA 가 본 `$962A-$9CFF` 루프는 NMI 의 사운드 엔진, `$F043` 은 정상 대기.)
+- 수정: tools/gen_spec.py 에서 stock_ui_b5 삽입 영역을 0x17C66-0x17E2C 로 줄이고 spec.json 재생성(원래 바이트 유지). `kor_build.py ui` 에 검사 추가: 삽입 영역 안에 문자열(offset+orig_bytes) 밖의 0 아닌 원본 바이트가 있으면 빌드 실패.
+- 확인(새 빌드, 처음부터 진행): 매수 확정·완료, 포트폴리오, 매도 확정·완료, 매매 목록 종목명 약어, 정보 화면 열 머리 → qa/fix_V1_*.png.
+- 남은 것: 확인 프롬프트 "OK? YES / NO" 는 원시 레코드라 영문. 한글화하려면 이름표처럼 `$D27F` 목록을 엔진이 변환하거나(목록 형식 [lo][hi][len][타일…]), 8x8 고정 타일을 두어야 함. 고정 뱅크 여유 부족으로 보류.

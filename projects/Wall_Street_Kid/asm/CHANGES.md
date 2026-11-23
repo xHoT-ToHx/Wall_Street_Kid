@@ -96,3 +96,9 @@
 ### 검증 롬·상태 (work/asm2, git 제외)
 - wsk_asm2j.nes(sha1 1978A31A…) 기준. 상태: j_news.mss(신문 시작), j_home.mss(랄프 전화 뒤 홈). **이 롬 전용**(다른 빌드에 로드하면 8x8 풀 포인터가 어긋남).
 - 재현: 리셋 → 750프레임 → START(메뉴) → START(새 게임) → 900프레임 → A 탭(4프레임 누름, 300프레임 간격)으로 래리 대사·신문·랄프 전화 → 홈. 은행: 홈에서 왼쪽 6·아래 5 → A.
+
+## 2026-11-23 QA 2차 V1 (DESIGN §16)
+- tools/gen_spec.py: stock_ui_b5 삽입 영역 끝 0x17E3E → 0x17E2C (0x17E2D-0x17E3E = 확인 프롬프트 `$D27F` 레코드 목록 보존). spec.json 재생성.
+- asm/tools/kor_build.py ui: 삽입 영역 안의 비문자열 원본 데이터 보호 검사(위반 시 빌드 실패).
+- 코드·빈 공간 변경 없음. 검증 롬 work/asm2/wsk_v1fix.nes(sha1 3A509743…), 상태 work/asm2/v1fix_home.mss(이 롬 전용, 랄프 전화 뒤 홈).
+- 재현(새 빌드): v1fix_home.mss → 왼쪽 3·위 2 → A(컴퓨터) → 아래 → A(주식 매수) → A(AT&T) → 오른쪽 3·위 1(수량 0001) → A → A(YES).
