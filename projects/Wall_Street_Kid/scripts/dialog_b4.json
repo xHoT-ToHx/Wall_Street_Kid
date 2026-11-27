@@ -149,7 +149,7 @@
     "offset": "0x1031a",
     "orig_bytes": 44,
     "ja": "LARRY\nGOOD JOB!  YOUR UNCLE\nWOULD'VE BEEN PROUD!<END>",
-    "ko": "래리\n훌륭합니다! 삼촌께서도\n자랑스러워하실 겁니다!<END>",
+    "ko": "래리\n훌륭합니다!\n삼촌께서도 자랑스러워하실 겁니다!<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -158,7 +158,7 @@
     "offset": "0x10346",
     "orig_bytes": 37,
     "ja": "RUTH\nWELL, I BET YOU\nCOULDN'T DO IT AGAIN!<END>",
-    "ko": "루스\n글쎄요, 두 번은\n못 하실 것 같습니다만!<END>",
+    "ko": "루스\n글쎄요, 두 번은 못 하실 것 같습니다만!<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -176,7 +176,7 @@
     "offset": "0x10387",
     "orig_bytes": 43,
     "ja": "CONNIE\nYOU REALLY WALLED YOURWAY THRU THIS GAME!<END>",
-    "ko": "코니\n월스트리트를 제대로\n평정하셨군요!<END>",
+    "ko": "코니\n월스트리트를 제대로 평정하셨군요!<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴 / [번역] WALLED(월가) 말장난 -> '월스트리트 평정'으로 의역"
   },
   {
@@ -185,7 +185,7 @@
     "offset": "0x103b2",
     "orig_bytes": 37,
     "ja": "RALPH\nARE YOU READY TO BUY\nMORE MANSIONS?<END>",
-    "ko": "랄프\n이봐, 저택 몇 채\n더 살 준비 됐어?<END>",
+    "ko": "랄프\n이봐, 저택 몇 채 더 살 준비 됐어?<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -194,7 +194,7 @@
     "offset": "0x103d7",
     "orig_bytes": 41,
     "ja": "DOC\nCELEBRATION ON THE\nMOST LUXURIOUS YACHT?<END>",
-    "ko": "닥\n최고급 요트에서\n축하 파티 어때?<END>",
+    "ko": "닥\n최고급 요트에서 축하 파티 어때?<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -203,7 +203,7 @@
     "offset": "0x10400",
     "orig_bytes": 32,
     "ja": "PAMELA\nHOW ABOUT SOME LARGER\nPETS?<END>",
-    "ko": "파멜라\n좀 더 큰 애완동물은\n어떠세요?<END>",
+    "ko": "파멜라\n좀 더 큰 애완동물은 어떠세요?<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -212,7 +212,7 @@
     "offset": "0x10420",
     "orig_bytes": 42,
     "ja": "CAL\nI CAN QUIT MY WORK ANDBECOME YOUR CHAUFFEUR!<END>",
-    "ko": "캘\n일 때려치우고\n네 운전기사나 할까!<END>",
+    "ko": "캘\n일 때려치우고 네 운전기사나 할까!<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -221,7 +221,7 @@
     "offset": "0x1044a",
     "orig_bytes": 37,
     "ja": "TED\nWHY DON'T YOU STOP BY\nMY NEW SHOWROOM?<END>",
-    "ko": "테드\n형씨, 새 매장에\n한번 들러 봐!<END>",
+    "ko": "테드\n형씨, 새 매장에 한번 들러 봐!<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -230,7 +230,7 @@
     "offset": "0x1046f",
     "orig_bytes": 36,
     "ja": "ART\nYOU'RE A SUCCESSFUL\nARTIST INDEED!<END>",
-    "ko": "아트\n진정 성공한\n예술가시네요!<END>",
+    "ko": "아트\n진정 성공한 예술가시네요!<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -239,7 +239,7 @@
     "offset": "0x10493",
     "orig_bytes": 44,
     "ja": "DION\nIMPRESSIVE!  NEED ANY\nDESIGNER UNDERWEAR?<END>",
-    "ko": "디온\n멋져요! 명품 속옷은\n필요 없으세요?<END>",
+    "ko": "디온\n멋져요!\n명품 속옷은 필요 없으세요?<END>",
     "note": "[엔딩 축하] 각 인물이 주인공(남성)에게. 15=프리실라(아내) 16=래리 17=루스 18=스탠리 19=코니 20=랄프 21=닥 22=파멜라 23=칼 24=테드 25=아트 26=디온 27=줄리 28=오스틴"
   },
   {
@@ -266,7 +266,7 @@
     "offset": "0x10514",
     "orig_bytes": 911,
     "ja": "HELLO.  I'M LARRY, A LAWYER\nEMPLOYED BY YOUR DISTANT\nUNCLE, MR. BENEDICT.  I'M\nSORRY TO SAY HE'S PASSED\nAWAY.\n<WAIT>\nAS HIS ONLY SURVIVING\nRELATIVE, YOU MAY BE\nELIGIBLE TO INHERIT OVER\n$600 BILLION IN ASSETS.\n<WAIT>\nFIRST, YOU MUST PROVE\nYOURSELF.  YOU'LL BE\nPROVIDED WITH $500,000 WITH\nWHICH YOU MUST TURN A PROFITTHROUGH THE STOCK MARKET.\n<WAIT>\nUSE THE PROFITS TO UPHOLD\nTHE BENEDICT STANDARD OF\nLIVING.  PAMPER YOUR\nSWEETHEART AND MOVE IN TO A\nDECENT $1 MILLION HOUSE.\n<WAIT>\nYOU'LL HAVE ONE MONTH TO\nPURCHASE THE HOUSE.  I'LL\nHAVE A REAL ESTATE AGENT\nCALL YOU.\n<WAIT>\nALSO, MR. BENEDICT'S\nGRANDFATHER OWNED A CASTLE\nIN EUROPE YEARS AGO.  WHEN\nHE EMIGRATED TO THE US, THE\nCASTLE HAD TO BE SOLD.\n<WAIT>\nJUST BEFORE MR. BENEDICT'S\nDEATH, HE HEARD GOSSIP THAT\nTHE CASTLE WOULD GO UP FOR\nSALE.  YOU MUST BUY IT BACK\nTO MAINTAIN THE FAMILY\nHERITAGE.<WAIT>\n\nTHE CASTLE WILL COST SEVERALMILLION DOLLARS, SO PREPARE\nYOURSELF!  I'LL KEEP YOU\nPOSTED ON THIS SALE.\n<WAIT>\nOH, BY THE WAY, HAVE A GREATAPRIL FOOL'S DAY.  BUT\nREMEMBER, EVERYTHING I JUST\nTOLD YOU IS NO APRIL FOOL'S\nJOKE.  GOOD LUCK!\n<WAIT><END>",
-    "ko": "안녕하십니까. 변호사 래리입니다.\n먼 삼촌이신 베네딕트 씨의\n일을 맡고 있습니다. 안타깝게도\n그분께서 세상을 떠나셨습니다.\n<WAIT>\n유일한 친척인 당신께서는\n$6000억이 넘는 재산을\n상속받을 자격이 있을지도\n모릅니다.\n<WAIT>\n먼저 실력을 증명하셔야\n합니다. $500,000의 자금을\n드릴 테니, 그 돈으로 주식\n시장에서 수익을 내십시오.\n<WAIT>\n그 수익으로 베네딕트 가문의\n생활 수준을 지키십시오.\n연인을 아껴 주시고,\n$1,000,000짜리 번듯한 집으로\n이사하셔야 합니다.\n<WAIT>\n집을 구입할 기한은\n한 달입니다. 부동산 중개인이\n연락드리도록 하겠습니다.\n<WAIT>\n그리고 베네딕트 씨의 조부께서는\n오래전 유럽에 성을 한 채\n갖고 계셨습니다. 미국으로\n이주하실 때 그 성을 팔아야\n했습니다.\n<WAIT>\n베네딕트 씨는 돌아가시기 직전,\n그 성이 매물로 나온다는\n소문을 들으셨습니다. 가문의\n유산을 지키려면 그 성을\n되찾아야 합니다.<WAIT>\n\n성은 수백만 달러는 할 테니\n각오하십시오! 매각 소식은\n계속 알려 드리겠습니다.\n<WAIT>\n아, 그리고 즐거운 만우절\n보내십시오. 하지만 방금 드린\n말씀은 만우절 농담이\n아닙니다. 행운을 빕니다!\n<WAIT><END>",
+    "ko": "안녕하십니까.\n변호사 래리입니다.\n먼 삼촌이신 베네딕트 씨의 일을 맡고 있습니다.\n안타깝게도 그분께서 세상을 떠나셨습니다.\n<WAIT>\n유일한 친척인 당신께서는\n$6000억 넘는 재산을\n상속받을 자격이 있을지도 모릅니다.\n<WAIT>\n먼저 실력을 증명하셔야 합니다.\n$500,000의 자금을 드릴 테니,\n그 돈으로 주식 시장에서 수익을 내십시오.\n<WAIT>\n그 수익으로 베네딕트 가문의\n생활 수준을 지키십시오.\n연인을 아껴 주시고,\n$1,000,000짜리 번듯한 집으로\n이사하셔야 합니다.\n<WAIT>\n집을 구입할 기한은 한 달입니다.\n부동산 중개인이 연락드리도록 하겠습니다.\n<WAIT>\n그리고 베네딕트 씨의 조부께서는\n오래전 유럽에 성을 한 채 갖고 계셨습니다.\n미국으로 이주하실 때 그 성을 팔아야 했습니다.\n<WAIT>\n베네딕트 씨는 돌아가시기 직전,\n그 성이 매물로 나온다는 소문을 들으셨습니다.\n가문의 유산을 지키려면 그 성을 되찾아야 합니다.\n<WAIT>\n성은 수백만 달러는 할 테니 각오하십시오!\n매각 소식은 계속 알려 드리겠습니다.\n<WAIT>\n아, 그리고 즐거운 만우절 보내십시오.\n하지만 방금 드린 말씀은 만우절 농담이 아닙니다.\n행운을 빕니다!\n<WAIT><END>",
     "note": "[래리->주인공 오프닝] 삼촌 베네딕트 유산 설명. 4/1 만우절 농담. 가장 긴 대사. <WAIT> 페이지 구분 / [번역] $600 BILLION -> $6000억 표기(전체 자릿수는 너무 길어 억 단위 사용). SEVERAL MILLION DOLLARS -> '수백만'(달러 미표기)"
   },
   {
@@ -275,7 +275,7 @@
     "offset": "0x108a3",
     "orig_bytes": 352,
     "ja": "CONGRATULATIONS!  YOU HAVE\nACCOMPLISHED THE FIRST STEP.YOUR NEW HOUSE IS A DECENT\nBEGINNING FOR A BENEDICT.<WAIT>\n\nTHANK YOU FOR THE WEDDING\nINVITATION.  I'LL BE THERE.\nTHE BENEDICT TRADITION IS TOHONEYMOON ON A YACHT.  A\nDECENT YACHT MAY COST AROUND$700,000.<WAIT>\n\nYOU CAN ALWAYS TAKE A LOAN\nFROM THE BANK. I'LL HAVE THEBOATSALESMAN CALL YOU.\n<WAIT>\nJUST A REMINDER, PLEASE KEEPSAVING YOUR MONEY FOR THE\nCASTLE, TOO.<WAIT><END>",
-    "ko": "축하합니다! 첫 관문을\n통과하셨군요. 새 집은 베네딕트\n가문 사람다운 훌륭한 출발입니다.<WAIT>\n\n결혼식 초대 감사합니다.\n꼭 참석하겠습니다.\n베네딕트 가문의 전통은 요트로\n신혼여행을 가는 것입니다.\n괜찮은 요트는 $700,000쯤 합니다.<WAIT>\n\n은행 대출도 언제든 받을 수\n있습니다. 요트 판매상에게\n연락하라고 해 두겠습니다.\n<WAIT>\n그리고 성을 위한 저축도\n잊지 마십시오.<WAIT><END>",
+    "ko": "축하합니다!\n첫 관문을 통과하셨군요.\n새 집은 베네딕트 가문 사람다운\n훌륭한 출발입니다.<WAIT>\n\n결혼식 초대 감사합니다.\n꼭 참석하겠습니다.<WAIT>\n\n베네딕트 가문의 전통은\n요트로 신혼여행을 가는 것입니다.\n괜찮은 요트는 $700,000쯤 합니다.<WAIT>\n\n은행 대출도 언제든 받을 수 있습니다.\n요트 판매상에게 연락하라고 해 두겠습니다.\n<WAIT>\n그리고 성을 위한 저축도 잊지 마십시오.<WAIT><END>",
     "note": "[래리->주인공] 집 구입 성공 후 축하, 요트(허니문) 안내"
   },
   {
@@ -284,7 +284,7 @@
     "offset": "0x11263",
     "orig_bytes": 182,
     "ja": "RALPH HAS JUST INFORMED ME\nTHAT YOU HAVE FAILED TO BUY\nTHE HOUSE.  TOO BAD.\n<WAIT>\nIF YOU CAN'T EVEN MAKE \nENOUGH PROFIT FROM A FREE\n$500,000 GIFT TO BUY A\nHOUSE, YOU'LL NEVER MAKE IT\nAS A BENEDICT.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
-    "ko": "랄프 씨에게서 방금 연락을\n받았습니다. 집을 사지\n못하셨다더군요. 유감입니다.\n<WAIT>\n공짜로 받은 $500,000의\n자금으로 집 한 채 살 수익도\n못 낸다면, 결코 베네딕트\n가문 사람이 될 수 없습니다.\n<WAIT>게임 오버!\n\n\n\n\n\n<END>",
+    "ko": "랄프 씨에게서 방금 연락을 받았습니다. \n집을 사지 못하셨다더군요.\n유감입니다.\n<WAIT>\n공짜로 받은 $500,000의 자금으로\n집 한 채 살 수익도 못 낸다면,\n결코 베네딕트 가문 사람이 될 수 없습니다.\n<WAIT>\n게임 오버!\n<END>",
     "note": "[게임오버] 집 구입 실패(31=래리, 32=해설). 끝에 빈 줄 6개(화면 정리) 유지"
   },
   {
@@ -293,7 +293,7 @@
     "offset": "0x10a03",
     "orig_bytes": 206,
     "ja": "TOO BAD!  YOU CAN'T EVEN\nMAKE ENOUGH PROFIT TO\nPURCHASE A DECENT HOUSE\nWITHIN A MONTH.\n<WAIT>\nYOU ARE OBVIOUSLY NOT\nCAPABLE OF COMMITTING\nYOURSELF TO HANDLE THE\nRESPONSIBILITY OF MR.\nBENEDICT'S PROPERTY.\nTOUGH LUCK.<WAIT>\nGAME'S OVER!\n\n\n\n\n\n<END>",
-    "ko": "유감입니다! 한 달 안에\n번듯한 집 한 채 살 수익조차\n내지 못하다니.\n<WAIT>\n당신에게는 베네딕트 씨의\n재산을 책임질 능력이\n없는 것이 분명합니다.\n운이 없었군요.<WAIT>\n게임 오버!\n\n\n\n\n\n<END>",
+    "ko": "유감입니다!\n한 달 안에 번듯한 집 한 채 살 수익조차\n내지 못하다니.\n<WAIT>\n당신에게는 베네딕트 씨의 재산을 책임질 능력이\n없는 것이 분명합니다.\n운이 없었군요.\n<WAIT>\n게임 오버!\n\n\n\n\n\n<END>",
     "note": "[게임오버] 집 구입 실패(31=래리, 32=해설). 끝에 빈 줄 6개(화면 정리) 유지"
   },
   {
@@ -302,7 +302,7 @@
     "offset": "0x10ad1",
     "orig_bytes": 168,
     "ja": "I SEE YOU'VE BOUGHT A\nBEAUTIFUL YACHT.  WHAT AN\nACCOMPLISHMENT!  I'VE JUST\nFOUND OUT THAT THE CASTLE\nWILL BE FOR SALE AT AN\nAUCTION.<WAIT>\n\nI'LL KEEP YOU INFORMED OF\nANYTHING ELSE I LEARN\nABOUT IT.<WAIT><END>",
-    "ko": "아름다운 요트를 사셨군요.\n정말 대단하십니다! 방금\n알아보니, 그 성이 경매에\n나온다고 합니다.<WAIT>\n\n새로 알게 되는 것이 있으면\n계속 알려 드리겠습니다.<WAIT><END>",
+    "ko": "아름다운 요트를 사셨군요.\n정말 대단하십니다!\n방금 알아보니, 그 성이 경매에 나온다고 합니다.<WAIT>\n\n새로 알게 되는 것이 있으면\n계속 알려 드리겠습니다.<WAIT><END>",
     "note": "[래리->주인공] 요트 구입 성공, 성 경매 예고"
   },
   {
@@ -311,7 +311,7 @@
     "offset": "0x11319",
     "orig_bytes": 188,
     "ja": "I'VE JUST HAD A CALL FROM\nDOC.  HE TOLD ME THAT YOU\nFAILED TO BUY THE YACHT.\nYOU'VE REALLY PUT HIM IN A\nPREDICAMENT.\n<WAIT>\nWHAT A DISAPPOINTMENT!\nA BENEDICT WOULD NEVER ACT\nSO IRRESPONSIBLY.  YOU LOSE.<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
-    "ko": "방금 닥 씨에게서 전화가\n왔습니다. 요트를 사지\n못하셨다고요. 덕분에 그가\n아주 곤란해졌습니다.\n<WAIT>\n정말 실망입니다! 베네딕트\n가문 사람이라면 이렇게\n무책임하게 굴지 않습니다.\n당신의 패배입니다.<WAIT>게임 오버!\n\n\n\n\n\n<END>",
+    "ko": "방금 닥 씨에게서 전화가 왔습니다.\n요트를 사지 못하셨다고요.\n덕분에 그가 아주 곤란해졌습니다.\n<WAIT>\n정말 실망입니다!\n베네딕트 가문 사람이라면\n이렇게 무책임하게 굴지 않습니다.\n당신의 패배입니다.\n<WAIT>\n게임 오버!\n\n\n\n\n\n<END>",
     "note": "[게임오버] 요트 구입 실패(34=래리, 35=해설)"
   },
   {
@@ -320,7 +320,7 @@
     "offset": "0x10b79",
     "orig_bytes": 154,
     "ja": "TOO BAD!  IF YOU CAN'T MAKE\nENOUGH PROFIT TO BUY A YACHTWITHIN A REASONABLE AMOUNT\nOF TIME, YOU'LL NEVER BE\nCOMPETENT ENOUGH TO MANAGE\nTHE BENEDICT DYNASTY.<WAIT>\nGAME'S OVER!\n\n\n\n\n\n<END>",
-    "ko": "유감입니다! 적당한 기간 안에\n요트 한 척 살 수익도 못\n낸다면, 베네딕트 가문을\n이끌 자격은 결코 없습니다.<WAIT>\n게임 오버!\n\n\n\n\n\n<END>",
+    "ko": "유감입니다!\n적당한 기간 안에 요트 하나 살 수익도 못 낸다면,\n베네딕트 가문을 이끌 자격은 결코 없습니다.\n<WAIT>\n게임 오버!\n\n\n\n\n\n<END>",
     "note": "[게임오버] 요트 구입 실패(34=래리, 35=해설)"
   },
   {
@@ -329,7 +329,7 @@
     "offset": "0x10c13",
     "orig_bytes": 450,
     "ja": "CONGRATULATIONS ON YOUR\nMARRIAGE!  YOUR BEAUTIFUL\nNEW WIFE WILL FIT INTO THE\nBENEDICT FAMILY VERY NICELY.<WAIT>\nI'VE JUST BEEN INFORMED THATTHE CASTLE WILL BE SOLD AT\nAN AUCTION ON JULY 1ST, AND\n10% OF THE CLOSING BID WILL\nBE DUE IN CASH.  THE BALANCEMUST BE PAID BY JULY 28TH.<WAIT>\n\nPLEASE KEEP IN MIND THAT\nMAINTAINING THE BENEDICT\nSTANDARD OF LIVING DOESN'T\nONLY INCLUDE SHOWING MONEY,\nPROFIT AND MANAGEABILITY.\n<WAIT>\nYOUR HEALTH AND MARRIAGE\nCONDITIONS ARE ALSO SUBJECT\nTO JUDGE.  HAVE A WONDERFUL\nHONEYMOON ON YOUR NEW YACHT!<WAIT><END>",
-    "ko": "결혼을 축하드립니다!\n아름다운 신부께서는 베네딕트\n가문에 잘 어울리실 겁니다.<WAIT>\n방금 소식을 들었는데, 성이\n7월 1일에 경매에 나온다고\n합니다. 낙찰가의 10%는\n현금으로 바로 내야 하고,\n잔금은 7월 28일까지 치러야\n합니다.<WAIT>\n\n베네딕트 가문의 생활 수준을\n지킨다는 것은 돈과 수익,\n관리 능력을 보여 주는 것만이\n아닙니다.\n<WAIT>\n건강과 결혼 생활 또한\n평가 대상입니다. 새 요트에서\n멋진 신혼여행 보내십시오!<WAIT><END>",
+    "ko": "결혼을 축하드립니다!\n아름다운 신부께서는 베네딕트 가문에\n잘 어울리실 겁니다.\n<WAIT>\n방금 소식을 들었는데,\n성이 7월 1일에 경매에 나온다고 합니다.\n낙찰가의 10%는 현금으로 바로 내야 하고,\n잔금은 7월 28일까지 치러야 합니다.\n<WAIT>\n베네딕트 가문의 생활 수준을 지킨다는 것은\n돈과 수익,관리 능력을 보여 주는 것만이 아닙니다.\n<WAIT>\n건강과 결혼 생활 또한 평가 대상입니다.\n새 요트에서 멋진 신혼여행 보내십시오!\n<WAIT><END>",
     "note": "[래리->주인공] 결혼 축하, 성 경매 7/1 안내, 건강·결혼 조건"
   },
   {
@@ -338,7 +338,7 @@
     "offset": "0x10ff5",
     "orig_bytes": 175,
     "ja": "CONGRATULATIONS!  YOU'VE WONTHE CASTLE BACK.  NOW ALL\nYOU HAVE TO DO IS PAY OFF\nTHE BALANCE WITHIN 4 WEEKS.\n<WAIT>\nYOU'RE SO CLOSE TO CARRYING\nOUT THE BENEDICT LEGACY AND\nINHERITING THE FORTUNE.\nGOOD LUCK!<WAIT><END>",
-    "ko": "축하합니다! 성을 되찾으셨군요.\n이제 4주 안에 잔금만\n치르시면 됩니다.\n<WAIT>\n베네딕트 가문의 유산을 잇고\n재산을 상속받을 날이\n머지않았습니다.\n행운을 빕니다!<WAIT><END>",
+    "ko": "축하합니다! 성을 되찾으셨군요.\n이제 4주 안에 잔금만 치르시면 됩니다.\n<WAIT>\n베네딕트 가문의 유산을 잇고\n재산을 상속받을 날이 머지않았습니다.\n행운을 빕니다!<WAIT><END>",
     "note": "[래리->주인공] 성 낙찰 후 잔금 4주 안내"
   },
   {
@@ -347,7 +347,7 @@
     "offset": "0x10f7b",
     "orig_bytes": 122,
     "ja": "TOO BAD!  YOU DON'T HAVE\nENOUGH MONEY FOR THE DEPOSITON THE CASTLE.  YOU'VE\nDESTROYED YOUR UNCLE'S\nLEGACY.  YOU LOSE!<WAIT>\nGAME'S OVER.\n\n\n\n\n\n<END>",
-    "ko": "유감입니다! 성의 보증금으로\n낼 돈이 부족합니다. 삼촌의\n유산을 망쳐 버렸군요.\n당신의 패배입니다!<WAIT>\n게임 오버.\n\n\n\n\n\n<END>",
+    "ko": "유감입니다!\n성의 보증금으로 낼 돈이 부족합니다.\n삼촌의 유산을 망쳐 버렸군요.\n당신의 패배입니다!<WAIT>\n게임 오버.\n\n\n\n\n\n<END>",
     "note": "[게임오버] 성 보증금 부족"
   },
   {
@@ -356,7 +356,7 @@
     "offset": "0x110a4",
     "orig_bytes": 267,
     "ja": "CONGRATULATIONS! YOU HAVE\nSUCCEEDED IN CARRYING OUT\nTHE BENEDICT LEGACY.  NOW\nEVERYTHING IS YOURS, ALL\nYOURS!\n<WAIT>\nYOU'VE PROVEN YOUR ABILITY\nTO SUCCESSFULLY RUN A\nMARRIAGE, MONEY AND A SOCIALENVIRONMENT.\n<WAIT>\nTO TOP IT OFF, YOU'VE\nCARRIED OUT THE LAST WISHES\nOF A DYING MAN.  YOU ARE\nA REAL BENEDICT!\n<WAIT>\n\n\n\n\n<END>",
-    "ko": "축하합니다! 베네딕트 가문의\n유산을 훌륭히 지켜 내셨습니다.\n이제 모든 것이 당신의\n것입니다. 전부 다!\n<WAIT>\n당신은 결혼 생활과 돈,\n그리고 사교 생활까지 훌륭히\n꾸려 갈 능력을 증명했습니다.\n<WAIT>\n게다가 세상을 떠난 분의\n마지막 소원까지 이뤄\n드렸습니다. 당신이야말로\n진정한 베네딕트입니다!\n<WAIT>\n\n\n\n<END>",
+    "ko": "축하합니다!\n베네딕트 가문의 유산을 훌륭히 지켜 내셨습니다.\n이제 모든 것이 당신의 것입니다.\n전부 다!\n<WAIT>\n당신은 결혼 생활과 돈, 그리고 사교 생활까지\n훌륭히 꾸려 갈 능력을 증명했습니다.\n<WAIT>\n게다가 세상을 떠난 분의 마지막 소원까지\n이뤄 드렸습니다.\n당신이야말로 진정한 베네딕트입니다!\n<WAIT>\n\n\n\n<END>",
     "note": "[엔딩] 39=상속 성공(최종 엔딩) 40=자선단체 기부(실패 엔딩)"
   },
   {
@@ -365,7 +365,7 @@
     "offset": "0x111af",
     "orig_bytes": 180,
     "ja": "OH, NO!\nWHAT A DISAPPOINTMENT!  YOU\nWEREN'T ABLE TO CARRY OUT\nTHE FINAL WISHES OF A DYING\nMAN.\n<WAIT>\nTHE ONLY GOOD THING TO COME\nOUT OF THIS IS THAT THE\nFORTUNE WILL BE DONATED TO\nCHARITY.  HAVE A NICE LIFE!\n<WAIT>\n\n\n\n\n<END>",
-    "ko": "오, 이런!\n정말 실망입니다! 당신은\n세상을 떠난 분의 마지막\n소원을 이루지 못했습니다.\n<WAIT>\n그나마 다행인 점은 재산이\n전부 자선 단체에 기부된다는\n것입니다. 잘 사십시오!\n<WAIT>\n\n\n\n<END>",
+    "ko": "오, 이런!\n정말 실망입니다!\n당신은 세상을 떠난 분의\n마지막 소원을 이루지 못했습니다.\n<WAIT>\n그나마 다행인 점은 재산이 전부 자선 단체에\n기부된다는 것입니다.\n잘 사십시오!\n<WAIT>\n\n\n\n<END>",
     "note": "[엔딩] 39=상속 성공(최종 엔딩) 40=자선단체 기부(실패 엔딩)"
   },
   {
@@ -374,7 +374,7 @@
     "offset": "0x113d5",
     "orig_bytes": 127,
     "ja": "TOO BAD!  IF YOU CAN'T GET\nOUT OF DEBT BY THE DUE DATE,YOU'RE OBVIOUSLY NOT THE\nTYPE OF PERSON TO DESERVE\nTHE BENEDICT DYNASTY.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
-    "ko": "유감입니다! 기한까지 빚을\n갚지 못한다면, 당신은\n베네딕트 가문을 이어받을\n자격이 없는 사람입니다.\n<WAIT>게임 오버!\n\n\n\n\n\n<END>",
+    "ko": "유감입니다! 기한까지 빚을 갚지 못한다면,\n당신은 베네딕트 가문을 이어받을\n자격이 없는 사람입니다.\n<WAIT>\n게임 오버!\n\n\n\n\n\n<END>",
     "note": "[게임오버] 41=잔금 미납 42=결혼생활 파탄 43=건강 악화"
   },
   {
@@ -383,7 +383,7 @@
     "offset": "0x114cd",
     "orig_bytes": 112,
     "ja": "IF YOU CANNOT EVEN MANAGE\nYOUR MARRIED LIFE, YOU'LL\nNEVER BE CAPABLE OF HANDLINGMR. BENEDICT'S PROPERTY.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n\n<END>",
-    "ko": "결혼 생활조차 꾸리지 못하는\n사람이 베네딕트 씨의 재산을\n감당할 수 있을 리 없습니다.\n<WAIT>게임 오버!\n\n\n\n\n\n\n<END>",
+    "ko": "결혼 생활조차 꾸리지 못하는 사람이\n베네딕트 씨의 재산을 감당할 수 있을 리 없습니다.\n<WAIT>게임 오버!\n\n\n\n\n\n\n<END>",
     "note": "[게임오버] 41=잔금 미납 42=결혼생활 파탄 43=건강 악화"
   },
   {
@@ -392,7 +392,7 @@
     "offset": "0x11454",
     "orig_bytes": 121,
     "ja": "YOU'VE GOTTEN TOO GREEDY ANDBECOME UNABLE TO TAKE CARE\nOF YOUR HEALTH.  NO BENEDICTWOULD ALLOW HIMSELF TO BE SOSTUPID.\n<WAIT>GAME'S OVER!\n\n\n\n\n\n<END>",
-    "ko": "욕심을 너무 부리다가 건강을\n돌보지 못하게 되었군요.\n베네딕트 가문 사람이라면\n이렇게 어리석게 굴지 않습니다.\n<WAIT>게임 오버!\n\n\n\n\n\n<END>",
+    "ko": "욕심을 너무 부리다가\n건강을 돌보지 못하게 되었군요.\n베네딕트 가문 사람이라면\n이렇게 어리석게 굴지 않습니다.\n<WAIT>게임 오버!\n\n\n\n\n\n<END>",
     "note": "[게임오버] 41=잔금 미납 42=결혼생활 파탄 43=건강 악화"
   },
   {
@@ -401,7 +401,7 @@
     "offset": "0x1153d",
     "orig_bytes": 233,
     "ja": "HELLO.  MY NAME IS RALPH.\nI'M A REAL ESTATE AGENT.\nLARRY TOLD ME THAT YOU ARE\nINTERESTED IN PURCHASING A\nHOUSE FOR AROUND $1 MILLION.<WAIT>\nI'M LOOKING AT SOME VERY\nNICE HOMES FOR SALE AT THE\nMOMENT.  I'LL GET THE\nDETAILS AND CALL YOU AT THE\nBEGINNING OF NEXT WEEK.\nBYE FOR NOW.<WAIT><END>",
-    "ko": "이봐, 안녕! 난 랄프야.\n부동산 중개인이지.\n래리 말로는 네가 $1,000,000\n정도 하는 집을 찾는다며?<WAIT>\n지금 끝내주는 매물을 몇 개\n보고 있거든. 자세한 걸\n알아보고 다음 주 초에\n전화할게.\n그럼 또 봐!<WAIT><END>",
+    "ko": "이봐, 안녕! 난 랄프야.\n부동산 중개인이지.\n래리 말로는 네가\n$1,000,000 정도 하는 집을 찾는다며?<WAIT>\n지금 끝내주는 매물을 몇 개 보고 있거든.\n자세한 걸 알아보고 다음 주 초에 전화할게.\n그럼 또 봐!<WAIT><END>",
     "note": "[랄프->주인공 전화] 첫 인사, 집 매물 안내(약 100만 달러)"
   },
   {
@@ -410,7 +410,7 @@
     "offset": "0x11c45",
     "orig_bytes": 162,
     "ja": "HELLO.  THIS IS DOC.  LARRY\nASKED ME TO CALL YOU.  HE\nTOLD ME YOU WERE INTERESTED\nIN BUYING A YACHT.\n<WAIT>\nI'LL BE GETTING A HOLD OF\nONE NEXT WEEK.  I'LL CALL\nYOU BACK THEN WITH ALL THE\nDETAILS.<WAIT><END>",
-    "ko": "여보세요, 닥이야. 래리가\n자네한테 전화해 보라더군.\n요트를 살 생각이 있다며?\n<WAIT>\n다음 주에 한 척 들어올\n거야. 그때 자세한 얘기를\n갖고 다시 전화하지.<WAIT><END>",
+    "ko": "여보세요, 닥이야.\n래리가 자네한테 전화해 보라더군.\n요트를 살 생각이 있다며?\n<WAIT>\n다음 주에 한 척 들어올 거야.\n그때 자세한 얘기를 갖고 다시 전화하지.<WAIT><END>",
     "note": "[닥->주인공 전화] 첫 인사, 요트 안내"
   },
   {
@@ -419,7 +419,7 @@
     "offset": "0x122c6",
     "orig_bytes": 94,
     "ja": "HI!  IT'S PRISILA.\nTOMORROW'S \"THE BIG DAY\"!\nI'M SO HAPPY.  OUR HONEYMOONON THE YACHT WILL BE SO\nEXCITING!<WAIT><END>",
-    "ko": "안녕! 나 프리실라야.\n내일이 드디어 \"그날\"이야!\n너무 행복해. 요트 타고 가는\n신혼여행, 정말 기대돼!<WAIT><END>",
+    "ko": "안녕! 나 프리실라야.\n내일이 드디어 \"그날\"이야!\n너무 행복해.\n요트 타고 가는 신혼여행,\n정말 기대돼!<WAIT><END>",
     "note": "[프리실라->주인공 전화] 결혼식 전날, 허니문 기대"
   },
   {
@@ -428,7 +428,7 @@
     "offset": "0x10dd5",
     "orig_bytes": 292,
     "ja": "THE AUCTION FOR THE CASTLE\nIS ONLY 3 WEEKS AWAY.  YOU\nMUST GET THAT CASTLE BACK TOKEEP THE FAMILY HERITAGE\nFROM BEING DESTROYED!\n<WAIT>\nI HAVE CONFIRMED THAT THE\nSTARTING BID WILL BE\n$2 MILLION.  JUST TO BE ON\nTHE SAFE SIDE, I SUGGEST YOUBRING AT LEAST $1 MILLION\nCASH TO THE AUCTION.<WAIT>\n\nDO YOUR BEST TO SAVE, BUT BECAREFUL NOT TO NEGLECT YOUR\nWIFE!<WAIT><END>",
-    "ko": "성 경매가 이제 3주\n남았습니다. 가문의 유산이\n사라지지 않도록 반드시\n성을 되찾으셔야 합니다!\n<WAIT>\n확인해 보니 시작가는\n$2,000,000입니다. 만일을\n대비해 경매에는 최소\n$1,000,000의 현금을\n가져가시길 권합니다.<WAIT>\n\n힘껏 저축하시되, 부인을\n소홀히 하지 않도록\n주의하십시오!<WAIT><END>",
+    "ko": "성 경매가 이제 3주 남았습니다.\n가문의 유산이 사라지지 않도록\n반드시 성을 되찾으셔야 합니다!\n<WAIT>\n확인해 보니 시작가는\n$2,000,000입니다.\n만일을 대비해 경매에는\n최소 $1,000,000의 현금을\n가져가시길 권합니다.<WAIT>\n\n힘껏 저축하시되,\n부인을 소홀히 하지 않도록\n주의하십시오!<WAIT><END>",
     "note": "[래리->주인공 전화] 47=경매 3주 전 48=경매 전날(보증금 100만 달러 현금)"
   },
   {
@@ -437,7 +437,7 @@
     "offset": "0x10ef9",
     "orig_bytes": 130,
     "ja": "GOOD MORNING.  THE BIG\nAUCTION WILL BE HELD\nTOMORROW.  REMEMBER,\nDEPENDING ON THE BID, YOU\nNEED AT LEAST $1 MILLION IN\nCASH AS A DEPOSIT.\nGOOD LUCK!<WAIT><END>",
-    "ko": "좋은 아침입니다. 드디어 내일\n경매가 열립니다. 입찰가에\n따라 다르지만 보증금으로 최소\n$1,000,000의 현금이 필요하니\n잊지 마십시오.\n행운을 빕니다!<WAIT><END>",
+    "ko": "좋은 아침입니다.\n드디어 내일 경매가 열립니다.\n입찰가에 따라 다르지만 보증금으로\n최소 $1,000,000의 현금이 필요하니\n잊지 마십시오.\n행운을 빕니다!<WAIT><END>",
     "note": "[래리->주인공 전화] 47=경매 3주 전 48=경매 전날(보증금 100만 달러 현금)"
   },
   {
@@ -462,7 +462,7 @@
     "offset": "0x123a2",
     "orig_bytes": 150,
     "ja": "GOOD MORNING.  THIS IS RUTH\nAT THE BANK.  THE BALANCE ONYOUR CASTLE IS DUE TODAY.\n<WAIT>\nIF WE DON'T RECEIVE THE\nPAYMENT BY 5 PM TODAY, WE'LLHAVE TO FORECLOSE ALL OF\nYOUR PROPERTY.<WAIT><END>",
-    "ko": "좋은 아침입니다, 은행의\n루스입니다. 성의 잔금 납부\n기한이 오늘입니다.\n<WAIT>\n오늘 오후 5시까지 납부가\n확인되지 않으면, 고객님의\n모든 재산을 압류하겠습니다.<WAIT><END>",
+    "ko": "좋은 아침입니다, 은행의 루스입니다.\n성의 잔금 납부 기한이 오늘입니다.\n<WAIT>\n오늘 오후 5시까지 납부가 확인되지 않으면,\n고객님의 모든 재산을 압류하겠습니다.<WAIT><END>",
     "note": "[루스(은행)->주인공 전화] 성 잔금 안내(49=기한 안내, 50=49의 alias, 51=당일 5PM)"
   },
   {
@@ -472,7 +472,7 @@
     "offset": "0x1197c",
     "orig_bytes": 84,
     "ja": "GOOD CHOICE!  I'M SURE\nYOU'LL LOVE THE HOUSE.  I'LLSEE YOU ON SATURDAY.  DON'T\nFORGET THE CASH!<WAIT><END>",
-    "ko": "탁월한 선택이야! 그 집\n분명 마음에 쏙 들 거야.\n토요일에 보자고. 현금\n잊지 마!<WAIT><END>",
+    "ko": "탁월한 선택이야!\n그 집 분명 마음에 쏙 들 거야.\n토요일에 보자고.\n현금 잊지 마!<WAIT><END>",
     "note": "[랄프->주인공] 집 구입 \"예\" 선택 직후(Y/N 응답). 토요일 현금 지참"
   },
   {
@@ -481,7 +481,7 @@
     "offset": "0x11626",
     "orig_bytes": 408,
     "ja": "HELLO.  THIS IS RALPH.  I'VEFOUND A GORGEOUS HOUSE FOR\nYOU!  IN FACT, THE OWNER IS\nA FRIEND OF YOURS, JOHN\nFELD.\n<WAIT>\nI KNOW YOU LOVE THE HOUSE.\nJOHN SAID YOU WERE RAVING\nABOUT IT AT HIS LAST PARTY.\n<WAIT>\nTHE COST IS EXACTLY\n$1 MILLION.  YOUR PRESENT\nCREDIT STATUS DOESN'T SHOW\nANY ACQUIRED ASSETS TO BE\nAPPLIED AGAINST A LOAN, SO\nYOU'LL HAVE TO HAVE THE CASHUP FRONT.<WAIT>\n\nIF YOU AGREE TO BUY NOW AND\nEND UP NOT HAVING ENOUGH\nMONEY ON SATURDAY, YOU'LL \nLOSE THE DEAL.\nWOULD YOU GO FOR IT?\n\n<END>",
-    "ko": "안녕, 나 랄프야. 너한테 딱 맞는\n끝내주는 집을 찾았어! 게다가\n집주인이 네 친구인\n존 펠드야.\n<WAIT>\n네가 그 집 좋아하는 거 다 알아.\n지난번 파티 때 네가 그 집\n칭찬을 늘어놨다고 존이 그러더라.\n<WAIT>\n가격은 딱 $1,000,000이야.\n지금 네 신용 상태로는 대출\n담보로 잡을 자산이 없어서,\n현금으로 미리 마련해야 해.<WAIT>\n\n지금 사겠다고 해 놓고\n토요일에 돈이 모자라면\n거래는 없던 걸로 돼.\n어때, 살 거야?\n\n<END>",
+    "ko": "안녕, 나 랄프야.\n너한테 딱 맞는 끝내주는 집을 찾았어!\n게다가 집주인이 네 친구인 존 펠드야.\n<WAIT>\n네가 그 집 좋아하는 거 다 알아.\n지난번 파티 때 네가\n그 집 칭찬을 늘어놨다고 존이 그러더라.\n<WAIT>\n가격은 딱 $1,000,000이야.\n지금 네 신용 상태로는\n대출 담보로 잡을 자산이 없어서,\n현금으로 미리 마련해야 해.<WAIT>\n\n지금 사겠다고 해 놓고 토요일에 돈이 모자라면\n거래는 없던 걸로 돼.\n어때, 살 거야?\n\n<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -490,7 +490,7 @@
     "offset": "0x117be",
     "orig_bytes": 249,
     "ja": "HELLO.  THIS IS RALPH.\nLARRY JUST TOLD ME THAT YOU\nMUST PURCHASE THE HOUSE BY\nMAY 1ST.\n<WAIT>\nTHE HOUSE IS STILL FOR SALE,AND I CAN TAKE YOU BY THE\nHOUSE ON SATURDAY TO CLOSE\nTHE DEAL.\n<WAIT>\nREMEMBER, IF YOU DON'T HAVE\nTHE CASH ON SATURDAY, YOU\nWON'T HAVE ANOTHER CHANCE ATTHE HOUSE.\n\nDO WE HAVE A DEAL?<END>",
-    "ko": "안녕, 나 랄프야.\n래리한테 들었는데, 너\n5월 1일까지 집을 사야\n한다며.\n<WAIT>\n그 집 아직 안 팔렸어. 토요일에\n집으로 데려가서 거래를\n마무리할 수 있어.\n<WAIT>\n명심해, 토요일에 현금이\n없으면 그 집을 살 기회는\n다시 없어.\n\n거래할 거야?<END>",
+    "ko": "안녕, 나 랄프야.\n래리한테 들었는데,\n너 5월 1일까지 집을 사야 한다며.\n<WAIT>\n그 집 아직 안 팔렸어.\n토요일에 집으로 데려가서 거래를 마무리할 수 있어.\n<WAIT>\n명심해, 토요일에 현금이 없으면\n그 집을 살 기회는 다시 없어.\n\n거래할 거야?<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -499,7 +499,7 @@
     "offset": "0x118b7",
     "orig_bytes": 197,
     "ja": "HELLO.  IT'S RALPH.  THE\nHOUSE IS STILL FOR SALE.  I\nTHINK YOU SHOULD STRONGLY\nCONSIDER BUYING THIS TIME ORYOUR TIME WILL BE UP.\n<WAIT>\nI CAN TAKE YOU BY THE HOUSE\nON SATURDAY, AND WE CAN \nCONCLUDE THE DEAL IF YOU\nARE INTERESTED, ARE YOU?<END>",
-    "ko": "안녕, 나 랄프야. 그 집 아직\n안 팔렸어. 이번엔 진지하게\n사는 걸 생각해 봐. 안 그러면\n기회를 놓쳐.\n<WAIT>\n토요일에 집으로 데려가서\n네가 원하면 바로 거래를\n끝낼 수 있어. 어때, 할 거지?<END>",
+    "ko": "안녕, 나 랄프야.\n그 집 아직 안 팔렸어.\n이번엔 진지하게 사는 걸 생각해 봐.\n안 그러면 기회를 놓쳐.\n<WAIT>\n토요일에 집으로 데려가서\n네가 원하면 바로 거래를 끝낼 수 있어.\n어때, 할 거지?<END>",
     "note": "[랄프->주인공 전화] 53=첫 집 제안(존 펠드 소유, 100만 달러) 54=재제안(5/1 기한) 55=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -508,7 +508,7 @@
     "offset": "0x119d0",
     "orig_bytes": 76,
     "ja": "OK.  IF THE HOUSE IS STILL\nFOR SALE IN A WEEK, I'LL\nCALL YOU TO SEE IF YOU'RE\nREADY TO BUY.<WAIT><END>",
-    "ko": "알았어. 일주일 뒤에도 그 집이\n안 팔렸으면, 살 준비가\n됐는지 전화해 볼게.<WAIT><END>",
+    "ko": "알았어.\n일주일 뒤에도 그 집이 안 팔렸으면,\n살 준비가 됐는지 전화해 볼게.<WAIT><END>",
     "note": "[랄프->주인공] 거절 응답 56,57=일주일 뒤 재전화 58=마지막 기회였다고 말함"
   },
   {
@@ -517,7 +517,7 @@
     "offset": "0x11a1c",
     "orig_bytes": 85,
     "ja": "ALRIGHT.  IF THE HOUSE IS\nSTILL UP FOR SALE IN A WEEK,I'LL CALL YOU THEN TO SEE IFYOU'RE READY TO BUY.<WAIT><END>",
-    "ko": "좋아. 일주일 뒤에도 그 집이\n매물로 남아 있으면, 그때\n살 준비 됐는지 전화할게.<WAIT><END>",
+    "ko": "좋아.\n일주일 뒤에도 그 집이 매물로 남아 있으면,\n그때 살 준비 됐는지 전화할게.<WAIT><END>",
     "note": "[랄프->주인공] 거절 응답 56,57=일주일 뒤 재전화 58=마지막 기회였다고 말함"
   },
   {
@@ -526,7 +526,7 @@
     "offset": "0x11a71",
     "orig_bytes": 56,
     "ja": "I TOLD YOU THAT THIS WOULD\nBE YOUR LAST CHANCE.\nWELL, GOOD LUCK!<WAIT><END>",
-    "ko": "이번이 마지막 기회라고\n했잖아.\n뭐, 행운을 빌어!<WAIT><END>",
+    "ko": "이번이 마지막 기회라고 했잖아.\n뭐, 행운을 빌어!<WAIT><END>",
     "note": "[랄프->주인공] 거절 응답 56,57=일주일 뒤 재전화 58=마지막 기회였다고 말함"
   },
   {
@@ -536,7 +536,7 @@
     "offset": "0x11aa9",
     "orig_bytes": 88,
     "ja": "HELLO.  THIS IS RALPH.  JUSTCALLING TO REMIND YOU NOT TOFORGET THE $1 MILLION CASH.\nSEE YOU TOMORROW.<WAIT><END>",
-    "ko": "안녕, 나 랄프야. $1,000,000\n현금 잊지 말라고 전화했어.\n내일 보자고!<WAIT><END>",
+    "ko": "안녕, 나 랄프야.\n$1,000,000 현금 잊지 말라고 전화했어.\n내일 보자고!<WAIT><END>",
     "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
   },
   {
@@ -546,7 +546,7 @@
     "offset": "0x11ba6",
     "orig_bytes": 159,
     "ja": "GOOD MORNING.  I'VE BEEN\nWORKING VERY HARD ON THIS\nDEAL HOLDING THE HOUSE FROM\nOTHER BUYERS.\n<WAIT>\nNOW I HEAR YOU DON'T HAVE\nENOUGH CASH.\nHOW IRRESPONSIBLE.  I'M\nAFRAID THE DEAL IS OFF!<WAIT><END>",
-    "ko": "좋은 아침. 다른 손님들이\n못 사게 그 집을 붙잡아\n두느라 내가 얼마나\n고생했는데.\n<WAIT>\n그런데 현금이 모자란다고?\n이런 무책임한! 미안하지만\n거래는 취소야!<WAIT><END>",
+    "ko": "좋은 아침.\n다른 손님들이 못 사게 그 집을 붙잡아 두느라\n내가 얼마나 고생했는데.\n<WAIT>\n그런데 현금이 모자란다고?\n이런 무책임한!\n미안하지만 거래는 취소야!<WAIT><END>",
     "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
   },
   {
@@ -566,7 +566,7 @@
     "offset": "0x11b57",
     "orig_bytes": 79,
     "ja": "I'M GLAD YOU DECIDED TO BUY\nTHIS GORGEOUS HOUSE.  WELL\nIT'S ALL YOURS!  THANK YOU.\nENJOY!<WAIT><END>",
-    "ko": "이 끝내주는 집을 사기로\n해서 정말 기뻐. 자, 이제 다\n네 거야! 고마워.\n즐기라고!<WAIT><END>",
+    "ko": "이 끝내주는 집을 사기로해서 정말 기뻐.\n자, 이제 다 네 거야! 고마워.\n즐기라고!<WAIT><END>",
     "note": "[랄프->주인공 전화] 59=전날 확인 60=현금 부족으로 거래 취소 61=당일 아침 모닝콜 62=집 인도"
   },
   {
@@ -576,7 +576,7 @@
     "offset": "0x12028",
     "orig_bytes": 88,
     "ja": "GREAT!  YOU'RE GONNA LOVE\nTHIS YACHT.  I'LL SEE YOU ATTHE HARBOR ON SATURDAY.\nDON'T FORGET THE CASH!<WAIT><END>",
-    "ko": "좋아! 이 요트, 자네 마음에\n쏙 들 거야. 토요일에 항구에서\n보자고.\n현금 잊지 말고!<WAIT><END>",
+    "ko": "좋아! 이 요트, 자네 마음에 쏙 들 거야.\n토요일에 항구에서 보자고.\n현금 잊지 말고!<WAIT><END>",
     "note": "[닥->주인공] 요트 구입 \"예\" 선택 직후. 토요일 항구"
   },
   {
@@ -585,7 +585,7 @@
     "offset": "0x11ce7",
     "orig_bytes": 416,
     "ja": "HELLO.  THIS IS DOC.  I'VE\nGOTTEN ONE SIMILAR TO THE\nYACHT I SOLD MR. BENEDICT\nSOME TIME AGO.  LARRY SAID\nIT'D BE JUST PERFECT FOR\nYOU.<WAIT>\n\nTHIS PARTICULAR YACHT IS A\nCLASSIC AND SELLING FOR\n$700,000. THE OWNER IS ON\nTHE URGE OF BANKRUPTCY AND\nCAN ONLY ACCEPT CASH FOR\nIT.<WAIT>\n\nIF YOU AGREE TO BUY NOW AND\nEND UP NOT HAVING ENOUGH\nMONEY ON SATURDAY, YOU'LL\nLOSE THE DEAL.\n<WAIT>\nI CAN'T AFFORD TO HOLD A\nCLASSIC FOR EMPTY PROMISES.\nESPECIALLY, IF ANOTHER BUYERCOMES ALONG.\n\nARE YOU INTERESTED?<END>",
-    "ko": "여보세요, 닥이야. 예전에\n베네딕트 씨한테 팔았던 요트랑\n비슷한 놈을 하나 구했어.\n래리 말로는 자네한테 딱\n맞을 거라더군.<WAIT>\n\n이 요트는 클래식 명품인데\n$700,000에 나왔어. 주인이\n파산 직전이라 현금만\n받겠대.<WAIT>\n\n지금 사겠다고 해 놓고\n토요일에 돈이 모자라면\n거래는 없던 걸로 할 거야.\n<WAIT>\n빈 약속 때문에 명품을 붙잡아\n둘 순 없거든. 특히 다른\n손님이 나타나면 말이야.\n\n관심 있어?<END>",
+    "ko": "여보세요, 닥이야.\n예전에 베네딕트 씨한테 팔았던 요트랑\n비슷한 놈을 하나 구했어.\n래리 말로는 자네한테 딱 맞을 거라더군.<WAIT>\n\n이 요트는 클래식 명품인데\n$700,000에 나왔어.\n주인이 파산 직전이라 현금만 받겠대.<WAIT>\n\n지금 사겠다고 해 놓고 토요일에 돈이 모자라면\n거래는 없던 걸로 할 거야.\n<WAIT>\n빈 약속 때문에 명품을 붙잡아 둘 순 없거든.\n특히 다른 손님이 나타나면 말이야.\n\n관심 있어?<END>",
     "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -594,7 +594,7 @@
     "offset": "0x11e87",
     "orig_bytes": 215,
     "ja": "HELLO.  THIS IS DOC.  THE\nYACHT DOESN'T HAVE A BUYER\nYET.  LARRY TOLD ME THAT YOUMUST BUY A YACHT BEFORE YOURHONEYMOON.\n<WAIT>\nIF YOU'RE READY, I CAN MEET\nYOU ON SATURDAY. DON'T\nFORGET, IF YOU DON'T HAVE\nTHE CASH ON SATURDAY, THE\nDEAL IS OFF.\nARE YOU READY?<END>",
-    "ko": "여보세요, 닥이야. 요트는\n아직 안 팔렸어. 래리 말로는\n신혼여행 전에 꼭 요트를\n사야 한다며.\n<WAIT>\n준비됐으면 토요일에 만나자고.\n잊지 마, 토요일에 현금이\n없으면 거래는 끝이야.\n준비됐어?<END>",
+    "ko": "여보세요, 닥이야.\n요트는 아직 안 팔렸어.\n래리 말로는 신혼여행 전에 꼭 요트를 사야 한다며.\n<WAIT>\n준비됐으면 토요일에 만나자고.\n잊지 마, 토요일에 현금이 없으면 거래는 끝이야.\n준비됐어?<END>",
     "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -603,7 +603,7 @@
     "offset": "0x11f5e",
     "orig_bytes": 202,
     "ja": "HI.  THIS IS DOC.  I DON'T\nHAVE A BUYER FOR THE YACHT\nYET.  I THINK YOU SHOULD\nSTRONGLY CONSIDER BUYING\nTHIS TIME OR YOUR TIME WILL\nBE UP.<WAIT>\n\nIF YOU'RE READY, I CAN MEET\nYOU AT THE HARBOR ON\nSATURDAY AND WE CAN FINISH\nTHE DEAL.  WANNA DO IT?<END>",
-    "ko": "안녕, 닥이야. 요트는 아직\n살 사람이 없어. 이번엔\n진지하게 사는 걸 생각해 봐.\n안 그러면 기회를 놓쳐.<WAIT>\n\n준비됐으면 토요일에 항구에서\n만나서 거래를 끝내자고.\n어때, 할 거야?<END>",
+    "ko": "안녕, 닥이야.\n요트는 아직 살 사람이 없어.\n이번엔 진지하게 사는 걸 생각해 봐.\n안 그러면 기회를 놓쳐.<WAIT>\n\n준비됐으면 토요일에 항구에서 만나서\n거래를 끝내자고.\n어때, 할 거야?<END>",
     "note": "[닥->주인공 전화] 64=첫 요트 제안(70만 달러) 65=재제안 66=마지막 제안. 끝에 예/아니오 선택 메뉴"
   },
   {
@@ -612,7 +612,7 @@
     "offset": "0x12080",
     "orig_bytes": 75,
     "ja": "WELL, IF THE YACHT ISN'T\nALREADY SOLD, I'LL CALL YOU\nNEXT WEEK TO SEE IF YOU'RE\nREADY.<WAIT><END>",
-    "ko": "뭐, 요트가 아직 안\n팔렸으면, 다음 주에 준비\n됐는지 전화해 보지.<WAIT><END>",
+    "ko": "뭐, 요트가 아직 안 팔렸으면,\n다음 주에 준비 됐는지 전화해 보지.<WAIT><END>",
     "note": "[닥->주인공] 거절/실패 응답(67,68=다음 주 재전화 69=허니문 어쩔거냐)"
   },
   {
@@ -621,7 +621,7 @@
     "offset": "0x120cb",
     "orig_bytes": 55,
     "ja": "TOO BAD.  WELL, IF I DON'T\nSELL BY NEXT WEEK, I'LL CALLYOU THEN.<WAIT><END>",
-    "ko": "아쉽군. 뭐, 다음 주까지\n안 팔리면 그때 전화할게.<WAIT><END>",
+    "ko": "아쉽군.\n뭐, 다음 주까지 안 팔리면 그때 전화할게.<WAIT><END>",
     "note": "[닥->주인공] 거절/실패 응답(67,68=다음 주 재전화 69=허니문 어쩔거냐)"
   },
   {
@@ -630,7 +630,7 @@
     "offset": "0x12102",
     "orig_bytes": 54,
     "ja": "WELL, I WONDER HOW YOU'RE\nGONNA GO ON A HONEYMOON.\nGOOD LUCK.<WAIT><END>",
-    "ko": "글쎄, 신혼여행은 어떻게\n갈 생각인지 모르겠군.\n행운을 빌어.<WAIT><END>",
+    "ko": "글쎄, 신혼여행은 어떻게 갈 생각인지 모르겠군.\n행운을 빌어.<WAIT><END>",
     "note": "[닥->주인공] 거절/실패 응답(67,68=다음 주 재전화 69=허니문 어쩔거냐)"
   },
   {
@@ -640,7 +640,7 @@
     "offset": "0x12138",
     "orig_bytes": 90,
     "ja": "HELLO.  THIS IS DOC.  I JUSTWANTED TO REMIND YOU NOT TO\nFORGET THE $700,000 CASH.\nI'LL SEE YOU TOMORROW.<WAIT><END>",
-    "ko": "여보세요, 닥이야. $700,000\n현금 잊지 말라고 전화했어.\n내일 보자고.<WAIT><END>",
+    "ko": "여보세요, 닥이야.\n$700,000 현금 잊지 말라고 전화했어.\n내일 보자고.<WAIT><END>",
     "note": "[닥->주인공 전화] 70=전날 확인(70만 달러) 71=현금 부족 취소 72=당일 아침 모닝콜 73=요트 인도"
   },
   {
@@ -650,7 +650,7 @@
     "offset": "0x1222a",
     "orig_bytes": 156,
     "ja": "GOOD MORNING.\nI HELD THE YACHT FROM OTHER\nBUYERS BECAUSE YOU SAID\nYOU'D HAVE THE CASH TODAY.\nNOW I HEAR YOU DON'T HAVE\nENOUGH.<WAIT>\n\nI'M VERY DISAPPOINTED IN\nYOUR IRRESPONSIBILITY!<WAIT><END>",
-    "ko": "좋은 아침.\n오늘 현금을 가져온다길래\n다른 손님들한테 안 팔고\n요트를 잡아 뒀는데,\n이제 와서 돈이 모자란다고?<WAIT>\n\n자네의 무책임함에\n정말 실망했어!<WAIT><END>",
+    "ko": "좋은 아침.\n오늘 현금을 가져온다길래\n다른 손님들한테 안 팔고 요트를 잡아 뒀는데,\n이제 와서 돈이 모자란다고?<WAIT>\n\n자네의 무책임함에 정말 실망했어!<WAIT><END>",
     "note": "[닥->주인공 전화] 70=전날 확인(70만 달러) 71=현금 부족 취소 72=당일 아침 모닝콜 73=요트 인도"
   },
   {
@@ -715,7 +715,7 @@
     "offset": "0x12ef0",
     "orig_bytes": 35,
     "ja": "OK.  I'LL GO AND LOOK AT\nSOME TOMORROW.<PAGE><END>",
-    "ko": "알았어. 내일 몇 대\n보러 갈게.<PAGE><END>",
+    "ko": "알았어.\n내일 몇 대 보러 갈게.<PAGE><END>",
     "note": "[프리실라<->주인공] 자동차 사고 싶다(77=프리실라 78=주인공 79=프리실라)"
   },
   {
@@ -733,7 +733,7 @@
     "offset": "0x13080",
     "orig_bytes": 62,
     "ja": "HI, HONEY!\nWE SHOULD LOOK AT SOME TV\nAND STEREO SETS FOR OUR NEW\nHOUSE.<PAGE><END>",
-    "ko": "자기야, 안녕!\n새 집에 놓을 TV랑\n오디오 좀 보러 가자.<PAGE><END>",
+    "ko": "자기야, 안녕!\n새 집에 놓을 TV랑 오디오 좀 보러 가자.<PAGE><END>",
     "note": "[프리실라<->주인공] TV/오디오(80=프리실라 81=주인공 82=프리실라)"
   },
   {
@@ -760,7 +760,7 @@
     "offset": "0x13272",
     "orig_bytes": 70,
     "ja": "HI, HONEY!\nMAYBE WE SHOULD BUY A\nPAINTING FOR THE MAIN\nENTRANCE IN OUR NEW HOME.<PAGE><END>",
-    "ko": "자기야, 안녕!\n새 집 현관에 걸\n그림을 사면 어떨까?<PAGE><END>",
+    "ko": "자기야, 안녕!\n새 집 현관에 걸 그림을 사면 어떨까?<PAGE><END>",
     "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
   },
   {
@@ -778,7 +778,7 @@
     "offset": "0x132cd",
     "orig_bytes": 85,
     "ja": "I'VE FOUND A WONDERFUL ART\nGALLERY.  WHY DON'T YOU\nCOME WITH ME TOMORROW AND\nHELP ME PICK ONE OUT.<PAGE><END>",
-    "ko": "멋진 화랑을 찾았거든.\n내일 같이 가서\n고르는 것 좀 도와줘.<PAGE><END>",
+    "ko": "멋진 화랑을 찾았거든.\n내일 같이 가서 고르는 것 좀 도와줘.<PAGE><END>",
     "note": "[프리실라<->주인공] 그림(83,85,87=프리실라 84,86=주인공?)"
   },
   {
@@ -805,7 +805,7 @@
     "offset": "0x1359a",
     "orig_bytes": 126,
     "ja": "HI, HONEY!\nI'VE FOUND A WONDERFUL\nDRESS DESIGNER TO DESIGN A\nDRESS THAT I CAN WEAR TO\nOUR PARTY.  PLEASE COME AND\nHELP ME PICK A DESIGN\nTOMORROW.<PAGE><END>",
-    "ko": "자기야, 안녕!\n우리 파티에 입을 드레스를\n만들어 줄 멋진 디자이너를\n찾았어. 내일 같이 가서\n디자인 고르는 것 좀 도와줘.<PAGE><END>",
+    "ko": "자기야, 안녕!\n우리 파티에 입을 드레스를 만들어 줄\n멋진 디자이너를 찾았어.\n내일 같이 가서 디자인 고르는 것 좀 도와줘.<PAGE><END>",
     "note": "[프리실라<->주인공] 드레스 디자이너(88=프리실라 89=주인공)"
   },
   {
@@ -823,7 +823,7 @@
     "offset": "0x137ad",
     "orig_bytes": 93,
     "ja": "HI, HONEY!\nPLEASE COME WITH ME TO THE\nJEWELERS TOMORROW TO HELP\nPICK OUT SOME JEWELRY TO\nWEAR AT OUR PARTY.<PAGE><END>",
-    "ko": "자기야, 안녕!\n내일 보석 가게에 같이 가서\n파티 때 할 보석 고르는 것\n좀 도와줘.<PAGE><END>",
+    "ko": "자기야, 안녕!\n내일 보석 가게에 같이 가서\n파티 때 할 보석 고르는 것 좀 도와줘.<PAGE><END>",
     "note": "[프리실라<->주인공] 보석(90=프리실라 91=주인공 92=프리실라)"
   },
   {
@@ -860,7 +860,7 @@
     "offset": "0x12438",
     "orig_bytes": 81,
     "ja": "HELLO, THIS IS RUTH.\nPLEASE DO NOT FORGET THAT\nYOUR DUE DATE FOR THE LOAN\nIS A WEEK FROM TODAY.<WAIT><END>",
-    "ko": "안녕하십니까, 루스입니다.\n대출 상환일이 오늘부터\n일주일 뒤라는 점을\n잊지 마십시오.<WAIT><END>",
+    "ko": "안녕하십니까, 루스입니다.\n대출 상환일이 오늘부터 일주일 뒤라는 점을\n잊지 마십시오.<WAIT><END>",
     "note": "[루스(은행)->주인공 전화] 대출 상환일 94=1주 전 95=당일"
   },
   {
@@ -870,7 +870,7 @@
     "offset": "0x12489",
     "orig_bytes": 92,
     "ja": "HELLO, THIS IS RUTH.\nSIR, TODAY IS YOUR DUE DATE\nFOR THE LOAN. PLEASE DO NOT\nFORGET TO PAY OFF THE\nBALANCE.<WAIT><END>",
-    "ko": "안녕하십니까, 루스입니다.\n고객님, 오늘이 대출\n상환일입니다. 잔금 납부를\n잊지 마십시오.<WAIT><END>",
+    "ko": "안녕하십니까, 루스입니다.\n고객님, 오늘이 대출 상환일입니다.\n잔금 납부를 잊지 마십시오.<WAIT><END>",
     "note": "[루스(은행)->주인공 전화] 대출 상환일 94=1주 전 95=당일"
   },
   {
@@ -910,7 +910,7 @@
     "offset": "0x124e5",
     "orig_bytes": 229,
     "ja": "THE AUCTION IS NOW\nBEGINNING.  HOUSE RULES\nSTATE 10% DOWN ON ALL\nCLOSING BIDS.  BALANCES MUSTBE PAID IN FULL BY\nJULY 28TH.<WAIT>\n\nWE WILL BEGIN WITH THE\nCASTLE.  OPENING BID IS\n$2 MILLION.  DO I HEAR\n$2 MILLION?  ONCE, TWICE.\nLADIES AND GENTLEMEN, PLEASEPLACE YOUR BID.<END>",
-    "ko": "지금부터 경매를 시작합니다.\n규칙에 따라 모든 낙찰가의\n10%를 보증금으로 받으며,\n잔금은 7월 28일까지 전액\n납부하셔야 합니다.<WAIT>\n\n첫 물건은 성입니다.\n시작가는 $2,000,000입니다.\n$2,000,000 부르실 분? 하나, 둘.\n신사 숙녀 여러분, 입찰해\n주십시오.<END>",
+    "ko": "지금부터 경매를 시작합니다.\n규칙에 따라 모든 낙찰가의 10%를\n보증금으로 받으며,\n잔금은 7월 28일까지 전액 납부하셔야 합니다.<WAIT>\n\n첫 물건은 성입니다.\n시작가는 $2,000,000입니다.\n$2,000,000 부르실 분?\n하나, 둘.\n신사 숙녀 여러분, 입찰해 주십시오.<END>",
     "note": "[경매인] 경매 개시 선언(성 시작가 200만 달러). 마지막 <END> 직전에 입찰 메뉴 연결 추정 / [번역] DO I HEAR $2 MILLION? ONCE, TWICE -> '없습니까? 하나, 둘.' 마지막 페이지 6줄->5줄"
   },
   {
@@ -920,7 +920,7 @@
     "offset": "0x125ca",
     "orig_bytes": 77,
     "ja": "I'M SORRY.  THAT BID IS\nLOWER THAN THE LAST BID.\nYOU MUST BID MORE THAN THE\nPREVIOUS BID.<WAIT><END>",
-    "ko": "죄송합니다. 그 입찰가는\n직전 입찰가보다 낮습니다.\n이전 입찰가보다 높게\n불러 주십시오.<WAIT><END>",
+    "ko": "죄송합니다.\n그 입찰가는 직전 입찰가보다 낮습니다.\n이전 입찰가보다 높게 불러 주십시오.<WAIT><END>",
     "note": "[경매인] 앞 입찰보다 낮은 입찰"
   },
   {
@@ -990,7 +990,7 @@
     "offset": "0x12c91",
     "orig_bytes": 99,
     "ja": "HONEY, I'VE HAD ENOUGH!\nTHERE'S NO POINT IN\nSAVING THIS MARRIAGE.  HAVE\nA NICE LIFE WITH YOUR STOCKSOR WHATEVER!<PAGE><END>",
-    "ko": "자기, 이제 지긋지긋해!\n이 결혼 생활은 더 이상\n지킬 의미가 없어. 주식이든\n뭐든 그거랑 잘 살아 봐!<PAGE><END>",
+    "ko": "자기, 이제 지긋지긋해!\n이 결혼 생활은 더 이상 지킬 의미가 없어.\n주식이든 뭐든 그거랑 잘 살아 봐!<PAGE><END>",
     "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
   },
   {
@@ -1010,7 +1010,7 @@
     "offset": "0x12c29",
     "orig_bytes": 67,
     "ja": "YOU'VE BEEN NEGLECTING ME\nLATELY.  I GUESS I DON'T\nMEAN MUCH TO YOU ANYMORE…<PAGE><END>",
-    "ko": "요즘 날 너무 소홀히 해.\n이제 난 자기한테 별\n의미 없는 사람인가 봐…<PAGE><END>",
+    "ko": "요즘 날 너무 소홀히 해.\n이제 난 자기한테 별 의미 없는 사람인가 봐…<PAGE><END>",
     "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
   },
   {
@@ -1020,7 +1020,7 @@
     "offset": "0x12bef",
     "orig_bytes": 58,
     "ja": "HONEY, YOU LOOK AWFUL\nLATELY.  ARE YOU GETTING\nENOUGH EXERCISE?<PAGE><END>",
-    "ko": "자기, 요즘 얼굴이\n말이 아니야. 운동은\n충분히 하고 있어?<PAGE><END>",
+    "ko": "자기, 요즘 얼굴이 말이 아니야.\n운동은 충분히 하고 있어?<PAGE><END>",
     "note": "[프리실라->주인공] 건강/관계 악화 107=이혼 통보 108,109=힘없이 말함(\"…\" 포함) 110=운동 권유"
   },
   {
@@ -1029,7 +1029,7 @@
     "offset": "0x126bb",
     "orig_bytes": 74,
     "ja": "GOOD DECISION.  SWIMMING IS\nVERY GOOD FOR YOUR HEALTH!\n\nTRANSACTION TAKES 2 HOURS.<PAGE><END>",
-    "ko": "잘 생각했어. 수영은\n건강에 정말 좋아!\n\n소요 시간: 2시간<PAGE><END>",
+    "ko": "잘 생각했어.\n수영은 건강에 정말 좋아!\n\n소요 시간: 2시간<PAGE><END>",
     "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지 / [번역] TRANSACTION TAKES N HOURS -> '소요 시간: N시간'(111~113 통일)"
   },
   {
@@ -1038,7 +1038,7 @@
     "offset": "0x127a6",
     "orig_bytes": 77,
     "ja": "GOOD DECISION.  WORKING OUT\nIS VERY GOOD FOR YOUR\nHEALTH!\n\nTRANSACTION TAKES 4 HOURS.<PAGE><END>",
-    "ko": "잘 생각했어. 운동은\n건강에 정말 좋아!\n\n소요 시간: 4시간<PAGE><END>",
+    "ko": "잘 생각했어.\n운동은 건강에 정말 좋아!\n\n소요 시간: 4시간<PAGE><END>",
     "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
   },
   {
@@ -1047,7 +1047,7 @@
     "offset": "0x1286f",
     "orig_bytes": 87,
     "ja": "GOOD DECISION.  HIKING IS\nVERY GOOD FOR YOUR HEALTH\nAND STATE OF MIND!\n\nTRANSACTION TAKES 8 HOURS.<PAGE><END>",
-    "ko": "잘 생각했어. 등산은\n몸과 마음 건강에\n정말 좋아!\n\n소요 시간: 8시간<PAGE><END>",
+    "ko": "잘 생각했어.\n등산은 몸과 마음 건강에 정말 좋아!\n\n소요 시간: 8시간<PAGE><END>",
     "note": "[프리실라->주인공] 활동 선택 확정(111=수영 2시간 112=운동 4시간 113=하이킹 8시간). 끝 줄 TRANSACTION 형식 유지"
   },
   {
@@ -1065,7 +1065,7 @@
     "offset": "0x12a23",
     "orig_bytes": 63,
     "ja": "BRILLIANT IDEA!  YOU KNOW\nHOW I LOVE TO SHOP.\n\nI'LL ENJOY THOSE 4 HOURS!<PAGE><END>",
-    "ko": "최고의 생각이야! 나 쇼핑\n좋아하는 거 알지?\n\n4시간 동안 실컷 즐길게!<PAGE><END>",
+    "ko": "최고의 생각이야!\n나 쇼핑 좋아하는 거 알지?\n\n4시간 동안 실컷 즐길게!<PAGE><END>",
     "note": "[프리실라->주인공] 활동 수락(114=2시간 115=쇼핑 4시간 116=놀이공원 추정)"
   },
   {
@@ -1083,7 +1083,7 @@
     "offset": "0x12719",
     "orig_bytes": 60,
     "ja": "TOO BAD.  YOU SHOULD'VE PAIDCLOSER ATTENTION TO THE\nMORNING PAPER!<PAGE><END>",
-    "ko": "안됐네. 아침 신문을\n좀 더 꼼꼼히 봤어야지!<PAGE><END>",
+    "ko": "안됐네.\n아침 신문을 좀 더 꼼꼼히 봤어야지!<PAGE><END>",
     "note": "[프리실라->주인공] 신문 기사로 활동 불가(같은 문장 3벌; alias 아님)"
   },
   {
@@ -1092,7 +1092,7 @@
     "offset": "0x12807",
     "orig_bytes": 60,
     "ja": "TOO BAD.  YOU SHOULD'VE PAIDCLOSER ATTENTION TO THE\nMORNING PAPER!<PAGE><END>",
-    "ko": "안됐네. 아침 신문을\n좀 더 꼼꼼히 봤어야지!<PAGE><END>",
+    "ko": "안됐네.\n아침 신문을 좀 더 꼼꼼히 봤어야지!<PAGE><END>",
     "note": "[프리실라->주인공] 신문 기사로 활동 불가(같은 문장 3벌; alias 아님)"
   },
   {
@@ -1101,7 +1101,7 @@
     "offset": "0x128e0",
     "orig_bytes": 60,
     "ja": "TOO BAD.  YOU SHOULD'VE PAIDCLOSER ATTENTION TO THE\nMORNING PAPER!<PAGE><END>",
-    "ko": "안됐네. 아침 신문을\n좀 더 꼼꼼히 봤어야지!<PAGE><END>",
+    "ko": "안됐네.\n아침 신문을 좀 더 꼼꼼히 봤어야지!<PAGE><END>",
     "note": "[프리실라->주인공] 신문 기사로 활동 불가(같은 문장 3벌; alias 아님)"
   },
   {
@@ -1110,7 +1110,7 @@
     "offset": "0x129a7",
     "orig_bytes": 84,
     "ja": "HONEY!  HOW COULD YOU EVEN\nTHINK I'D WANT TO GO THERE\nTODAY?  DIDN'T YOU READ THE\nMORNING PAPER?<PAGE><END>",
-    "ko": "자기! 오늘 내가 거기 가고\n싶어 할 거라고 생각한\n거야? 아침 신문 안 봤어?<PAGE><END>",
+    "ko": "자기!\n오늘 내가 거기 가고 싶어 할 거라고 생각한 거야?\n아침 신문 안 봤어?<PAGE><END>",
     "note": "[프리실라->주인공] 신문을 안 읽었냐며 화냄 120=수영장? 121=쇼핑몰 122=기타"
   },
   {
@@ -1119,7 +1119,7 @@
     "offset": "0x12aae",
     "orig_bytes": 73,
     "ja": "HONEY!  DIDN'T YOU READ THE\nMORNING PAPER?  I'M NOT\nGOING NEAR THE SHOPPING\nMALL!<PAGE><END>",
-    "ko": "자기! 아침 신문 안 봤어?\n난 쇼핑몰 근처에도\n안 갈 거야!<PAGE><END>",
+    "ko": "자기! 아침 신문 안 봤어?\n난 쇼핑몰 근처에도 안 갈 거야!<PAGE><END>",
     "note": "[프리실라->주인공] 신문을 안 읽었냐며 화냄 120=수영장? 121=쇼핑몰 122=기타"
   },
   {
@@ -1128,7 +1128,7 @@
     "offset": "0x12b79",
     "orig_bytes": 74,
     "ja": "FORGET IT!  EITHER YOU\nDIDN'T READ THE MORNING\nPAPER OR YOU HAVE A DEATH\nWISH FOR ME.<PAGE><END>",
-    "ko": "됐어! 아침 신문을 안 읽었거나\n아니면 내가 죽길 바라는\n거겠지.<PAGE><END>",
+    "ko": "됐어!\n아침 신문을 안 읽었거나\n아니면 내가 죽길 바라는 거겠지.<PAGE><END>",
     "note": "[프리실라->주인공] 신문을 안 읽었냐며 화냄 120=수영장? 121=쇼핑몰 122=기타"
   },
   {
@@ -1164,7 +1164,7 @@
     "offset": "0x12981",
     "orig_bytes": 38,
     "ja": "SORRY HONEY, I HAVE ANOTHER\nAPPOINTMENT.<PAGE><END>",
-    "ko": "미안해 자기, 다른 약속이\n있어.<PAGE><END>",
+    "ko": "미안해 자기, 다른 약속이있어.<PAGE><END>",
     "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
   },
   {
@@ -1173,7 +1173,7 @@
     "offset": "0x12a62",
     "orig_bytes": 76,
     "ja": "SORRY HONEY, I WISH I COULD.\nI WOULD HAVE REALLY\nENJOYED SPENDING THAT\nTIME WITH YOU.\n<WAIT><END>",
-    "ko": "미안해 자기, 나도 그러고 싶어.\n자기랑 그 시간을 함께\n보냈으면 정말 좋았을\n텐데.\n<WAIT><END>",
+    "ko": "미안해 자기, 나도 그러고 싶어.\n자기랑 그 시간을 함께 보냈으면 정말 좋았을 텐데.\n<WAIT><END>",
     "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
   },
   {
@@ -1182,7 +1182,7 @@
     "offset": "0x12b4b",
     "orig_bytes": 46,
     "ja": "SORRY HONEY, I'D GET SICK IFI WENT ON ANY RIDES TODAY!<PAGE><END>",
-    "ko": "미안해 자기, 오늘 놀이기구\n타면 탈 날 것 같아!<PAGE><END>",
+    "ko": "미안해 자기, 오늘 놀이기구 타면 탈 날 것 같아!<PAGE><END>",
     "note": "[프리실라/직원] 활동 불가 거절 123,124=휴관 125=하이킹 코스 폐쇄 126=약속 127=사양 128=놀이기구"
   },
   {
@@ -1200,7 +1200,7 @@
     "offset": "0x12d97",
     "orig_bytes": 33,
     "ja": "WE'D LIKE TO HAVE A LOOK AT\nSOME DOGS.<PAGE><END>",
-    "ko": "강아지를 좀\n보고 싶은데요.<PAGE><END>",
+    "ko": "강아지를 좀 보고 싶은데요.<PAGE><END>",
     "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
   },
   {
@@ -1209,7 +1209,7 @@
     "offset": "0x12db8",
     "orig_bytes": 80,
     "ja": "WE HAVE-\n(A) A SHAR-PEI FOR $2,000.\n(B) A POODLE FOR $1,000.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
-    "ko": "이런 아이들이 있어요-\n(A) 샤페이: $2,000\n(B) 푸들: $1,000\n\n둘 중 마음에 드는\n아이가 있으세요?<END>",
+    "ko": "이런 아이들이 있어요-\n(A) 샤페이: $2,000\n(B) 푸들: $1,000\n\n둘 중 마음에 드는 아이가 있으세요?<END>",
     "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
   },
   {
@@ -1218,7 +1218,7 @@
     "offset": "0x12e08",
     "orig_bytes": 79,
     "ja": "WE HAVE-\n(A) A POODLE FOR $1,000.\n(B) A CHIHUAHUA FOR $500.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
-    "ko": "이런 아이들이 있어요-\n(A) 푸들: $1,000\n(B) 치와와: $500\n\n둘 중 마음에 드는\n아이가 있으세요?<END>",
+    "ko": "이런 아이들이 있어요-\n(A) 푸들: $1,000\n(B) 치와와: $500\n\n둘 중 마음에 드는 아이가 있으세요?<END>",
     "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상)"
   },
   {
@@ -1254,7 +1254,7 @@
     "offset": "0x12e92",
     "orig_bytes": 43,
     "ja": "SIR, YOU DON'T HAVE ENOUGH\nCASH FOR THE PAYMENT.<PAGE><END>",
-    "ko": "손님, 결제하실 현금이\n부족하네요.<PAGE><END>",
+    "ko": "손님, 결제하실 현금이 부족하네요.<PAGE><END>",
     "note": "[애완동물 가게: 파멜라] 129=점원 인사 130=주인공 요청 131,132=목록(개 (A)(B)) 133,134=구입 후 프리실라 135=포기 136=현금 부족(공통, alias 대상) / [번역] 6개 상점 공용(alias) -> 해요체 '손님'으로 통일(캘·테드 반말 캐릭터도 이 문장은 공용)"
   },
   {
@@ -1272,7 +1272,7 @@
     "offset": "0x12f38",
     "orig_bytes": 43,
     "ja": "I'D LIKE TO PURCHASE A CAR\nAS A GIFT TO MY FIANCEE.<PAGE><END>",
-    "ko": "약혼녀에게 선물할 차를\n사고 싶은데요.<PAGE><END>",
+    "ko": "약혼녀에게 선물할 차를 사고 싶은데요.<PAGE><END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1281,7 +1281,7 @@
     "offset": "0x12f63",
     "orig_bytes": 87,
     "ja": "I HAVE-\n(A) A PORCH 928 FOR\n    $100,000.\n(B) A FAIRRARI 328 FOR\n    $50,000.\nWHICH ONE WOULD YOU LIKE?<END>",
-    "ko": "이런 차가 있어-\n(A) 포르치 928:\n    $100,000\n(B) 페어라리 328:\n    $50,000\n어느 걸로 할래?<END>",
+    "ko": "이런 차가 있어-\n(A) 포르쉐 928:\n    $100,000\n(B) 페라리 328:\n    $50,000\n어느 걸로 할래?<END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1290,7 +1290,7 @@
     "offset": "0x12fba",
     "orig_bytes": 83,
     "ja": "I HAVE-\n(A) A FAIRRARI 328 FOR\n    $50,000.\n(B) A BMV 750IL FOR $25,000.\nWHICH ONE WOULD YOU LIKE?<END>",
-    "ko": "이런 차가 있어-\n(A) 페어라리 328:\n    $50,000\n(B) BMV 750IL: $25,000\n어느 걸로 할래?<END>",
+    "ko": "이런 차가 있어-\n(A) 페라리 328:\n    $50,000\n(B) BMW 750IL: $25,000\n어느 걸로 할래?<END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1317,7 +1317,7 @@
     "offset": "0x13051",
     "orig_bytes": 47,
     "ja": "COME BACK AGAIN. I'LL BE\nMORE THAN HAPPY TO HELP\nYOU!<PAGE><END>",
-    "ko": "다음에 또 와. 언제든\n기꺼이 도와줄 테니까!<PAGE><END>",
+    "ko": "다음에 또 와.\n언제든 기꺼이 도와줄 테니까!<PAGE><END>",
     "note": "[자동차 가게: 칼] 137 인사 138 요청 139,140 목록(차 3종) 141,142 구입 후 143 구입 안 함 144=136의 alias"
   },
   {
@@ -1342,7 +1342,7 @@
     "offset": "0x13125",
     "orig_bytes": 48,
     "ja": "WE'RE LOOKING FOR A TV AND\nSTEREO SET FOR OUR NEW\nHOME.<PAGE><END>",
-    "ko": "새 집에 놓을 TV랑\n오디오를 찾고 있어요.<PAGE><END>",
+    "ko": "새 집에 놓을 TV랑 오디오를 찾고 있어요.<PAGE><END>",
     "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
   },
   {
@@ -1351,7 +1351,7 @@
     "offset": "0x13155",
     "orig_bytes": 90,
     "ja": "WE GOT-\n(A) A SOMY SYSTEM FOR\n    $6,000.\n(B) A PANAZODIAC SYSTEM FOR\n    $3,000.\nWHICH ONE YA WANT, DUDE?<END>",
-    "ko": "이런 게 있어-\n(A) 소미 시스템:\n    $6,000\n(B) 파나조디악 시스템:\n    $3,000\n어느 걸로 할래, 형씨?<END>",
+    "ko": "이런 게 있어-\n(A) 소니 시스템:\n    $6,000\n(B) 파나소닉 시스템:\n    $3,000\n어느 걸로 할래, 형씨?<END>",
     "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
   },
   {
@@ -1360,7 +1360,7 @@
     "offset": "0x131af",
     "orig_bytes": 92,
     "ja": "WE GOT-\n(A) A PANAZODIAC SYSTEM FOR\n    $3,000.\n(B) A SHAORP SYSTEM FOR\n    $1,500.\nWHICH ONE YA WANT, DUDE?<END>",
-    "ko": "이런 게 있어-\n(A) 파나조디악 시스템:\n    $3,000\n(B) 샤오프 시스템:\n    $1,500\n어느 걸로 할래, 형씨?<END>",
+    "ko": "이런 게 있어-\n(A) 파나소닉 시스템:\n    $3,000\n(B) 샤프 시스템:\n    $1,500\n어느 걸로 할래, 형씨?<END>",
     "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
   },
   {
@@ -1378,7 +1378,7 @@
     "offset": "0x13229",
     "orig_bytes": 51,
     "ja": "FOR THAT PRICE, I HOPE IT\nLASTS AWHILE.\nTHANK YOU, HONEY!<PAGE><END>",
-    "ko": "그 가격이면 오래\n써야 할 텐데.\n고마워, 자기!<PAGE><END>",
+    "ko": "그 가격이면 오래 써야 할 텐데.\n고마워, 자기!<PAGE><END>",
     "note": "[오디오 가게: 테드(껄렁체, DUDE)] 145 인사 146 요청 147,148 목록 149,150 구입 후 151 실망 152=alias"
   },
   {
@@ -1412,7 +1412,7 @@
     "offset": "0x13349",
     "orig_bytes": 40,
     "ja": "WE'RE INTERESTED IN\nPURCHASING A PAINTING.<PAGE><END>",
-    "ko": "그림을 한 점\n사고 싶은데요.<PAGE><END>",
+    "ko": "그림을 한 점 사고 싶은데요.<PAGE><END>",
     "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
   },
   {
@@ -1421,7 +1421,7 @@
     "offset": "0x13371",
     "orig_bytes": 79,
     "ja": "WE HAVE-\n(A) A FABIANI FOR $70,000.\n(B) AN ALI FOR $50,000.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
-    "ko": "이런 작품이 있어요-\n(A) 파비아니: $70,000\n(B) 알리: $50,000\n\n마음에 드는 작품이\n있으신가요?<END>",
+    "ko": "이런 작품이 있어요-\n(A) 파비아니: $70,000\n(B) 달리: $50,000\n\n마음에 드는 작품이\n있으신가요?<END>",
     "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
   },
   {
@@ -1430,7 +1430,7 @@
     "offset": "0x133c0",
     "orig_bytes": 80,
     "ja": "WELL, WE HAVE-\n(A) AN ALI FOR $50,000.\n(B) A NUA FOR $30,000.\n\nWOULD YOU LIKE EITHER OF\nTHEM?<END>",
-    "ko": "음, 이런 작품이 있어요-\n(A) 알리: $50,000\n(B) 누아: $30,000\n\n마음에 드는 작품이\n있으신가요?<END>",
+    "ko": "음, 이런 작품이 있어요-\n(A) 달리: $50,000\n(B) 르누아르: $30,000\n\n마음에 드는 작품이\n있으신가요?<END>",
     "note": "[미술 가게: 아트] 153 인사 154 요청 155,156 목록 157,158 구입 후 159 실패 160=alias"
   },
   {

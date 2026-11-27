@@ -6,7 +6,7 @@
     "offset": "0x17f61",
     "orig_bytes": 75,
     "ja": "\n«STOCK PRICE»\n\n STARTING CURRENT %CHANGE\n\n\n«STOCK CATEGORY»\n\n\n\n«COMMENTS»<END>",
-    "ko": "\n«주가»\n\n      시작가     현재가     등락률\n\n\n«종목 분류»\n\n\n\n«기업 개요»<END>",
+    "ko": "«주가»\n      시작가     현재가     등락률\n\n«종목 분류»\n\n«기업 개요»<END>",
     "note": "[종목명/정보 화면 틀] 종목 1~20. 패러디 이름. 정보 화면 가운데 정렬용 앞 공백 유지 여부는 최종 레이아웃 후 결정 / 열 머리: 숫자가 오른쪽 맞춤(끝 열 8/16/24)이라 열 머리 끝을 맞춤: 시작가@6 현재가@14 등락률@22, 25칸 유지. COMMENTS → 기업 개요"
   },
   {

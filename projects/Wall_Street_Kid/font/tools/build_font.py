@@ -66,6 +66,8 @@ def main():
     ap.add_argument("--narrow-left", default=",.'`;:!\"",
                     help="좁은 구두점: 잉크 왼쪽 끝을 셀 x=0 으로 붙인다(A4: `$500,000` 에서 쉼표 앞이 벌어져 보이던 문제). 빈 문자열이면 생략")
     ap.add_argument("--tag", default="잠정", help="tbl 머리말에 적는 코드 배정 상태")
+    ap.add_argument("--overrides", default="font/kr16_ascii_overrides.json",
+                    help='8x16 1bpp 글자별 덮어쓰기 {"M": "32자리 hex"} (폰트작업대). 빈 문자열이면 생략')
     a = ap.parse_args()
 
     w, h = (int(x) for x in a.cell.lower().split("x"))
@@ -100,6 +102,17 @@ def main():
 
     blob = b"".join(encode_glyph(fnt.colorize(b, a.fg, a.bg), w, h, a.format, a.order) for b in bms)
     gb = len(blob) // max(1, len(chars))
+    if a.overrides and (w, h, a.format) == (8, 16, "1bpp") and os.path.exists(p(a.overrides)):
+        ov = json.load(open(p(a.overrides), encoding="utf-8"))
+        patched, n = bytearray(blob), 0
+        for i, c in enumerate(chars):
+            if c in ov:
+                g = bytes.fromhex(ov[c])
+                assert len(g) == gb, f"잘못된 오버라이드 {c!r}"
+                patched[i * gb:(i + 1) * gb] = g
+                n += 1
+        blob = bytes(patched)
+        print(f"8x16 오버라이드 {n}자")
     os.makedirs(os.path.dirname(p(a.out)), exist_ok=True)
     open(p(a.out), "wb").write(blob)
 

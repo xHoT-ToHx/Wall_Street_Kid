@@ -297,6 +297,27 @@ POOL_LO, POOL_HI = 0x4E, 0xDE   # 동적 8x8 풀 범위(0xDF-0xFF 는 idx6/7 이
 POOL_MAX = 80                # RAM UGLY[80]
 MENU_CODE_RESERVE = 96       # menu_b7 영역(고정 뱅크 $E017-$E121) 끝 96B = 엔진 고정부 2 (kor_engine.asm korig·kq·hkpre·kwdbox, $E0C2-$E121)
 NOP_CODE = 0x4E              # 아무것도 그리지 않고 커서도 안 움직이는 1바이트(고정 길이 문자열 채움용, 요일)
+# ---- 종목 화면 상단 8x16 (DESIGN §19): BG $0000 의 홈 그림(맵0) 타일 쌍에 8x16 글리프를 올린다
+#      창 모드 bit2(+bit0 2행 피치, bit1=0) = 상단 8x16 창. 문자: 한글 [5F ii] (ii = T16_BASE + 순번), 그 밖은 원본 1바이트
+#      (엔진이 8x16 ASCII 로). 표식 [5F FF] = $B33E 창(창 6)을 상단 8x16 배치로(2행 피치·한 행 위, KLAY=1),
+#      [5F FD] = 8x8 배치(KLAY=0, 수량 화면 금액은 8x8 그대로).
+T16_BASE = 0x37                  # ii < 0x37 = 원본 1바이트 문자(ASC 표), 0x37.. = 아래 T16 글자
+T16_MAX = 0xFC - T16_BASE        # FC-FF 는 표식
+T16_MARK_NEW = b"\x5f\xfc"       # 정보 화면 종목명 앞: 8x16 캐시 비움
+T16_CACHE_A = 36                 # 캐시 앞 44칸 = UGLY[36..79] (맵0 8x8 풀은 0..35) — kor_engine.asm T16CA
+T16_TOP = {"stock_ui_b5": {"stock_ui_b5_0001", "stock_ui_b5_0002", "stock_ui_b5_0003", "stock_ui_b5_0004",
+                           "stock_ui_b5_0005", "stock_ui_b5_0006"},
+           "stock_names_b5": None, "stock_cat_b5": None}           # None = 블록 전체(정보 화면 창, 모드 $85)
+T16_MARK_TOP = b"\x5f\xff"
+T16_MARK_8 = {"stock_ui_b5_0000", "stock_ui_b5_0007"}            # 같은 창 6 의 8x8 문자열 → [5F FD]
+STUB5_RESERVE = 32               # stock_desc_b5 영역 끝 32B($BC26-$BC45) = bank5/bank7 공유 스텁(kor_engine.asm stub5)
+
+
+def t16_is_top(name, eid):
+    s = T16_TOP.get(name, ())
+    return s is None or eid in s
+
+
 UI8_TTF = os.path.join(PROJ, "font", "Galmuri7.ttf")
 UI8_OFFICIAL = os.path.join(PROJ, "font", "ui8_charset.txt")
 UI8_BIN = os.path.join(PROJ, "build", "font_ui8.bin")
@@ -320,6 +341,8 @@ def ui8_charset():
     seen = []
     for name in UI8_BLOCKS:
         for e in ui_entries(name):
+            if t16_is_top(name, e["id"]):   # 상단 8x16 문자열은 8x8 글리프를 두지 않는다(대체 = 공백)
+                continue
             t = ui8_text(e, name)
             if t is None and name == "password_b7":
                 t = e.get("ko") or ""          # 글자 목록에는 포함(나중에 켤 때 재생성 불필요)
@@ -434,6 +457,35 @@ def cmd_ui(a):
             i += 1
         return bytes(out)
 
+    # ---- 상단 8x16 글자(T16): 대상 문자열의 한글을 순서대로 모은다
+    t16chars = []
+    for name in T16_TOP:
+        for e in ui_entries(name):
+            if "alias_of" in e or not t16_is_top(name, e["id"]):
+                continue
+            for c in e.get("ko") or "":
+                if is_hangul(c) and c not in t16chars:
+                    t16chars.append(c)
+    if len(t16chars) > T16_MAX:
+        raise SystemExit(f"상단 8x16 글자 {len(t16chars)} > {T16_MAX}")
+    t16idx = {c: T16_BASE + i for i, c in enumerate(t16chars)}
+
+    def encT(text, eid):
+        out = bytearray()
+        i = 0
+        while i < len(text):
+            c = text[i]
+            if is_hangul(c):
+                out += bytes([0x5F, t16idx[c]])
+                i += 1
+            else:
+                j = i
+                while j < len(text) and not is_hangul(text[j]):
+                    j += 1
+                out += enc8(text[i:j], eid)
+                i = j
+        return bytes(out)
+
     def cells(text):
         return [len(ln) for ln in re.sub(r"<[^>]*>", "", text).split("\n")]
 
@@ -466,7 +518,17 @@ def cmd_ui(a):
             text = e.get("ko") if name in UI16_BLOCKS else ui8_text(e, name)
             if not text:
                 continue
-            enc[e["id"]] = t16.encode(text) if name in UI16_BLOCKS else enc8(text, e["id"])
+            if name in UI16_BLOCKS:
+                enc[e["id"]] = t16.encode(text)
+            elif t16_is_top(name, e["id"]):
+                mark = T16_MARK_TOP if name == "stock_ui_b5" else b""
+                if name == "stock_names_b5" and e["id"] != "stock_names_b5_0000":
+                    mark = T16_MARK_NEW
+                enc[e["id"]] = mark + encT(text, e["id"])
+            elif e["id"] in T16_MARK_8:
+                enc[e["id"]] = b"\x5f\xfd" + enc8(text, e["id"])
+            else:
+                enc[e["id"]] = enc8(text, e["id"])
             if enc[e["id"]][-1:] != b"\xff":
                 raise SystemExit(f"{e['id']}: <END> 로 끝나지 않음")
         if not enc:
@@ -488,6 +550,10 @@ def cmd_ui(a):
         r0, r1 = remap(pint(reg["start"])), remap(pint(reg["end"]))
         bank_lim = (r0 - 0x10) // 0x4000 * 0x4000 + 0x10 + 0x3FF8      # $BFF9 뱅크 표식 보호
         r1 = min(r1, bank_lim)
+        if name == "stock_desc_b5":       # 끝 32B 는 bank5/bank7 공유 스텁(kor_engine.asm stub5, $BC26-$BC45)
+            if remap(pint(reg["end"])) != 0x17C55:
+                raise SystemExit("stock_desc_b5 영역 끝이 0x17C55 가 아님 — stub5 주소 확인")
+            r1 -= STUB5_RESERVE
         if name == "menu_b7" and r1 > 0x3E131 - MENU_CODE_RESERVE:    # spec(gen_spec.py)이 이미 끝 32B 를 뺐는지 확인
             raise SystemExit("menu_b7 text_region 이 엔진 예약($E102-$E121)과 겹침 — tools/gen_spec.py 확인")
         # 안전 검사(QA V1): 삽입 영역 안에서 문자열이 아닌 원본 데이터(0 이 아닌 바이트)는 덮지 않는다
@@ -556,6 +622,8 @@ def cmd_ui(a):
         for e in ents:
             if e["id"] in enc and name in UI8_BLOCKS:
                 ko_c, ja_c = cells(e["ko"]), cells(e["ja"])
+                if t16_is_top(name, e["id"]):     # 상단 8x16 창은 2행 피치라 원문의 빈 줄을 뺐다 → 빈 줄 빼고 비교
+                    ko_c, ja_c = [n for n in ko_c if n], [n for n in ja_c if n]
                 over = [i for i, n in enumerate(ko_c) if i < len(ja_c) and n > max(ja_c[i], 1) and n > 0]
                 if over:
                     report.append(f"  칸 초과 {e['id']}: 줄 {over} ko {ko_c} / 원문 {ja_c}")
@@ -600,8 +668,44 @@ def cmd_ui(a):
         rom[o:o + b["length"]] = data
     report.append(f"UI 넘침 뱅크 {UI_OVF_BANK}: ${UI_OVF_BASE:04X}-${ovf - 1:04X} ({ovf - UI_OVF_BASE}B)")
 
+    # ---- 상단 8x16 표: 글자 → 8x16 글리프 번호, 8x8 대체(풀 없을 때), 타일 쌍(맵0 이 참조하는 인접 타일 2개)
+    if len(pools[0]) > T16_CACHE_A:
+        raise SystemExit(f"맵0 8x8 풀 {len(pools[0])} > {T16_CACHE_A} (UGLY 앞부분) — T16 캐시와 겹침")
+    t16lo, t16hi, t16u8 = [], [], []
+    for c in t16chars:
+        k = ko.enc.get(c)
+        if k is None:
+            raise SystemExit(f"상단 8x16: 8x16 폰트에 없는 글자 {c}")
+        n = gnum(int.from_bytes(k, "big") - 0x5000)
+        t16lo.append(n & 0xFF), t16hi.append(n >> 8)
+        t16u8.append(idx8.get(c, 0xFF))
+    m0 = maps[0]
+    pairs, t = [], 0x50
+    while t + 1 <= POOL_HI:
+        if t in m0 and t + 1 in m0:
+            pairs.append(t)
+            t += 2
+        else:
+            t += 1
+    if len(pairs) < 54:
+        raise SystemExit(f"상단 8x16 타일 쌍 {len(pairs)} < 54 (캐시 크기)")
+    pairs = pairs[:54]
+    # 화면별 고유 글자 수(캐시 54칸 이하여야 덮어쓰기 없음): 목록·보유 주식 = 문자열 + 숫자, 정보 = 틀+종목명+분류+숫자
+    num = set("0123456789$,-")
+    def uniq(s):
+        return set(re.sub(r"<[^>]*>", "", s)) - set(" \n")
+    ui = {e["id"]: e.get("ko") or "" for e in ui_entries("stock_ui_b5")}
+    worst_list = max(len(uniq(ui[i]) | num) for i in T16_TOP["stock_ui_b5"])
+    nm = [e.get("ko") or e["ja"] for e in ui_entries("stock_names_b5")]
+    cats = [e.get("ko") or e["ja"] for e in ui_entries("stock_cat_b5")]
+    worst_info = max(len(uniq(nm[0]) | uniq(n) | uniq(c) | num) for n in nm[1:] for c in cats)
+    report.append(f"상단 8x16: 글자 {len(t16chars)}, 타일 쌍 {len(pairs)}, 화면 최대 고유 글자 목록 {worst_list} / 정보 {worst_info} (캐시 54)")
+    if max(worst_list, worst_info) > 54:
+        raise SystemExit("상단 8x16 화면 고유 글자 > 54")
+
     # ---- 엔진 표
     out = ["; 자동 생성: asm/tools/kor_build.py ui (수정 금지)",
+           "T16LO:", db(t16lo), "T16HI:", db(t16hi), "T16U8:", db(t16u8), "T16TILE:", db(pairs),
            f"UI8N = {len(chars)}", "UI8FONT:", db(font8), "UI8G_LO:", db(g_lo), "UI8G_HI:", db(g_hi),
            "LABIMG:", db(labimg),
            "POOLCNT:", db([len(p) for p in pools]),

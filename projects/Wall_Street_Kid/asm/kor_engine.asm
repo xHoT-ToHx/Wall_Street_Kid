@@ -37,6 +37,18 @@ KDCLR   = $05B8          ; [진단] 분할 건너뜀: NMI 가 사전렌더를 �
 KDBUSY  = $05B9          ; [진단] 분할 건너뜀: 메인 스레드가 직접 PPU 쓰기 루틴 안(ppubusy)
 KINVF   = $05BB          ; ≠0 = 8x8 캐시 무효화 예약($CD70 화면 지우기)
 KTHI    = $05BA          ; 분할 행의 네임테이블 상위 바이트($20+행/8) — hkpre 가 분할 해제 판정
+KMAG    = $05BC          ; [2] = $A5,$5A 이면 엔진 RAM 초기화됨. kinit(리셋·전원)이 깨고 첫 NMI 의 eng_nmipre 가 eng_init (fix3)
+KPGF    = $05BE          ; ≠0 = <PAGE>(kpage) 뒤 8x16 슬롯 캐시 초기화 예약 (glyph_emit 이 처리, fix3: kreset 을 엔진 뱅크로)
+KRDY    = $05BF          ; ≠0 = 감지 스프라이트가 이번 프레임 PPU OAM 에 있음(지난 NMI 가 써 두었고 이번 DMA 로 올라감) (fix3)
+KINW    = $06EE          ; ≠0 = 분할 대기 중 (대기가 241 을 넘겨 들어온 중첩 NMI 는 eng_nmipre 가 바로 버림) (fix3)
+KSND    = $06EF          ; ≠0 = NMI 사운드($DE67) 처리 중 (중첩 NMI 는 사운드 건너뜀) (fix3)
+; ---- 종목 화면 상단 8x16 (DESIGN §19). 캐시 54칸 = T16CA[44](UGLY 뒤쪽, 맵0 8x8 풀은 UGLY[0..35]) + T16CB[10]
+T16CA   = $0584          ; = UGLY+36, 캐시 0..43 (글자 번호 ii, $FF = 빈칸). uinval 이 UGLY 와 함께 비움
+T16CB   = $05E0          ; 캐시 44..53 ($05E0-$05E9, 원본 정적 참조 없음)
+T16NEXT = $06DB          ; 다음 할당 칸(원형)
+T16I    = $06DC          ; 현재 글자 번호 ii
+KLAY    = $06DD          ; 1 = 창 6 이 상단 8x16 배치([5F FF]) → $B37C 금액도 8x16·한 행 위로 / 0 = 8x8([5F FD], 수량 화면)
+PFI     = $06DE          ; eng_pfnum 글자 위치
 
 ; ---------------------------------------------------------------- 상수
 NSLOT    = 107
@@ -48,6 +60,9 @@ OVSLOT   = $02DC          ; 오버플로 감지용 스프라이트 9개 = OAM �
 OVTILE   = $40            ; $1000 타일 0x40 (빈 타일로 업로드)
 LABTILE  = $4A            ; 상태창 라벨 고정 타일 0x4A-0x4D (kor_build.py LABEL_TILE0)
 NPOOLMAX = 80
+T16N     = 54             ; 상단 8x16 캐시 칸 = 타일 쌍 수 (kor_build.py 가 T16TILE 54개 생성)
+T16NA    = 44             ; 그중 T16CA 칸 수
+T16BASE  = $37            ; [5F ii] 의 ii 시작 (kor_build.py T16_BASE). ii < $37 = 원본 1바이트 문자
 
 BUS      = $FE90          ; 버스충돌 표 0..15 (원래 $F07E 0..6)
 BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번호 (원본은 0 패딩)
@@ -71,6 +86,9 @@ BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번�
 .org $F197                ; PPUMASK 갱신 공통 꼬리 (STA $02 / STA $2001 / RTS)
 .expect 85 02 8D 01 20 60
   JMP kmask
+.org $F98E                ; NMI: 사운드 $DE67 호출 → 재진입 방지 (fix3, DESIGN §18)
+.expect 20 67 DE
+  JSR ksnd
 
 .bank 30
 .org $D7BC                ; $D7B6: 텍스트 뱅크 전환
@@ -108,11 +126,62 @@ BANKID   = $BFF9          ; 각 뱅크 0-14 의 이 주소에 자기 뱅크 번�
 .limit $C00F
 .expect 00 00 00 00 00 00 00 00 00 00 00 00 00
 ; ---- 리셋 초기화 ($F03B JMP ($FFDE) 대체)
+;      전원 투입 시 RAM 은 무작위다(리셋은 보존). 여기서는 표식(KMAG)만 깨고, 첫 NMI 의 eng_nmipre 가
+;      엔진 RAM 전부를 eng_init 로 초기화한다(고정 뱅크 여유가 없어 초기화 본체는 엔진 뱅크) (fix3)
 kinit:
   LDA #0
-  STA KACT
-  STA USTATE
+  STA KMAG
   JMP ($FFDE)
+.bank 30
+.org $D242                ; 창 표 $D22F: 창 4 [x8 y24 w22 h4] 의 h — 데모 카드 지우기($85C6 → $D198)
+.expect 04
+  .db 5                   ; 8x16 설명 줄의 아래 타일 행(28)까지 지운다 (fix3: 다음 카드에 이전 설명 아래 반쪽이 남던 문제)
+.org $D246                ; 창 5 [x8 y22 w22 h6] 의 h (엔딩 카드)
+.expect 06
+  .db 7
+.org $D248                ; 창 6 [x2 y2 w28 h4] 의 y — 종목 화면 상단 창 지우기(bank5 $B33E/$B1AA 만 사용) (§19)
+.expect 02
+  .db 1                   ; 행 1-4 (8x16 안내 2줄). 열 제목(행 5-6)은 남김 → 수량 화면에서도 보임
+.org $D250                ; 창 8 [x1 y2 w30 h5] — 정보 화면 진입 지우기(bank5 $ADF6 만 사용) → [x1 y1 w30 h6] (행 1 = 목록 안내 위 타일)
+.expect 02 1E 05
+  .db 1,$1E,6
+
+; ---- bank5 종목 화면 창 모드 $80 → $85 (bit2 = 상단 8x16, bit0 = 2행 피치) (§19)
+.bank 11
+.org $AE28                ; 정보 화면 종목명 x3 y3 → 행 3-4
+.expect 80
+  .db $85
+.org $AE4D                ; 정보 화면 틀 x2 y8 → 행 8-19 (주가/열 머리/종목 분류/기업 개요)
+.expect 80
+  .db $85
+.org $AF07                ; 정보 화면 값 줄($038F) x2 y12 → 행 12-13
+.expect 80
+  .db $85
+.org $AF37                ; 정보 화면 분류명 x3 y16 → 행 16-17
+.expect 80
+  .db $85
+.org $B3C7                ; $B37C 금액 2줄 PPU 레코드 제출(LDX #$2B / LDY #$03 / JSR $C0EB) → 보유 주식 화면이면 8x16 으로
+.expect A2 2B A0 03 20 EB C0
+  JSR stub5
+  NOP
+  NOP
+  NOP
+  NOP
+; ---- bank5·bank7 같은 주소 공유 스텁 (stock_desc_b5 영역 끝 32B, kor_build.py STUB5_RESERVE): 뱅크를 바꿔도 다음 명령이 이어진다
+.bank 11,15
+.org $BC26
+.limit $BC45
+stub5:
+  LDA $07
+  PHA
+  LDA #ENGBANK
+  JSR fastsw              ; → 뱅크 7 의 같은 주소에서 계속
+  JSR eng_pfnum
+  PLA
+  JSR fastsw              ; → 뱅크 5
+  LDX #$2B
+  LDY #$03
+  JMP $C0EB
 .bank 30
 .org $CBEB                ; CHR 로더($CB33, 1bpp/2bpp 직접 쓰기) 끝: JMP $CE03 (PLA / 뱅크 복원 / RTS)
 .expect 4C 03 CE
@@ -145,7 +214,7 @@ kinit:
 ; ================================================================= 고정뱅크 본체 2 ($E0F2-$E121: menu_b7 영역 끝 96B, kor_build.py MENU_CODE_RESERVE)
 .bank 31
 .org $E0C2
-.limit $E121
+.limit $E120              ; $E121 은 원본 코드(LDX $AF, 점프표 $C13F 의 대상) — 포함하면 안 됨 (fix3 에서 확인)
 ; ---- 1바이트 문자 원래 경로. 4E = NOP(그리지 않고 전진 0: 고정 길이 요일 채움)
 korig:
   LDA KC
@@ -250,11 +319,8 @@ khook:
 @ctl:
   STA $73
   RTS
-@one:
+@one:                     ; 1바이트 문자는 모두 eng_one 이 판정(분할 창 8x16 / 상단 8x16 창 / 그 밖 C=1 원래 경로) (§19: 고정 8B 절약)
   STA KC
-  LDX KACT
-  CPX #3
-  BNE @orig
   LDA $07
   PHA
   LDA #ENGBANK
@@ -321,20 +387,10 @@ krows:
   STA KTWO
   RTS
 
-; ---- <PAGE> 창 지우기 전 슬롯 캐시 초기화
+; ---- <PAGE> 창 지우기 전 슬롯 캐시 초기화 → 예약만(다음 글리프에서 glyph_emit 가 kreset). 본체는 엔진 뱅크 (fix3: 고정 공간)
 kpage:
-  JSR kreset
+  DEC KPGF
   JMP $DA62
-kreset:
-  LDA #$FF
-  LDX #NSLOT-1
-@l:
-  STA KHI,X
-  DEX
-  BPL @l
-  LDA #0
-  STA KNEXT
-  RTS
 
 ; ---- $CD70(네임테이블 전체 지우기) 첫머리: 화면이 통째로 바뀌므로 8x8 풀 캐시 무효화 예약(u8tile 이 처리)
 kcls:
@@ -409,7 +465,7 @@ nmi_post:
   TAX
   STA BUS,X
   JSR eng_nmipre          ; 게임 큐 작업이 끝난 뒤(VBlank 안): BG 복귀·감지 스프라이트
-  JSR eng_split
+  JSR eng_splitw          ; 분할 대기 (KINW 로 감쌈)
   PLA
   TAX
   STA BUS,X
@@ -419,6 +475,21 @@ nmi_post:
   PLA
   JMP $F98E
 @h:
+  RTS
+
+; ---- NMI 의 사운드($F98E JSR $DE67 대체): 사운드 엔진 재진입 방지 (fix3, DESIGN §18)
+;      분할 대기가 NMI 안에서 분할 줄(타이틀 카드 = 199줄)까지 이어지므로 그 뒤의 $09 훅·사운드가 241 을 넘기면 다음 NMI 가
+;      사운드 처리 중간에 끼어든다(원래 게임은 $09 훅 $E121 이 NMI 안에서 $F03E 로 다음 NMI 를 일부러 기다림 = 중첩 NMI 전제).
+;      안쪽 NMI 가 사운드를 끝까지 돌리면 바깥 사운드의 채널 루프 변수 $0521 이 3 이 되어 $0543,X 배열을 한 칸 밀어 쓰고
+;      $0546 → 점프표 $9CC3 범위 밖 → $025D(RAM) 실행 → 화면이 $1000 타일로 바뀐 채 정지 [검증: 트레이스·쓰기 BP].
+;      → 사운드 중이면 안쪽 NMI 는 이번 사운드 틱을 건너뛴다.
+ksnd:
+  LDA KSND
+  BNE @s
+  INC KSND
+  JSR $DE67
+  DEC KSND
+@s:
   RTS
 
 ; ================================================================= 엔진 뱅크 7 ($8000-$BFFF)
@@ -432,6 +503,10 @@ eng_kor:
   LDA KGHI
   CMP #$10
   BEQ eng_ui8
+  CMP #$0F                ; [5F ii] = 상단 8x16 글자/표식 (§19)
+  BNE @g
+  JMP eng_t16
+@g:
   JMP glyph_emit
 
 ; ---- 8x8 UI 글리프 (DESIGN §10)
@@ -688,10 +763,10 @@ eng_chr:
   JSR $F302
   JMP $F03E
 @other:
-  CMP #1
-  BEQ @none
-  CMP #2
-  BEQ @none
+  CMP #1                  ; 항목 1 = 타일 0x24-0x40(패스워드 기호), 2 = 0x00-0x2B(엔딩 로고)만 올림 [검증: 로더 표 bank0 $8010].
+  BEQ @free               ;  둘 다 화면을 통째로 지운 패스워드 표시 화면 앞에서 쓰이므로 0x50-0x9F 를 풀로 (fix3:
+  CMP #2                  ;  예전엔 '풀 없음'으로 둬 "당신의 패스워드" 가 공백으로 나옴). 일반 장면은 뒤이어 맵 항목이 덮어씀
+  BEQ @free
   CMP #$2A
   BCC @rts
   CMP #$2D
@@ -701,21 +776,301 @@ eng_chr:
   STA USTATE
   STA UCNT
   JMP uinval
+@free:
+  LDA #$14                ; 1..$13 = 맵 풀, $14 = 지운 화면용 고정 풀
+  STA USTATE
+  LDA #NPOOLMAX
+  STA UCNT
+  LDA #<POOLFREE
+  STA UPLO
+  LDA #>POOLFREE
+  STA UPHI
+  JMP uinval
 @rts:
   RTS
-uinval:
+uinval:                   ; 8x8 풀 캐시 + 상단 8x16 캐시(T16CA 는 UGLY 뒤쪽, T16CB) 비움
   LDA #$FF
   LDX #NPOOLMAX-1
 @i:
   STA UGLY,X
   DEX
   BPL @i
+  LDX #T16N-T16NA-1
+@j:
+  STA T16CB,X
+  DEX
+  BPL @j
   LDA #0
   STA UNEXT
+  STA T16NEXT
+  RTS
+
+; 상단 8x16 캐시만 비움(8x8 풀은 화면에 남아 있을 수 있어 건드리지 않음)
+t16inval:
+  LDA #$FF
+  LDX #T16NA-1
+@a:
+  STA T16CA,X
+  DEX
+  BPL @a
+  LDX #T16N-T16NA-1
+@b:
+  STA T16CB,X
+  DEX
+  BPL @b
+  LDA #0
+  STA T16NEXT
+  RTS
+
+; ================================================================= 종목 화면 상단 8x16 (DESIGN §19)
+; 목록·보유 주식·정보 화면은 그림이 없고 BG $0000 에 홈 그림(맵0, CHR 항목 8)이 남아 있다. 맵0 이 참조하는 인접 타일 쌍
+; 54개(T16TILE, 8x8 풀과 겹치지 않음)에 8x16 글리프를 올린다. 화면을 떠나 홈으로 가면 CHR 항목 8 이 다시 로드된다[검증].
+; C=0 = 지금 창이 상단 8x16 창(모드 & 6 = 4)이고 홈 CHR(USTATE=1) 이 있음
+t16ok:
+  LDA $7A
+  AND #$06
+  CMP #$04
+  BNE @no
+  LDA USTATE
+  CMP #1
+  BNE @no
+  CLC
+  RTS
+@no:
+  SEC
+  RTS
+
+; X = 글자 번호 ii → KGLO/KGHI (8x16 글리프). ii < $37 = 원본 1바이트 문자(ASC 표)
+t16g:
+  CPX #T16BASE
+  BCS @k
+  LDA ASC_LO,X
+  STA KGLO
+  LDA ASC_HI,X
+  STA KGHI
+  RTS
+@k:
+  LDA T16LO-T16BASE,X
+  STA KGLO
+  LDA T16HI-T16BASE,X
+  STA KGHI
+  RTS
+
+; X = 글자 번호 ii → KT = 위 타일(아래 = KT+1). 캐시 미스면 원형 할당 후 32B 를 큐로 업로드(NMI 1회)
+t16tile:
+  STX T16I
+  LDA KINVF               ; 화면 지우기($CD70) 뒤 첫 글자: 캐시 비움
+  BEQ @v
+  JSR uinval
+  LDA #0
+  STA KINVF
+@v:
+  LDX #T16N-1
+@f:
+  CPX #T16NA
+  BCS @f2
+  LDA T16CA,X
+  JMP @c
+@f2:
+  LDA T16CB-T16NA,X
+@c:
+  CMP T16I
+  BEQ @hit
+  DEX
+  BPL @f
+  LDX T16NEXT             ; 미스
+  LDA T16I
+  CPX #T16NA
+  BCS @s2
+  STA T16CA,X
+  JMP @s3
+@s2:
+  STA T16CB-T16NA,X
+@s3:
+  LDA T16TILE,X
+  STA KT
+  INX
+  CPX #T16N
+  BCC @nn
+  LDX #0
+@nn:
+  STX T16NEXT
+  LDX T16I
+  JSR t16g
+  LDA #0
+  LDX #7
+@z:
+  STA KBUF,X
+  STA KBUF+16,X
+  DEX
+  BPL @z
+  JSR kcopy
+  LDA #$02                ; [02][00][20][FF][KBUF][$0000+KT*16] (타일 KT, KT+1)
+  STA KREC
+  LDA #0
+  STA KREC+1
+  LDA #32
+  STA KREC+2
+  LDA #$FF
+  STA KREC+3
+  LDA #<KBUF
+  STA KREC+4
+  LDA #>KBUF
+  STA KREC+5
+  LDA KT
+  ASL A
+  ASL A
+  ASL A
+  ASL A
+  STA KREC+6
+  LDA KT
+  LSR A
+  LSR A
+  LSR A
+  LSR A
+  STA KREC+7
+  LDX #<KREC
+  LDY #>KREC
+  JSR $F302
+  JMP $F03E
+@hit:
+  LDA T16TILE,X
+  STA KT
+  RTS
+
+; [5F ii]: ii = 글자 → 상단 8x16 (창이 아니거나 홈 CHR 이 아니면 8x8 대체 T16U8, 없으면 공백)
+;          FF = 창 6 을 상단 8x16 배치로(2행 피치 + 상단 8x16 모드, 한 행 위로, KLAY=1) / FD = KLAY=0. 표식은 그리지 않고 전진 0
+eng_t16:
+  LDX KGLO
+  CPX #$FC
+  BEQ @fc
+  CPX #$FD
+  BEQ @fd
+  CPX #$FF
+  BEQ @ff
+  JSR t16ok
+  BCS @fb
+  JSR t16tile
+  JMP glyph_emit@emit
+@fb:
+  LDA T16U8-T16BASE,X
+  CMP #$FF
+  BEQ @sp
+  STA KGLO
+  JMP eng_ui8@u8
+@sp:
+  LDA #$49
+  STA KT
+  JMP glyph_emit@put1
+@fc:                      ; 정보 화면 첫 글자 앞: 앞 화면의 8x16 캐시를 비움(v0.2.6)
+  JSR t16inval
+  JMP @nop
+@ff:
+  JSR t16inval            ; 목록·보유 주식 화면 시작
+  LDA #1
+  STA KLAY
+  LDA $7A
+  ORA #$05
+  STA $7A
+  DEC $75
+  DEC $77
+  JMP @nop
+@fd:
+  LDA #0
+  STA KLAY
+@nop:
+  LDA #0
+  STA $7B
+  STA $73
+  RTS
+
+; ---- 보유 주식 화면 금액(bank5 $B37C): PPU 레코드 $032B = [lo][hi][len][타일 x len][FF] 를 제출 직전에 바꾼다 (stub5 에서 호출)
+;      KLAY=1(보유 주식 [5F FF]) 이면 행을 짝수→한 행 위(행 2→1, 3 은 그대로 = 현금/주식 8x16 줄과 맞춤),
+;      홈 CHR 이면 숫자·$·, 를 8x16 위 타일로 바꾸고 아래 타일 레코드를 이어 붙인다(최대 len 12 → $0349 까지).
+eng_pfnum:
+  LDA KLAY
+  BEQ @r
+  LDA $032B
+  AND #$20
+  BNE @odd
+  LDA $032B
+  SEC
+  SBC #$20
+  STA $032B
+  BCS @odd
+  DEC $032C
+@odd:
+  LDA USTATE
+  CMP #1
+  BNE @r
+  CLC
+  LDA $032B
+  ADC #$20
+  STA $033A
+  LDA $032C
+  ADC #0
+  STA $033B
+  LDA $032D
+  STA $033C
+  LDA #0
+  STA PFI
+@l:
+  LDX PFI
+  LDA #$49
+  STA $033D,X
+  LDA $032E,X
+  CMP #$49
+  BEQ @n
+  AND #$7F
+  CMP #$37
+  BCS @n
+  TAX
+  LDA ASC_HI,X
+  CMP #$FF
+  BEQ @n
+  JSR t16tile
+  LDX PFI
+  LDA KT
+  STA $032E,X
+  CLC
+  ADC #1
+  STA $033D,X
+@n:
+  INC PFI
+  LDA PFI
+  CMP $032D
+  BCC @l
+  TAX
+  LDA #$FF                ; 목록 끝 = 다음 레코드의 hi 자리($D2A3 이 [lo][hi] 의 hi=FF 로 판정) → $033D+len+1
+  STA $033D,X
+  STA $033E,X
+@r:
   RTS
 
 ; ---- 1바이트 원본 문자: 활성·2행 피치·분할 아래면 8x16 ASCII 글리프로. C=0 처리함 / C=1 원래 경로
 eng_one:
+  JSR t16ok               ; 상단 8x16 창(모드 bit2, 홈 CHR): ASCII 8x16 을 BG $0000 타일 쌍에 (§19)
+  BCS @spl
+  LDA KC
+  AND #$7F
+  CMP #$37
+  BCS @no
+  TAX
+  LDA ASC_HI,X
+  CMP #$FF
+  BEQ @no
+  LDA KC
+  BPL @t1
+  INC $7B                 ; 80|c = 문자+공백
+@t1:
+  JSR t16tile
+  JSR glyph_emit@emit
+  CLC
+  RTS
+@spl:
+  LDA KACT                ; (khook 이 이제 모든 1바이트 문자를 넘김) 분할 활성일 때만
+  CMP #3
+  BNE @no
   LDA $75
   CMP #SPLITTOP
   BCC @no
@@ -753,6 +1108,10 @@ glyph_emit:
   STA KT
   JMP @put1
 @row:
+  LDA KPGF                ; <PAGE> 뒤 첫 글리프: 슬롯 캐시 초기화 (kpage 가 예약)
+  BEQ @np
+  JSR kreset
+@np:
   LDA KACT
   CMP #3
   BEQ @act
@@ -945,8 +1304,45 @@ glyph_emit:
   STA ($89),Y
   JMP @put1x
 
-; ---- NMI 뒷부분(작업·사운드 뒤, VBlank 안): BG=$0000 복귀, 오버플로 감지 스프라이트 OAM(다음 프레임 DMA 용)
+; ---- 8x16 슬롯 캐시 초기화 (활성화·<PAGE>). 고정 뱅크에서 옮김 (fix3)
+kreset:
+  LDA #$FF
+  LDX #NSLOT-1
+@l:
+  STA KHI,X
+  DEX
+  BPL @l
+  LDA #0
+  STA KNEXT
+  STA KPGF
+  RTS
+
+; ---- NMI(큐 작업 직후, VBlank 안): BG=$0000 복귀, 오버플로 감지 스프라이트 OAM(다음 프레임 DMA 용)
 eng_nmipre:
+  LDA KMAG                ; 리셋·전원 투입 뒤 첫 NMI: 엔진 RAM 전부 초기화 (kinit 가 KMAG 를 깸)
+  CMP #$A5
+  BNE @init
+  LDA KMAG+1
+  CMP #$5A
+  BEQ @ok
+@init:
+  JMP eng_init
+@ok:
+  LDA KINW                ; 분할 대기(엔진 뱅크) 중에 다음 VBlank 의 NMI 가 들어옴(NMI 작업이 길어 대기가 241 을 넘김):
+  BEQ @nn                 ; 이 NMI 를 끝까지 돌리면 사운드($DE67)가 $07 뱅크로 바꿔 놓고 RTI 해 대기 루프가 엉뚱한 뱅크에서
+  PLA                     ; 이어지므로(정지) 여기서 버린다. 스택: eng_nmipre 복귀 2 / 뱅크 1 / nmi_post 복귀 2 / Y X A P → RTI
+  PLA                     ; (이 NMI 앞부분 kdma·큐·hkpre 는 이미 돎: 큐·$0A 는 바깥 NMI 가 비웠고 메인 스레드는 멈춰 있어 새 작업 없음)
+  PLA
+  PLA
+  PLA
+  PLA
+  TAY
+  PLA
+  TAX
+  PLA
+  PLP
+  RTI
+@nn:
   LDA KACT
   CMP #3
   BEQ @act
@@ -958,6 +1354,8 @@ eng_nmipre:
   CMP #4
   BNE @idle
 @off:
+  LDA #0
+  STA KRDY
   LDA #$F4                ; 비활성화: 감지 스프라이트 숨김
   LDX #32
 @hide:
@@ -972,6 +1370,16 @@ eng_nmipre:
 @idle:
   RTS
 @act:
+  LDX #0                  ; 지난 NMI 가 써 둔 감지 스프라이트가 그대로면 이번 NMI 첫머리 DMA 로 PPU 에 올라갔음 → 이번 프레임 분할 가능
+  LDA OVSLOT+32
+  CMP KSPL
+  BNE @rdy
+  LDA OVSLOT+33
+  CMP #OVTILE
+  BNE @rdy
+  INX
+@rdy:
+  STX KRDY
   LDX #32                 ; 감지 스프라이트 9개: Y=KSPL, 타일 0x40(빈), 뒤
 @ov:
   LDA KSPL
@@ -1028,6 +1436,8 @@ wclr:
 ; ---- NMI 가 끊은 메인 스레드 위치 검사. C=1 = 직접 PPU 쓰기 루틴 안($CB79-$CBFF CHR 로더, $F086-$F0BE 스크롤)
 ; 스택: S+1,2 nmi_post 복귀 / S+3,4 $F9C0 / S+5 Y S+6 X S+7 A S+8 P / S+9 P S+10 PCL S+11 PCH (NMI)
 ;       NMI 가 $F03E 대기 루프($F03E-$F048)를 끊었으면 S+12 A, S+13/14 = 호출자 복귀 주소
+; [fix3 메모, 미수정] 지금 경로(nmi_post 의 뱅크 PHA, eng_splitw)에서는 위 오프셋이 맞지 않아 PCL/P 근처를 읽는다 → 사실상
+;   항상 '아님'(QA 의 KDBUSY 0 과 일치). 고치면 스크롤 중 분할을 건너뛰는 프레임이 생길 수 있어 동작을 바꾸지 않았다.
 ppubusy:
   TSX                     ; (이 루틴 JSR 로 2 더 깊음 → +2)
   LDA $010D,X
@@ -1059,7 +1469,17 @@ ppubusy:
   SEC
   RTS
 
-; ---- NMI 끝: 스프라이트 오버플로 플래그를 기다렸다가 BG=$1000
+; ---- nmi_post: 분할 대기를 KINW 로 감쌈 (대기 중 중첩 NMI 는 eng_nmipre 가 버린다: 그 NMI 가 끝까지 돌면 사운드가
+;      $07 뱅크로 바꿔 놓고 RTI 해 이 대기 루프가 엉뚱한 뱅크에서 이어짐)
+eng_splitw:
+  LDA #1
+  STA KINW
+  JSR eng_split
+  LDA #0
+  STA KINW
+  RTS
+
+; ---- 스프라이트 오버플로 플래그를 기다렸다가 BG=$1000
 eng_split:
   LDA KACT
   CMP #3
@@ -1068,6 +1488,8 @@ eng_split:
   AND #$18
   CMP #$18
   BNE @out
+  LDA KRDY                 ; 감지 스프라이트가 아직 PPU OAM 에 없으면(활성화 직후 1프레임 등) 오버플로가 안 나 대기만 길어짐 → 건너뜀
+  BEQ @out
   JSR ppubusy             ; 메인 스레드가 VBlank 직후 PPU 를 직접 쓰는 중이면 이번 프레임 분할 안 함
   BCS @busy
   LDY #1                   ; 대기 한도 보정(아래)
@@ -1122,6 +1544,52 @@ eng_split:
 @clr:                     ; NMI 가 길어(스크롤·큰 큐 작업) 이미 사전렌더를 지남 = 이번 프레임 렌더링 중(분할 줄 전) [QA A3]
   INC KDCLR               ; → 건너뛰지 않고 분할 줄의 오버플로 켜짐을 바로 기다린다(대기 한도는 241 전에 끝남)
   JMP @w2s
+
+; ---- 리셋·전원 투입 뒤 첫 NMI(eng_nmipre): 엔진 RAM 전부를 빈 상태로. 전원 투입 직후 RAM 은 무작위(FCEUmm 기본 $FF)라
+;      KTWO≠0 이면 첫 8x16 글자의 '아래 행 버퍼 공백 채움'을 건너뛰어 버퍼 쓰레기(팔레트 자료 등)가 아래 행에 찍혔다
+;      (첫 카드 '월스트리트 키드' 오른쪽 잔상, fix3 [검증: Mesen 에서 RAM $FF 채움 + 리셋으로 재현]).
+eng_init:
+  JSR uinval              ; UGLY·T16 캐시, UNEXT·T16NEXT (A=0 으로 돌아옴)
+  STA KLAY
+  STA PFI
+  STA T16I
+  LDA #$FF
+  LDX #NSLOT-1
+@k:
+  STA KHI,X
+  DEX
+  BPL @k
+  STA KTHI                ; $FF = 어떤 행도 분할 구간이 아님(hkpre/kq 의 CMP KTHI → BCC)
+  LDA #0
+  STA KACT
+  STA KFAIL
+  STA KNEXT
+  STA KTWO
+  STA KCH
+  STA KSPON
+  STA KINVF
+  STA KDCLR
+  STA KDBUSY
+  STA USTATE
+  STA UNEXT
+  STA UCNT
+  STA KPGF
+  STA KRDY
+  STA KINW
+  STA KSND
+  LDA #$A5
+  STA KMAG
+  LDA #$5A
+  STA KMAG+1
+  RTS
+
+; ---- 지운 화면(패스워드 표시) 용 8x8 풀: 0x50-0x9F
+POOLFREE:
+  .db $50,$51,$52,$53,$54,$55,$56,$57,$58,$59,$5A,$5B,$5C,$5D,$5E,$5F
+  .db $60,$61,$62,$63,$64,$65,$66,$67,$68,$69,$6A,$6B,$6C,$6D,$6E,$6F
+  .db $70,$71,$72,$73,$74,$75,$76,$77,$78,$79,$7A,$7B,$7C,$7D,$7E,$7F
+  .db $80,$81,$82,$83,$84,$85,$86,$87,$88,$89,$8A,$8B,$8C,$8D,$8E,$8F
+  .db $90,$91,$92,$93,$94,$95,$96,$97,$98,$99,$9A,$9B,$9C,$9D,$9E,$9F
 
 .include "../build/kor_tables.asm"
 .include "../build/kor_ui_tables.asm"

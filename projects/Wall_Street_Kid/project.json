@@ -1,6 +1,6 @@
 {
   "name": "Wall Street Kid",
-  "version": "0.2.2",
+  "version": "0.2.8",
   "platform": "fc",
   "source_lang": "en",
   "rom": "rom/Wall Street Kid (USA).nes",
@@ -27,6 +27,11 @@
       "4:12",
       "--copy",
       "6:13"
+    ],
+    [
+      "python",
+      "tools/apply_orig_font.py",
+      "{rom}"
     ],
     [
       "python",

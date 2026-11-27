@@ -1,0 +1,422 @@
+<title>월스트리트 키드 번역대</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&family=Noto+Sans+JP:wght@400&display=swap">
+<style>
+:root{
+  --bg:#EEEDE8; --surface:#FAF9F6; --ink:#1C1B18; --dim:#66625A; --line:#D8D5CC;
+  --accent:#B3361F; --accent-ink:#FFFFFF; --soft:#F2E3DD;
+  --warn:#92600A; --warn-bg:#F5EAD2; --bad:#B42318; --bad-bg:#F8DEDA; --ok:#2F7A4B;
+  --kr:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+  --jp:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121110; --surface:#1B1A18; --ink:#ECE9E2; --dim:#A19C92; --line:#2E2C28;
+    --accent:#E8735C; --accent-ink:#240A04; --soft:#33201B;
+    --warn:#E3A34B; --warn-bg:#33270F; --bad:#F2766B; --bad-bg:#3A1714; --ok:#6CC18F;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121110; --surface:#1B1A18; --ink:#ECE9E2; --dim:#A19C92; --line:#2E2C28;
+  --accent:#E8735C; --accent-ink:#240A04; --soft:#33201B;
+  --warn:#E3A34B; --warn-bg:#33270F; --bad:#F2766B; --bad-bg:#3A1714; --ok:#6CC18F;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.6 var(--kr);padding-inline:16px;padding-block:0 32px;
+  -webkit-text-size-adjust:100%;margin:0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);
+  margin-inline:-16px;padding:12px 16px 10px;border-bottom:1px solid var(--line);display:grid;gap:8px}
+.head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h1{margin:0;font-size:18px;font-weight:600;letter-spacing:-.01em}
+.sync{margin-left:auto;font-size:12.5px;color:var(--dim);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.sync::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--dim)}
+.sync[data-s="saved"]::before{background:var(--ok)}
+.sync[data-s="saving"]::before{background:var(--warn)}
+.sync[data-s="error"]::before,.sync[data-s="off"]::before{background:var(--bad)}
+input[type=search],select,textarea,button{font:inherit;color:inherit}
+input[type=search]{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  background:var(--surface);font-size:16px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);font-size:14px;max-width:100%}
+.chip{padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13.5px;cursor:pointer}
+.chip b{font-family:var(--mono);font-weight:500;margin-left:3px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.gauges{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--dim)}
+.gauges b{font-family:var(--mono);font-weight:500;color:var(--ink)}
+.note{margin:12px 0 0;padding:10px 12px;border-radius:10px;background:var(--soft);font-size:13.5px;line-height:1.55}
+.note[hidden]{display:none}
+main{display:grid;gap:10px;margin-top:12px}
+.row{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;
+  display:grid;gap:6px;border-left-width:3px;min-width:0}
+.row.ed{border-left-color:var(--accent)}
+.row.warn{border-left-color:var(--warn)}
+.row.bad{border-left-color:var(--bad)}
+.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--dim)}
+.meta code{font-family:var(--mono);font-size:12px;color:var(--ink)}
+.tag{padding:1px 7px;border-radius:999px;background:var(--bg);font-size:11.5px}
+.tag.ed{background:var(--accent);color:var(--accent-ink)}
+.jp{margin:0;font-family:var(--jp);font-size:14.5px;color:var(--dim);overflow-wrap:anywhere;white-space:pre-wrap}
+.ko{margin:0;font-size:16px;overflow-wrap:anywhere;white-space:pre-wrap;cursor:text;padding:4px 6px;margin-inline:-6px;border-radius:6px}
+.ko:hover,.ko:focus-visible{background:var(--bg);outline:none}
+.tk{font-family:var(--mono);font-size:.74em;color:var(--dim);background:var(--bg);border-radius:4px;padding:0 3px;margin:0 1px;white-space:nowrap}
+.editor{display:grid;gap:8px;margin-top:2px;min-width:0}
+.editor[hidden]{display:none}
+textarea{width:100%;min-height:96px;padding:9px 10px;border:1.5px solid var(--accent);border-radius:10px;
+  background:var(--bg);font-size:16px;line-height:1.55;resize:vertical}
+.pvbox{max-width:100%;overflow-x:auto;border-radius:6px;background:#000;padding:0}
+.pv{display:block;image-rendering:pixelated;image-rendering:crisp-edges;height:auto}
+.pvcap{font-size:11.5px;color:var(--dim)}
+.checks{display:flex;gap:6px;flex-wrap:wrap;margin:0;padding:0;list-style:none;font-size:12.5px}
+.checks li{padding:2px 8px;border-radius:6px;background:var(--bg)}
+.checks .warn{background:var(--warn-bg);color:var(--warn)}
+.checks .bad{background:var(--bad-bg);color:var(--bad)}
+.checks .num{font-family:var(--mono)}
+.gl,.ins{display:flex;gap:6px;flex-wrap:wrap}
+.gl button,.ins button{padding:4px 9px;border:1px solid var(--line);border-radius:8px;background:var(--bg);cursor:pointer;font-size:13px;text-align:left}
+.ins button{font-family:var(--mono)}
+.gl small{display:block;color:var(--dim);font-size:11px}
+.acts{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.btn{padding:7px 13px;border-radius:9px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:14px}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:focus-visible,.chip:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.more{display:block;margin:14px auto 0}
+.more[hidden]{display:none}
+.empty{color:var(--dim);text-align:center;padding:24px 0}
+footer{margin-top:22px;font-size:12px;color:var(--dim);line-height:1.6;overflow-wrap:anywhere}
+footer code{font-family:var(--mono)}
+</style>
+
+<header class="bar">
+  <div class="head">
+    <h1>월스트리트 키드 번역대</h1>
+    <span class="sync" id="sync" data-s="wait">연결 중…</span>
+  </div>
+  <label for="q" hidden>검색</label>
+  <input id="q" type="search" placeholder="원문 · 번역 · ID 검색" autocomplete="off">
+  <div class="filters">
+    <label for="reg" hidden>구간</label>
+    <select id="reg"><option value="">전체 구간</option></select>
+    <button class="chip" id="fAll" aria-pressed="true">전체</button>
+    <button class="chip" id="fEd" aria-pressed="false">수정<b id="nEd">0</b></button>
+    <button class="chip" id="fWarn" aria-pressed="false">점검<b id="nWarn">0</b></button>
+  </div>
+  <div class="gauges">
+    <span>행 <b id="nRows">–</b></span>
+    <span id="gNew">새 글자 <b>0</b></span>
+  </div>
+</header>
+
+<p class="note" id="applyNote" hidden></p>
+<main id="list" aria-live="polite"></main>
+<button class="btn more" id="more" hidden>더 보기</button>
+<footer id="foot"></footer>
+
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script id="g16" type="text/plain">__G16__</script>
+<script id="g8" type="text/plain">__G8__</script>
+<script>
+(() => {
+'use strict';
+const D = JSON.parse(document.getElementById('data').textContent);
+const dec = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const G16 = dec(document.getElementById('g16').textContent.trim());
+const G8 = dec(document.getElementById('g8').textContent.trim());
+const IDX16 = new Map([...D.cs16].map((c, i) => [c, i]));
+const IDX8 = new Map([...D.cs8].map((c, i) => [c, i]));
+const ROWS = D.rows.map(([id, blk, ja, ko, lim]) => ({id, blk, ja, ko, lim}));
+const BY = new Map(ROWS.map(r => [r.id, r]));
+const isHan = c => c >= '가' && c <= '힣';
+let EDITS = new Map();
+let db = null;
+
+/* ── 칸 모델 ───────────────────────────────────────────────────────
+   글자(공백 포함) 1칸 · <VAR> 10칸(금액·날짜 추정) · 그 밖 <..>·[XX] 0칸 · 대사창은 28칸에서 글자 단위 자동 줄바꿈 */
+const TOK = /<[^>]*>|\[[0-9A-Fa-f]{2}\]|\n|[\s\S]/g;
+function layout(s, W) {
+  const pages = [{lines: [[]], wait: false}];
+  let page = pages[0], line = page.lines[0];
+  const put = c => { if (line.length >= W) { line = []; page.lines.push(line); } line.push(c); };
+  for (const t of (s.match(TOK) || [])) {
+    if (t === '\n') { line = []; page.lines.push(line); continue; }
+    if (t === '<PAGE>') { page = {lines: [[]], wait: false}; pages.push(page); line = page.lines[0]; continue; }
+    if (t === '<WAIT>') { page.wait = true; continue; }
+    if (t === '<VAR>') { for (let i = 0; i < 10; i++) put({v: 1}); continue; }
+    if (t.length > 1 && (t[0] === '<' || t[0] === '[')) continue;
+    put({ch: t});
+  }
+  return pages;
+}
+const trim = ls => { const a = ls.slice(); while (a.length > 1 && !a[a.length - 1].length) a.pop(); return a; };
+const ctrlSeq = s => (s.match(/<[^>]*>|\[[0-9A-Fa-f]{2}\]/g) || []).join('');
+const rawLines = s => s.replace(/<VAR>/g, '\u0001'.repeat(10)).replace(/<[^>]*>|\[[0-9A-Fa-f]{2}\]/g, '').split('\n').map(l => [...l].length);
+
+function check(r, s) {
+  const out = [], L = r.lim;
+  if (!s.trim()) return [{lv: 'warn', t: '아직 번역하지 않았다'}];
+  if (ctrlSeq(s) !== ctrlSeq(r.ja)) out.push({lv: 'bad', t: '제어 토큰이 원문과 다르다 — 같은 순서·개수여야 한다 (' + (ctrlSeq(r.ja) || '없음') + ')'});
+  const chars = new Set([...s.replace(/<[^>]*>|\[[0-9A-Fa-f]{2}\]|\s/g, '')]);
+  if (L.t === 'dlg') {
+    rawLines(s).forEach((w, i) => { if (w > L.w) out.push({lv: 'warn', t: `${i + 1}번째 줄 ${w}칸 — ${L.w}칸을 넘으면 글자 단위로 줄이 넘어간다`}); });
+    const pages = layout(s, L.w);
+    pages.forEach((p, pi) => {
+      const n = trim(p.lines).length;
+      if (n > L.lines) out.push({lv: 'warn', t: `${pi + 1}쪽 ${n}줄 — ${L.lines}줄을 넘으면 위로 스크롤된다${p.wait ? '' : ' (<WAIT> 없음)'}`});
+      const u = new Set(); for (const l of p.lines) for (const c of l) if (c.ch && c.ch.trim()) u.add(c.ch);
+      if (u.size > D.uniq.max) out.push({lv: 'bad', t: `${pi + 1}쪽 서로 다른 글자 ${u.size}자 — 한도 ${D.uniq.max}`});
+      else if (u.size > D.uniq.warn) out.push({lv: 'warn', num: true, t: `${pi + 1}쪽 서로 다른 글자 ${u.size}/${D.uniq.max} (권장 ${D.uniq.warn})`});
+    });
+    const nw = [...chars].filter(c => !IDX16.has(c));
+    if (nw.length) out.push({lv: 'info', t: '새 글자 ' + nw.join(' ') + ' (폰트 charset 뒤에 추가해야 한다)'});
+  } else {
+    const w = rawLines(s);
+    if (w.length > L.w.length) out.push({lv: 'bad', t: `${w.length}줄 — 원문은 ${L.w.length}줄`});
+    w.forEach((x, i) => { const lim = L.w[i] ?? L.w[L.w.length - 1]; if (x > lim) out.push({lv: 'bad', t: `${i + 1}번째 줄 ${x}칸 — 한도 ${lim}칸(원문 칸 수)`}); });
+    if (L.ascii && /[^\x00-\x7F]/.test(s)) out.push({lv: 'bad', t: '이 영역은 한글 불가 — 영문·숫자 약어만'});
+    else { const nw = [...chars].filter(c => !IDX8.has(c)); if (nw.length) out.push({lv: 'warn', t: '8×8 한글 세트에 없음: ' + nw.join(' ') + ' (font/ui8_charset.txt 에 추가 필요)'}); }
+  }
+  if (!out.length) out.push({lv: 'ok', t: '통과'});
+  return out;
+}
+const level = cs => cs.some(c => c.lv === 'bad') ? 'bad' : cs.some(c => c.lv === 'warn') ? 'warn' : '';
+
+/* ── 상태 ───────────────────────────────────────────────────────── */
+const $ = id => document.getElementById(id);
+const local = new Map();
+const cur = r => local.has(r.id) ? local.get(r.id) : (EDITS.has(r.id) ? EDITS.get(r.id).ko : r.ko);
+const edited = r => cur(r) !== r.ko;
+let FILTER = 'all', REG = '', Q = '', SHOWN = 40;
+
+function gauges() {
+  const nw = new Set();
+  for (const r of ROWS) if (edited(r) && r.lim.t === 'dlg') for (const c of cur(r)) if (isHan(c) && !IDX16.has(c)) nw.add(c);
+  $('gNew').innerHTML = `새 글자 <b>${nw.size}</b>`;
+  const nEd = ROWS.filter(edited).length;
+  $('nEd').textContent = nEd;
+  $('nWarn').textContent = ROWS.filter(r => cur(r).trim() && level(check(r, cur(r)))).length;
+  const n = $('applyNote'); n.hidden = !nEd;
+  n.textContent = nEd ? `수정 ${nEd}행이 저장돼 있다. 대화창에 “번역대 반영해줘”라고 하면 Claude 가 원고에 넣고 빌드한다.` : '';
+}
+function match(r) {
+  if (REG && r.blk !== REG) return false;
+  if (FILTER === 'ed' && !edited(r)) return false;
+  if (FILTER === 'warn' && !(cur(r).trim() && level(check(r, cur(r))))) return false;
+  if (!Q) return true;
+  const q = Q.toLowerCase();
+  return r.id.toLowerCase().includes(q) || r.ja.toLowerCase().includes(q) || cur(r).includes(Q) || r.ko.includes(Q);
+}
+function inline(el, s) {
+  el.textContent = '';
+  let i = 0;
+  for (const m of s.matchAll(/<[^>]*>|\[[0-9A-Fa-f]{2}\]/g)) {
+    if (m.index > i) el.append(s.slice(i, m.index));
+    const t = document.createElement('span'); t.className = 'tk'; t.textContent = m[0]; el.append(t);
+    i = m.index + m[0].length;
+  }
+  if (i < s.length) el.append(s.slice(i));
+  if (!s) { const t = document.createElement('span'); t.className = 'tk'; t.textContent = '(미번역)'; el.append(t); }
+}
+
+/* ── 미리보기 — 게임처럼 검은 창에 실제 글리프 (대사 8×16, 그 밖 8×8) ── */
+function drawPv(cv, r, s) {
+  const L = r.lim, dlg = L.t === 'dlg', gh = dlg ? 16 : 8, G = dlg ? G16 : G8, IDX = dlg ? IDX16 : IDX8;
+  const W = dlg ? L.w : Math.max(...L.w);
+  const pages = layout(s, dlg ? L.w : 99);
+  const lines = dlg ? [].concat(...pages.map(p => trim(p.lines))) : trim(pages[0].lines);
+  const rowsN = dlg ? Math.max(lines.length, L.lines) : Math.max(lines.length, L.w.length);
+  const PADX = 8, PADY = 6, Wp = (W + 1) * 8 + PADX * 2, Hp = rowsN * gh + PADY * 2;
+  cv.width = Wp; cv.height = Hp;
+  const sc = Math.max(2, Math.min(3, Math.floor((cv.parentNode.clientWidth || Wp * 2) / Wp)));
+  cv.style.width = Wp * sc + 'px';
+  const x = cv.getContext('2d');
+  x.fillStyle = '#000'; x.fillRect(0, 0, Wp, Hp);
+  x.strokeStyle = '#d8d8d8'; x.strokeRect(1.5, 1.5, Wp - 3, Hp - 3);
+  x.fillStyle = '#7a2a24';
+  if (dlg) x.fillRect(PADX + W * 8, PADY, 1, rowsN * gh);
+  else L.w.forEach((lw, i) => x.fillRect(PADX + lw * 8, PADY + i * gh, 1, gh));
+  if (dlg && lines.length > L.lines) { x.fillStyle = '#e5483d'; x.fillRect(PADX, PADY + L.lines * gh, Wp - PADX * 2, 1); }
+  lines.forEach((l, li) => {
+    const y0 = PADY + li * gh;
+    l.forEach((it, ci) => {
+      const px = PADX + ci * 8;
+      if (it.v) { x.fillStyle = '#5b86d6'; x.fillRect(px + 1, y0 + gh / 2 - 2, 6, 4); return; }
+      if (!it.ch.trim()) return;
+      const gi = IDX.get(it.ch);
+      if (gi === undefined) { x.strokeStyle = '#ff8a80'; x.strokeRect(px + .5, y0 + 1.5, 6, gh - 3); return; }
+      x.fillStyle = (!dlg && ci >= (L.w[li] ?? W)) ? '#ff8a80' : '#fff';
+      for (let yy = 0; yy < gh; yy++) { const b = G[gi * gh + yy]; if (!b) continue;
+        for (let xx = 0; xx < 8; xx++) if (b & (0x80 >> xx)) x.fillRect(px + xx, y0 + yy, 1, 1); }
+    });
+  });
+}
+
+/* ── 카드 ───────────────────────────────────────────────────────── */
+const cards = new Map();
+const CAP = {dlg: '대사창 28칸 × 6줄 · 8×16 한글 · 붉은 세로선 = 28칸 · 파란 막대 = <VAR>(10칸 가정)',
+  fix: '고정 영역 8×8 · 붉은 세로선 = 줄별 칸 한도(원문 칸 수)'};
+function card(r) {
+  const a = document.createElement('article'); a.className = 'row';
+  const meta = document.createElement('div'); meta.className = 'meta';
+  const code = document.createElement('code'); code.textContent = r.id;
+  const reg = document.createElement('span'); reg.className = 'tag'; reg.textContent = D.labels[r.blk] || r.blk;
+  const st = document.createElement('span'); st.className = 'tag ed'; st.textContent = '수정됨'; st.hidden = true;
+  meta.append(code, reg, st);
+  const jp = document.createElement('p'); jp.className = 'jp'; jp.lang = 'en'; inline(jp, r.ja);
+  const ko = document.createElement('p'); ko.className = 'ko'; ko.lang = 'ko'; ko.tabIndex = 0; ko.setAttribute('role', 'button');
+  ko.setAttribute('aria-label', r.id + ' 번역 고치기');
+  const chk = document.createElement('ul'); chk.className = 'checks';
+  const ed = document.createElement('div'); ed.className = 'editor'; ed.hidden = true;
+  a.append(meta, jp, ko, chk, ed);
+  const c = {a, st, ko, chk, ed, r, ta: null, cv: null};
+  const open = () => openEditor(c);
+  ko.addEventListener('click', open);
+  ko.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  cards.set(r.id, c);
+  paint(c);
+  return a;
+}
+function paintChecks(ul, cs) {
+  ul.textContent = '';
+  for (const k of cs) { const li = document.createElement('li'); li.className = (k.lv === 'info' || k.lv === 'ok' ? '' : k.lv) + (k.num ? ' num' : ''); li.textContent = k.t; ul.append(li); }
+  ul.hidden = !cs.length;
+}
+function paint(c) {
+  const s = cur(c.r), cs = check(c.r, s), lv = s.trim() ? level(cs) : '';
+  c.a.className = 'row' + (edited(c.r) ? ' ed' : '') + (lv ? ' ' + lv : '');
+  c.st.hidden = !edited(c.r);
+  if (!c.ta || c.ed.hidden) inline(c.ko, s);
+  paintChecks(c.chk, cs);
+  if (c.cv && !c.ed.hidden) drawPv(c.cv, c.r, s);
+}
+function insertAt(c, t) {
+  const ta = c.ta, s = ta.selectionStart || 0, e = ta.selectionEnd || 0;
+  ta.value = ta.value.slice(0, s) + t + ta.value.slice(e);
+  ta.focus(); ta.selectionStart = ta.selectionEnd = s + t.length;
+  ta.dispatchEvent(new Event('input'));
+}
+function openEditor(c) {
+  if (!c.ed.hidden) return;
+  if (!c.ta) {
+    const lab = document.createElement('label'); lab.hidden = true; lab.htmlFor = 'ta-' + c.r.id; lab.textContent = c.r.id + ' 번역';
+    const ta = document.createElement('textarea'); ta.id = 'ta-' + c.r.id; ta.lang = 'ko'; ta.spellcheck = false;
+    ta.readOnly = !db;
+    const ins = document.createElement('div'); ins.className = 'ins';
+    for (const t of ['<WAIT>', '<PAGE>', '<VAR>', '<END>', '\n']) {
+      if (t !== '\n' && !c.r.ja.includes(t)) continue;
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = t === '\n' ? '⏎ 줄바꿈' : t;
+      b.addEventListener('click', () => insertAt(c, t)); ins.append(b);
+    }
+    const gl = document.createElement('div'); gl.className = 'gl';
+    const up = c.r.ja.toUpperCase(), seen = new Set();
+    for (const g of D.gloss) {
+      const k = g[0].toUpperCase();
+      if (k.length < 3 || !/^[A-Z0-9 .'&%()\/-]+$/.test(k) || seen.has(k) || !up.includes(k)) continue;
+      seen.add(k);
+      const b = document.createElement('button'); b.type = 'button'; b.append(g[0] + ' → ' + g[1]);
+      const sm = document.createElement('small'); sm.textContent = (g[2] || '') + (g[3] ? ' · ' + g[3] : ''); b.append(sm);
+      b.addEventListener('click', () => insertAt(c, g[1])); gl.append(b);
+    }
+    const box = document.createElement('div'); box.className = 'pvbox';
+    const cv = document.createElement('canvas'); cv.className = 'pv'; box.append(cv);
+    const cap = document.createElement('div'); cap.className = 'pvcap';
+    cap.textContent = CAP[c.r.lim.t] + ' · 글리프 Galmuri (SIL OFL)';
+    const acts = document.createElement('div'); acts.className = 'acts';
+    const rv = document.createElement('button'); rv.className = 'btn'; rv.textContent = '원래대로';
+    const cl = document.createElement('button'); cl.className = 'btn pri'; cl.textContent = '닫기';
+    acts.append(rv, cl);
+    c.ed.append(lab, ta, ins);
+    if (gl.children.length) c.ed.append(gl);
+    c.ed.append(box, cap, acts);
+    c.ta = ta; c.cv = cv;
+    ta.addEventListener('input', () => { local.set(c.r.id, ta.value); queue(c.r.id); paint(c); gauges(); });
+    ta.addEventListener('blur', () => flush(c.r.id));
+    rv.addEventListener('click', () => { ta.value = c.r.ko; local.set(c.r.id, c.r.ko); queue(c.r.id, 0); paint(c); gauges(); });
+    cl.addEventListener('click', () => { flush(c.r.id); c.ed.hidden = true; c.ko.hidden = false; paint(c); c.ko.focus(); });
+  }
+  c.ta.value = cur(c.r);
+  c.ed.hidden = false; c.ko.hidden = true;
+  paint(c); c.ta.focus();
+}
+
+/* ── 저장 — 문서 하나에 한 번에 한 쓰기 ─────────────────────────── */
+const timers = new Map(), inflight = new Set(), pend = new Map();
+function setSync(s, t) { const e = $('sync'); e.dataset.s = s; e.textContent = t; }
+function queue(id, ms = 800) {
+  if (!db) return;
+  pend.set(id, local.get(id));
+  clearTimeout(timers.get(id));
+  timers.set(id, setTimeout(() => save(id), ms));
+  setSync('saving', '저장 대기…');
+}
+function flush(id) { if (timers.has(id)) { clearTimeout(timers.get(id)); timers.delete(id); if (pend.has(id)) save(id); } }
+async function save(id) {
+  timers.delete(id);
+  if (!db || inflight.has(id)) return;
+  inflight.add(id); setSync('saving', '저장 중…');
+  try {
+    while (pend.has(id)) {
+      const v = pend.get(id); pend.delete(id);
+      const r = BY.get(id), ref = db.doc('edits/' + id);
+      if (v === r.ko) await ref.delete();
+      else await ref.set({ko: v, base: r.ko, at: Date.now()});
+    }
+    setSync('saved', '저장됨');
+  } catch (e) {
+    setSync('error', e && e.code === 'quota_exceeded' ? '저장 공간 참' : '저장 실패');
+  } finally {
+    inflight.delete(id);
+    if (pend.has(id)) save(id);
+  }
+}
+
+/* ── 목록 ───────────────────────────────────────────────────────── */
+let matched = [];
+function render() {
+  matched = ROWS.filter(match);
+  const list = $('list'); list.textContent = '';
+  for (const r of matched.slice(0, SHOWN)) list.append(cards.get(r.id)?.a || card(r));
+  if (!matched.length) { const p = document.createElement('p'); p.className = 'empty'; p.textContent = '맞는 행이 없다'; list.append(p); }
+  $('more').hidden = matched.length <= SHOWN;
+  $('more').textContent = `더 보기 (${matched.length - Math.min(SHOWN, matched.length)}행 남음)`;
+  $('nRows').textContent = matched.length === ROWS.length ? ROWS.length : `${matched.length} / ${ROWS.length}`;
+  gauges();
+}
+function refresh() { for (const c of cards.values()) paint(c); gauges(); }
+
+for (const b of D.order) {
+  const o = document.createElement('option'); o.value = b;
+  o.textContent = `${D.labels[b] || b} (${ROWS.filter(r => r.blk === b).length})`;
+  $('reg').append(o);
+}
+let qt;
+$('q').addEventListener('input', e => { clearTimeout(qt); qt = setTimeout(() => { Q = e.target.value.trim(); SHOWN = 40; render(); }, 200); });
+$('reg').addEventListener('change', e => { REG = e.target.value; SHOWN = 40; render(); });
+const chips = {all: $('fAll'), ed: $('fEd'), warn: $('fWarn')};
+for (const [k, b] of Object.entries(chips)) b.addEventListener('click', () => {
+  FILTER = k; for (const [kk, bb] of Object.entries(chips)) bb.setAttribute('aria-pressed', String(kk === k));
+  SHOWN = 40; render();
+});
+$('more').addEventListener('click', () => { SHOWN += 40; render(); });
+$('foot').textContent = `원고 기준 ${D.stamp} · ${ROWS.length}행 · 대사창 28칸×6줄 · 한 쪽의 서로 다른 글자 ${D.uniq.max}자 이하(권장 ${D.uniq.warn}) · 제어 토큰은 원문과 같은 순서·개수 · 글리프 Galmuri (SIL OFL 1.1)`;
+render();
+
+/* ── db 연결 ─────────────────────────────────────────────────────── */
+(async () => {
+  const use = window.claude && window.claude.use;
+  db = use ? await window.claude.use('db') : null;
+  if (!db) { setSync('off', '읽기 전용'); return; }
+  for (const c of cards.values()) if (c.ta) c.ta.readOnly = false;
+  db.collection('edits').onSnapshot(snap => {
+    const m = new Map();
+    for (const d of snap.docs) { const v = d.data(); if (v && typeof v.ko === 'string' && BY.has(d.id)) m.set(d.id, v); }
+    EDITS = m;
+    for (const [id] of local) if (!pend.has(id) && !inflight.has(id) && !timers.has(id)) local.delete(id);
+    refresh();
+    if ($('sync').dataset.s === 'wait') setSync('saved', '저장됨');
+  }, () => setSync('error', '연결 끊김'));
+})();
+})();
+</script>

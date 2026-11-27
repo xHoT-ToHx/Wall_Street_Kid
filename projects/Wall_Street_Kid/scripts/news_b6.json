@@ -75,7 +75,7 @@
     "offset": "0x19a3d",
     "orig_bytes": 520,
     "ja": "STOCKS ARE MONEY WHICH A\nCOMPANY DIVIDES INTO SHARES\nOF EQUAL AMOUNTS THAT ARE\nBOUGHT AND SOLD IN THE STOCKMARKET. BUYING STOCK IN A\nCOMPANY MAKES YOU PART\nOWNER.<WAIT>\n\nA COMPANY ISSUES YOU STOCK\nCERTIFICATES TO REPRESENT\nTHE NUMBER OF SHARES YOU\nHAVE PURCHASED, OR IN OTHER\nWORDS, HOW MUCH OF THE\nCOMPANY YOU OWN.<WAIT>\n\nBY BECOMING A STOCKHOLDER,\nYOU RECEIVE A PERCENTAGE OF\nTHE PROFITS THAT THE COMPANYMAKES.  IT ALSO MEANS THAT\nYOU CAN ATTEND STOCKHOLDER\nMEETINGS.<WAIT>\n\nAT THE MEETINGS YOU'RE GIVENINFORMATION ON COMPANY\nBUSINESS AND ARE ALLOWED TO\nEXPRESS YOUR OPINION THROUGHYOUR PERCENTAGE OF VOTES.\n<WAIT><END>",
-    "ko": "주식이란 회사가 자본을\n같은 금액의 몫으로 나눈\n것으로, 주식 시장에서\n사고팔려요. 어떤 회사의\n주식을 사면 그 회사의\n공동 주인이 되는 거죠.<WAIT>\n\n회사는 여러분이 산 주식\n수를 나타내는 주식 증서를\n발행해 줘요. 다시 말해\n회사를 얼마나 소유했는지\n보여 주는 거죠.<WAIT>\n\n주주가 되면 회사가 낸\n수익의 일부를 받아요.\n주주총회에도 참석할 수\n있고요.<WAIT>\n\n총회에서는 회사 경영에\n관한 정보를 듣고, 가진\n의결권 비율만큼 의견을\n낼 수 있어요.\n<WAIT><END>",
+    "ko": "주식이란 회사가 자본을\n같은 금액의 몫으로 나눈 것으로,\n주식 시장에서 사고팔려요.\n어떤 회사의 주식을 사면\n그 회사의 공동 주인이 되는 거죠.<WAIT>\n\n회사는 여러분이 산\n주식 수를 나타내는\n주식 증서를 발행해 줘요.\n다시 말해 회사를 얼마나\n소유했는지 보여 주는 거죠.<WAIT>\n\n주주가 되면 회사가 낸\n수익의 일부를 받아요.\n주주총회에도\n참석할 수 있고요.<WAIT>\n\n총회에서는 회사 경영에\n관한 정보를 듣고,\n가진 의결권 비율만큼\n의견을 낼 수 있어요.\n<WAIT><END>",
     "note": "[스탠리 강의 4편] 7=주식이란 8=주가 9=뉴스 확보 10=매매법. 매우 긴 페이지 묶음(여러 <WAIT>). 1 LOT=1,000주"
   },
   {
@@ -84,7 +84,7 @@
     "offset": "0x19c45",
     "orig_bytes": 808,
     "ja": "TIMING IS VERY IMPORTANT IN\nTHE STOCK MARKET. TO MAKE\nMONEY YOU MUST BUY STOCKS\nWHILE THEY ARE SELLING LOW\nAND SELL STOCKS WHILE THEY\nARE SELLING HIGH.<WAIT>\n\nSTOCK PRICES DEPEND MAINLY\nON SUPPLY AND DEMAND. THE\nMORE BUYERS, THE HIGHER THE\nPRICES. THE MORE SELLERS,\nTHE LOWER THE PRICES.\n<WAIT>\nSEVERAL THINGS CAN AFFECT\nSTOCK PRICES: COMPANY SALES,COMPANY PLANS AND INTEREST\nRATE FLUCTUATIONS.\n<WAIT>\nTHE MORE SENSITIVE A COMPANYIS TO CHANGES IN INTEREST\nRATES, THE MORE RISKY THE\nINVESTMENT.\n<WAIT>\nINTEREST RATE CHANGES AFFECTHOW MUCH YOU SPEND AND BUY.\nWHEN INTEREST RATES\nINCREASE, YOU WILL TEND TO\nSAVE MORE AND SPEND LESS.\n<WAIT>\nDURING A RECESSION, PRICES\nARE HIGH, THEREFORE YOU WILLTEND TO SPEND LESS.\n<WAIT>\nTHE MORE DEBT A COMPANY HAS,THAT IS THE MORE MONEY THEY\nOWE, THE MORE SENSITIVE THEYARE TO INTEREST RATES.\n<WAIT>\nTHE HIGHER THE ASSET BASE,\nTHAT IS ALL PROPERTY AND\nGOODS THAT HAVE HIGH VALUE,\nTHE LESS SENSITIVE THE\nCOMPANY IS TO INTEREST\nRATES.<WAIT><END>",
-    "ko": "주식 시장에선 타이밍이\n아주 중요해요. 돈을 벌려면\n쌀 때 사서 비쌀 때\n팔아야 하죠.<WAIT>\n\n주가는 주로 수요와 공급에\n달려 있어요. 사는 사람이\n많을수록 주가는 오르고,\n파는 사람이 많을수록\n주가는 내려가요.\n<WAIT>\n주가에 영향을 주는 건\n여러 가지예요. 회사 매출,\n회사 계획, 그리고 금리\n변동 같은 거죠.\n<WAIT>\n금리 변화에 민감한\n회사일수록 투자 위험도\n커져요.\n<WAIT>\n금리가 변하면 여러분이\n얼마나 쓰고 사는지도\n달라져요. 금리가 오르면\n저축은 늘리고 지출은\n줄이게 되죠.\n<WAIT>\n불황 땐 물가가 높아서\n지출을 줄이게 돼요.\n<WAIT>\n빚이 많은 회사, 그러니까\n갚을 돈이 많은 회사일수록\n금리에 민감해요.\n<WAIT>\n자산 기반, 그러니까 값나가는\n부동산과 물건이 많은\n회사일수록 금리에 덜\n민감하답니다.<WAIT><END>",
+    "ko": "주식 시장에선 타이밍이\n아주 중요해요.\n돈을 벌려면 쌀 때 사서\n비쌀 때 팔아야 하죠.<WAIT>\n\n주가는 주로 수요와\n공급에 달려 있어요.\n사는 사람이 많을수록\n주가는 오르고,\n파는 사람이 많을수록\n주가는 내려가요.\n<WAIT>\n주가에 영향을 주는 건\n여러 가지예요.\n회사 매출, 회사 계획,\n그리고 금리변동 같은 거죠.\n<WAIT>\n금리 변화에\n민감한 회사일수록\n투자 위험도 커져요.\n<WAIT>\n금리가 변하면\n여러분이 얼마나 쓰고\n사는지도 달라져요.\n금리가 오르면\n저축은 늘리고\n지출은 줄이게 되죠.\n<WAIT>\n불황 땐 물가가 높아서\n지출을 줄이게 돼요.\n<WAIT>\n빚이 많은 회사, 그러니까\n갚을 돈이 많은 회사일수록\n금리에 민감해요.\n<WAIT>\n자산 기반, 그러니까\n값나가는 부동산과\n물건이 많은 회사일수록\n금리에 덜 민감하답니다.<WAIT><END>",
     "note": "[스탠리 강의 4편] 7=주식이란 8=주가 9=뉴스 확보 10=매매법. 매우 긴 페이지 묶음(여러 <WAIT>). 1 LOT=1,000주"
   },
   {
@@ -142,7 +142,7 @@
     "offset": "0x1a3ac",
     "orig_bytes": 48,
     "ja": "COME BACK SOON.  I'LL ALWAYSHAVE MORE INFO.\nGOOD BYE.<WAIT><END>",
-    "ko": "또 오세요. 정보라면 늘\n더 있으니까요.\n안녕히 가세요.<WAIT><END>",
+    "ko": "또 오세요.\n정보라면 늘 더 있으니까요.\n안녕히 가세요.<WAIT><END>",
     "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
   },
   {
@@ -152,7 +152,7 @@
     "offset": "0x1a3dc",
     "orig_bytes": 90,
     "ja": "THAT'S A SHAME AND I HAD\nSUCH GOOD INFORMATION FOR\nYOU.  OH WELL, CHECK BACK\nWHEN YOU HAVE ENOUGH MONEY.<WAIT><END>",
-    "ko": "안타깝네요, 좋은 정보를\n준비해 뒀는데. 뭐, 돈이\n충분해지면 다시 오시죠.<WAIT><END>",
+    "ko": "안타깝네요, 좋은 정보를\n준비해 뒀는데.\n뭐, 돈이 충분해지면\n다시 오시죠.<WAIT><END>",
     "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
   },
   {
@@ -172,7 +172,7 @@
     "offset": "0x1a457",
     "orig_bytes": 53,
     "ja": "SORRY, SIR.  MAYBE NEXT TIMEI'LL HAVE SOME INFO.\n\nGOOD BYE.<WAIT><END>",
-    "ko": "유감이군요, 손님. 다음엔\n정보가 있을지도 모르겠네요.\n\n안녕히 가세요.<WAIT><END>",
+    "ko": "유감이군요, 손님.\n다음엔 정보가 있을지도 모르겠네요.\n\n안녕히 가세요.<WAIT><END>",
     "note": "[코니(어드바이저) 정보 가게] 11,12=인사 13=1,000달러 정보 제안 14~17=응답"
   },
   {
@@ -182,7 +182,7 @@
     "offset": "0x1b869",
     "orig_bytes": 23,
     "ja": "HELLO.  HOW CAN I HELP YOU?<END>",
-    "ko": "안녕하십니까. 무엇을 도와드리겠습니까?<END>",
+    "ko": "안녕하십니까.\n무엇을 도와드릴까요?<END>",
     "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
   },
   {
@@ -192,7 +192,7 @@
     "offset": "0x1b880",
     "orig_bytes": 69,
     "ja": "HELLO, IT'S NICE TO SEE YOU\nAGAIN.\n\nWHICH SERVICE CAN I PROVIDE\nYOU WITH TODAY?<END>",
-    "ko": "다시 뵙게 되어 반갑습니다.\n\n오늘은 어떤 업무를\n도와드리겠습니까?<END>",
+    "ko": "다시 뵙게 되어 반갑습니다.\n\n오늘은 어떤 업무를\n도와드릴까요?<END>",
     "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
   },
   {
@@ -202,7 +202,7 @@
     "offset": "0x1b8c5",
     "orig_bytes": 48,
     "ja": "IF YOU NEED MY ASSISTANCE,\nSTOP BY ANY TIME.  GOOD BYE.<WAIT><END>",
-    "ko": "도움이 필요하시면 언제든\n들러 주십시오. 안녕히 가십시오.<WAIT><END>",
+    "ko": "도움이 필요하시면\n언제든 들러 주십시오.\n안녕히 가십시오.<WAIT><END>",
     "note": "[루스(은행)] 18,19=인사 20=작별 21~25=대출 안내(<VAR>=날짜) 26~29=상환 30=현금 부족 31~34=성 잔금(7/28 기한)"
   },
   {

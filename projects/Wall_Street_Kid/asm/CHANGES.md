@@ -108,3 +108,67 @@
 - kor_build.py ui 풀: 맵 1-$11 은 CHR 로드 범위 전체 제외, 큰 맵 풀 0, 맵 0 은 기존대로.
 - 빈 공간 변경 없음(엔진 뱅크 코드 +7B). 검증 롬 work/asm2/wsk_v2fix.nes(sha1 464AFDCA…), 상태 work/asm2/v2_fri.mss(금 4/14 신문, 이 롬 전용 아님 — v0.2.1 상태에서 이어진 것).
 - M1: 수정 없음(8x8 글리프가 1-7행 사용, 폰트 한계).
+
+## 2026-11-26 fix3 (DESIGN §18)
+### 훅·데이터
+| 주소 | 원래 | 변경 | 목적 |
+|---|---|---|---|
+| $C003 kinit | LDA #0 / STA KACT / STA USTATE / JMP ($FFDE) | LDA #0 / STA KMAG / JMP ($FFDE) | 첫 NMI 에서 eng_init(엔진 RAM 전체 초기화) |
+| $F98E | JSR $DE67 | JSR ksnd | NMI 사운드 재진입 방지 |
+| $D242 / $D246 | 04 / 06 | 05 / 07 | 데모·엔딩 카드 창 높이 +1(28행 지우기) |
+| nmi_post(고정) | JSR eng_split | JSR eng_splitw | 분할 대기 KINW 표시 |
+| $D8A8 kpage | JSR kreset | DEC KPGF | kreset 엔진 뱅크로 |
+| eng_chr(뱅크 7) | 항목 1·2 → 풀 없음 | 풀 POOLFREE(0x50-0x9F), USTATE=$14 | 패스워드 표시 머리말 |
+### 빈 공간
+| 위치 | 내용 |
+|---|---|
+| 고정 $FFCD-$FFDB | ksnd (kreset 이동으로 생긴 자리 포함, 상한 $FFDD) |
+| 고정 $E0C2-$E120 | 상한 $E121→$E120 (원본 코드 보호) |
+| 뱅크 7 | kreset, eng_init, eng_splitw, KRDY 판정, POOLFREE 80B |
+| RAM | $05BC-$05BF, $06EE-$06EF |
+### 검증 (Mesen, headless)
+- 롬 work/fix3/fix3b.nes (sha1 af4aea7c…) vs work/fix3/v022.nes (v0.2.2, 464AFDCA…). 같은 절차: 리셋 → $C000 실행 BP 에서 정지 → RAM $0000-$07FF=$FF → 진행.
+- 리셋+500: 첫 카드. v0.2.2 26행 4B 4D 4F 51 4F 14 53 55 30 25 0F 30 37 16 …(잔상) / 새 빌드 49 공백 → qa/fix3_firstcard_ramff_after_r500.png.
+- 리셋+1290: 스탠리 카드. v0.2.2 28행에 이전(루스) 설명 아래 타일 → qa/fix3_card_row28_before_f3071.png / 새 빌드 정상 → qa/fix3_card_row28_after_r1290.png.
+- 타이틀 방치: v0.2.2 리셋+4990 에 붕괴(PC=$770B) / 새 빌드 리셋+11290 정상(qa/fix3_title_idle_ramff_after_r6290.png).
+- 회귀: START → 타이틀 메뉴 잔상 없음, NEW GAME 래리 대사·스크롤(qa/fix3_reg_larry_scroll.png), 신문, 홈 컴퓨터 메뉴(qa/fix3_reg_menu.png), 리셋 → 이어하기 → 패스워드 입력 화면(qa/fix3_reg_password_entry.png, USTATE=1).
+
+## 2026-11-27 ui16: 종목 화면 상단 8x16 (DESIGN §19)
+### 훅·데이터
+| 주소 | 원래 | 변경 | 목적 |
+|---|---|---|---|
+| khook@one(고정 $FEDC-) | STA KC / LDX KACT / CPX #3 / BNE @orig / … | STA KC / … (KACT 검사 삭제, 8B 절약) | 1바이트 문자는 모두 eng_one 이 판정(분할 8x16 / 상단 8x16 / 원래 경로) |
+| $D248 | 02 | 01 | 창 6 [x2 y2 w28 h4] → y1 (행 1-4 지우기, bank5 $B33E·$B1AA 만 사용) |
+| $D250-$D252 | 02 1E 05 | 01 1E 06 | 창 8 → [x1 y1 w30 h6] (정보 화면 진입 지우기, bank5 $ADF6 만) |
+| bank5 $AE28/$AE4D/$AF07/$AF37 | 80 | 85 | 정보 화면 종목명·틀·값 줄·분류명 창 모드 = 상단 8x16(bit2)+2행 피치 |
+| bank5 $B3C7-$B3CD | LDX #$2B / LDY #$03 / JSR $C0EB | JSR stub5 / NOP x4 | $B37C 금액 2줄 레코드 → 보유 주식 화면이면 8x16·한 행 위 |
+| bank5·bank7 $BC26-$BC3B | (stock_desc_b5 영역 끝, 빈칸) | stub5 (두 뱅크 같은 바이트) | 뱅크 5 ↔ 7 전환 스텁(고정 뱅크 무사용) |
+### 빈 공간·RAM
+| 위치 | 내용 |
+|---|---|
+| bank5 $BC26-$BC45 (파일 0x17C36-0x17C55) | 예약 32B(kor_build.py STUB5_RESERVE, stock_desc_b5 영역에서 제외), 사용 22B |
+| bank7 $BC26-$BC45 | stub5 사본 (bank7 $A000-$BF9F 는 그 밖에 비어 있음) |
+| 뱅크 7 $8000- | t16ok/t16g/t16tile/eng_t16/eng_pfnum, uinval 확장, eng_one 재작성, 표 T16LO/HI/U8/TILE (엔진 끝 약 $9180) |
+| 고정 | 순증가 없음(khook 8B 감소) |
+| RAM | $0584-$05AF(UGLY[36..79]) = T16 캐시 앞 44칸, $05E0-$05E9 = 뒤 10칸, $06DB T16NEXT, $06DC T16I, $06DD KLAY, $06DE PFI (eng_init·uinval 초기화) |
+### 검증 (Mesen headless, 최종 롬 sha1 f7eebc37…)
+- 상태: work/ui16/t3_home.mss·t3_menu.mss·t3_menu_owned.mss(t3 롬, 처음부터 진행). 이후 롬에 로드할 때는 UPLO/UPHI($05B3)를 새 POOL0 주소로 써야 함(엔진 표 이동, §15.1 주의와 같음). 최종 롬은 $8FB7.
+- 입력: 홈에서 왼쪽 32프레임 + 위 10프레임 → A(컴퓨터 메뉴). 메뉴 아래 1 → 매수, 2 → 정보, 3 → 포트폴리오. 수량은 위/아래/좌우 8프레임 누름.
+- 화면: qa/ui16_buy_list, ui16_buy_qty, ui16_buy_confirm, ui16_buy_done_home, ui16_sell_list, ui16_sell_qty, ui16_sell_confirm, ui16_sell_done_home, ui16_portfolio, ui16_portfolio_empty, ui16_info_list, ui16_info_screen, ui16_info_screen_long, ui16_return_home_from_portfolio, ui16_return_home_from_info.
+- 회귀: ui16_reg_title_card, ui16_reg_title_menu, ui16_reg_larry_dialog(이전 빌드와 같은 해시), ui16_reg_larry_scroll, ui16_reg_news, ui16_reg_ralph_call, ui16_reg_stock_menu.
+
+## v0.2.5: 미사용 글자 삭제
+- font/charset.txt: 영문 소문자 26자 삭제(708→682). 글리프 번호가 밀리므로 tables/ko_font.tbl 재생성(`python font/tools/build_font.py`).
+- font/ui8_charset.txt: 상단 8x16 문자열에만 쓰던 한글 35자와 «» 삭제(129→92). kor_build.py ui8_charset() 은 상단 8x16 문자열을 수집하지 않는다.
+- 결과: 상단 8x16 화면이 홈 외 장면에서 열리면(알려진 경로 없음) 해당 글자의 8x8 대체는 공백.
+
+## v0.2.6
+- 버그: 종목 정보를 연달아 보면 글자가 바뀜. 원인: 화면 지우기($CD70)를 거치지 않아 상단 8x16 캐시(54칸)가 누적, 원형 할당이 보이는 타일을 덮음.
+- 수정: t16inval(8x16 캐시만 비움) 추가. [5F FF](목록·보유 주식 시작)와 새 표식 [5F FC](정보 화면 종목명 0001-0020 앞)에서 호출.
+- 번역대·폰트작업대 수정분 반영(dialog_b4_0030 은 <WAIT> 추가로 보류).
+
+## v0.2.7
+- 원본 8x8 영문 글리프 수정분 반영(font/orig_font_overrides.json, 전 글자 맨 윗줄 비움 — v0.2.6 목록 줄 붙음 해결).
+
+## v0.2.8
+- dialog_b4_0030: 사용자 승인으로 <WAIT> 1개 추가(원문 4개 → 번역 5개, 제어 토큰 개수 규칙의 예외).
